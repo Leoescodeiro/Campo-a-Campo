@@ -75,6 +75,9 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .drawn-card.spinning .spin-num{animation:numRoll .1s linear infinite}
 .drawn-card.spinning::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(200,168,75,.12) 50%,transparent 100%);animation:shimmer .5s linear infinite}
 .drawn-card.settled{animation:settlePop .5s ease}
+.drawn-card.spinning .drawn-cup{opacity:0}
+#draft-content-left.hide-list-spin .pick-label,
+#draft-content-left.hide-list-spin .player-scroll{filter:blur(6px);opacity:.4;pointer-events:none;transition:none}
 @keyframes cardShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-1px)}75%{transform:translateX(1px)}}
 @keyframes spinBlur{0%{transform:translateY(0) scale(1);opacity:1}50%{transform:translateY(-6px) scale(1.1);opacity:.5}100%{transform:translateY(0) scale(1);opacity:1}}
 @keyframes numRoll{0%{transform:translateY(-2px)}50%{transform:translateY(2px)}100%{transform:translateY(-2px)}}
@@ -470,6 +473,25 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 @media (max-width: 768px){
   html,body{height:auto;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
   .game-layout{height:auto;overflow:visible}
+
+  /* Simulate screen (team list before kickoff) */
+  #screen-simulate.active{height:auto;min-height:calc(100vh - 52px);align-items:flex-start;padding:8px 0}
+  .sim-screen{padding:16px}
+
+  /* Live match screen */
+  #screen-live.active{height:auto;min-height:calc(100vh - 52px);overflow:visible}
+  .live-header{grid-template-columns:1fr;text-align:center;padding:14px 12px;gap:8px}
+  .live-team-left,.live-team-right{align-items:center}
+  .live-scoreboard{order:-1}
+  .live-body{grid-template-columns:1fr;overflow:visible}
+  .live-feed{padding:14px 16px;max-height:50vh;overflow-y:auto}
+  .live-sidebar{border-left:none;border-top:1px solid var(--border)}
+  .live-footer{flex-wrap:wrap;padding:12px 14px}
+  #live-speed-picker{flex-wrap:wrap;width:100%;order:3}
+  .btn-skip,.btn-next-match{flex:1 1 auto}
+
+  /* Results screen */
+  .results-screen{padding:16px;max-width:100%}
   #screen-draft.active{
     height:auto;min-height:calc(100vh - 52px);overflow:visible;
     align-items:flex-start;
@@ -917,6 +939,7 @@ function animateDrawnCard(teamKey, finalTeam){
   if(!card || !flagEl || !nameEl || !cupEl) return;
 
   card.classList.add('spinning');
+  document.getElementById('draft-content-left').classList.add('hide-list-spin');
   const keys = teamKeys();
   let delay = 35;
   let ticks = 0;
@@ -941,6 +964,7 @@ function animateDrawnCard(teamKey, finalTeam){
       card.classList.add('settled');
       setTimeout(()=>card.classList.remove('settled'), 500);
       G.isSpinning = false;
+      document.getElementById('draft-content-left').classList.remove('hide-list-spin');
       G.spinDisplayTeamKey = null;
       renderDraftLeft(); // reveal the new team's player list now that it settled
     }
