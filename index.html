@@ -277,7 +277,8 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 
 /* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px)}
-.modal{background:var(--bg2);border:1px solid var(--border2);padding:20px;width:300px;max-height:80vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.modal{background:var(--bg2);border:1px solid var(--border2);padding:20px;width:300px;max-width:94vw;max-height:80vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.modal:has(.bracket-grid){width:auto}
 .modal h3{font-size:11px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin-bottom:14px}
 .modal-list{overflow-y:auto;flex:1}
 .modal-list::-webkit-scrollbar{width:3px}
@@ -287,6 +288,18 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .btn-modal-cancel{background:transparent;border:1px solid var(--border2);color:var(--text2);padding:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;width:100%;margin-top:10px;transition:all .15s;letter-spacing:1px}
 .btn-modal-confirm{background:var(--danger);border:none;color:#fff;padding:10px;font-size:12px;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;width:100%;margin-top:4px;transition:all .15s;letter-spacing:1px}
 .btn-modal-confirm:hover{background:var(--danger2)}
+.bracket-grid{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 8px;max-width:min(90vw,900px)}
+.bracket-col{display:flex;flex-direction:column;gap:8px;min-width:180px;flex-shrink:0}
+.bracket-stage-title{font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;text-align:center;padding-bottom:4px;border-bottom:1px solid var(--border)}
+.bracket-match{border:1px solid var(--border2);background:var(--bg3);padding:8px 10px;border-radius:4px;font-size:12px;transition:all .15s}
+.bracket-team{display:flex;align-items:center;gap:6px;color:var(--text2);padding:2px 0}
+.bracket-score{text-align:center;font-size:11px;font-weight:800;color:var(--text3);padding:2px 0}
+.bracket-played .bracket-team{color:var(--text);}
+.bracket-played .bracket-score{color:var(--green3)}
+.bracket-current{border-color:var(--gold);box-shadow:0 0 0 1px rgba(255,210,63,.25)}
+.bracket-current .bracket-score{color:var(--gold)}
+.bracket-jumpable{cursor:pointer;border-color:var(--gold);box-shadow:0 0 8px rgba(255,210,63,.2)}
+.bracket-jumpable:hover{background:rgba(255,210,63,.1);transform:translateY(-2px)}
 .btn-modal-cancel:hover{border-color:var(--text)}
 
 /* PLAYER COLORS */
@@ -455,6 +468,8 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .toggle-pill.on::after{left:16px;background:#fff}
 /* ===== MOBILE LAYOUT ===== */
 @media (max-width: 768px){
+  html,body{height:auto;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+  .game-layout{height:auto;overflow:visible}
   #screen-draft.active{
     height:auto;min-height:calc(100vh - 52px);overflow:visible;
     align-items:flex-start;
@@ -654,7 +669,7 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
     <div class="live-next-info" id="live-next-info"></div>
     <div id="live-speed-picker" style="display:flex;gap:6px"></div>
     <div style="display:flex;gap:8px">
-      <button class="btn-skip" id="btn-skip" onclick="skipToEnd()">PULAR JOGO ⏩</button>
+      <button class="btn-skip" id="btn-skip" onclick="openBracket()">CHAVEAMENTO 🏆</button>
       <button class="btn-next-match" id="btn-next-match" disabled onclick="proceedNextMatch()">PRÓXIMO JOGO →</button>
     </div>
   </div>
@@ -2144,10 +2159,22 @@ function renderSpeedPicker(){
   const el = document.getElementById('live-speed-picker');
   if(!el) return;
   if(!G.isHost){ el.innerHTML = ''; return; }
-  const speeds = [[0.5,'0.5x'],[1,'1x'],[2,'2x'],[4,'4x']];
+  const speeds = [[0.5,'0.5x'],[1,'1x'],[2,'2x'],[4,'4x'],[8,'ULTRA']];
   el.innerHTML = speeds.map(([v,label])=>
     `<button class="form-btn ${G.simSpeed===v?'active':''}" style="padding:6px 10px;font-size:11px" onclick="setSimSpeed(${v})">${label}</button>`
-  ).join('');
+  ).join('') + `<button class="form-btn ${G.autoPlay?'active':''}" style="padding:6px 10px;font-size:11px" onclick="toggleAutoPlay()">AUTO ${G.autoPlay?'▶':'⏸'}</button>`;
+}
+
+function toggleAutoPlay(){
+  G.autoPlay = !G.autoPlay;
+  renderSpeedPicker();
+  if(G.autoPlay){
+    // If the current match has already finished, kick off the next one
+    const result = G.matchResults[G.currentMatchIdx];
+    if(result && document.getElementById('btn-next-match') && !document.getElementById('btn-next-match').disabled){
+      proceedNextMatch();
+    }
+  }
 }
 
 function setSimSpeed(v){
@@ -2283,7 +2310,6 @@ function renderLiveStateUpTo(matchIdx, eventIdx){
 
   if(eventIdx >= events.length){
     const isHostUser = G.isHost || !ROOM_REF;
-    document.getElementById('btn-skip').disabled = true;
     document.getElementById('btn-next-match').disabled = !isHostUser;
     const remaining = G.matchQueue.slice(matchIdx+1);
     document.getElementById('btn-next-match').textContent = remaining.length===0 ? 'VER RESULTADOS →' : 'PRÓXIMO JOGO →';
@@ -2313,6 +2339,9 @@ function hostTick(matchIdx, eventIdx){
   const result = G.matchResults[matchIdx];
   if(eventIdx >= result.events.length){
     G.isSimRunning = false;
+    if(G.autoPlay && matchIdx+1 < G.matchQueue.length){
+      G.simTimeout = setTimeout(()=>proceedNextMatch(), 1200 / (G.simSpeed || 1));
+    }
     return; // wait for proceedNextMatch
   }
   G.isSimRunning = true;
@@ -2352,6 +2381,79 @@ function skipToEnd(){
   if(G.simTimeout) clearTimeout(G.simTimeout);
   const result = G.matchResults[G.currentMatchIdx];
   hostTick(G.currentMatchIdx, result.events.length);
+}
+
+// ===== BRACKET / "VER CHAVEAMENTO" =====
+
+// A match is "jumpable" if no earlier not-yet-played match shares a player with it.
+// This guarantees we never watch player2 vs player3 before player1 vs player2
+// (i.e. each player's matches are always seen in their original order).
+function isMatchJumpable(idx){
+  if(idx <= G.currentMatchIdx) return false;
+  const m = G.matchQueue[idx];
+  if(!m || !m.a || !m.b) return false;
+  for(let j=G.currentMatchIdx; j<idx; j++){
+    const m2 = G.matchQueue[j];
+    if(!m2 || !m2.a || !m2.b) continue;
+    const names = [m2.a.playerName, m2.b.playerName];
+    if(names.includes(m.a.playerName) || names.includes(m.b.playerName)) return false;
+  }
+  return true;
+}
+
+function openBracket(){
+  if(!G.isHost && ROOM_REF){ showToast('Apenas o host pode fazer isso'); return; }
+
+  // Group matches by stage, preserving original order
+  const stages = {};
+  const stageOrder = [];
+  G.matchQueue.forEach((m,idx)=>{
+    if(!stages[m.stage]){ stages[m.stage]=[]; stageOrder.push(m.stage); }
+    stages[m.stage].push(idx);
+  });
+
+  let html = `<div class="bracket-grid">`;
+  stageOrder.forEach(stage=>{
+    html += `<div class="bracket-col">
+      <div class="bracket-stage-title">${stage}</div>
+      ${stages[stage].map(idx=>{
+        const m = G.matchQueue[idx];
+        const r = G.matchResults[idx];
+        const played = idx < G.currentMatchIdx;
+        const isCurrent = idx === G.currentMatchIdx;
+        const jumpable = isMatchJumpable(idx);
+        const score = played ? `${r.goalsA} – ${r.goalsB}` : (isCurrent ? 'AO VIVO' : '? – ?');
+        let cls = 'bracket-match';
+        if(played) cls += ' bracket-played';
+        if(isCurrent) cls += ' bracket-current';
+        if(jumpable) cls += ' bracket-jumpable';
+        return `<div class="${cls}" ${jumpable?`onclick="jumpToMatch(${idx})"`:''}>
+          <div class="bracket-team"><span>${m.a.flag}</span> ${m.a.playerName}</div>
+          <div class="bracket-score">${score}</div>
+          <div class="bracket-team"><span>${m.b.flag}</span> ${m.b.playerName}</div>
+        </div>`;
+      }).join('')}
+    </div>`;
+  });
+  html += `</div>
+  <div style="margin-top:10px;font-size:11px;color:var(--text3);text-align:center">
+    Jogos em <span style="color:var(--gold)">amarelo</span> podem ser assistidos agora — os demais dependem de jogos anteriores dos mesmos jogadores.
+  </div>`;
+
+  document.getElementById('modal-title').textContent = 'Chaveamento';
+  document.getElementById('modal-list').innerHTML = html;
+  document.getElementById('modal').style.display='flex';
+}
+
+function jumpToMatch(idx){
+  if(!G.isHost && ROOM_REF){ showToast('Apenas o host pode fazer isso'); return; }
+  if(!isMatchJumpable(idx)) return;
+  closeModalDirect();
+  if(G.simTimeout) clearTimeout(G.simTimeout);
+  G.currentMatchIdx = idx;
+  setupMatchUI(idx);
+  if(ROOM_REF) ROOM_REF.update({ liveSync: {matchIdx:idx, eventIdx:-1} });
+  hostTick(idx, 0);
 }
 
 function proceedNextMatch(){
