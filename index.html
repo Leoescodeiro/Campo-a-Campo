@@ -68,21 +68,23 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .drawn-label{font-size:10px;letter-spacing:2px;color:var(--text3);margin-bottom:6px;text-transform:uppercase}
 .drawn-country{font-size:26px;font-weight:900;color:var(--white);display:flex;align-items:center;gap:8px}
 .drawn-flag{font-size:20px}
-.drawn-cup{font-size:13px;font-weight:700;color:var(--red);margin-top:3px;letter-spacing:1px}
-.spin-num{font-family:'Inter',monospace;font-variant-numeric:tabular-nums;display:inline-block}
-.drawn-card.spinning{animation:cardShake .12s linear infinite}
-.drawn-card.spinning .drawn-flag{display:inline-block;animation:spinBlur .12s linear infinite}
-.drawn-card.spinning .spin-num{animation:numRoll .1s linear infinite}
-.drawn-card.spinning::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(200,168,75,.12) 50%,transparent 100%);animation:shimmer .5s linear infinite}
+.drawn-cup{font-size:13px;font-weight:700;color:var(--green3);margin-top:3px;letter-spacing:1px}
+.drawn-card.spinning::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(255,210,63,.12) 50%,transparent 100%);animation:shimmer .5s linear infinite}
 .drawn-card.settled{animation:settlePop .5s ease}
-.drawn-card.spinning .drawn-cup{opacity:0}
 #draft-content-left.hide-list-spin .pick-label,
 #draft-content-left.hide-list-spin .player-scroll{filter:blur(6px);opacity:.4;pointer-events:none;transition:none}
-@keyframes cardShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-1px)}75%{transform:translateX(1px)}}
-@keyframes spinBlur{0%{transform:translateY(0) scale(1);opacity:1}50%{transform:translateY(-6px) scale(1.1);opacity:.5}100%{transform:translateY(0) scale(1);opacity:1}}
-@keyframes numRoll{0%{transform:translateY(-2px)}50%{transform:translateY(2px)}100%{transform:translateY(-2px)}}
 @keyframes shimmer{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
-@keyframes settlePop{0%{transform:scale(1.06);box-shadow:0 0 24px rgba(200,168,75,.6)}60%{transform:scale(.98)}100%{transform:scale(1);box-shadow:none}}
+@keyframes settlePop{0%{transform:scale(1.06);box-shadow:0 0 24px rgba(255,210,63,.6)}60%{transform:scale(.98)}100%{transform:scale(1);box-shadow:none}}
+
+/* Casino-style reel */
+.reel-viewport{position:relative;height:54px;overflow:hidden;border-radius:4px;background:rgba(0,0,0,.25);margin:4px 0}
+.reel-strip{display:flex;align-items:center;height:100%;will-change:transform}
+.reel-tile{width:100%;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.drawn-country .reel-viewport{width:100%}
+.reel-tile{min-width:100%}
+.reel-flag{font-size:28px;line-height:1}
+.reel-year{font-size:11px;font-weight:800;color:var(--text2);letter-spacing:1px}
+.reel-marker{position:absolute;top:0;left:0;right:0;bottom:0;border:2px solid var(--gold);border-radius:4px;pointer-events:none;box-shadow:0 0 10px rgba(255,210,63,.4) inset}
 .reroll-info{font-size:10px;letter-spacing:1px;color:var(--text3);text-transform:uppercase;margin-bottom:8px}
 .reroll-btns{display:flex;gap:8px}
 .btn-reroll{background:transparent;border:1px solid var(--border2);color:var(--text2);padding:7px 10px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s ease;display:flex;align-items:center;gap:5px;letter-spacing:.5px;flex:1;justify-content:center}
@@ -274,6 +276,25 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 
 /* SIMULATE SCREEN */
 .sim-screen{padding:28px;max-width:580px;width:100%}
+#screen-penalty.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px);background:var(--bg)}
+.penalty-screen{width:100%;max-width:600px;padding:32px 24px;text-align:center}
+.penalty-header{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:4px;color:var(--text3);text-transform:uppercase;margin-bottom:20px}
+.penalty-teams{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}
+.pen-team{flex:1;text-align:center}
+.pen-team-name{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800;color:var(--text)}
+.pen-team-flag{font-size:36px;margin-bottom:6px}
+.pen-vs{font-size:22px;font-weight:900;color:var(--text3)}
+.penalty-score-row{font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:900;color:var(--text);margin:8px 0;letter-spacing:4px;transition:all .2s}
+.penalty-score-row.goal-flash{color:var(--gold);transform:scale(1.1)}
+.penalty-kicks{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:8px 0;min-height:42px}
+.pen-kick{width:36px;height:36px;border-radius:50%;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .3s;opacity:0;transform:scale(0)}
+.pen-kick.show{opacity:1;transform:scale(1)}
+.pen-kick.scored{background:var(--green2);border-color:var(--green3);animation:penPop .4s cubic-bezier(.34,1.56,.64,1)}
+.pen-kick.missed{background:var(--danger);border-color:var(--danger2);animation:penPop .4s cubic-bezier(.34,1.56,.64,1)}
+.pen-kick.pending{border-style:dashed;opacity:.3;transform:scale(1)}
+@keyframes penPop{0%{transform:scale(0.5)}60%{transform:scale(1.2)}100%{transform:scale(1)}}
+.penalty-message{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:800;color:var(--gold);margin-top:28px;min-height:36px;letter-spacing:1px;animation:msgFadeIn .5s ease}
+@keyframes msgFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .sim-screen h2{font-size:12px;letter-spacing:3px;color:var(--text3);text-transform:uppercase;margin-bottom:16px}
 .sim-team-row{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--bg3);border:1px solid var(--border2);margin-bottom:6px;transition:all .2s}
 .sim-team-row:hover{border-color:var(--border)}
@@ -698,6 +719,17 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 </div>
 
 <!-- RESULTS -->
+<div id="screen-penalty" class="screen">
+  <div class="penalty-screen">
+    <div class="penalty-header" id="pen-header">PÊNALTIS</div>
+    <div class="penalty-teams" id="pen-teams"></div>
+    <div class="penalty-kicks" id="pen-kicks-a"></div>
+    <div class="penalty-score-row" id="pen-score"></div>
+    <div class="penalty-kicks" id="pen-kicks-b"></div>
+    <div class="penalty-message" id="pen-message"></div>
+  </div>
+</div>
+
 <div id="screen-results" class="screen">
   <div class="results-screen" id="results-content"></div>
 </div>
@@ -933,43 +965,51 @@ function checkAndAnimateDraw(teamKey, finalTeam){
 
 function animateDrawnCard(teamKey, finalTeam){
   const card = document.getElementById('drawn-card');
-  const flagEl = document.getElementById('drawn-flag');
-  const nameEl = document.getElementById('drawn-name');
-  const cupEl = document.getElementById('drawn-cup-num');
-  if(!card || !flagEl || !nameEl || !cupEl) return;
+  const countryEl = document.querySelector('.drawn-country');
+  const cupEl = document.querySelector('.drawn-cup');
+  if(!card || !countryEl) return;
 
   card.classList.add('spinning');
   document.getElementById('draft-content-left').classList.add('hide-list-spin');
-  const keys = teamKeys();
-  let delay = 35;
-  let ticks = 0;
-  const maxTicks = 18;
+  if(cupEl) cupEl.style.visibility = 'hidden';
 
-  function tick(){
-    ticks++;
-    const k = rand(keys);
-    const tt = TEAMS_DB[k];
-    flagEl.textContent = tt.flag;
-    nameEl.textContent = k.replace(/\d+/,'').trim();
-    cupEl.textContent = k.match(/\d+/)?.[0]||'';
-    if(ticks < maxTicks){
-      delay = delay + ticks*3; // decelerate like a slot machine
-      G.drawAnimTimeout = setTimeout(tick, delay);
-    } else {
-      // Settle on the real result
-      flagEl.textContent = finalTeam.flag;
-      nameEl.textContent = teamKey.replace(/\d+/,'').trim();
-      cupEl.textContent = teamKey.match(/\d+/)?.[0]||'';
-      card.classList.remove('spinning');
-      card.classList.add('settled');
-      setTimeout(()=>card.classList.remove('settled'), 500);
-      G.isSpinning = false;
-      document.getElementById('draft-content-left').classList.remove('hide-list-spin');
-      G.spinDisplayTeamKey = null;
-      renderDraftLeft(); // reveal the new team's player list now that it settled
-    }
+  const keys = teamKeys();
+  const REEL_LEN = 24;
+  const tiles = [];
+  for(let i=0;i<REEL_LEN-1;i++) tiles.push(TEAMS_DB[rand(keys)]);
+  tiles.push(finalTeam); // final tile lands under the marker
+
+  countryEl.innerHTML = `<div class="reel-viewport"><div class="reel-strip" id="reel-strip">
+    ${tiles.map(tt=>`<div class="reel-tile"><div class="reel-flag">${tt.flag}</div><div class="reel-year">${tt.year||''}</div></div>`).join('')}
+  </div><div class="reel-marker"></div></div>`;
+
+  // Light haptic "ticks" while the reel spins (mobile only)
+  if(navigator.vibrate){
+    for(let i=0;i<6;i++) setTimeout(()=>navigator.vibrate(12), i*180);
   }
-  tick();
+
+  requestAnimationFrame(()=>{
+    const strip = document.getElementById('reel-strip');
+    if(!strip) return;
+    const tileWidth = strip.children[0].offsetWidth;
+    strip.style.transition = 'none';
+    strip.style.transform = 'translateX(0px)';
+    requestAnimationFrame(()=>{
+      strip.style.transition = 'transform 1.6s cubic-bezier(.1,.85,.15,1)';
+      strip.style.transform = `translateX(-${(REEL_LEN-1)*tileWidth}px)`;
+    });
+  });
+
+  setTimeout(()=>{
+    card.classList.remove('spinning');
+    card.classList.add('settled');
+    if(navigator.vibrate) navigator.vibrate([0,40,30,90]);
+    setTimeout(()=>card.classList.remove('settled'), 500);
+    G.isSpinning = false;
+    document.getElementById('draft-content-left').classList.remove('hide-list-spin');
+    G.spinDisplayTeamKey = null;
+    renderDraftLeft(); // rebuilds the card normally and reveals the new player list
+  }, 1750);
 }
 
 // ===== STATE =====
@@ -1232,6 +1272,19 @@ function syncRoomToG(room){
        !document.getElementById('screen-live').classList.contains('active') &&
        !document.getElementById('screen-results').classList.contains('active')){
       goSimulate();
+    }
+
+    // If host has already started playing and we haven't transitioned yet → go live
+    if(room.liveSync && !isHost){
+      if(!document.getElementById('screen-live').classList.contains('active') &&
+         !document.getElementById('screen-results').classList.contains('active')){
+        if(G.matchResults && G.matchQueue && G.matchQueue.length){
+          setScreen('live');
+          renderSpeedPicker();
+          setupMatchUI(room.liveSync.matchIdx || 0);
+          LAST_SYNCED_MATCH = -1;
+        }
+      }
     }
 
     if(document.getElementById('screen-live').classList.contains('active') && room.liveSync){
@@ -1583,8 +1636,8 @@ function renderPitch(){
       const isCompatible = !isSource && G.pendingPlayer && canPlaceInSlot(G.pendingPlayer.p, pos)
         && (!player || G.pendingFromKey); // empty slots always ok; filled slots only as swap targets
 
-      // Eligible players for this slot (for hover picker)
-      const eligible = t.players.filter(x=>!usedNames.has(x.n) && canPlaceInSlot(x.p, pos));
+      // Eligible players for this slot (for hover picker) - hidden while spinning
+      const eligible = G.isSpinning ? [] : t.players.filter(x=>!usedNames.has(x.n) && canPlaceInSlot(x.p, pos));
       const hoverList = eligible.map(pl=>`
         <div class="hover-player-row" onmousedown="event.preventDefault();selectFromHover('${key}','${pos}','${pl.n.replace(/'/g,"\\'")}')" onclick="event.stopPropagation();selectFromHover('${key}','${pos}','${pl.n.replace(/'/g,"\\'")}')">
           <span class="player-num">#${pl.num}</span>
@@ -1910,8 +1963,8 @@ function goSimulate(){
   const simBtn = document.querySelector('.btn-simulate');
   if(simBtn){
     if(ROOM_REF && !G.isHost){
-      simBtn.classList.add('host-only-disabled');
-      simBtn.textContent = 'AGUARDANDO O HOST...';
+      simBtn.classList.remove('host-only-disabled');
+      simBtn.textContent = G.matchResults ? 'ENTRAR NO JOGO →' : 'AGUARDANDO HOST...';
     } else {
       simBtn.classList.remove('host-only-disabled');
       simBtn.textContent = 'SIMULAR A COPA ⚽';
@@ -2030,6 +2083,28 @@ function generateMatchEvents(teamA, teamB, rngFn){
   return {events, goalsA:finalGoals.a, goalsB:finalGoals.b};
 }
 
+// Generates a penalty shootout sequence deterministically.
+// Returns {kicksA, kicksB, winnerTeam} where kicksA/B are arrays of true/false.
+function generatePenalties(rngFn){
+  const kicksA = [], kicksB = [];
+  // Standard 5 kicks each, then sudden death
+  for(let round=0; round<5; round++){
+    kicksA.push(rngFn() < 0.72);
+    kicksB.push(rngFn() < 0.72);
+  }
+  // Check if already decided at 5
+  let gA = kicksA.filter(Boolean).length;
+  let gB = kicksB.filter(Boolean).length;
+  // Sudden death
+  while(gA === gB){
+    const ka = rngFn() < 0.72, kb = rngFn() < 0.72;
+    kicksA.push(ka); kicksB.push(kb);
+    gA += ka?1:0; gB += kb?1:0;
+    if(kicksA.length > 20) break; // safety
+  }
+  return {kicksA, kicksB, winnerTeam: gA > gB ? 'A' : 'B'};
+}
+
 function buildMatchQueue(){
   const teams = [...G.draftedTeams];
   const n = teams.length;
@@ -2086,10 +2161,20 @@ function precomputeTournament(seed){
     if(m.placeholder) continue;
     const r = generateMatchEvents(m.a, m.b, rngFn);
     results[i] = {teamAName:m.a.playerName, teamBName:m.b.playerName, stage:m.stage, goalsA:r.goalsA, goalsB:r.goalsB, events:r.events};
-    stats[m.a.playerName].gf += r.goalsA; stats[m.a.playerName].ga += r.goalsB;
-    stats[m.b.playerName].gf += r.goalsB; stats[m.b.playerName].ga += r.goalsA;
-    if(r.goalsA > r.goalsB){ stats[m.a.playerName].w++; stats[m.a.playerName].pts+=3; stats[m.b.playerName].l++; }
-    else if(r.goalsA < r.goalsB){ stats[m.b.playerName].w++; stats[m.b.playerName].pts+=3; stats[m.a.playerName].l++; }
+    // Add penalties for knockout rounds that end in a draw
+    const isKnockout = m.stage !== 'Fase de Grupos';
+    if(isKnockout && r.goalsA === r.goalsB){
+      results[i].penalties = generatePenalties(rngFn);
+    }
+    const goalsAFinal = r.goalsA;
+    const goalsBFinal = r.goalsB;
+    const pen = results[i].penalties;
+    const teamAWon = pen ? pen.winnerTeam==='A' : goalsAFinal > goalsBFinal;
+    const teamBWon = pen ? pen.winnerTeam==='B' : goalsBFinal > goalsAFinal;
+    stats[m.a.playerName].gf += goalsAFinal; stats[m.a.playerName].ga += goalsBFinal;
+    stats[m.b.playerName].gf += goalsBFinal; stats[m.b.playerName].ga += goalsAFinal;
+    if(teamAWon){ stats[m.a.playerName].w++; stats[m.a.playerName].pts+=3; stats[m.b.playerName].l++; }
+    else if(teamBWon){ stats[m.b.playerName].w++; stats[m.b.playerName].pts+=3; stats[m.a.playerName].l++; }
     else { stats[m.a.playerName].d++; stats[m.a.playerName].pts++; stats[m.b.playerName].d++; stats[m.b.playerName].pts++; }
   }
 
@@ -2107,19 +2192,32 @@ function precomputeTournament(seed){
         queue[i] = {a:ta,b:tb,stage:'Semifinal'};
         const r = generateMatchEvents(ta, tb, rngFn);
         results[i] = {teamAName:ta.playerName, teamBName:tb.playerName, stage:'Semifinal', goalsA:r.goalsA, goalsB:r.goalsB, events:r.events};
-        semiResults.push({teamA:ta, teamB:tb, goalsA:r.goalsA, goalsB:r.goalsB});
+        // Penalties if draw
+        let penA = ta, penB = tb;
+        if(r.goalsA === r.goalsB){
+          const pen = generatePenalties(rngFn);
+          results[i].penalties = pen;
+          penA = pen.winnerTeam==='A' ? ta : tb;
+          penB = pen.winnerTeam==='A' ? tb : ta;
+          semiResults.push({teamA:ta, teamB:tb, goalsA:r.goalsA, goalsB:r.goalsB, penalties:pen, winner:penA});
+        } else {
+          semiResults.push({teamA:ta, teamB:tb, goalsA:r.goalsA, goalsB:r.goalsB, winner: r.goalsA>r.goalsB?ta:tb});
+        }
         semiQueueIdx++;
       }
     }
 
     // Final
-    const finA = semiResults[0].goalsA >= semiResults[0].goalsB ? semiResults[0].teamA : semiResults[0].teamB;
-    const finB = semiResults[1].goalsA >= semiResults[1].goalsB ? semiResults[1].teamA : semiResults[1].teamB;
+    const finA = semiResults[0].winner;
+    const finB = semiResults[1].winner;
     for(let i=0;i<queue.length;i++){
       if(queue[i].placeholder && queue[i].final){
         queue[i] = {a:finA, b:finB, stage:'⚽ Final'};
         const r = generateMatchEvents(finA, finB, rngFn);
         results[i] = {teamAName:finA.playerName, teamBName:finB.playerName, stage:'⚽ Final', goalsA:r.goalsA, goalsB:r.goalsB, events:r.events};
+        if(r.goalsA === r.goalsB){
+          results[i].penalties = generatePenalties(rngFn);
+        }
       }
     }
   }
@@ -2147,7 +2245,14 @@ function loadPrecomputedTournament(precomputed){
 
 function startLiveSimulation(){
   if(ROOM_REF && !G.isHost){
-    showToast('Apenas o host pode iniciar a simulação');
+    // Non-host: transition to live screen to watch - host controls playback via liveSync
+    if(!G.matchResults){
+      showToast('Aguardando host iniciar...');
+      return;
+    }
+    setScreen('live');
+    renderSpeedPicker();
+    setupMatchUI(0);
     return;
   }
   if(!G.matchResults){
@@ -2344,6 +2449,13 @@ function renderLiveStateUpTo(matchIdx, eventIdx){
 let LAST_SYNCED_MATCH = -1;
 function applyLiveSync(sync, isHost){
   if(isHost) return; // host drives its own state via hostTick
+  if(sync.penaltyMatchIdx !== undefined){
+    // Penalty shootout screen
+    const result = G.matchResults[sync.penaltyMatchIdx];
+    const match = G.matchQueue[sync.penaltyMatchIdx];
+    if(result && match) renderPenaltyState(match, result, sync.penaltyIdx || 0);
+    return;
+  }
   if(sync.matchIdx !== LAST_SYNCED_MATCH){
     LAST_SYNCED_MATCH = sync.matchIdx;
     setupMatchUI(sync.matchIdx);
@@ -2363,6 +2475,11 @@ function hostTick(matchIdx, eventIdx){
   const result = G.matchResults[matchIdx];
   if(eventIdx >= result.events.length){
     G.isSimRunning = false;
+    // If it's a draw in a knockout match and has penalties → show penalty screen
+    if(result.goalsA === result.goalsB && result.penalties){
+      startPenaltyTick(matchIdx);
+      return;
+    }
     if(G.autoPlay && matchIdx+1 < G.matchQueue.length){
       G.simTimeout = setTimeout(()=>proceedNextMatch(), 1200 / (G.simSpeed || 1));
     }
@@ -2495,7 +2612,118 @@ function proceedNextMatch(){
   hostTick(nextIdx, 0);
 }
 
-// Computes final standings/champion directly from matchQueue + matchResults
+// ===== PENALTY SHOOTOUT ANIMATION =====
+
+function startPenaltyTick(matchIdx){
+  setScreen('penalty');
+  const result = G.matchResults[matchIdx];
+  const match = G.matchQueue[matchIdx];
+  const totalKicks = result.penalties.kicksA.length;
+  if(ROOM_REF) ROOM_REF.update({ liveSync: {penaltyMatchIdx: matchIdx, penaltyIdx: -1} });
+  renderPenaltyState(match, result, -1);
+
+  let idx = 0;
+  function penTick(){
+    if(idx > totalKicks * 2){
+      // Finished - show final message then proceed
+      if(ROOM_REF) ROOM_REF.update({ liveSync: {penaltyMatchIdx: matchIdx, penaltyIdx: totalKicks*2+1} });
+      setTimeout(()=>{
+        setScreen('live'); // back to live for "next match" button
+        setupMatchUI(matchIdx);
+        renderLiveStateUpTo(matchIdx, result.events.length);
+        if(ROOM_REF) ROOM_REF.update({ liveSync: {matchIdx, eventIdx: result.events.length} });
+        if(G.autoPlay && matchIdx+1 < G.matchQueue.length){
+          G.simTimeout = setTimeout(()=>proceedNextMatch(), 1400);
+        }
+      }, 2800);
+      return;
+    }
+    renderPenaltyState(match, result, idx);
+    if(ROOM_REF) ROOM_REF.update({ liveSync: {penaltyMatchIdx: matchIdx, penaltyIdx: idx} });
+    if(navigator.vibrate) navigator.vibrate(30);
+    idx++;
+    const delay = (1200 / (G.simSpeed || 1));
+    G.simTimeout = setTimeout(penTick, delay);
+  }
+  G.simTimeout = setTimeout(penTick, 800);
+}
+
+function renderPenaltyState(match, result, kickIdx){
+  if(!document.getElementById('screen-penalty').classList.contains('active')){
+    setScreen('penalty');
+  }
+  const pen = result.penalties;
+  const totalKicks = pen.kicksA.length;
+  const finished = kickIdx >= totalKicks * 2;
+
+  // Update header
+  document.getElementById('pen-header').textContent = finished ? '⚽ PÊNALTIS · FIM' : '⚽ COBRANÇAS DE PÊNALTI';
+
+  // Teams
+  document.getElementById('pen-teams').innerHTML = `
+    <div class="pen-team">
+      <div class="pen-team-flag">${match.a.flag}</div>
+      <div class="pen-team-name">${match.a.playerName}</div>
+    </div>
+    <div class="pen-vs">×</div>
+    <div class="pen-team">
+      <div class="pen-team-flag">${match.b.flag}</div>
+      <div class="pen-team-name">${match.b.playerName}</div>
+    </div>`;
+
+  // Count scored so far (each "event" = one kick: evens = A, odds = B)
+  let gA = 0, gB = 0;
+  for(let i=0; i<Math.min(kickIdx, totalKicks*2); i++){
+    if(i%2===0 && i/2 < totalKicks) gA += pen.kicksA[Math.floor(i/2)] ? 1 : 0;
+    else if(i%2===1 && Math.floor(i/2) < totalKicks) gB += pen.kicksB[Math.floor(i/2)] ? 1 : 0;
+  }
+
+  // Score
+  const scoreEl = document.getElementById('pen-score');
+  scoreEl.textContent = `${gA} – ${gB}`;
+
+  // Kick icons for team A
+  function kicksHtml(kicks, revealedCount){
+    return kicks.map((scored,i)=>{
+      if(i < revealedCount){
+        return `<div class="pen-kick show ${scored?'scored':'missed'}">${scored?'⚽':'✕'}</div>`;
+      } else if(i === revealedCount){
+        return `<div class="pen-kick show pending">○</div>`;
+      } else {
+        return `<div class="pen-kick pending">○</div>`;
+      }
+    }).join('');
+  }
+
+  const revA = Math.min(Math.ceil(kickIdx/2), totalKicks);
+  const revB = Math.min(Math.floor(kickIdx/2), totalKicks);
+  document.getElementById('pen-kicks-a').innerHTML = kicksHtml(pen.kicksA, revA);
+  document.getElementById('pen-kicks-b').innerHTML = kicksHtml(pen.kicksB, revB);
+
+  // Message
+  const msgEl = document.getElementById('pen-message');
+  if(finished){
+    const winner = pen.winnerTeam==='A' ? match.a : match.b;
+    const loser = pen.winnerTeam==='A' ? match.b : match.a;
+    msgEl.innerHTML = `${winner.flag} <strong>${winner.playerName}</strong> VENCE NOS PÊNALTIS!<br><small style="font-size:14px;color:var(--text2)">${gA > gB ? gA : gB} – ${gA > gB ? gB : gA}</small>`;
+    scoreEl.classList.add('goal-flash');
+    if(navigator.vibrate) navigator.vibrate([0,60,50,120,50,200]);
+  } else if(kickIdx >= 0){
+    const isAKick = kickIdx%2===0;
+    const kickerTeam = isAKick ? match.a : match.b;
+    const kIdx = Math.floor(kickIdx/2);
+    const scored = isAKick ? pen.kicksA[kIdx] : pen.kicksB[kIdx];
+    if(scored !== undefined){
+      msgEl.textContent = scored
+        ? `${kickerTeam.flag} GOOOOL! ⚽`
+        : `${kickerTeam.flag} Perdeu! ✕`;
+    } else {
+      msgEl.textContent = '';
+    }
+  } else {
+    msgEl.textContent = '';
+  }
+}
 // (deterministic, identical for every client, independent of playback state)
 function computeFinalStandings(){
   const stats = {};
@@ -2509,8 +2737,15 @@ function computeFinalStandings(){
     sb.gf += r.goalsB; sb.ga += r.goalsA;
     if(r.goalsA > r.goalsB){ sa.w++;sa.pts+=3;sb.l++; }
     else if(r.goalsA < r.goalsB){ sb.w++;sb.pts+=3;sa.l++; }
-    else { sa.d++;sa.pts++;sb.d++;sb.pts++; }
-    if(m.stage==='⚽ Final') finalMatch = {teamA:m.a, teamB:m.b, goalsA:r.goalsA, goalsB:r.goalsB};
+    else if(r.penalties){
+      // Penalty shootout decides knockout - count as W/L, not draw
+      if(r.penalties.winnerTeam==='A'){ sa.w++;sa.pts+=3;sb.l++; }
+      else { sb.w++;sb.pts+=3;sa.l++; }
+    } else { sa.d++;sa.pts++;sb.d++;sb.pts++; }
+    if(m.stage==='⚽ Final'){
+      const penWinner = r.penalties ? (r.penalties.winnerTeam==='A' ? m.a : m.b) : null;
+      finalMatch = {teamA:m.a, teamB:m.b, goalsA:r.goalsA, goalsB:r.goalsB, penalties:r.penalties, penWinner};
+    }
   });
   const ranking = Object.entries(stats)
     .sort((a,b)=>b[1].pts-a[1].pts||(b[1].gf-b[1].ga)-(a[1].gf-a[1].ga))
@@ -2524,7 +2759,7 @@ function finishSimulation(){
   const {ranking, finalMatch} = computeFinalStandings();
   let winner;
   if(finalMatch){
-    const winnerTeam = finalMatch.goalsA>=finalMatch.goalsB ? finalMatch.teamA : finalMatch.teamB;
+    const winnerTeam = finalMatch.penWinner || (finalMatch.goalsA>=finalMatch.goalsB ? finalMatch.teamA : finalMatch.teamB);
     winner = {name: winnerTeam.playerName};
     const winTeam = G.draftedTeams.find(t=>t.playerName===winner.name);
     winner = {...ranking.find(r=>r.name===winner.name)||ranking[0], teamData: winTeam};
