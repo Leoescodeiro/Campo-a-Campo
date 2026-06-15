@@ -28,7 +28,7 @@
   --danger:#e0473e;
   --danger2:#ef6b62;
 }
-html,body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;height:100vh;overflow:hidden;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden;overflow-y:auto;margin:0;padding:0}
 h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.btn-simulate,.live-team-name{font-family:'Space Grotesk',sans-serif}
 
 /* HEADER */
@@ -130,10 +130,10 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .btn-outline.active{border-color:var(--gold);color:var(--gold)}
 
 /* LAYOUT */
-.game-layout{display:flex;flex-direction:column;height:calc(100vh - 52px);overflow:hidden}
-.panel-left{background:var(--bg2);border-right:1px solid var(--border);padding:14px 16px;display:flex;flex-direction:column;gap:10px;overflow-y:auto;width:280px;flex-shrink:0}
-.panel-center{background:var(--bg);padding:12px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;overflow:hidden}
-.panel-right{background:var(--bg2);border-left:1px solid var(--border);padding:14px 12px;overflow-y:auto;width:240px;flex-shrink:0}
+.game-layout{display:flex;flex-direction:column;min-height:calc(100vh - 52px)}
+.panel-left{background:var(--bg2);border-right:1px solid var(--border);padding:14px 16px;display:flex;flex-direction:column;gap:10px;overflow-y:auto;width:280px;flex-shrink:0;max-height:calc(100vh - 52px)}
+.panel-center{background:var(--bg);padding:12px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;overflow:auto}
+.panel-right{background:var(--bg2);border-left:1px solid var(--border);padding:14px 12px;overflow-y:auto;width:240px;flex-shrink:0;max-height:calc(100vh - 52px)}
 
 /* FORMATION */
 .formation-grid{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
@@ -239,6 +239,7 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
     radial-gradient(ellipse at 50% 50%, rgba(255,255,255,.05) 0%, transparent 65%),
     linear-gradient(180deg,#2f6a36 0%,#2a6030 45%,#255328 55%,#2a6030 100%);
   position:relative;border:none;overflow:visible;box-shadow:inset 0 0 80px rgba(0,0,0,.35)}
+.pitch.match-over{overflow:hidden}
 .pitch-stripe{position:absolute;width:100%;height:12.5%;opacity:.05;background:#fff}
 .pitch-line{position:absolute;border:1.5px solid rgba(255,255,255,.3);pointer-events:none;box-shadow:0 0 6px rgba(255,255,255,.06)}
 .line-top-box{top:0;left:18%;right:18%;height:18%}
@@ -359,13 +360,13 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 /* SCREENS */
 .screen{display:none}
 .screen.active{display:flex;flex-direction:column}
-#screen-lobby.active,#screen-results.active,#screen-name.active,#screen-room.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px)}
-#screen-setup.active{display:flex;align-items:flex-start;justify-content:center;min-height:calc(100vh - 52px)}
-#screen-draft.active{display:flex;align-items:center;justify-content:center;height:calc(100vh - 52px - 48px);overflow:hidden;background:var(--bg)}
+#screen-lobby.active,#screen-results.active,#screen-name.active,#screen-room.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px);padding:16px 0;box-sizing:border-box}
+#screen-setup.active{display:flex;align-items:flex-start;justify-content:center;min-height:calc(100vh - 52px);padding:16px 0;box-sizing:border-box}
+#screen-draft.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px - 48px);background:var(--bg);padding:12px 0;box-sizing:border-box}
 /* The actual 3-column block sits in the center */
-.draft-block{display:flex;flex-direction:row;height:calc(100vh - 52px - 48px - 24px);width:min(1600px,calc(100vw - 24px));border:1px solid var(--border);overflow:hidden}
-#screen-simulate.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px)}
-#screen-live.active{display:flex;flex-direction:column;height:calc(100vh - 52px);overflow:hidden}
+.draft-block{display:flex;flex-direction:row;height:calc(100vh - 52px - 48px - 24px);min-height:480px;width:min(1600px,calc(100vw - 24px));border:1px solid var(--border);overflow:auto}
+#screen-simulate.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px);padding:16px 0;box-sizing:border-box}
+#screen-live.active{display:flex;flex-direction:column;min-height:calc(100vh - 52px)}
 
 /* LOBBY / ROOM */
 .lobby-screen{text-align:center;padding:40px 20px;max-width:480px;width:100%}
@@ -385,21 +386,82 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .btn-join{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:12px 20px;font-size:13px;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;letter-spacing:1px;white-space:nowrap}
 .btn-join:hover{border-color:var(--text2);background:var(--bg2)}
 
-/* ROOM WAITING SCREEN */
-.room-screen{padding:36px 28px;max-width:520px;width:100%}
-.room-code-box{background:var(--bg3);border:1px solid var(--border2);padding:20px;text-align:center;margin-bottom:20px;position:relative}
-.room-code-label{font-size:10px;letter-spacing:3px;color:var(--text3);text-transform:uppercase;margin-bottom:8px}
-.room-code-big{font-size:48px;font-weight:900;color:var(--gold);letter-spacing:10px;line-height:1}
-.room-code-copy{position:absolute;top:12px;right:12px;background:transparent;border:1px solid var(--border2);color:var(--text3);padding:4px 8px;font-size:10px;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:1px;transition:all .15s}
-.room-code-copy:hover{border-color:var(--text2);color:var(--text)}
-.room-players-label{font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin-bottom:10px}
+/* ROOM WAITING SCREEN — redesigned */
+.room-screen{padding:28px;max-width:880px;width:100%}
+.room-screen-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.room-code-box{
+  background:var(--bg3);border:1px solid var(--border2);
+  padding:14px 22px;display:flex;align-items:center;gap:16px;
+  flex:1;min-width:240px;
+}
+.room-code-label{font-size:10px;letter-spacing:3px;color:var(--text3);text-transform:uppercase;margin-bottom:2px}
+.room-code-big{font-size:32px;font-weight:900;color:var(--gold);letter-spacing:8px;line-height:1}
+.room-code-copy{
+  margin-left:auto;background:transparent;border:1px solid var(--border2);color:var(--text2);
+  padding:8px 14px;font-size:10px;cursor:pointer;font-family:'Inter',sans-serif;
+  letter-spacing:1px;transition:all .15s;font-weight:700;
+}
+.room-code-copy:hover{border-color:var(--gold);color:var(--gold)}
+
+/* Players strip — horizontal chips next to the room code */
+.room-players-box{
+  background:var(--bg3);border:1px solid var(--border2);
+  padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.room-players-label{font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;flex-shrink:0}
+.room-player-chip{
+  display:flex;align-items:center;gap:6px;
+  background:var(--bg2);border:1px solid var(--border);
+  padding:5px 10px 5px 8px;font-size:12px;font-weight:700;color:var(--text);
+}
+.room-player-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.room-player-you{font-size:9px;font-weight:800;color:var(--gold);letter-spacing:1px;margin-left:2px}
+.room-player-host-tag{font-size:9px;font-weight:700;color:var(--text3);letter-spacing:1px;margin-left:2px}
+.btn-kick{background:transparent;border:none;color:var(--text3);width:16px;height:16px;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s;font-family:'Inter',sans-serif;line-height:1;margin-left:2px;border-radius:2px}
+.btn-kick:hover{background:var(--danger);color:#fff}
+
+/* Settings grid — cards laid side by side on desktop, stacked on mobile */
+.room-settings-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;
+}
+.room-card{
+  background:var(--bg3);border:1px solid var(--border2);padding:16px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.room-card.span-2{grid-column:1 / -1}
+.room-card-title{
+  font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;
+  font-weight:800;display:flex;align-items:center;gap:8px;
+}
+.room-card-title .rc-icon{font-size:13px;letter-spacing:0}
+
+/* Compact name field inside its card */
+.room-name-row{display:flex;gap:8px}
+.room-name-row .name-big-input{
+  font-size:15px;padding:10px 14px;margin-bottom:0;text-align:left;font-weight:700;
+}
+.room-name-row .btn-reroll{flex:0 0 auto;padding:0 16px;font-size:11px}
+
+/* Sticky action bar at the bottom */
+.room-action-bar{
+  display:flex;gap:10px;align-items:center;margin-top:4px;
+}
+.room-action-bar .room-waiting-hint{margin:0;flex:1;justify-content:flex-start;text-align:left}
+.room-action-bar .btn-start-room{margin-top:0;flex:1}
+.room-action-bar .btn-leave-room{margin-top:0;width:auto;flex:0 0 auto;padding:15px 22px}
+
+@media (max-width: 768px){
+  .room-screen{padding:16px;max-width:100%}
+  .room-settings-grid{grid-template-columns:1fr}
+  .room-screen-header{flex-direction:column;align-items:stretch}
+  .room-code-box{justify-content:space-between}
+  .room-action-bar{flex-direction:column}
+  .room-action-bar .btn-leave-room{width:100%}
+}
+
+/* (legacy selectors kept for compatibility with any inline references) */
 .room-player-row{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg3);border:1px solid var(--border);margin-bottom:5px}
-.room-player-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.room-player-name{flex:1;font-size:14px;font-weight:700;color:var(--text)}
 .room-player-badge{font-size:10px;letter-spacing:1px;color:var(--text3)}
-.room-player-you{font-size:10px;font-weight:700;color:var(--gold);letter-spacing:1px}
-.btn-kick{background:transparent;border:1px solid var(--danger);color:var(--danger);width:24px;height:24px;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s;font-family:'Inter',sans-serif;line-height:1;border-radius:2px}
-.btn-kick:hover{background:var(--danger);color:#fff;transform:scale(1.1)}
 .room-waiting-hint{font-size:11px;color:var(--text3);letter-spacing:1px;text-align:center;margin:12px 0;display:flex;align-items:center;justify-content:center;gap:8px}
 .btn-start-room{background:var(--red);color:#fff;border:none;padding:15px;font-size:14px;font-weight:900;letter-spacing:2px;cursor:pointer;width:100%;margin-top:12px;font-family:'Inter',sans-serif;transition:all .15s;text-transform:uppercase}
 .btn-start-room:hover{background:var(--red2)}
@@ -911,6 +973,51 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 }
 @keyframes goalBadgePop{0%{transform:scale(0)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
 
+/* ===== VICTORY CELEBRATION — winning team dances alone on the pitch ===== */
+.pitch-player.celebrating{
+  z-index:20;
+  transition:left 1.1s cubic-bezier(.34,1.56,.64,1), top 1.1s cubic-bezier(.34,1.56,.64,1), opacity .4s ease;
+}
+.pitch-player.celebrating .jersey{
+  filter:none!important;
+  animation:celebrateBounce .9s ease-in-out infinite;
+  animation-delay:var(--cel-delay,0s);
+  box-shadow:0 4px 16px rgba(0,0,0,.6),0 0 0 2px rgba(255,210,63,.55),0 0 22px rgba(255,210,63,.35);
+}
+.pitch-player.celebrating .pitch-player-label{
+  opacity:1!important;
+  color:var(--gold);
+  animation:celebrateBounce .9s ease-in-out infinite;
+  animation-delay:var(--cel-delay,0s);
+}
+@keyframes celebrateBounce{
+  0%,100%{transform:translateY(0) rotate(0deg) scale(1)}
+  25%    {transform:translateY(-10px) rotate(-6deg) scale(1.05)}
+  50%    {transform:translateY(0) rotate(0deg) scale(1)}
+  75%    {transform:translateY(-6px) rotate(6deg) scale(1.03)}
+}
+/* Losing/drawing team fades out quietly so the champions own the pitch */
+.pitch-player.match-over-fade{
+  opacity:.18;
+  filter:grayscale(.6) brightness(.5)!important;
+  transition:opacity 1s ease, filter 1s ease;
+}
+.pitch-player.match-over-fade .pitch-player-label{ opacity:.12!important; }
+
+/* Confetti rain for the victory celebration */
+.victory-confetti{
+  position:absolute;top:-6%;
+  width:7px;height:7px;border-radius:1px;
+  pointer-events:none;z-index:18;
+  will-change:transform,opacity;
+  animation:victoryConfettiFall var(--vdur,3s) var(--vdelay,0s) linear forwards;
+}
+@keyframes victoryConfettiFall{
+  0%  {transform:translateY(0) rotate(0deg);opacity:1}
+  85% {opacity:1}
+  100%{transform:translateY(115%) rotate(var(--vrot,360deg));opacity:0}
+}
+
 /* Name tag below jersey */
 .pitch-player-label{
   margin-top:2px;
@@ -930,6 +1037,7 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
   border-radius:1px;
   pointer-events:none;
   z-index:25;
+  will-change:transform,opacity;
   animation:particleFly var(--dur,0.9s) var(--delay,0s) cubic-bezier(.22,.8,.2,1) forwards;
   transform:translate(-50%,-50%);
 }
@@ -1056,14 +1164,30 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
   color:#fff;
   text-shadow:
     0 0 30px rgba(255,255,255,.9),
-    0 0 60px rgba(255,210,63,.7),
-    0 0 100px rgba(255,210,63,.4),
+    0 0 60px var(--goal-glow,rgba(255,210,63,.7)),
+    0 0 100px var(--goal-glow2,rgba(255,210,63,.4)),
     0 4px 0 rgba(0,0,0,.5);
   animation:golPulse 0.5s ease-in-out infinite alternate;
 }
 @keyframes golPulse{
-  from{text-shadow:0 0 30px rgba(255,255,255,.9),0 0 60px rgba(255,210,63,.7),0 0 100px rgba(255,210,63,.4),0 4px 0 rgba(0,0,0,.5)}
-  to  {text-shadow:0 0 50px rgba(255,255,255,1),0 0 90px rgba(255,210,63,1),0 0 140px rgba(255,210,63,.7),0 4px 0 rgba(0,0,0,.5)}
+  from{text-shadow:0 0 30px rgba(255,255,255,.9),0 0 60px var(--goal-glow,rgba(255,210,63,.7)),0 0 100px var(--goal-glow2,rgba(255,210,63,.4)),0 4px 0 rgba(0,0,0,.5)}
+  to  {text-shadow:0 0 50px rgba(255,255,255,1),0 0 90px var(--goal-glow,rgba(255,210,63,1)),0 0 140px var(--goal-glow2,rgba(255,210,63,.7)),0 4px 0 rgba(0,0,0,.5)}
+}
+
+/* Double-goal banner: two balls + team-colored ring */
+.goal-ball-spin.double{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  font-size:52px;
+}
+.goal-ball-spin.double span{
+  animation:ballSpin 0.6s linear infinite;
+  filter:drop-shadow(0 0 16px rgba(255,255,255,.8)) drop-shadow(0 0 32px rgba(255,210,63,.6));
+}
+.goal-ball-spin.double span:nth-child(2){animation-direction:reverse;animation-delay:.05s}
+.goal-banner-streak{
+  font-size:13px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+  color:var(--goal-glow,#ffd23f);margin-top:6px;
+  text-shadow:0 0 16px var(--goal-glow,rgba(255,210,63,.8));
 }
 
 /* Score number flash */
@@ -1101,15 +1225,18 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 /* Screen-wide confetti particles for goal */
 .goal-confetti{
   position:fixed;
+  top:0;left:0;
   width:8px;height:8px;
   border-radius:2px;
   pointer-events:none;
   z-index:301;
+  will-change:transform,opacity;
+  transform:translate(var(--sx),var(--sy));
   animation:confettiFall var(--dur) var(--delay) ease-in forwards;
 }
 @keyframes confettiFall{
-  0%  {transform:translate(0,0) rotate(0deg);opacity:1}
-  100%{transform:translate(var(--tx),var(--ty)) rotate(var(--rot));opacity:0}
+  0%  {transform:translate(var(--sx),var(--sy)) rotate(0deg);opacity:1}
+  100%{transform:translate(calc(var(--sx) + var(--tx)),calc(var(--sy) + var(--ty))) rotate(var(--rot));opacity:0}
 }
 
 /* Shockwave ring from center */
@@ -1118,14 +1245,21 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
   left:50%;top:50%;
   width:40px;height:40px;
   border-radius:50%;
-  border:3px solid rgba(255,210,63,.9);
+  border:3px solid var(--goal-glow,rgba(255,210,63,.9));
   transform:translate(-50%,-50%) scale(0);
   pointer-events:none;
   z-index:299;
+  will-change:transform,opacity;
   animation:shockwaveExpand .7s cubic-bezier(.2,.8,.4,1) forwards;
 }
 .goal-shockwave:nth-child(2){animation-delay:.12s;border-color:rgba(255,255,255,.5)}
-.goal-shockwave:nth-child(3){animation-delay:.24s;border-color:rgba(255,210,63,.3)}
+.goal-shockwave:nth-child(3){animation-delay:.24s;border-color:var(--goal-glow2,rgba(255,210,63,.3))}
+/* Mixed-team double goal: split ring (each half a team color) */
+.goal-shockwave.split-a,.goal-shockwave.split-b{
+  border-style:solid;border-width:3px;
+}
+.goal-shockwave.split-a{border-color:var(--goal-color-a,#e74c3c) var(--goal-color-a,#e74c3c) transparent transparent}
+.goal-shockwave.split-b{border-color:transparent transparent var(--goal-color-b,#2980b9) var(--goal-color-b,#2980b9)}
 @keyframes shockwaveExpand{
   0%  {transform:translate(-50%,-50%) scale(0);opacity:1}
   100%{transform:translate(-50%,-50%) scale(25);opacity:0}
@@ -1355,32 +1489,62 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 <!-- ROOM WAITING -->
 <div id="screen-room" class="screen">
   <div class="room-screen">
-    <div class="room-code-box">
-      <div class="room-code-label">CÓDIGO DA SALA</div>
-      <div class="room-code-big" id="room-code-display">----</div>
-      <button class="room-code-copy" onclick="copyRoomCode()">COPIAR</button>
+
+    <div class="room-screen-header">
+      <div class="room-code-box">
+        <div>
+          <div class="room-code-label">CÓDIGO DA SALA</div>
+          <div class="room-code-big" id="room-code-display">----</div>
+        </div>
+        <button class="room-code-copy" onclick="copyRoomCode()">COPIAR</button>
+      </div>
+      <div class="room-players-box">
+        <span class="room-players-label">JOGADORES</span>
+        <div id="room-players-list" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+      </div>
     </div>
-    <div class="room-players-label">JOGADORES NA SALA</div>
-    <div id="room-players-list"></div>
-    <div class="room-style-label" style="font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin:14px 0 8px">SEU NOME</div>
-    <div class="add-form">
-      <input class="name-big-input" id="room-name-edit" maxlength="20" style="margin-bottom:0">
-      <button class="btn-reroll" onclick="updateMyName()" style="flex:0 0 auto;padding:0 14px">SALVAR</button>
+
+    <div class="room-settings-grid">
+
+      <div class="room-card">
+        <div class="room-card-title"><span class="rc-icon">👤</span>SEU NOME</div>
+        <div class="room-name-row">
+          <input class="name-big-input" id="room-name-edit" maxlength="20">
+          <button class="btn-reroll" onclick="updateMyName()">SALVAR</button>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <div class="room-card-title"><span class="rc-icon">🎮</span>MODO DE JOGO</div>
+        <div class="formation-grid" id="room-mode-picker"></div>
+      </div>
+
+      <div class="room-card span-2">
+        <div class="room-card-title"><span class="rc-icon">📅</span>PERÍODO DAS COPAS</div>
+        <div id="room-period-picker"></div>
+      </div>
+
+      <div class="room-card">
+        <div class="room-card-title"><span class="rc-icon">🎲</span>ROLLS POR JOGADOR</div>
+        <div class="formation-grid" id="room-rolls-picker"></div>
+      </div>
+
+      <div class="room-card">
+        <div class="room-card-title"><span class="rc-icon">⏱</span>TEMPO DE ESCOLHA</div>
+        <div id="room-timer-picker"></div>
+      </div>
+
     </div>
-    <div class="room-style-label" style="font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin:14px 0 8px">MODO DE JOGO</div>
-    <div class="formation-grid" id="room-mode-picker"></div>
-    <div class="room-style-label" style="font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin:14px 0 8px">PERÍODO DAS COPAS</div>
-    <div id="room-period-picker"></div>
-    <div class="room-style-label" style="font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin:14px 0 8px">ROLLS POR JOGADOR</div>
-    <div class="formation-grid" id="room-rolls-picker"></div>
-    <div class="room-style-label" style="font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin:14px 0 8px">TEMPO DE ESCOLHA</div>
-    <div id="room-timer-picker"></div>
-    <div class="room-waiting-hint" id="room-waiting-hint">
-      <div class="loading-dots"><span></span><span></span><span></span></div>
-      Aguardando jogadores...
+
+    <div class="room-action-bar">
+      <div class="room-waiting-hint" id="room-waiting-hint">
+        <div class="loading-dots"><span></span><span></span><span></span></div>
+        Aguardando jogadores...
+      </div>
+      <button class="btn-start-room" id="btn-start-room" onclick="hostStartGame()" disabled>INICIAR JOGO →</button>
+      <button class="btn-leave-room" onclick="leaveRoom()">SAIR DA SALA</button>
     </div>
-    <button class="btn-start-room" id="btn-start-room" onclick="hostStartGame()" disabled>INICIAR JOGO →</button>
-    <button class="btn-leave-room" onclick="leaveRoom()">SAIR DA SALA</button>
+
   </div>
 </div>
 
@@ -1589,8 +1753,9 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 <div class="goal-overlay" id="goal-overlay">
   <div class="goal-backdrop"></div>
   <div class="goal-banner" id="goal-banner">
-    <span class="goal-ball-spin">⚽</span>
-    <div class="goal-banner-text">GOL!</div>
+    <span class="goal-ball-spin" id="goal-ball-spin">⚽</span>
+    <div class="goal-banner-text" id="goal-banner-text">GOL!</div>
+    <div class="goal-banner-streak" id="goal-banner-streak" style="display:none"></div>
     <div class="goal-banner-score" id="goal-banner-score"></div>
     <div class="goal-banner-scorer" id="goal-banner-scorer"></div>
     <div class="goal-banner-time" id="goal-banner-time"></div>
@@ -2369,17 +2534,17 @@ const TACTICAL_STYLES = {
 // RW/LW preenchem suas alas + slot oposto de ala + RM/LM quando necessário.
 const POSITION_COMPAT = {
   GK: ["GK"],
-  CB: ["CB"],
-  RB: ["RB","LB"],
-  LB: ["LB","RB"],
-  DM: ["DM","CM"],
-  CM: ["CM","DM","RM","LM"],
-  AM: ["AM","ST","RW","LW"],
-  RM: ["RM","CM","RW"],
-  LM: ["LM","CM","LW"],
-  RW: ["RW","RM","LW"],
-  LW: ["LW","LM","RW"],
-  ST: ["ST"]
+  CB: ["CB","DM"],
+  RB: ["RB","LB","RM","RW","CB"],
+  LB: ["LB","RB","LM","LW","CB"],
+  DM: ["DM","CM","CB"],
+  CM: ["CM","DM","RM","LM","AM"],
+  AM: ["AM","ST","RW","LW","CM"],
+  RM: ["RM","CM","RW","RB","LM"],
+  LM: ["LM","CM","LW","LB","RM"],
+  RW: ["RW","RM","LW","AM","ST"],
+  LW: ["LW","LM","RW","AM","ST"],
+  ST: ["ST","AM","RW","LW"]
 };
 function canPlaceInSlot(playerPos, slotPos){
   const compat = POSITION_COMPAT[playerPos];
@@ -2797,11 +2962,11 @@ function renderRoomWaiting(players, room, isHost){
   const code = room.code;
   const list = document.getElementById('room-players-list');
   list.innerHTML = players.map((p,i)=>`
-    <div class="room-player-row">
-      <div class="room-player-dot" style="background:${p.color}"></div>
-      <div class="room-player-name">${p.name}</div>
+    <div class="room-player-chip">
+      <span class="room-player-dot" style="background:${p.color}"></span>
+      <span>${p.name}</span>
       ${p.id===MY_PLAYER_ID?'<span class="room-player-you">VOCÊ</span>':''}
-      ${i===0?'<span class="room-player-badge">HOST</span>':''}
+      ${i===0?'<span class="room-player-host-tag">HOST</span>':''}
       ${isHost && p.id!==MY_PLAYER_ID?`<button class="btn-kick" title="Expulsar ${p.name}" onclick="kickPlayer('${p.id}','${p.name.replace(/'/g,"\\'")}')" >✕</button>`:''}
     </div>`).join('');
 
@@ -3785,26 +3950,51 @@ async function autoFillLineup(){
   });
 
   const newLineup = {...G.lineup};
-  let posIdx = 0;
 
-  // Sort players by rating desc so we pick the best available for each slot
+  // Build list of empty slots
+  const emptySlots = [];
+  let posIdx = 0;
+  for(const row of FORMATIONS_DB[G.formation]){
+    for(const pos of row){
+      const key = `${pos}_${posIdx}`;
+      if(!newLineup[key]) emptySlots.push({key, pos});
+      posIdx++;
+    }
+  }
+
+  // Available players sorted by rating desc (prefer higher-rated when multiple matchings exist)
   const available = [...t.players]
     .filter(pl => !usedNames.has(pl.n) && !globalUsed.has(pl.n))
     .sort((a,b) => b.r - a.r);
 
-  for(const row of FORMATIONS_DB[G.formation]){
-    for(const pos of row){
-      const key = `${pos}_${posIdx}`;
-      if(!newLineup[key]){
-        // Pick best available player that fits this position
-        const idx = available.findIndex(pl => canPlaceInSlot(pl.p, pos));
-        if(idx !== -1){
-          const pl = available.splice(idx, 1)[0];
-          newLineup[key] = {n:pl.n, p:pl.p, r:pl.r, num:pl.num};
-          usedNames.add(pl.n);
-        }
+  // Bipartite matching via augmenting paths — guarantees max slot coverage
+  const nSlots = emptySlots.length;
+  const nPlayers = available.length;
+  const slotAssign = new Array(nSlots).fill(-1);
+
+  function tryAssign(playerIdx, visited){
+    for(let s = 0; s < nSlots; s++){
+      if(visited[s]) continue;
+      if(!canPlaceInSlot(available[playerIdx].p, emptySlots[s].pos)) continue;
+      visited[s] = true;
+      if(slotAssign[s] === -1 || tryAssign(slotAssign[s], visited)){
+        slotAssign[s] = playerIdx;
+        return true;
       }
-      posIdx++;
+    }
+    return false;
+  }
+
+  for(let p = 0; p < nPlayers; p++){
+    const visited = new Array(nSlots).fill(false);
+    tryAssign(p, visited);
+  }
+
+  // Apply assignments
+  for(let s = 0; s < nSlots; s++){
+    if(slotAssign[s] !== -1){
+      const pl = available[slotAssign[s]];
+      newLineup[emptySlots[s].key] = {n:pl.n, p:pl.p, r:pl.r, num:pl.num};
     }
   }
 
@@ -4327,10 +4517,16 @@ function setupMatchUI(matchIdx){
   document.getElementById('btn-next-match').disabled = true;
   // Reset ball and player registry
   clearBallCarrier();
+  G.lastGoalTeam = null;
+  G.goalStreak = 0;
+  G.celebrationShown = false;
   PLAYER_REGISTRY.A = [];
   PLAYER_REGISTRY.B = [];
+  document.querySelectorAll('.victory-confetti').forEach(el=>el.remove());
+  const pitchEl = document.getElementById('pitch');
+  if(pitchEl) pitchEl.classList.remove('match-over');
   const ball = document.getElementById('live-ball');
-  if(ball){ ball.style.transition='none'; ball.style.left='50%'; ball.style.top='50%'; ball.className=''; void ball.offsetWidth; ball.style.transition=''; }
+  if(ball){ ball.style.transition='none'; ball.style.left='50%'; ball.style.top='50%'; ball.style.opacity=''; ball.className=''; void ball.offsetWidth; ball.style.transition=''; }
   document.getElementById('live-next-info-short') && (document.getElementById('live-next-info-short').textContent = `${matchIdx+1}/${G.matchQueue.length}`);
   const isHostUser = G.isHost || !ROOM_REF;
   document.getElementById('btn-skip').disabled = !isHostUser;
@@ -4442,12 +4638,25 @@ function renderLiveStateUpTo(matchIdx, eventIdx){
         scoreEl.classList.add('goal-flash');
         setTimeout(()=>scoreEl.classList.remove('goal-flash'), 600);
         const scoreText = `${liveA} – ${liveB}`;
+
+        // Track consecutive goals by the same team across the whole match
+        if(G.lastGoalTeam === ev.team){ G.goalStreak = (G.goalStreak||1) + 1; }
+        else { G.goalStreak = 1; }
+        const mixedFollowUp = (G.lastGoalTeam && G.lastGoalTeam !== ev.team);
+        G.lastGoalTeam = ev.team;
+        const streakCount = G.goalStreak;
+
         // Ball travels ~400ms setup + 450ms transition = ~860ms before arriving
-        // Show banner only when ball physically reaches the goal
+        // Show banner + update score number only when ball physically reaches the goal
         window._GOAL_BANNER_PENDING = false;
+        const goalScoreEl = scoreEl;
+        const finalScoreText = scoreText;
         setTimeout(()=>{
           // Check if the goal animation signaled arrival
-          const fire = ()=>{ showGoalBanner(ev.scorer, ev.min, scoreText); };
+          const fire = ()=>{
+            goalScoreEl.textContent = finalScoreText;
+            showGoalBanner(ev.scorer, ev.min, scoreText, ev.team, {streakCount, mixedFollowUp});
+          };
           if(window._GOAL_BANNER_PENDING){ fire(); window._GOAL_BANNER_PENDING=false; }
           else { setTimeout(fire, 200); }
         }, 870);
@@ -4460,13 +4669,22 @@ function renderLiveStateUpTo(matchIdx, eventIdx){
   if(eventIdx < 0){
     document.getElementById('live-minute').textContent = '1\'';
     document.getElementById('progress-fill').style.width = '0%';
+    G.lastGoalTeam = null;
+    G.goalStreak = 0;
   }
   if(eventIdx >= events.length){
     liveA = result.goalsA; liveB = result.goalsB;
     document.getElementById('progress-fill').style.width = '100%';
   }
 
-  document.getElementById('live-score').textContent = `${liveA} – ${liveB}`;
+  // Only set score immediately for non-goal renders (initial state, scrubbing, finished match).
+  // For a live goal event, the score is updated inside the delayed fire() above so it
+  // changes exactly when the ball arrives and the GOL! banner appears.
+  const lastEv = lastIdx >= 0 ? events[lastIdx] : null;
+  const isLiveGoalTick = lastEv && lastEv.type === 'goal' && eventIdx === lastIdx && eventIdx < events.length;
+  if(!isLiveGoalTick){
+    document.getElementById('live-score').textContent = `${liveA} – ${liveB}`;
+  }
   document.getElementById('shots-a').textContent = shotsA;
   document.getElementById('shots-b').textContent = shotsB;
   updateScorers(scorers, match.a, match.b);
@@ -4479,6 +4697,82 @@ function renderLiveStateUpTo(matchIdx, eventIdx){
     const remaining = G.matchQueue.slice(matchIdx+1);
     document.getElementById('btn-next-match').textContent = remaining.length===0 ? 'VER RESULTADOS →' : 'PRÓXIMO JOGO →';
     document.getElementById('btn-next-match').className = 'btn-right-action primary';
+
+    // Kick off the victory celebration once the match is fully over
+    if(!G.celebrationShown){
+      G.celebrationShown = true;
+      setTimeout(()=>celebrateMatchEnd(result), 350);
+    }
+  }
+}
+
+// ===== VICTORY CELEBRATION =====
+// Winning team dances around the pitch alone; losing/drawing team fades out.
+function celebrateMatchEnd(result){
+  if(IDLE_TIMER) clearInterval(IDLE_TIMER);
+  clearBallCarrier();
+
+  const winner = result.goalsA > result.goalsB ? 'A'
+               : result.goalsB > result.goalsA ? 'B'
+               : null; // draw — no solo celebration
+
+  const loser = winner === 'A' ? 'B' : winner === 'B' ? 'A' : null;
+
+  // Fade out the ball
+  const ball = document.getElementById('live-ball');
+  if(ball) ball.style.opacity = '0';
+
+  if(!winner){
+    // Draw: both teams take a bow together — gentle bounce for everyone
+    PLAYER_REGISTRY.A.concat(PLAYER_REGISTRY.B).forEach((reg,i)=>{
+      reg.el.classList.add('celebrating');
+      reg.el.style.setProperty('--cel-delay', ((i % 6) * 0.08) + 's');
+    });
+    return;
+  }
+
+  // Loser fades into the background
+  PLAYER_REGISTRY[loser].forEach(reg=>{
+    reg.el.classList.add('match-over-fade');
+  });
+
+  // Winner spreads out across the whole pitch and dances
+  const spreadSpots = [
+    {x:50,y:50},{x:30,y:30},{x:70,y:30},{x:30,y:70},{x:70,y:70},
+    {x:18,y:50},{x:82,y:50},{x:50,y:18},{x:50,y:82},{x:38,y:50},
+    {x:62,y:50}
+  ];
+  PLAYER_REGISTRY[winner].forEach((reg,i)=>{
+    reg.el.classList.remove('far-from-ball','mid-from-ball','has-ball');
+    reg.el.classList.add('celebrating');
+    reg.el.style.setProperty('--cel-delay', ((i % 8) * 0.07) + 's');
+    const spot = spreadSpots[i % spreadSpots.length];
+    const jx = spot.x + (Math.random()-0.5)*8;
+    const jy = spot.y + (Math.random()-0.5)*8;
+    reg.el.dataset.curX = jx;
+    reg.el.dataset.curY = jy;
+    reg.el.style.left = jx + '%';
+    reg.el.style.top  = jy + '%';
+  });
+
+  // Confetti rain over the pitch
+  const pitchEl = document.getElementById('pitch');
+  if(pitchEl){
+    pitchEl.classList.add('match-over');
+    const colors = winner === 'A'
+      ? ['#e74c3c','#ff6b6b','#fff','#ffd23f']
+      : ['#2980b9','#5dade2','#fff','#ffd23f'];
+    for(let i=0;i<36;i++){
+      const c = document.createElement('div');
+      c.className = 'victory-confetti';
+      c.style.left = (Math.random()*100) + '%';
+      c.style.background = colors[i % colors.length];
+      c.style.width = c.style.height = (5 + Math.random()*6) + 'px';
+      c.style.setProperty('--vdur', (2.2 + Math.random()*2.2) + 's');
+      c.style.setProperty('--vdelay', (Math.random()*2.5) + 's');
+      c.style.setProperty('--vrot', ((Math.random()-0.5)*720) + 'deg');
+      pitchEl.appendChild(c);
+    }
   }
 }
 
@@ -4667,9 +4961,26 @@ function updateScorers(scorers, teamA, teamB){
   }).join('');
 }
 
-function showGoalBanner(scorer, min, scoreText){
+function showGoalBanner(scorer, min, scoreText, team, opts){
+  opts = opts || {};
   const overlay = document.getElementById('goal-overlay');
   const banner  = document.getElementById('goal-banner');
+  const ballEl  = document.getElementById('goal-ball-spin');
+  const textEl  = document.getElementById('goal-banner-text');
+  const streakEl= document.getElementById('goal-banner-streak');
+
+  // Team colors (A=red, B=blue — matches live pitch)
+  const colorA = '#e74c3c', glowA = 'rgba(231,76,60,.7)', glow2A = 'rgba(231,76,60,.4)';
+  const colorB = '#2980b9', glowB = 'rgba(41,128,185,.7)', glow2B = 'rgba(41,128,185,.4)';
+  const isA = team === 'A';
+  const mainColor = isA ? colorA : colorB;
+  const glow  = isA ? glowA  : glowB;
+  const glow2 = isA ? glow2A : glow2B;
+
+  // Apply team color to the GOL! text glow
+  banner.style.setProperty('--goal-glow', glow);
+  banner.style.setProperty('--goal-glow2', glow2);
+  textEl.style.color = mainColor;
 
   // Fill in text
   document.getElementById('goal-banner-scorer').textContent = scorer.toUpperCase();
@@ -4677,21 +4988,48 @@ function showGoalBanner(scorer, min, scoreText){
   const scoreEl = document.getElementById('goal-banner-score');
   if(scoreEl && scoreText) scoreEl.textContent = scoreText;
 
+  // ---- Streak variant: consecutive goals by the same team → double ball + extra confetti
+  const streak = opts.streakCount || 1;
+  if(streak >= 2){
+    ballEl.className = 'goal-ball-spin double';
+    ballEl.innerHTML = '<span>⚽</span><span>⚽</span>';
+    streakEl.style.display = 'block';
+    streakEl.style.color = mainColor;
+    streakEl.style.textShadow = `0 0 16px ${glow}`;
+    streakEl.textContent = streak === 2 ? 'DOBRADINHA!' : `${streak}º GOL EM SEQUÊNCIA!`;
+  } else {
+    ballEl.className = 'goal-ball-spin';
+    ballEl.innerHTML = '⚽';
+    streakEl.style.display = 'none';
+  }
+
   // Show overlay
   overlay.classList.remove('hide');
   overlay.classList.add('show');
 
-  // Spawn shockwave rings
+  // ---- Shockwave rings
+  const mixed = !!opts.mixedFollowUp; // a goal from the OTHER team came right before this one
   for(let i=0;i<3;i++){
     const sw = document.createElement('div');
-    sw.className = 'goal-shockwave';
+    if(mixed && i < 2){
+      // Split ring: half in the previous team's color, half in this team's color
+      sw.className = 'goal-shockwave ' + (i===0 ? 'split-a' : 'split-b');
+      sw.style.setProperty('--goal-color-a', isA ? colorB : colorA);
+      sw.style.setProperty('--goal-color-b', isA ? colorA : colorB);
+    } else {
+      sw.className = 'goal-shockwave';
+    }
     document.body.appendChild(sw);
     setTimeout(()=>sw.remove(), 900);
   }
 
-  // Spawn full-screen confetti
-  const colors = ['#ffd23f','#fff','#4ade80','#e74c3c','#2980b9','#ff6b6b','#ffd23f','#fff'];
-  for(let i=0;i<55;i++){
+  // ---- Confetti (team-colored, lighter particle count for performance)
+  const teamColors = isA
+    ? ['#e74c3c','#ff6b6b','#fff','#ffd23f']
+    : ['#2980b9','#5dade2','#fff','#ffd23f'];
+  const baseCount = streak >= 2 ? 40 : 28; // a bit more for a streak, but still capped
+  const colors = mixed ? ['#e74c3c','#2980b9','#ffd23f','#fff'] : teamColors;
+  for(let i=0;i<baseCount;i++){
     const c = document.createElement('div');
     c.className = 'goal-confetti';
     const startX = 20 + Math.random()*60; // vw
@@ -4702,7 +5040,7 @@ function showGoalBanner(scorer, min, scoreText){
     const delay = (Math.random()*0.5) + 's';
     const rot = (Math.random()-0.5)*720 + 'deg';
     c.style.cssText = `
-      left:${startX}vw;top:${startY}vh;
+      --sx:${startX}vw;--sy:${startY}vh;
       background:${colors[i%colors.length]};
       width:${5+Math.random()*8}px;height:${5+Math.random()*8}px;
       --tx:${tx};--ty:${ty};--dur:${dur};--delay:${delay};--rot:${rot};
@@ -4867,6 +5205,7 @@ function startIdleLoop(){
     const all = PLAYER_REGISTRY.A.concat(PLAYER_REGISTRY.B);
     // Pick ~60% of players to drift each tick
     all.forEach(reg => {
+      if(reg.el.classList.contains('celebrating') || reg.el.classList.contains('match-over-fade')) return;
       if(Math.random() > 0.55) return;
       // Small drift around baseX/Y — closer to base = less drift, further = pull back
       const curX = parseFloat(reg.el.dataset.curX || reg.baseX);
