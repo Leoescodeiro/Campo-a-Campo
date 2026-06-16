@@ -6136,10 +6136,16 @@
         "num": 1
       },
       {
-        "n": "Danilo",
-        "p": "RB",
+        "n": "Weverton",
+        "p": "GK",
         "r": 82,
-        "num": 13
+        "num": 12
+      },
+      {
+        "n": "Ederson",
+        "p": "GK",
+        "r": 88,
+        "num": 23
       },
       {
         "n": "Marquinhos",
@@ -6150,56 +6156,134 @@
       {
         "n": "Gabriel Magalhães",
         "p": "CB",
-        "r": 86,
-        "num": 5
+        "r": 87,
+        "num": 3
       },
       {
-        "n": "Alex Telles",
+        "n": "Bremer",
+        "p": "CB",
+        "r": 86,
+        "num": 14
+      },
+      {
+        "n": "Leo Pereira",
+        "p": "CB",
+        "r": 82,
+        "num": 15
+      },
+      {
+        "n": "Danilo",
+        "p": "RB",
+        "r": 82,
+        "num": 13
+      },
+      {
+        "n": "Alex Sandro",
         "p": "LB",
         "r": 80,
         "num": 6
       },
       {
+        "n": "Douglas Santos",
+        "p": "LB",
+        "r": 79,
+        "num": 16
+      },
+      {
+        "n": "Ibañez",
+        "p": "CB",
+        "r": 81,
+        "num": 24
+      },
+      {
+        "n": "Bruno Guimarães",
+        "p": "DM",
+        "r": 89,
+        "num": 8
+      },
+      {
         "n": "Casemiro",
         "p": "DM",
-        "r": 88,
+        "r": 86,
         "num": 5
       },
       {
         "n": "Lucas Paquetá",
         "p": "CM",
         "r": 88,
-        "num": 10
+        "num": 20
       },
       {
-        "n": "Gerson",
+        "n": "Fabinho",
+        "p": "DM",
+        "r": 82,
+        "num": 17
+      },
+      {
+        "n": "Danilo Santos",
         "p": "CM",
-        "r": 83,
-        "num": 8
+        "r": 80,
+        "num": 18
       },
       {
         "n": "Vinicius Jr.",
         "p": "LW",
-        "r": 95,
-        "num": 7
+        "r": 96,
+        "num": 11
+      },
+      {
+        "n": "Raphinha",
+        "p": "RW",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Neymar",
+        "p": "AM",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Gabriel Martinelli",
+        "p": "LW",
+        "r": 86,
+        "num": 26
       },
       {
         "n": "Endrick",
         "p": "ST",
         "r": 84,
+        "num": 19
+      },
+      {
+        "n": "Matheus Cunha",
+        "p": "ST",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "Igor Thiago",
+        "p": "ST",
+        "r": 82,
         "num": 9
       },
       {
-        "n": "Rodrygo",
+        "n": "Luiz Henrique",
         "p": "RW",
-        "r": 88,
-        "num": 11
+        "r": 83,
+        "num": 21
       },
       {
-        "n": "Estevão",
-        "p": "AM",
+        "n": "Rayan",
+        "p": "ST",
+        "r": 81,
+        "num": 22
+      },
+      {
+        "n": "Éderson",
+        "p": "DM",
         "r": 83,
-        "num": 17
+        "num": 25
       }
     ]
   },
@@ -6228,7 +6312,7 @@
       {
         "n": "Otamendi",
         "p": "CB",
-        "r": 84,
+        "r": 83,
         "num": 19
       },
       {
@@ -6246,25 +6330,19 @@
       {
         "n": "Enzo Fernández",
         "p": "CM",
-        "r": 86,
+        "r": 87,
         "num": 24
       },
       {
         "n": "Mac Allister",
-        "p": "CM",
-        "r": 86,
+        "p": "DM",
+        "r": 87,
         "num": 20
-      },
-      {
-        "n": "Di María",
-        "p": "RW",
-        "r": 84,
-        "num": 11
       },
       {
         "n": "Messi",
         "p": "AM",
-        "r": 98,
+        "r": 97,
         "num": 10
       },
       {
@@ -6278,6 +6356,24 @@
         "p": "ST",
         "r": 87,
         "num": 9
+      },
+      {
+        "n": "Dybala",
+        "p": "RW",
+        "r": 85,
+        "num": 21
+      },
+      {
+        "n": "Lo Celso",
+        "p": "AM",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Acuña",
+        "p": "LB",
+        "r": 81,
+        "num": 8
       }
     ]
   },
@@ -6324,13 +6420,13 @@
       {
         "n": "Camavinga",
         "p": "CM",
-        "r": 86,
+        "r": 87,
         "num": 6
       },
       {
         "n": "Griezmann",
         "p": "AM",
-        "r": 88,
+        "r": 87,
         "num": 7
       },
       {
@@ -6341,7 +6437,7 @@
       },
       {
         "n": "Mbappé",
-        "p": "LW",
+        "p": "ST",
         "r": 98,
         "num": 10
       },
@@ -6353,9 +6449,21 @@
       },
       {
         "n": "Olise",
-        "p": "RW",
-        "r": 84,
+        "p": "AM",
+        "r": 85,
         "num": 25
+      },
+      {
+        "n": "Rabiot",
+        "p": "CM",
+        "r": 83,
+        "num": 14
+      },
+      {
+        "n": "Coman",
+        "p": "LW",
+        "r": 83,
+        "num": 20
       }
     ]
   },
@@ -6385,13 +6493,13 @@
         "n": "Laporte",
         "p": "CB",
         "r": 85,
-        "num": 14
+        "num": 4
       },
       {
-        "n": "Grimaldo",
+        "n": "Cucurella",
         "p": "LB",
-        "r": 85,
-        "num": 5
+        "r": 83,
+        "num": 17
       },
       {
         "n": "Rodri",
@@ -6414,7 +6522,7 @@
       {
         "n": "Lamine Yamal",
         "p": "RW",
-        "r": 90,
+        "r": 91,
         "num": 19
       },
       {
@@ -6434,6 +6542,18 @@
         "p": "AM",
         "r": 86,
         "num": 10
+      },
+      {
+        "n": "Ferran Torres",
+        "p": "LW",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Joselu",
+        "p": "ST",
+        "r": 80,
+        "num": 19
       }
     ]
   },
@@ -6450,7 +6570,7 @@
       {
         "n": "Kimmich",
         "p": "RB",
-        "r": 91,
+        "r": 90,
         "num": 6
       },
       {
@@ -6466,39 +6586,33 @@
         "num": 4
       },
       {
-        "n": "Raum",
+        "n": "Mittelstädt",
         "p": "LB",
-        "r": 83,
+        "r": 82,
         "num": 22
       },
       {
-        "n": "Kroos",
-        "p": "DM",
-        "r": 90,
-        "num": 8
-      },
-      {
         "n": "Andrich",
-        "p": "CM",
+        "p": "DM",
         "r": 82,
         "num": 23
       },
       {
         "n": "Gündogan",
         "p": "CM",
-        "r": 87,
+        "r": 86,
         "num": 21
       },
       {
         "n": "Musiala",
         "p": "AM",
-        "r": 91,
+        "r": 92,
         "num": 10
       },
       {
         "n": "Wirtz",
         "p": "AM",
-        "r": 92,
+        "r": 93,
         "num": 17
       },
       {
@@ -6512,6 +6626,24 @@
         "p": "RW",
         "r": 83,
         "num": 10
+      },
+      {
+        "n": "Fullkrug",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Sané",
+        "p": "LW",
+        "r": 85,
+        "num": 19
+      },
+      {
+        "n": "Schlotterbeck",
+        "p": "CB",
+        "r": 83,
+        "num": 5
       }
     ]
   },
@@ -6522,7 +6654,7 @@
       {
         "n": "Diogo Costa",
         "p": "GK",
-        "r": 86,
+        "r": 87,
         "num": 1
       },
       {
@@ -6532,16 +6664,16 @@
         "num": 20
       },
       {
-        "n": "Pepe",
-        "p": "CB",
-        "r": 82,
-        "num": 3
-      },
-      {
         "n": "Rúben Dias",
         "p": "CB",
         "r": 92,
         "num": 6
+      },
+      {
+        "n": "Gonçalo Inácio",
+        "p": "CB",
+        "r": 85,
+        "num": 3
       },
       {
         "n": "Nuno Mendes",
@@ -6551,14 +6683,14 @@
       },
       {
         "n": "Vitinha",
-        "p": "CM",
-        "r": 86,
+        "p": "DM",
+        "r": 87,
         "num": 16
       },
       {
         "n": "Bernardo Silva",
         "p": "CM",
-        "r": 90,
+        "r": 91,
         "num": 10
       },
       {
@@ -6576,7 +6708,7 @@
       {
         "n": "Cristiano Ronaldo",
         "p": "ST",
-        "r": 88,
+        "r": 86,
         "num": 7
       },
       {
@@ -6590,6 +6722,18 @@
         "p": "ST",
         "r": 85,
         "num": 18
+      },
+      {
+        "n": "João Félix",
+        "p": "AM",
+        "r": 84,
+        "num": 21
+      },
+      {
+        "n": "Palhinha",
+        "p": "DM",
+        "r": 85,
+        "num": 26
       }
     ]
   },
@@ -6600,7 +6744,7 @@
       {
         "n": "Pickford",
         "p": "GK",
-        "r": 85,
+        "r": 84,
         "num": 1
       },
       {
@@ -6616,9 +6760,9 @@
         "num": 5
       },
       {
-        "n": "Maguire",
+        "n": "Guehi",
         "p": "CB",
-        "r": 82,
+        "r": 84,
         "num": 6
       },
       {
@@ -6630,7 +6774,7 @@
       {
         "n": "Rice",
         "p": "DM",
-        "r": 90,
+        "r": 91,
         "num": 4
       },
       {
@@ -6648,13 +6792,13 @@
       {
         "n": "Foden",
         "p": "AM",
-        "r": 90,
+        "r": 89,
         "num": 20
       },
       {
         "n": "Kane",
         "p": "ST",
-        "r": 92,
+        "r": 91,
         "num": 9
       },
       {
@@ -6664,88 +6808,22 @@
         "num": 24
       },
       {
+        "n": "Rashford",
+        "p": "LW",
+        "r": 83,
+        "num": 11
+      },
+      {
         "n": "Gordon",
         "p": "LW",
         "r": 82,
-        "num": 11
-      }
-    ]
-  },
-  "Itália 2026": {
-    "flag": "🇮🇹",
-    "year": 2026,
-    "players": [
-      {
-        "n": "Donnarumma",
-        "p": "GK",
-        "r": 91,
-        "num": 1
-      },
-      {
-        "n": "Di Lorenzo",
-        "p": "RB",
-        "r": 84,
-        "num": 2
-      },
-      {
-        "n": "Bastoni",
-        "p": "LB",
-        "r": 88,
-        "num": 23
-      },
-      {
-        "n": "Calafiori",
-        "p": "CB",
-        "r": 85,
-        "num": 15
-      },
-      {
-        "n": "Mancini",
-        "p": "CB",
-        "r": 82,
-        "num": 23
-      },
-      {
-        "n": "Tonali",
-        "p": "DM",
-        "r": 87,
-        "num": 8
-      },
-      {
-        "n": "Barella",
-        "p": "CM",
-        "r": 88,
-        "num": 18
-      },
-      {
-        "n": "Frattesi",
-        "p": "CM",
-        "r": 83,
-        "num": 16
-      },
-      {
-        "n": "Raspadori",
-        "p": "AM",
-        "r": 82,
-        "num": 10
-      },
-      {
-        "n": "Scamacca",
-        "p": "ST",
-        "r": 83,
-        "num": 9
-      },
-      {
-        "n": "Chiesa",
-        "p": "RW",
-        "r": 84,
         "num": 14
       },
       {
-        "n": "Pellegrini",
-        "p": "LW",
-        "r": 83,
-        "num": 10
+        "n": "Mainoo",
+        "p": "CM",
+        "r": 82,
+        "num": 26
       }
     ]
   },
@@ -6785,14 +6863,14 @@
       },
       {
         "n": "Frenkie de Jong",
-        "p": "CM",
+        "p": "DM",
         "r": 87,
         "num": 21
       },
       {
         "n": "Gravenberch",
         "p": "CM",
-        "r": 85,
+        "r": 86,
         "num": 14
       },
       {
@@ -6804,26 +6882,38 @@
       {
         "n": "Xavi Simons",
         "p": "AM",
-        "r": 85,
+        "r": 86,
         "num": 17
       },
       {
-        "n": "Depay",
+        "n": "Weghorst",
         "p": "ST",
-        "r": 83,
-        "num": 10
+        "r": 82,
+        "num": 19
       },
       {
         "n": "Zirkzee",
         "p": "ST",
-        "r": 82,
+        "r": 83,
         "num": 23
       },
       {
         "n": "Malen",
         "p": "RW",
-        "r": 81,
+        "r": 82,
         "num": 7
+      },
+      {
+        "n": "Reijnders",
+        "p": "CM",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "van den Berg",
+        "p": "CB",
+        "r": 80,
+        "num": 15
       }
     ]
   },
@@ -6863,27 +6953,27 @@
       },
       {
         "n": "Berge",
-        "p": "CM",
-        "r": 83,
+        "p": "DM",
+        "r": 84,
         "num": 8
       },
       {
         "n": "Thorsby",
-        "p": "DM",
+        "p": "CM",
         "r": 79,
         "num": 6
-      },
-      {
-        "n": "Elyounoussi",
-        "p": "RW",
-        "r": 80,
-        "num": 11
       },
       {
         "n": "Odegaard",
         "p": "AM",
         "r": 91,
         "num": 10
+      },
+      {
+        "n": "Nusa",
+        "p": "LW",
+        "r": 83,
+        "num": 7
       },
       {
         "n": "Haaland",
@@ -6898,10 +6988,22 @@
         "num": 22
       },
       {
-        "n": "Nusa",
-        "p": "LW",
-        "r": 82,
-        "num": 7
+        "n": "Elyounoussi",
+        "p": "RW",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "Odegaard A.",
+        "p": "CM",
+        "r": 79,
+        "num": 20
+      },
+      {
+        "n": "Johnsen",
+        "p": "CB",
+        "r": 79,
+        "num": 16
       }
     ]
   },
@@ -6918,7 +7020,7 @@
       {
         "n": "Hakimi",
         "p": "RB",
-        "r": 90,
+        "r": 91,
         "num": 2
       },
       {
@@ -6948,7 +7050,7 @@
       {
         "n": "Ounahi",
         "p": "CM",
-        "r": 83,
+        "r": 84,
         "num": 8
       },
       {
@@ -6980,6 +7082,18 @@
         "p": "CM",
         "r": 80,
         "num": 18
+      },
+      {
+        "n": "Attiat-Allah",
+        "p": "LB",
+        "r": 80,
+        "num": 14
+      },
+      {
+        "n": "El Yamiq",
+        "p": "CB",
+        "r": 80,
+        "num": 13
       }
     ]
   },
@@ -7000,16 +7114,16 @@
         "num": 2
       },
       {
+        "n": "Richards",
+        "p": "CB",
+        "r": 83,
+        "num": 4
+      },
+      {
         "n": "Long",
         "p": "CB",
         "r": 79,
         "num": 3
-      },
-      {
-        "n": "Richards",
-        "p": "CB",
-        "r": 82,
-        "num": 4
       },
       {
         "n": "Robinson",
@@ -7018,34 +7132,34 @@
         "num": 12
       },
       {
+        "n": "Adams T.",
+        "p": "DM",
+        "r": 84,
+        "num": 4
+      },
+      {
         "n": "McKennie",
         "p": "CM",
         "r": 82,
         "num": 8
       },
       {
-        "n": "Adams T.",
-        "p": "DM",
-        "r": 83,
-        "num": 4
-      },
-      {
         "n": "Musah",
         "p": "CM",
-        "r": 82,
+        "r": 83,
         "num": 6
-      },
-      {
-        "n": "Reyna",
-        "p": "AM",
-        "r": 81,
-        "num": 7
       },
       {
         "n": "Pulisic",
         "p": "AM",
-        "r": 85,
+        "r": 86,
         "num": 10
+      },
+      {
+        "n": "Reyna",
+        "p": "RW",
+        "r": 82,
+        "num": 7
       },
       {
         "n": "Balogun",
@@ -7058,6 +7172,18 @@
         "p": "RW",
         "r": 80,
         "num": 21
+      },
+      {
+        "n": "Morris",
+        "p": "LW",
+        "r": 79,
+        "num": 13
+      },
+      {
+        "n": "Acosta",
+        "p": "DM",
+        "r": 80,
+        "num": 5
       }
     ]
   },
@@ -7086,13 +7212,13 @@
       {
         "n": "Machida",
         "p": "CB",
-        "r": 80,
+        "r": 81,
         "num": 5
       },
       {
         "n": "Nagatomo",
         "p": "LB",
-        "r": 78,
+        "r": 79,
         "num": 5
       },
       {
@@ -7122,13 +7248,13 @@
       {
         "n": "Ueda",
         "p": "ST",
-        "r": 82,
+        "r": 83,
         "num": 14
       },
       {
         "n": "Mitoma",
         "p": "LW",
-        "r": 85,
+        "r": 86,
         "num": 16
       },
       {
@@ -7136,6 +7262,18 @@
         "p": "RW",
         "r": 83,
         "num": 11
+      },
+      {
+        "n": "Kamada",
+        "p": "AM",
+        "r": 82,
+        "num": 9
+      },
+      {
+        "n": "Tomiyasu",
+        "p": "RB",
+        "r": 82,
+        "num": 13
       }
     ]
   },
@@ -7146,7 +7284,7 @@
       {
         "n": "Ochoa",
         "p": "GK",
-        "r": 84,
+        "r": 83,
         "num": 13
       },
       {
@@ -7156,34 +7294,34 @@
         "num": 19
       },
       {
-        "n": "Araujo",
-        "p": "CB",
-        "r": 81,
-        "num": 3
-      },
-      {
         "n": "Montes",
         "p": "CB",
         "r": 82,
         "num": 3
       },
       {
-        "n": "Gallardo",
-        "p": "LB",
-        "r": 79,
-        "num": 16
+        "n": "Araujo J.",
+        "p": "CB",
+        "r": 81,
+        "num": 22
       },
       {
-        "n": "Guardado",
-        "p": "DM",
+        "n": "Gallardo",
+        "p": "LB",
         "r": 80,
-        "num": 18
+        "num": 16
       },
       {
         "n": "Herrera H.",
-        "p": "CM",
-        "r": 80,
+        "p": "DM",
+        "r": 81,
         "num": 16
+      },
+      {
+        "n": "Rodríguez C.",
+        "p": "CM",
+        "r": 82,
+        "num": 7
       },
       {
         "n": "Lozano",
@@ -7192,10 +7330,10 @@
         "num": 22
       },
       {
-        "n": "Rodríguez C.",
-        "p": "CM",
-        "r": 82,
-        "num": 7
+        "n": "Vega O.",
+        "p": "AM",
+        "r": 81,
+        "num": 10
       },
       {
         "n": "Jiménez",
@@ -7210,10 +7348,22 @@
         "num": 8
       },
       {
-        "n": "Vega O.",
-        "p": "AM",
+        "n": "Lainez",
+        "p": "RW",
+        "r": 79,
+        "num": 20
+      },
+      {
+        "n": "Alvarado",
+        "p": "CM",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Pineda",
+        "p": "CM",
         "r": 80,
-        "num": 10
+        "num": 9
       }
     ]
   },
@@ -9104,6 +9254,1452 @@
         "p": "LW",
         "r": 82,
         "num": 10
+      }
+    ]
+  },
+  "Hungria 1938": {
+    "flag": "🇭🇺",
+    "year": 1938,
+    "players": [
+      {
+        "n": "Szabó Á.",
+        "p": "GK",
+        "r": 80,
+        "num": 1
+      },
+      {
+        "n": "Korányi",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Bíró",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Lázár",
+        "p": "CB",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Henni",
+        "p": "LB",
+        "r": 77,
+        "num": 3
+      },
+      {
+        "n": "Szalay",
+        "p": "DM",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Sárosi",
+        "p": "CM",
+        "r": 91,
+        "num": 9
+      },
+      {
+        "n": "Vincze",
+        "p": "CM",
+        "r": 78,
+        "num": 8
+      },
+      {
+        "n": "Zsengellér",
+        "p": "ST",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Titkos",
+        "p": "LW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Kohut",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Toldi",
+        "p": "AM",
+        "r": 81,
+        "num": 12
+      },
+      {
+        "n": "Géza Kocsis",
+        "p": "ST",
+        "r": 80,
+        "num": 13
+      },
+      {
+        "n": "Mátyás",
+        "p": "CB",
+        "r": 77,
+        "num": 14
+      }
+    ]
+  },
+  "Brasil 1966": {
+    "flag": "🇧🇷",
+    "year": 1966,
+    "players": [
+      {
+        "n": "Manga",
+        "p": "GK",
+        "r": 79,
+        "num": 1
+      },
+      {
+        "n": "Fidelis",
+        "p": "RB",
+        "r": 75,
+        "num": 2
+      },
+      {
+        "n": "Altair",
+        "p": "CB",
+        "r": 77,
+        "num": 3
+      },
+      {
+        "n": "Brito",
+        "p": "CB",
+        "r": 78,
+        "num": 5
+      },
+      {
+        "n": "Paulo Henrique",
+        "p": "LB",
+        "r": 76,
+        "num": 6
+      },
+      {
+        "n": "Denilson",
+        "p": "DM",
+        "r": 75,
+        "num": 15
+      },
+      {
+        "n": "Lima",
+        "p": "CM",
+        "r": 77,
+        "num": 8
+      },
+      {
+        "n": "Jairzinho",
+        "p": "RW",
+        "r": 86,
+        "num": 7
+      },
+      {
+        "n": "Garrincha",
+        "p": "RW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Pelé",
+        "p": "ST",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Tostão",
+        "p": "ST",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Papaíto",
+        "p": "LW",
+        "r": 75,
+        "num": 20
+      },
+      {
+        "n": "Rildo",
+        "p": "LW",
+        "r": 78,
+        "num": 16
+      },
+      {
+        "n": "Servílio",
+        "p": "AM",
+        "r": 77,
+        "num": 12
+      }
+    ]
+  },
+  "Polônia 1974": {
+    "flag": "🇵🇱",
+    "year": 1974,
+    "players": [
+      {
+        "n": "Tomaszewski",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Szymanowski",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Gorgoń",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Musialik",
+        "p": "CB",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "Zmuda",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Deyna",
+        "p": "DM",
+        "r": 90,
+        "num": 10
+      },
+      {
+        "n": "Maszczyk",
+        "p": "CM",
+        "r": 81,
+        "num": 8
+      },
+      {
+        "n": "Kasperczak",
+        "p": "CM",
+        "r": 80,
+        "num": 15
+      },
+      {
+        "n": "Gadocha",
+        "p": "LW",
+        "r": 85,
+        "num": 11
+      },
+      {
+        "n": "Lato",
+        "p": "RW",
+        "r": 92,
+        "num": 7
+      },
+      {
+        "n": "Szarmach",
+        "p": "ST",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Lubański",
+        "p": "ST",
+        "r": 87,
+        "num": 16
+      },
+      {
+        "n": "Cmikiewicz",
+        "p": "AM",
+        "r": 79,
+        "num": 14
+      },
+      {
+        "n": "Gorgon P.",
+        "p": "CB",
+        "r": 78,
+        "num": 4
+      }
+    ]
+  },
+  "Polônia 1982": {
+    "flag": "🇵🇱",
+    "year": 1982,
+    "players": [
+      {
+        "n": "Młynarczyk",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Dziuba",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Majewski",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Zmuda",
+        "p": "CB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Janas",
+        "p": "LB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Matysik",
+        "p": "DM",
+        "r": 78,
+        "num": 15
+      },
+      {
+        "n": "Buncol",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Smolarek",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Boniek",
+        "p": "AM",
+        "r": 92,
+        "num": 10
+      },
+      {
+        "n": "Lato",
+        "p": "LW",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Szarmach",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Kupcewicz",
+        "p": "CM",
+        "r": 80,
+        "num": 14
+      },
+      {
+        "n": "Ciolek",
+        "p": "ST",
+        "r": 79,
+        "num": 16
+      },
+      {
+        "n": "Palasz",
+        "p": "CB",
+        "r": 77,
+        "num": 4
+      }
+    ]
+  },
+  "Zaire 1974": {
+    "flag": "🇨🇩",
+    "year": 1974,
+    "players": [
+      {
+        "n": "Kazadi",
+        "p": "GK",
+        "r": 72,
+        "num": 1
+      },
+      {
+        "n": "Mwepu",
+        "p": "RB",
+        "r": 70,
+        "num": 2
+      },
+      {
+        "n": "Buhanga",
+        "p": "CB",
+        "r": 69,
+        "num": 5
+      },
+      {
+        "n": "Mukombo",
+        "p": "CB",
+        "r": 68,
+        "num": 6
+      },
+      {
+        "n": "Lobilo",
+        "p": "LB",
+        "r": 69,
+        "num": 3
+      },
+      {
+        "n": "Kembo",
+        "p": "DM",
+        "r": 71,
+        "num": 4
+      },
+      {
+        "n": "Kilasu",
+        "p": "CM",
+        "r": 70,
+        "num": 8
+      },
+      {
+        "n": "Tshimen",
+        "p": "CM",
+        "r": 72,
+        "num": 15
+      },
+      {
+        "n": "Kakoko",
+        "p": "RW",
+        "r": 74,
+        "num": 7
+      },
+      {
+        "n": "Ndaye",
+        "p": "ST",
+        "r": 75,
+        "num": 9
+      },
+      {
+        "n": "Mayanga",
+        "p": "LW",
+        "r": 73,
+        "num": 11
+      },
+      {
+        "n": "Kibonge",
+        "p": "AM",
+        "r": 71,
+        "num": 10
+      },
+      {
+        "n": "Ntumba",
+        "p": "ST",
+        "r": 70,
+        "num": 16
+      },
+      {
+        "n": "Mana",
+        "p": "CB",
+        "r": 68,
+        "num": 14
+      }
+    ]
+  },
+  "Camarões 1994": {
+    "flag": "🇨🇲",
+    "year": 1994,
+    "players": [
+      {
+        "n": "Bell",
+        "p": "GK",
+        "r": 79,
+        "num": 1
+      },
+      {
+        "n": "Tataw",
+        "p": "RB",
+        "r": 76,
+        "num": 2
+      },
+      {
+        "n": "Song R.",
+        "p": "CB",
+        "r": 78,
+        "num": 5
+      },
+      {
+        "n": "Kana-Biyik",
+        "p": "CB",
+        "r": 77,
+        "num": 6
+      },
+      {
+        "n": "Mbouh",
+        "p": "LB",
+        "r": 75,
+        "num": 3
+      },
+      {
+        "n": "Foe",
+        "p": "DM",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Omam-Biyik",
+        "p": "CM",
+        "r": 79,
+        "num": 8
+      },
+      {
+        "n": "Ndip Akem",
+        "p": "CM",
+        "r": 76,
+        "num": 15
+      },
+      {
+        "n": "Embe",
+        "p": "RW",
+        "r": 76,
+        "num": 7
+      },
+      {
+        "n": "Milla",
+        "p": "ST",
+        "r": 82,
+        "num": 9
+      },
+      {
+        "n": "Mboma",
+        "p": "ST",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Ekeke",
+        "p": "LW",
+        "r": 78,
+        "num": 10
+      },
+      {
+        "n": "Libiih",
+        "p": "AM",
+        "r": 75,
+        "num": 14
+      },
+      {
+        "n": "N'Dip",
+        "p": "CB",
+        "r": 74,
+        "num": 13
+      }
+    ]
+  },
+  "Nigéria 1994": {
+    "flag": "🇳🇬",
+    "year": 1994,
+    "players": [
+      {
+        "n": "Rufai",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Eguavoen",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Okechukwu",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Nwosu",
+        "p": "CB",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Finidi",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Okocha",
+        "p": "AM",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Amokachi",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Yekini",
+        "p": "ST",
+        "r": 85,
+        "num": 11
+      },
+      {
+        "n": "Amuneke",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Adepoju",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Siasia",
+        "p": "DM",
+        "r": 78,
+        "num": 4
+      },
+      {
+        "n": "Kanu",
+        "p": "ST",
+        "r": 83,
+        "num": 16
+      },
+      {
+        "n": "Westerhof",
+        "p": "LW",
+        "r": 77,
+        "num": 14
+      },
+      {
+        "n": "Emenalo",
+        "p": "CB",
+        "r": 78,
+        "num": 15
+      }
+    ]
+  },
+  "Nigéria 1998": {
+    "flag": "🇳🇬",
+    "year": 1998,
+    "players": [
+      {
+        "n": "Rufai",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Babayaro",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "West",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Apam",
+        "p": "CB",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Eguavoen",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Okocha",
+        "p": "AM",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "Finidi",
+        "p": "RW",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Lawal",
+        "p": "CM",
+        "r": 79,
+        "num": 8
+      },
+      {
+        "n": "Amokachi",
+        "p": "ST",
+        "r": 82,
+        "num": 9
+      },
+      {
+        "n": "Ikpeba",
+        "p": "LW",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Kanu",
+        "p": "ST",
+        "r": 84,
+        "num": 16
+      },
+      {
+        "n": "Adepoju",
+        "p": "DM",
+        "r": 78,
+        "num": 4
+      },
+      {
+        "n": "Yobo",
+        "p": "CB",
+        "r": 79,
+        "num": 13
+      },
+      {
+        "n": "Oruma",
+        "p": "CM",
+        "r": 78,
+        "num": 14
+      }
+    ]
+  },
+  "Costa Rica 2014": {
+    "flag": "🇨🇷",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Navas K.",
+        "p": "GK",
+        "r": 90,
+        "num": 1
+      },
+      {
+        "n": "Gamboa",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Duarte",
+        "p": "CB",
+        "r": 78,
+        "num": 3
+      },
+      {
+        "n": "González ó.",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Díaz J.",
+        "p": "LB",
+        "r": 77,
+        "num": 6
+      },
+      {
+        "n": "Tejeda",
+        "p": "DM",
+        "r": 77,
+        "num": 5
+      },
+      {
+        "n": "Borges",
+        "p": "CM",
+        "r": 78,
+        "num": 8
+      },
+      {
+        "n": "Ruiz B.",
+        "p": "AM",
+        "r": 83,
+        "num": 10
+      },
+      {
+        "n": "Bolanos",
+        "p": "RW",
+        "r": 78,
+        "num": 7
+      },
+      {
+        "n": "Campbell J.",
+        "p": "ST",
+        "r": 82,
+        "num": 9
+      },
+      {
+        "n": "Brenes",
+        "p": "LW",
+        "r": 76,
+        "num": 11
+      },
+      {
+        "n": "Umana",
+        "p": "CB",
+        "r": 78,
+        "num": 4
+      },
+      {
+        "n": "Venegas",
+        "p": "ST",
+        "r": 76,
+        "num": 20
+      },
+      {
+        "n": "Cubero",
+        "p": "CM",
+        "r": 77,
+        "num": 19
+      }
+    ]
+  },
+  "Austrália 2022": {
+    "flag": "🇦🇺",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Ryan",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Degenek",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Rowles",
+        "p": "CB",
+        "r": 78,
+        "num": 3
+      },
+      {
+        "n": "Souttar",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Atkinson",
+        "p": "LB",
+        "r": 77,
+        "num": 6
+      },
+      {
+        "n": "Mooy",
+        "p": "CM",
+        "r": 84,
+        "num": 13
+      },
+      {
+        "n": "Irvine",
+        "p": "DM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Leckie",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Hrustic",
+        "p": "AM",
+        "r": 79,
+        "num": 10
+      },
+      {
+        "n": "Duke",
+        "p": "ST",
+        "r": 80,
+        "num": 20
+      },
+      {
+        "n": "Boyle",
+        "p": "LW",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Goodwin",
+        "p": "CM",
+        "r": 78,
+        "num": 15
+      },
+      {
+        "n": "Maclaren",
+        "p": "ST",
+        "r": 78,
+        "num": 9
+      },
+      {
+        "n": "Wright T.",
+        "p": "RB",
+        "r": 79,
+        "num": 19
+      }
+    ]
+  },
+  "Coreia do Sul 2022": {
+    "flag": "🇰🇷",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Seung-gyu Kim",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Kim Moon-hwan",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Kim Young-gwon",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Kim Min-jae",
+        "p": "CB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Hong Chul",
+        "p": "LB",
+        "r": 77,
+        "num": 3
+      },
+      {
+        "n": "Jung Woo-young",
+        "p": "DM",
+        "r": 80,
+        "num": 16
+      },
+      {
+        "n": "Lee Jae-sung",
+        "p": "CM",
+        "r": 81,
+        "num": 7
+      },
+      {
+        "n": "Hwang In-beom",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Son Heung-min",
+        "p": "LW",
+        "r": 90,
+        "num": 7
+      },
+      {
+        "n": "Hwang Hee-chan",
+        "p": "ST",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Cho Gue-sung",
+        "p": "ST",
+        "r": 79,
+        "num": 9
+      },
+      {
+        "n": "Lee Kang-in",
+        "p": "AM",
+        "r": 83,
+        "num": 17
+      },
+      {
+        "n": "Kwon Chang-hoon",
+        "p": "RW",
+        "r": 79,
+        "num": 10
+      },
+      {
+        "n": "Paik Seung-ho",
+        "p": "CM",
+        "r": 78,
+        "num": 14
+      }
+    ]
+  },
+  "Japão 2018": {
+    "flag": "🇯🇵",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Kawashima",
+        "p": "GK",
+        "r": 79,
+        "num": 1
+      },
+      {
+        "n": "Sakai H.",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Shoji",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Yoshida",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Nagatomo",
+        "p": "LB",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Hasebe",
+        "p": "DM",
+        "r": 81,
+        "num": 17
+      },
+      {
+        "n": "Shibasaki",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Kagawa",
+        "p": "AM",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Honda",
+        "p": "RW",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Osako",
+        "p": "ST",
+        "r": 80,
+        "num": 15
+      },
+      {
+        "n": "Inui",
+        "p": "LW",
+        "r": 81,
+        "num": 14
+      },
+      {
+        "n": "Haraguchi",
+        "p": "RW",
+        "r": 80,
+        "num": 7
+      },
+      {
+        "n": "Okazaki",
+        "p": "ST",
+        "r": 80,
+        "num": 9
+      },
+      {
+        "n": "Nakashima",
+        "p": "LW",
+        "r": 78,
+        "num": 11
+      }
+    ]
+  },
+  "Cabo Verde 2026": {
+    "flag": "🇨🇻",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Vozinha",
+        "p": "GK",
+        "r": 101,
+        "num": 1
+      },
+      {
+        "n": "Márcio da Rosa",
+        "p": "GK",
+        "r": 74,
+        "num": 12
+      },
+      {
+        "n": "Carlos Santos",
+        "p": "GK",
+        "r": 73,
+        "num": 23
+      },
+      {
+        "n": "Steven Moreira",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Wagner Pina",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Sidny Cabral",
+        "p": "CB",
+        "r": 79,
+        "num": 4
+      },
+      {
+        "n": "Logan Costa",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Pico",
+        "p": "CB",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Stopira",
+        "p": "LB",
+        "r": 77,
+        "num": 16
+      },
+      {
+        "n": "Diney",
+        "p": "RB",
+        "r": 76,
+        "num": 21
+      },
+      {
+        "n": "João Paulo F.",
+        "p": "CB",
+        "r": 76,
+        "num": 15
+      },
+      {
+        "n": "Jamiro Monteiro",
+        "p": "CM",
+        "r": 81,
+        "num": 8
+      },
+      {
+        "n": "Telmo Arcanjo",
+        "p": "CM",
+        "r": 79,
+        "num": 10
+      },
+      {
+        "n": "Yannick Semedo",
+        "p": "CM",
+        "r": 77,
+        "num": 14
+      },
+      {
+        "n": "Laros Duarte",
+        "p": "DM",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "Deroy Duarte",
+        "p": "CM",
+        "r": 78,
+        "num": 11
+      },
+      {
+        "n": "Kevin Pina",
+        "p": "CM",
+        "r": 78,
+        "num": 20
+      },
+      {
+        "n": "Garry Rodrigues",
+        "p": "RW",
+        "r": 80,
+        "num": 7
+      },
+      {
+        "n": "Jovane Cabral",
+        "p": "LW",
+        "r": 80,
+        "num": 19
+      },
+      {
+        "n": "Ryan Mendes",
+        "p": "RW",
+        "r": 79,
+        "num": 17
+      },
+      {
+        "n": "Nuno da Costa",
+        "p": "ST",
+        "r": 80,
+        "num": 9
+      },
+      {
+        "n": "Dailon Livramento",
+        "p": "ST",
+        "r": 80,
+        "num": 18
+      },
+      {
+        "n": "Gilson Benchimol",
+        "p": "ST",
+        "r": 77,
+        "num": 22
+      },
+      {
+        "n": "Willy Semedo",
+        "p": "LW",
+        "r": 77,
+        "num": 24
+      },
+      {
+        "n": "Hélio Varela",
+        "p": "RW",
+        "r": 76,
+        "num": 25
+      },
+      {
+        "n": "Kelvin Pires",
+        "p": "LB",
+        "r": 76,
+        "num": 13
+      }
+    ]
+  },
+  "Fem 2026": {
+    "flag": "🇧🇷",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Humpt",
+        "p": "CB",
+        "r": 96,
+        "num": 8
+      },
+      {
+        "n": "Jocaseto",
+        "p": "CM",
+        "r": 99,
+        "num": 11
+      },
+      {
+        "n": "ChupaKabra",
+        "p": "GK",
+        "r": 95,
+        "num": 10
+      },
+      {
+        "n": "Gabe",
+        "p": "GK",
+        "r": 91,
+        "num": 12
+      },
+      {
+        "n": "Gladiador Fermino",
+        "p": "CB",
+        "r": 94,
+        "num": 9
+      }
+    ]
+  },
+  "Águias de Marabá 2026": {
+    "flag": "🇧🇷",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Felipe Febris",
+        "p": "CM",
+        "r": 96,
+        "num": 2
+      },
+      {
+        "n": "Lucca",
+        "p": "CM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Marabá",
+        "p": "RB",
+        "r": 89,
+        "num": 3
+      },
+      {
+        "n": "Enzo",
+        "p": "ST",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Vero",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      }
+    ]
+  },
+  "Águias de Marabá 2025": {
+    "flag": "🇧🇷",
+    "year": 2025,
+    "players": [
+      {
+        "n": "Humpt",
+        "p": "CB",
+        "r": 92,
+        "num": 8
+      },
+      {
+        "n": "Jocaseto",
+        "p": "CM",
+        "r": 99,
+        "num": 11
+      },
+      {
+        "n": "ChupaKabra",
+        "p": "GK",
+        "r": 94,
+        "num": 10
+      },
+      {
+        "n": "Gabe",
+        "p": "GK",
+        "r": 86,
+        "num": 12
+      },
+      {
+        "n": "Gladiador Fermino",
+        "p": "CB",
+        "r": 92,
+        "num": 9
+      },
+      {
+        "n": "Felipe Febris",
+        "p": "CM",
+        "r": 95,
+        "num": 2
+      },
+      {
+        "n": "Lucca",
+        "p": "CM",
+        "r": 87,
+        "num": 8
+      },
+      {
+        "n": "Marabá",
+        "p": "RB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Enzo",
+        "p": "ST",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "Vero",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      }
+    ]
+  },
+  "Águias de Marabá 2024": {
+    "flag": "🇧🇷",
+    "year": 2024,
+    "players": [
+      {
+        "n": "Humpt",
+        "p": "CB",
+        "r": 87,
+        "num": 8
+      },
+      {
+        "n": "Jocaseto",
+        "p": "CM",
+        "r": 45,
+        "num": 11
+      },
+      {
+        "n": "ChupaKabra",
+        "p": "GK",
+        "r": 90,
+        "num": 10
+      },
+      {
+        "n": "Gabe",
+        "p": "GK",
+        "r": 84,
+        "num": 12
+      },
+      {
+        "n": "Gladiador Fermino",
+        "p": "CB",
+        "r": 89,
+        "num": 9
+      },
+      {
+        "n": "Felipe Febris",
+        "p": "CM",
+        "r": 91,
+        "num": 2
+      },
+      {
+        "n": "Lucca",
+        "p": "CM",
+        "r": 86,
+        "num": 8
+      },
+      {
+        "n": "Marabá",
+        "p": "RB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Enzo",
+        "p": "ST",
+        "r": 77,
+        "num": 11
+      },
+      {
+        "n": "Vero",
+        "p": "ST",
+        "r": 81,
+        "num": 9
       }
     ]
   }
