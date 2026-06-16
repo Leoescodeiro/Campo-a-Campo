@@ -1,0 +1,9110 @@
+{
+  "Brasil 1970": {
+    "flag": "🇧🇷",
+    "year": 1970,
+    "players": [
+      {
+        "n": "Félix",
+        "p": "GK",
+        "r": 81,
+        "num": 1
+      },
+      {
+        "n": "Carlos Alberto",
+        "p": "RB",
+        "r": 91,
+        "num": 2
+      },
+      {
+        "n": "Brito",
+        "p": "CB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Piazza",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Everaldo",
+        "p": "LB",
+        "r": 81,
+        "num": 6
+      },
+      {
+        "n": "Clodoaldo",
+        "p": "DM",
+        "r": 86,
+        "num": 15
+      },
+      {
+        "n": "Gérson",
+        "p": "CM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Jairzinho",
+        "p": "RW",
+        "r": 94,
+        "num": 7
+      },
+      {
+        "n": "Tostão",
+        "p": "AM",
+        "r": 91,
+        "num": 9
+      },
+      {
+        "n": "Pelé",
+        "p": "ST",
+        "r": 99,
+        "num": 10
+      },
+      {
+        "n": "Rivelino",
+        "p": "LW",
+        "r": 93,
+        "num": 11
+      },
+      {
+        "n": "Paulo César",
+        "p": "LW",
+        "r": 82,
+        "num": 20
+      },
+      {
+        "n": "Leão",
+        "p": "GK",
+        "r": 80,
+        "num": 12
+      },
+      {
+        "n": "Joel",
+        "p": "CB",
+        "r": 77,
+        "num": 4
+      }
+    ]
+  },
+  "Argentina 1986": {
+    "flag": "🇦🇷",
+    "year": 1986,
+    "players": [
+      {
+        "n": "Pumpido",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Ruggeri",
+        "p": "CB",
+        "r": 86,
+        "num": 6
+      },
+      {
+        "n": "Brown",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Cucciuffo",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Olarticoechea",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Batista",
+        "p": "DM",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Burruchaga",
+        "p": "CM",
+        "r": 87,
+        "num": 8
+      },
+      {
+        "n": "Giusti",
+        "p": "CM",
+        "r": 82,
+        "num": 16
+      },
+      {
+        "n": "Maradona",
+        "p": "AM",
+        "r": 99,
+        "num": 10
+      },
+      {
+        "n": "Valdano",
+        "p": "ST",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Enrique",
+        "p": "LW",
+        "r": 81,
+        "num": 7
+      },
+      {
+        "n": "Borghi",
+        "p": "RW",
+        "r": 80,
+        "num": 9
+      },
+      {
+        "n": "Tapia",
+        "p": "ST",
+        "r": 79,
+        "num": 18
+      },
+      {
+        "n": "Garré",
+        "p": "LB",
+        "r": 79,
+        "num": 14
+      }
+    ]
+  },
+  "França 1998": {
+    "flag": "🇫🇷",
+    "year": 1998,
+    "players": [
+      {
+        "n": "Barthez",
+        "p": "GK",
+        "r": 90,
+        "num": 1
+      },
+      {
+        "n": "Thuram",
+        "p": "RB",
+        "r": 89,
+        "num": 15
+      },
+      {
+        "n": "Blanc",
+        "p": "CB",
+        "r": 87,
+        "num": 5
+      },
+      {
+        "n": "Desailly",
+        "p": "CB",
+        "r": 88,
+        "num": 6
+      },
+      {
+        "n": "Lizarazu",
+        "p": "LB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Deschamps",
+        "p": "DM",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Karembeu",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Zidane",
+        "p": "AM",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Petit",
+        "p": "CM",
+        "r": 84,
+        "num": 17
+      },
+      {
+        "n": "Djorkaeff",
+        "p": "RW",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Guivarc'h",
+        "p": "ST",
+        "r": 80,
+        "num": 21
+      },
+      {
+        "n": "Trezeguet",
+        "p": "ST",
+        "r": 87,
+        "num": 20
+      },
+      {
+        "n": "Henry",
+        "p": "LW",
+        "r": 90,
+        "num": 12
+      },
+      {
+        "n": "Leboeuf",
+        "p": "CB",
+        "r": 84,
+        "num": 4
+      }
+    ]
+  },
+  "Alemanha 1974": {
+    "flag": "🇩🇪",
+    "year": 1974,
+    "players": [
+      {
+        "n": "Maier",
+        "p": "GK",
+        "r": 92,
+        "num": 1
+      },
+      {
+        "n": "Vogts",
+        "p": "RB",
+        "r": 87,
+        "num": 3
+      },
+      {
+        "n": "Schwarzenbeck",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Beckenbauer",
+        "p": "CB",
+        "r": 97,
+        "num": 5
+      },
+      {
+        "n": "Breitner",
+        "p": "LB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Bonhof",
+        "p": "DM",
+        "r": 84,
+        "num": 14
+      },
+      {
+        "n": "Hoeness",
+        "p": "CM",
+        "r": 85,
+        "num": 12
+      },
+      {
+        "n": "Overath",
+        "p": "CM",
+        "r": 87,
+        "num": 12
+      },
+      {
+        "n": "Grabowski",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Müller G.",
+        "p": "ST",
+        "r": 95,
+        "num": 13
+      },
+      {
+        "n": "Holzenbein",
+        "p": "LW",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Wimmer",
+        "p": "DM",
+        "r": 80,
+        "num": 10
+      },
+      {
+        "n": "Köpke",
+        "p": "GK",
+        "r": 79,
+        "num": 22
+      },
+      {
+        "n": "Cullmann",
+        "p": "CM",
+        "r": 79,
+        "num": 8
+      }
+    ]
+  },
+  "Holanda 1974": {
+    "flag": "🇳🇱",
+    "year": 1974,
+    "players": [
+      {
+        "n": "Jongbloed",
+        "p": "GK",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Suurbier",
+        "p": "RB",
+        "r": 84,
+        "num": 20
+      },
+      {
+        "n": "Rijsbergen",
+        "p": "CB",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Haan",
+        "p": "CB",
+        "r": 85,
+        "num": 2
+      },
+      {
+        "n": "Krol",
+        "p": "LB",
+        "r": 88,
+        "num": 17
+      },
+      {
+        "n": "Jansen",
+        "p": "DM",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Neeskens",
+        "p": "CM",
+        "r": 90,
+        "num": 15
+      },
+      {
+        "n": "van Hanegem",
+        "p": "CM",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Rep",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Cruyff",
+        "p": "ST",
+        "r": 98,
+        "num": 14
+      },
+      {
+        "n": "Rensenbrink",
+        "p": "LW",
+        "r": 86,
+        "num": 13
+      },
+      {
+        "n": "de Jong",
+        "p": "AM",
+        "r": 81,
+        "num": 9
+      },
+      {
+        "n": "Peters",
+        "p": "DM",
+        "r": 79,
+        "num": 4
+      },
+      {
+        "n": "Brinkman",
+        "p": "CB",
+        "r": 79,
+        "num": 22
+      }
+    ]
+  },
+  "Itália 1982": {
+    "flag": "🇮🇹",
+    "year": 1982,
+    "players": [
+      {
+        "n": "Zoff",
+        "p": "GK",
+        "r": 92,
+        "num": 1
+      },
+      {
+        "n": "Gentile",
+        "p": "RB",
+        "r": 85,
+        "num": 6
+      },
+      {
+        "n": "Scirea",
+        "p": "CB",
+        "r": 89,
+        "num": 5
+      },
+      {
+        "n": "Collovati",
+        "p": "CB",
+        "r": 84,
+        "num": 6
+      },
+      {
+        "n": "Cabrini",
+        "p": "LB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Tardelli",
+        "p": "CM",
+        "r": 87,
+        "num": 14
+      },
+      {
+        "n": "Oriali",
+        "p": "DM",
+        "r": 83,
+        "num": 13
+      },
+      {
+        "n": "Antognoni",
+        "p": "AM",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Conti",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Rossi",
+        "p": "ST",
+        "r": 92,
+        "num": 20
+      },
+      {
+        "n": "Graziani",
+        "p": "LW",
+        "r": 84,
+        "num": 8
+      },
+      {
+        "n": "Altobelli",
+        "p": "ST",
+        "r": 83,
+        "num": 16
+      },
+      {
+        "n": "Bergomi",
+        "p": "CB",
+        "r": 86,
+        "num": 17
+      },
+      {
+        "n": "Marini",
+        "p": "CM",
+        "r": 79,
+        "num": 11
+      }
+    ]
+  },
+  "Espanha 2010": {
+    "flag": "🇪🇸",
+    "year": 2010,
+    "players": [
+      {
+        "n": "Casillas",
+        "p": "GK",
+        "r": 93,
+        "num": 1
+      },
+      {
+        "n": "Sergio Ramos",
+        "p": "RB",
+        "r": 90,
+        "num": 15
+      },
+      {
+        "n": "Piqué",
+        "p": "CB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Puyol",
+        "p": "CB",
+        "r": 89,
+        "num": 5
+      },
+      {
+        "n": "Capdevila",
+        "p": "LB",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Busquets",
+        "p": "DM",
+        "r": 87,
+        "num": 16
+      },
+      {
+        "n": "Alonso",
+        "p": "CM",
+        "r": 90,
+        "num": 14
+      },
+      {
+        "n": "Iniesta",
+        "p": "AM",
+        "r": 95,
+        "num": 6
+      },
+      {
+        "n": "David Silva",
+        "p": "RW",
+        "r": 89,
+        "num": 21
+      },
+      {
+        "n": "Villa",
+        "p": "ST",
+        "r": 91,
+        "num": 7
+      },
+      {
+        "n": "Torres",
+        "p": "LW",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Xavi",
+        "p": "CM",
+        "r": 96,
+        "num": 8
+      },
+      {
+        "n": "Fàbregas",
+        "p": "AM",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Mata",
+        "p": "RW",
+        "r": 86,
+        "num": 18
+      }
+    ]
+  },
+  "Brasil 2002": {
+    "flag": "🇧🇷",
+    "year": 2002,
+    "players": [
+      {
+        "n": "Marcos",
+        "p": "GK",
+        "r": 87,
+        "num": 12
+      },
+      {
+        "n": "Cafu",
+        "p": "RB",
+        "r": 91,
+        "num": 2
+      },
+      {
+        "n": "Lúcio",
+        "p": "CB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Roque Jr.",
+        "p": "CB",
+        "r": 82,
+        "num": 14
+      },
+      {
+        "n": "Roberto Carlos",
+        "p": "LB",
+        "r": 93,
+        "num": 6
+      },
+      {
+        "n": "Gilberto Silva",
+        "p": "DM",
+        "r": 86,
+        "num": 19
+      },
+      {
+        "n": "Kléberson",
+        "p": "CM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Ronaldinho",
+        "p": "AM",
+        "r": 94,
+        "num": 11
+      },
+      {
+        "n": "Rivaldo",
+        "p": "LW",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "Ronaldo",
+        "p": "ST",
+        "r": 98,
+        "num": 9
+      },
+      {
+        "n": "Edilson",
+        "p": "RW",
+        "r": 79,
+        "num": 22
+      },
+      {
+        "n": "Denílson",
+        "p": "CM",
+        "r": 80,
+        "num": 7
+      },
+      {
+        "n": "Juninho",
+        "p": "CM",
+        "r": 85,
+        "num": 15
+      },
+      {
+        "n": "Edmílson",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      }
+    ]
+  },
+  "Alemanha 2014": {
+    "flag": "🇩🇪",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Neuer",
+        "p": "GK",
+        "r": 96,
+        "num": 1
+      },
+      {
+        "n": "Lahm",
+        "p": "RB",
+        "r": 90,
+        "num": 16
+      },
+      {
+        "n": "Hummels",
+        "p": "CB",
+        "r": 89,
+        "num": 5
+      },
+      {
+        "n": "Boateng",
+        "p": "CB",
+        "r": 88,
+        "num": 17
+      },
+      {
+        "n": "Höwedes",
+        "p": "LB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Khedira",
+        "p": "DM",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Kroos",
+        "p": "CM",
+        "r": 92,
+        "num": 18
+      },
+      {
+        "n": "Müller T.",
+        "p": "RW",
+        "r": 91,
+        "num": 13
+      },
+      {
+        "n": "Özil",
+        "p": "AM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Klose",
+        "p": "ST",
+        "r": 89,
+        "num": 11
+      },
+      {
+        "n": "Götze",
+        "p": "LW",
+        "r": 87,
+        "num": 19
+      },
+      {
+        "n": "Schürrle",
+        "p": "LW",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Schweinsteiger",
+        "p": "DM",
+        "r": 89,
+        "num": 7
+      },
+      {
+        "n": "Reus",
+        "p": "AM",
+        "r": 87,
+        "num": 21
+      }
+    ]
+  },
+  "Portugal 2006": {
+    "flag": "🇵🇹",
+    "year": 2006,
+    "players": [
+      {
+        "n": "Ricardo",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Miguel",
+        "p": "RB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "R. Carvalho",
+        "p": "CB",
+        "r": 87,
+        "num": 16
+      },
+      {
+        "n": "Fernando Meira",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Nuno Valente",
+        "p": "LB",
+        "r": 81,
+        "num": 14
+      },
+      {
+        "n": "Costinha",
+        "p": "DM",
+        "r": 82,
+        "num": 18
+      },
+      {
+        "n": "Maniche",
+        "p": "CM",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "Figo",
+        "p": "AM",
+        "r": 90,
+        "num": 7
+      },
+      {
+        "n": "Tiago",
+        "p": "CM",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Deco",
+        "p": "RW",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "C. Ronaldo",
+        "p": "LW",
+        "r": 92,
+        "num": 17
+      },
+      {
+        "n": "Pauleta",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Simão",
+        "p": "RW",
+        "r": 84,
+        "num": 15
+      },
+      {
+        "n": "Petit",
+        "p": "DM",
+        "r": 80,
+        "num": 19
+      }
+    ]
+  },
+  "Inglaterra 1966": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 1966,
+    "players": [
+      {
+        "n": "Banks",
+        "p": "GK",
+        "r": 92,
+        "num": 1
+      },
+      {
+        "n": "Cohen",
+        "p": "RB",
+        "r": 84,
+        "num": 2
+      },
+      {
+        "n": "J. Charlton",
+        "p": "CB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "Moore",
+        "p": "CB",
+        "r": 95,
+        "num": 6
+      },
+      {
+        "n": "Wilson",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Stiles",
+        "p": "DM",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Ball",
+        "p": "CM",
+        "r": 86,
+        "num": 7
+      },
+      {
+        "n": "B. Charlton",
+        "p": "AM",
+        "r": 93,
+        "num": 9
+      },
+      {
+        "n": "Greaves",
+        "p": "RW",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "Hurst",
+        "p": "ST",
+        "r": 87,
+        "num": 10
+      },
+      {
+        "n": "Peters",
+        "p": "LW",
+        "r": 85,
+        "num": 16
+      },
+      {
+        "n": "Hunter",
+        "p": "CB",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Eastham",
+        "p": "CM",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "Connelly",
+        "p": "RW",
+        "r": 79,
+        "num": 12
+      }
+    ]
+  },
+  "Argentina 2022": {
+    "flag": "🇦🇷",
+    "year": 2022,
+    "players": [
+      {
+        "n": "E. Martínez",
+        "p": "GK",
+        "r": 90,
+        "num": 23
+      },
+      {
+        "n": "Molina",
+        "p": "RB",
+        "r": 85,
+        "num": 26
+      },
+      {
+        "n": "Romero",
+        "p": "CB",
+        "r": 87,
+        "num": 13
+      },
+      {
+        "n": "Otamendi",
+        "p": "CB",
+        "r": 86,
+        "num": 19
+      },
+      {
+        "n": "Tagliafico",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "de Paul",
+        "p": "DM",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Fernández",
+        "p": "CM",
+        "r": 85,
+        "num": 24
+      },
+      {
+        "n": "Mac Allister",
+        "p": "CM",
+        "r": 85,
+        "num": 20
+      },
+      {
+        "n": "di María",
+        "p": "RW",
+        "r": 90,
+        "num": 11
+      },
+      {
+        "n": "Messi",
+        "p": "AM",
+        "r": 99,
+        "num": 10
+      },
+      {
+        "n": "Álvarez",
+        "p": "ST",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Paredes",
+        "p": "DM",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Dybala",
+        "p": "LW",
+        "r": 88,
+        "num": 21
+      },
+      {
+        "n": "Lautaro",
+        "p": "ST",
+        "r": 87,
+        "num": 22
+      }
+    ]
+  },
+  "França 2018": {
+    "flag": "🇫🇷",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Lloris",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Pavard",
+        "p": "RB",
+        "r": 84,
+        "num": 2
+      },
+      {
+        "n": "Varane",
+        "p": "CB",
+        "r": 89,
+        "num": 4
+      },
+      {
+        "n": "Umtiti",
+        "p": "CB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "L. Hernández",
+        "p": "LB",
+        "r": 84,
+        "num": 21
+      },
+      {
+        "n": "Kanté",
+        "p": "DM",
+        "r": 92,
+        "num": 13
+      },
+      {
+        "n": "Pogba",
+        "p": "CM",
+        "r": 89,
+        "num": 6
+      },
+      {
+        "n": "Matuidi",
+        "p": "CM",
+        "r": 84,
+        "num": 14
+      },
+      {
+        "n": "Griezmann",
+        "p": "AM",
+        "r": 91,
+        "num": 7
+      },
+      {
+        "n": "Giroud",
+        "p": "ST",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Mbappé",
+        "p": "LW",
+        "r": 94,
+        "num": 10
+      },
+      {
+        "n": "Dembélé",
+        "p": "RW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Fekir",
+        "p": "AM",
+        "r": 84,
+        "num": 18
+      },
+      {
+        "n": "Lemar",
+        "p": "LW",
+        "r": 82,
+        "num": 12
+      }
+    ]
+  },
+  "Uruguai 1950": {
+    "flag": "🇺🇾",
+    "year": 1950,
+    "players": [
+      {
+        "n": "Máspoli",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "González M.",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Tejera",
+        "p": "CB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "Gambetta",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Andrade",
+        "p": "LB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Pérez",
+        "p": "DM",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Schiaffino",
+        "p": "AM",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "Ghiggia",
+        "p": "RW",
+        "r": 90,
+        "num": 7
+      },
+      {
+        "n": "Míguez",
+        "p": "ST",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Morán",
+        "p": "LW",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "O. Varela",
+        "p": "CM",
+        "r": 86,
+        "num": 8
+      },
+      {
+        "n": "Vidal",
+        "p": "CM",
+        "r": 82,
+        "num": 13
+      },
+      {
+        "n": "Martínez R.",
+        "p": "ST",
+        "r": 80,
+        "num": 14
+      },
+      {
+        "n": "Báez",
+        "p": "CB",
+        "r": 78,
+        "num": 15
+      }
+    ]
+  },
+  "Marrocos 2022": {
+    "flag": "🇲🇦",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Bono",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Hakimi",
+        "p": "RB",
+        "r": 89,
+        "num": 2
+      },
+      {
+        "n": "Saïss",
+        "p": "CB",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Aguerd",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Mazraoui",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Amrabat",
+        "p": "DM",
+        "r": 85,
+        "num": 4
+      },
+      {
+        "n": "Amallah",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Ounahi",
+        "p": "CM",
+        "r": 82,
+        "num": 22
+      },
+      {
+        "n": "Ziyech",
+        "p": "AM",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "En-Nesyri",
+        "p": "ST",
+        "r": 83,
+        "num": 19
+      },
+      {
+        "n": "Boufal",
+        "p": "LW",
+        "r": 81,
+        "num": 11
+      },
+      {
+        "n": "Benoun",
+        "p": "CB",
+        "r": 80,
+        "num": 14
+      },
+      {
+        "n": "Cheddira",
+        "p": "ST",
+        "r": 79,
+        "num": 9
+      },
+      {
+        "n": "Sabiri",
+        "p": "RW",
+        "r": 79,
+        "num": 17
+      }
+    ]
+  },
+  "Uruguai 2010": {
+    "flag": "🇺🇾",
+    "year": 2010,
+    "players": [
+      {
+        "n": "Muslera",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Maxi Pereira",
+        "p": "RB",
+        "r": 82,
+        "num": 16
+      },
+      {
+        "n": "Lugano",
+        "p": "CB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Godín",
+        "p": "CB",
+        "r": 86,
+        "num": 2
+      },
+      {
+        "n": "Á. Pereira",
+        "p": "LB",
+        "r": 80,
+        "num": 19
+      },
+      {
+        "n": "Scotti",
+        "p": "DM",
+        "r": 78,
+        "num": 5
+      },
+      {
+        "n": "Arévalo",
+        "p": "CM",
+        "r": 79,
+        "num": 8
+      },
+      {
+        "n": "Pérez",
+        "p": "CM",
+        "r": 80,
+        "num": 20
+      },
+      {
+        "n": "Forlán",
+        "p": "AM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Suárez",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Cavani",
+        "p": "LW",
+        "r": 88,
+        "num": 7
+      },
+      {
+        "n": "Cáceres",
+        "p": "RB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Fucile",
+        "p": "LB",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Silva F.",
+        "p": "GK",
+        "r": 70,
+        "num": 23
+      }
+    ]
+  },
+  "Rússia 2018": {
+    "flag": "🇷🇺",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Akinfeev",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Lunyov",
+        "p": "GK",
+        "r": 72,
+        "num": 12
+      },
+      {
+        "n": "Fernandes",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Smolnikov",
+        "p": "RB",
+        "r": 74,
+        "num": 23
+      },
+      {
+        "n": "Kudryashov",
+        "p": "CB",
+        "r": 74,
+        "num": 13
+      },
+      {
+        "n": "Kutepov",
+        "p": "CB",
+        "r": 75,
+        "num": 3
+      },
+      {
+        "n": "Zhirkov",
+        "p": "LB",
+        "r": 78,
+        "num": 18
+      },
+      {
+        "n": "Golovin",
+        "p": "CM",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "Zobnin",
+        "p": "CM",
+        "r": 76,
+        "num": 15
+      },
+      {
+        "n": "Dzyuba",
+        "p": "ST",
+        "r": 80,
+        "num": 22
+      },
+      {
+        "n": "Cheryshev",
+        "p": "LW",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "Gazinskiy",
+        "p": "DM",
+        "r": 75,
+        "num": 8
+      },
+      {
+        "n": "Kuzyayev",
+        "p": "RW",
+        "r": 74,
+        "num": 11
+      },
+      {
+        "n": "Samedov",
+        "p": "AM",
+        "r": 74,
+        "num": 7
+      }
+    ]
+  },
+  "Hungria 1954": {
+    "flag": "🇭🇺",
+    "year": 1954,
+    "players": [
+      {
+        "n": "Grosics",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Buzánszky",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Lóránt",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Lantos",
+        "p": "LB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Bozsik",
+        "p": "CM",
+        "r": 90,
+        "num": 4
+      },
+      {
+        "n": "Zakariás",
+        "p": "DM",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Czibor",
+        "p": "LW",
+        "r": 89,
+        "num": 11
+      },
+      {
+        "n": "Kocsis",
+        "p": "ST",
+        "r": 94,
+        "num": 8
+      },
+      {
+        "n": "Hidegkuti",
+        "p": "AM",
+        "r": 91,
+        "num": 9
+      },
+      {
+        "n": "Puskás",
+        "p": "LW",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Tóth",
+        "p": "RM",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Gröse",
+        "p": "CB",
+        "r": 79,
+        "num": 17
+      },
+      {
+        "n": "Palotás",
+        "p": "ST",
+        "r": 80,
+        "num": 12
+      },
+      {
+        "n": "Gellér",
+        "p": "GK",
+        "r": 78,
+        "num": 12
+      }
+    ]
+  },
+  "Alemanha 1954": {
+    "flag": "🇩🇪",
+    "year": 1954,
+    "players": [
+      {
+        "n": "Turek",
+        "p": "GK",
+        "r": 85,
+        "num": 1
+      },
+      {
+        "n": "Laband",
+        "p": "RB",
+        "r": 76,
+        "num": 2
+      },
+      {
+        "n": "Kohlmeyer",
+        "p": "LB",
+        "r": 77,
+        "num": 3
+      },
+      {
+        "n": "Liebrich",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Mai",
+        "p": "CB",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "Eckel",
+        "p": "CM",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Schäfer",
+        "p": "LM",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Morlock",
+        "p": "AM",
+        "r": 84,
+        "num": 8
+      },
+      {
+        "n": "Walter F.",
+        "p": "CM",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Walter O.",
+        "p": "ST",
+        "r": 86,
+        "num": 10
+      },
+      {
+        "n": "Rahn",
+        "p": "RW",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Klodt",
+        "p": "RW",
+        "r": 77,
+        "num": 17
+      },
+      {
+        "n": "Ottmar Walter",
+        "p": "LW",
+        "r": 84,
+        "num": 19
+      },
+      {
+        "n": "Pfaff",
+        "p": "CB",
+        "r": 75,
+        "num": 14
+      }
+    ]
+  },
+  "Brasil 1958": {
+    "flag": "🇧🇷",
+    "year": 1958,
+    "players": [
+      {
+        "n": "Gilmar",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "D.Santos",
+        "p": "RB",
+        "r": 84,
+        "num": 2
+      },
+      {
+        "n": "N.Santos",
+        "p": "LB",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Bellini",
+        "p": "CB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Orlando",
+        "p": "CB",
+        "r": 81,
+        "num": 4
+      },
+      {
+        "n": "Zito",
+        "p": "CM",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Garrincha",
+        "p": "RW",
+        "r": 97,
+        "num": 7
+      },
+      {
+        "n": "Didi",
+        "p": "CM",
+        "r": 92,
+        "num": 8
+      },
+      {
+        "n": "Vavá",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Pelé",
+        "p": "LW",
+        "r": 99,
+        "num": 10
+      },
+      {
+        "n": "Zagallo",
+        "p": "LM",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Djalma Santos",
+        "p": "RB",
+        "r": 85,
+        "num": 14
+      },
+      {
+        "n": "Pepe",
+        "p": "AM",
+        "r": 80,
+        "num": 13
+      },
+      {
+        "n": "Castilho",
+        "p": "GK",
+        "r": 82,
+        "num": 12
+      }
+    ]
+  },
+  "Suécia 1958": {
+    "flag": "🇸🇪",
+    "year": 1958,
+    "players": [
+      {
+        "n": "Svensson",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Bergmark",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Axbom",
+        "p": "LB",
+        "r": 78,
+        "num": 3
+      },
+      {
+        "n": "Gustavsson",
+        "p": "CB",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Parling",
+        "p": "CB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Hamrin",
+        "p": "RW",
+        "r": 89,
+        "num": 7
+      },
+      {
+        "n": "Gren",
+        "p": "AM",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "Simonsson",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Liedholm",
+        "p": "CM",
+        "r": 87,
+        "num": 4
+      },
+      {
+        "n": "Skoglund",
+        "p": "LW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Mellberg",
+        "p": "CM",
+        "r": 76,
+        "num": 17
+      },
+      {
+        "n": "Börjesson",
+        "p": "DM",
+        "r": 75,
+        "num": 14
+      },
+      {
+        "n": "Källgren",
+        "p": "GK",
+        "r": 74,
+        "num": 12
+      }
+    ]
+  },
+  "Brasil 1962": {
+    "flag": "🇧🇷",
+    "year": 1962,
+    "players": [
+      {
+        "n": "Gilmar",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "D.Santos",
+        "p": "RB",
+        "r": 84,
+        "num": 2
+      },
+      {
+        "n": "N.Santos",
+        "p": "LB",
+        "r": 86,
+        "num": 6
+      },
+      {
+        "n": "Mauro",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Zózimo",
+        "p": "CB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Zito",
+        "p": "CM",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Garrincha",
+        "p": "RW",
+        "r": 96,
+        "num": 7
+      },
+      {
+        "n": "Didi",
+        "p": "CM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Vavá",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Pelé",
+        "p": "LW",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Zagallo",
+        "p": "LW",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Amarildo",
+        "p": "ST",
+        "r": 82,
+        "num": 22
+      },
+      {
+        "n": "Coutinho",
+        "p": "AM",
+        "r": 84,
+        "num": 16
+      },
+      {
+        "n": "Mengálvio",
+        "p": "CM",
+        "r": 80,
+        "num": 15
+      }
+    ]
+  },
+  "Tchecoslováquia 1962": {
+    "flag": "🇨🇿",
+    "year": 1962,
+    "players": [
+      {
+        "n": "Schroif",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Lala",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Novák",
+        "p": "LB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "Pluskal",
+        "p": "CB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Popluhár",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Masopust",
+        "p": "CM",
+        "r": 90,
+        "num": 6
+      },
+      {
+        "n": "Pospíchal",
+        "p": "RW",
+        "r": 80,
+        "num": 7
+      },
+      {
+        "n": "Scherer",
+        "p": "AM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Kvašňák",
+        "p": "ST",
+        "r": 82,
+        "num": 9
+      },
+      {
+        "n": "Kadraba",
+        "p": "LW",
+        "r": 79,
+        "num": 10
+      },
+      {
+        "n": "Jelínek",
+        "p": "CM",
+        "r": 78,
+        "num": 11
+      },
+      {
+        "n": "Tichý",
+        "p": "ST",
+        "r": 77,
+        "num": 13
+      },
+      {
+        "n": "Buberník",
+        "p": "AM",
+        "r": 76,
+        "num": 14
+      }
+    ]
+  },
+  "Portugal 1966": {
+    "flag": "🇵🇹",
+    "year": 1966,
+    "players": [
+      {
+        "n": "Carvalho",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Festa",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Baptista",
+        "p": "LB",
+        "r": 78,
+        "num": 5
+      },
+      {
+        "n": "Vicente",
+        "p": "CB",
+        "r": 80,
+        "num": 3
+      },
+      {
+        "n": "Hilário",
+        "p": "CB",
+        "r": 79,
+        "num": 4
+      },
+      {
+        "n": "Graça",
+        "p": "CM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Simões",
+        "p": "LW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Eusébio",
+        "p": "AM",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Torres",
+        "p": "ST",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Coluna",
+        "p": "DM",
+        "r": 88,
+        "num": 6
+      },
+      {
+        "n": "Augusto",
+        "p": "RW",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Pereira",
+        "p": "CM",
+        "r": 78,
+        "num": 17
+      },
+      {
+        "n": "José Carlos",
+        "p": "CB",
+        "r": 77,
+        "num": 14
+      },
+      {
+        "n": "Peres",
+        "p": "GK",
+        "r": 76,
+        "num": 12
+      }
+    ]
+  },
+  "Itália 1970": {
+    "flag": "🇮🇹",
+    "year": 1970,
+    "players": [
+      {
+        "n": "Albertosi",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Burgnich",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Facchetti",
+        "p": "LB",
+        "r": 89,
+        "num": 3
+      },
+      {
+        "n": "Rosato",
+        "p": "CB",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Cera",
+        "p": "CB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Mazzola",
+        "p": "CM",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Domenghini",
+        "p": "RW",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "De Sisti",
+        "p": "CM",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Boninsegna",
+        "p": "ST",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Rivera",
+        "p": "AM",
+        "r": 90,
+        "num": 16
+      },
+      {
+        "n": "Riva",
+        "p": "LW",
+        "r": 91,
+        "num": 11
+      },
+      {
+        "n": "Bertini",
+        "p": "DM",
+        "r": 79,
+        "num": 8
+      },
+      {
+        "n": "Anastasi",
+        "p": "ST",
+        "r": 82,
+        "num": 18
+      },
+      {
+        "n": "Juliano",
+        "p": "CB",
+        "r": 79,
+        "num": 17
+      }
+    ]
+  },
+  "Alemanha 1970": {
+    "flag": "🇩🇪",
+    "year": 1970,
+    "players": [
+      {
+        "n": "Maier",
+        "p": "GK",
+        "r": 92,
+        "num": 1
+      },
+      {
+        "n": "Vogts",
+        "p": "RB",
+        "r": 85,
+        "num": 4
+      },
+      {
+        "n": "Schnellinger",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Schulz",
+        "p": "CB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Fichtel",
+        "p": "CB",
+        "r": 81,
+        "num": 6
+      },
+      {
+        "n": "Beckenbauer",
+        "p": "CM",
+        "r": 97,
+        "num": 5
+      },
+      {
+        "n": "Seeler",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Müller G.",
+        "p": "ST",
+        "r": 96,
+        "num": 13
+      },
+      {
+        "n": "Overath",
+        "p": "CM",
+        "r": 87,
+        "num": 12
+      },
+      {
+        "n": "Grabowski",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Libuda",
+        "p": "LW",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Löhr",
+        "p": "AM",
+        "r": 78,
+        "num": 10
+      },
+      {
+        "n": "Held",
+        "p": "RW",
+        "r": 80,
+        "num": 14
+      },
+      {
+        "n": "Patzke",
+        "p": "DM",
+        "r": 76,
+        "num": 15
+      }
+    ]
+  },
+  "Argentina 1978": {
+    "flag": "🇦🇷",
+    "year": 1978,
+    "players": [
+      {
+        "n": "Fillol",
+        "p": "GK",
+        "r": 87,
+        "num": 5
+      },
+      {
+        "n": "Olguín",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Passarella",
+        "p": "CB",
+        "r": 89,
+        "num": 6
+      },
+      {
+        "n": "Tarantini",
+        "p": "LB",
+        "r": 80,
+        "num": 3
+      },
+      {
+        "n": "Galván",
+        "p": "CB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Ardiles",
+        "p": "CM",
+        "r": 88,
+        "num": 8
+      },
+      {
+        "n": "Ortiz",
+        "p": "RW",
+        "r": 81,
+        "num": 7
+      },
+      {
+        "n": "Luque",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Kempes",
+        "p": "LW",
+        "r": 92,
+        "num": 10
+      },
+      {
+        "n": "Bertoni",
+        "p": "AM",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Houseman",
+        "p": "LW",
+        "r": 80,
+        "num": 15
+      },
+      {
+        "n": "Gallego",
+        "p": "DM",
+        "r": 81,
+        "num": 18
+      },
+      {
+        "n": "Larrosa",
+        "p": "CM",
+        "r": 79,
+        "num": 14
+      },
+      {
+        "n": "Alonso R.",
+        "p": "CM",
+        "r": 80,
+        "num": 16
+      }
+    ]
+  },
+  "Holanda 1978": {
+    "flag": "🇳🇱",
+    "year": 1978,
+    "players": [
+      {
+        "n": "Jongbloed",
+        "p": "GK",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Suurbier",
+        "p": "RB",
+        "r": 84,
+        "num": 20
+      },
+      {
+        "n": "Krol",
+        "p": "LB",
+        "r": 88,
+        "num": 17
+      },
+      {
+        "n": "Rijsbergen",
+        "p": "CB",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Brandts",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Neeskens",
+        "p": "CM",
+        "r": 89,
+        "num": 15
+      },
+      {
+        "n": "Jansen",
+        "p": "CM",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Rep",
+        "p": "RW",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "Rensenbrink",
+        "p": "LW",
+        "r": 87,
+        "num": 13
+      },
+      {
+        "n": "van der Kerkhof R.",
+        "p": "AM",
+        "r": 84,
+        "num": 18
+      },
+      {
+        "n": "Nanninga",
+        "p": "ST",
+        "r": 80,
+        "num": 12
+      },
+      {
+        "n": "van der Kerkhof W.",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Poortvliet",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      }
+    ]
+  },
+  "Brasil 1982": {
+    "flag": "🇧🇷",
+    "year": 1982,
+    "players": [
+      {
+        "n": "Waldir Peres",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Leandro",
+        "p": "RB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Júnior",
+        "p": "LB",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Luizinho",
+        "p": "CB",
+        "r": 80,
+        "num": 3
+      },
+      {
+        "n": "Oscar",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Falcão",
+        "p": "CM",
+        "r": 93,
+        "num": 8
+      },
+      {
+        "n": "Sócrates",
+        "p": "CM",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "Zico",
+        "p": "AM",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Serginho",
+        "p": "LW",
+        "r": 78,
+        "num": 11
+      },
+      {
+        "n": "Éder",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Careca",
+        "p": "ST",
+        "r": 87,
+        "num": 15
+      },
+      {
+        "n": "Cerezo",
+        "p": "DM",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Paulo Isidoro",
+        "p": "AM",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "Dirceu",
+        "p": "CM",
+        "r": 83,
+        "num": 14
+      }
+    ]
+  },
+  "Alemanha 1982": {
+    "flag": "🇩🇪",
+    "year": 1982,
+    "players": [
+      {
+        "n": "Schumacher",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Kaltz",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Briegel",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "K.H. Förster",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Stielike",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Dremmler",
+        "p": "CM",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "B. Förster",
+        "p": "DM",
+        "r": 81,
+        "num": 8
+      },
+      {
+        "n": "Breitner",
+        "p": "CM",
+        "r": 87,
+        "num": 17
+      },
+      {
+        "n": "Rummenigge",
+        "p": "AM",
+        "r": 93,
+        "num": 11
+      },
+      {
+        "n": "Fischer",
+        "p": "ST",
+        "r": 84,
+        "num": 10
+      },
+      {
+        "n": "Hrubesch",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Littbarski",
+        "p": "RW",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "Magath",
+        "p": "CM",
+        "r": 82,
+        "num": 14
+      },
+      {
+        "n": "Allofs",
+        "p": "LW",
+        "r": 81,
+        "num": 18
+      }
+    ]
+  },
+  "França 1982": {
+    "flag": "🇫🇷",
+    "year": 1982,
+    "players": [
+      {
+        "n": "Ettori",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Amoros",
+        "p": "RB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Tresor",
+        "p": "CB",
+        "r": 85,
+        "num": 3
+      },
+      {
+        "n": "Bossis",
+        "p": "CB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Janvion",
+        "p": "LB",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "Giresse",
+        "p": "CM",
+        "r": 89,
+        "num": 9
+      },
+      {
+        "n": "Platini",
+        "p": "AM",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Tigana",
+        "p": "DM",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Rocheteau",
+        "p": "RW",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "Lacombe",
+        "p": "ST",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Six",
+        "p": "LW",
+        "r": 81,
+        "num": 11
+      },
+      {
+        "n": "Couriol",
+        "p": "CM",
+        "r": 77,
+        "num": 18
+      },
+      {
+        "n": "Soler",
+        "p": "ST",
+        "r": 79,
+        "num": 20
+      },
+      {
+        "n": "Lopez P.",
+        "p": "LB",
+        "r": 77,
+        "num": 14
+      }
+    ]
+  },
+  "Alemanha 1986": {
+    "flag": "🇩🇪",
+    "year": 1986,
+    "players": [
+      {
+        "n": "Schumacher",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Berthold",
+        "p": "RB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Briegel",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "K.H. Förster",
+        "p": "CB",
+        "r": 81,
+        "num": 4
+      },
+      {
+        "n": "Eder",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Matthäus",
+        "p": "CM",
+        "r": 94,
+        "num": 10
+      },
+      {
+        "n": "Brehme",
+        "p": "LB",
+        "r": 87,
+        "num": 8
+      },
+      {
+        "n": "Magath",
+        "p": "CM",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Rummenigge",
+        "p": "AM",
+        "r": 91,
+        "num": 11
+      },
+      {
+        "n": "Völler",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Allofs",
+        "p": "LW",
+        "r": 83,
+        "num": 17
+      },
+      {
+        "n": "Littbarski",
+        "p": "RW",
+        "r": 85,
+        "num": 6
+      }
+    ]
+  },
+  "França 1986": {
+    "flag": "🇫🇷",
+    "year": 1986,
+    "players": [
+      {
+        "n": "Bats",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Amoros",
+        "p": "RB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Ayache",
+        "p": "CB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Bossis",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Tusseau",
+        "p": "LB",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Giresse",
+        "p": "CM",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Platini",
+        "p": "AM",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Tigana",
+        "p": "DM",
+        "r": 87,
+        "num": 8
+      },
+      {
+        "n": "Rocheteau",
+        "p": "RW",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Papin",
+        "p": "ST",
+        "r": 85,
+        "num": 20
+      },
+      {
+        "n": "Stopyra",
+        "p": "LW",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "Bellone",
+        "p": "AM",
+        "r": 79,
+        "num": 14
+      }
+    ]
+  },
+  "Brasil 1986": {
+    "flag": "🇧🇷",
+    "year": 1986,
+    "players": [
+      {
+        "n": "Carlos",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Edinho",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Branco",
+        "p": "LB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Júlio César",
+        "p": "CB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Edson",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Elzo",
+        "p": "CM",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Sócrates",
+        "p": "CM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Alemão",
+        "p": "DM",
+        "r": 82,
+        "num": 15
+      },
+      {
+        "n": "Júnior",
+        "p": "LB",
+        "r": 84,
+        "num": 17
+      },
+      {
+        "n": "Zico",
+        "p": "AM",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "Careca",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Müller",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      }
+    ]
+  },
+  "México 1986": {
+    "flag": "🇲🇽",
+    "year": 1986,
+    "players": [
+      {
+        "n": "Larios",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Trejo",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Servín",
+        "p": "LB",
+        "r": 77,
+        "num": 3
+      },
+      {
+        "n": "Quirarte",
+        "p": "CB",
+        "r": 81,
+        "num": 4
+      },
+      {
+        "n": "Amador",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "de los Cobos",
+        "p": "DM",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "España",
+        "p": "CM",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Boy",
+        "p": "AM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Negrete",
+        "p": "CM",
+        "r": 82,
+        "num": 10
+      },
+      {
+        "n": "Sánchez",
+        "p": "ST",
+        "r": 89,
+        "num": 9
+      },
+      {
+        "n": "Aguirre",
+        "p": "LW",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Flores",
+        "p": "RW",
+        "r": 77,
+        "num": 17
+      }
+    ]
+  },
+  "Alemanha 1990": {
+    "flag": "🇩🇪",
+    "year": 1990,
+    "players": [
+      {
+        "n": "Illgner",
+        "p": "GK",
+        "r": 87,
+        "num": 1
+      },
+      {
+        "n": "Berthold",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Brehme",
+        "p": "LB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Augenthaler",
+        "p": "CB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Kohler",
+        "p": "CB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "Matthäus",
+        "p": "CM",
+        "r": 96,
+        "num": 10
+      },
+      {
+        "n": "Buchwald",
+        "p": "DM",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Häßler",
+        "p": "CM",
+        "r": 86,
+        "num": 8
+      },
+      {
+        "n": "Riedle",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Völler",
+        "p": "LW",
+        "r": 88,
+        "num": 11
+      },
+      {
+        "n": "Klinsmann",
+        "p": "ST",
+        "r": 89,
+        "num": 18
+      },
+      {
+        "n": "Littbarski",
+        "p": "RW",
+        "r": 83,
+        "num": 7
+      }
+    ]
+  },
+  "Argentina 1990": {
+    "flag": "🇦🇷",
+    "year": 1990,
+    "players": [
+      {
+        "n": "Goycochea",
+        "p": "GK",
+        "r": 85,
+        "num": 18
+      },
+      {
+        "n": "Lorenzo",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Sensini",
+        "p": "CB",
+        "r": 82,
+        "num": 17
+      },
+      {
+        "n": "Ruggeri",
+        "p": "CB",
+        "r": 86,
+        "num": 6
+      },
+      {
+        "n": "Serrizuela",
+        "p": "LB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Basualdo",
+        "p": "CM",
+        "r": 79,
+        "num": 8
+      },
+      {
+        "n": "Burruchaga",
+        "p": "CM",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Maradona",
+        "p": "AM",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Troglio",
+        "p": "ST",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Caniggia",
+        "p": "RW",
+        "r": 89,
+        "num": 9
+      },
+      {
+        "n": "Dezotti",
+        "p": "LW",
+        "r": 78,
+        "num": 22
+      },
+      {
+        "n": "Giusti",
+        "p": "DM",
+        "r": 80,
+        "num": 14
+      }
+    ]
+  },
+  "Itália 1990": {
+    "flag": "🇮🇹",
+    "year": 1990,
+    "players": [
+      {
+        "n": "Zenga",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Bergomi",
+        "p": "RB",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Maldini",
+        "p": "LB",
+        "r": 92,
+        "num": 3
+      },
+      {
+        "n": "Baresi",
+        "p": "CB",
+        "r": 96,
+        "num": 5
+      },
+      {
+        "n": "Costacurta",
+        "p": "CB",
+        "r": 87,
+        "num": 15
+      },
+      {
+        "n": "Ancelotti",
+        "p": "CM",
+        "r": 86,
+        "num": 8
+      },
+      {
+        "n": "De Agostini",
+        "p": "LM",
+        "r": 81,
+        "num": 4
+      },
+      {
+        "n": "Donadoni",
+        "p": "CM",
+        "r": 83,
+        "num": 14
+      },
+      {
+        "n": "Giannini",
+        "p": "AM",
+        "r": 82,
+        "num": 10
+      },
+      {
+        "n": "Baggio R.",
+        "p": "AM",
+        "r": 92,
+        "num": 20
+      },
+      {
+        "n": "Schillaci",
+        "p": "ST",
+        "r": 88,
+        "num": 19
+      },
+      {
+        "n": "Vialli",
+        "p": "LW",
+        "r": 85,
+        "num": 9
+      }
+    ]
+  },
+  "Camarões 1990": {
+    "flag": "🇨🇲",
+    "year": 1990,
+    "players": [
+      {
+        "n": "N'Kono",
+        "p": "GK",
+        "r": 85,
+        "num": 1
+      },
+      {
+        "n": "Tataw",
+        "p": "RB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Ndip",
+        "p": "CB",
+        "r": 78,
+        "num": 4
+      },
+      {
+        "n": "Massing",
+        "p": "CB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Onana",
+        "p": "LB",
+        "r": 77,
+        "num": 2
+      },
+      {
+        "n": "Maboang",
+        "p": "CM",
+        "r": 79,
+        "num": 8
+      },
+      {
+        "n": "Libih",
+        "p": "CM",
+        "r": 77,
+        "num": 7
+      },
+      {
+        "n": "Ebwelle",
+        "p": "DM",
+        "r": 76,
+        "num": 6
+      },
+      {
+        "n": "Omam-Biyik",
+        "p": "RW",
+        "r": 82,
+        "num": 9
+      },
+      {
+        "n": "Milla",
+        "p": "ST",
+        "r": 88,
+        "num": 17
+      },
+      {
+        "n": "Pagal",
+        "p": "LW",
+        "r": 77,
+        "num": 11
+      },
+      {
+        "n": "Ekeke",
+        "p": "AM",
+        "r": 79,
+        "num": 14
+      }
+    ]
+  },
+  "Brasil 1994": {
+    "flag": "🇧🇷",
+    "year": 1994,
+    "players": [
+      {
+        "n": "Taffarel",
+        "p": "GK",
+        "r": 89,
+        "num": 1
+      },
+      {
+        "n": "Cafu",
+        "p": "RB",
+        "r": 91,
+        "num": 2
+      },
+      {
+        "n": "Branco",
+        "p": "LB",
+        "r": 84,
+        "num": 6
+      },
+      {
+        "n": "Aldair",
+        "p": "CB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Marcio Santos",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Mauro Silva",
+        "p": "DM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Mazinho",
+        "p": "RM",
+        "r": 80,
+        "num": 19
+      },
+      {
+        "n": "Zinho",
+        "p": "CM",
+        "r": 86,
+        "num": 8
+      },
+      {
+        "n": "Rai",
+        "p": "AM",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Romário",
+        "p": "ST",
+        "r": 97,
+        "num": 11
+      },
+      {
+        "n": "Bebeto",
+        "p": "ST",
+        "r": 92,
+        "num": 9
+      },
+      {
+        "n": "Leonardo",
+        "p": "LW",
+        "r": 83,
+        "num": 12
+      }
+    ]
+  },
+  "Itália 1994": {
+    "flag": "🇮🇹",
+    "year": 1994,
+    "players": [
+      {
+        "n": "Pagliuca",
+        "p": "GK",
+        "r": 85,
+        "num": 1
+      },
+      {
+        "n": "Mussi",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Maldini",
+        "p": "LB",
+        "r": 93,
+        "num": 3
+      },
+      {
+        "n": "Baresi",
+        "p": "CB",
+        "r": 95,
+        "num": 5
+      },
+      {
+        "n": "Costacurta",
+        "p": "CB",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Albertini",
+        "p": "CM",
+        "r": 86,
+        "num": 4
+      },
+      {
+        "n": "Donadoni",
+        "p": "CM",
+        "r": 82,
+        "num": 14
+      },
+      {
+        "n": "Baggio D.",
+        "p": "DM",
+        "r": 83,
+        "num": 15
+      },
+      {
+        "n": "Evani",
+        "p": "AM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Baggio R.",
+        "p": "AM",
+        "r": 95,
+        "num": 10
+      },
+      {
+        "n": "Signori",
+        "p": "LW",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Zola",
+        "p": "RW",
+        "r": 86,
+        "num": 11
+      }
+    ]
+  },
+  "Brasil 1998": {
+    "flag": "🇧🇷",
+    "year": 1998,
+    "players": [
+      {
+        "n": "Taffarel",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Cafu",
+        "p": "RB",
+        "r": 93,
+        "num": 2
+      },
+      {
+        "n": "Roberto Carlos",
+        "p": "LB",
+        "r": 93,
+        "num": 6
+      },
+      {
+        "n": "Aldair",
+        "p": "CB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Junior Baiano",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Dunga",
+        "p": "DM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "César Sampaio",
+        "p": "CM",
+        "r": 80,
+        "num": 18
+      },
+      {
+        "n": "Rivaldo",
+        "p": "LW",
+        "r": 95,
+        "num": 10
+      },
+      {
+        "n": "Leonardo",
+        "p": "LB",
+        "r": 86,
+        "num": 12
+      },
+      {
+        "n": "Ronaldo",
+        "p": "ST",
+        "r": 99,
+        "num": 9
+      },
+      {
+        "n": "Bebeto",
+        "p": "ST",
+        "r": 89,
+        "num": 7
+      },
+      {
+        "n": "Denilson",
+        "p": "RW",
+        "r": 84,
+        "num": 11
+      }
+    ]
+  },
+  "Holanda 1998": {
+    "flag": "🇳🇱",
+    "year": 1998,
+    "players": [
+      {
+        "n": "van der Sar",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Reiziger",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "F.de Boer",
+        "p": "CB",
+        "r": 87,
+        "num": 5
+      },
+      {
+        "n": "Stam",
+        "p": "CB",
+        "r": 91,
+        "num": 6
+      },
+      {
+        "n": "Numan",
+        "p": "LB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Seedorf",
+        "p": "CM",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "Davids",
+        "p": "DM",
+        "r": 89,
+        "num": 8
+      },
+      {
+        "n": "R.de Boer",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Cocu",
+        "p": "CM",
+        "r": 85,
+        "num": 4
+      },
+      {
+        "n": "Bergkamp",
+        "p": "AM",
+        "r": 95,
+        "num": 10
+      },
+      {
+        "n": "Kluivert",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Zenden",
+        "p": "LW",
+        "r": 82,
+        "num": 11
+      }
+    ]
+  },
+  "Alemanha 1998": {
+    "flag": "🇩🇪",
+    "year": 1998,
+    "players": [
+      {
+        "n": "Köpke",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Strunz",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Reuter",
+        "p": "CB",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Kohler",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Heinrich",
+        "p": "LB",
+        "r": 80,
+        "num": 3
+      },
+      {
+        "n": "Matthäus",
+        "p": "CM",
+        "r": 90,
+        "num": 10
+      },
+      {
+        "n": "Hamann",
+        "p": "DM",
+        "r": 84,
+        "num": 20
+      },
+      {
+        "n": "Scholl",
+        "p": "AM",
+        "r": 86,
+        "num": 7
+      },
+      {
+        "n": "Bierhoff",
+        "p": "ST",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Klinsmann",
+        "p": "LW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Kirsten",
+        "p": "ST",
+        "r": 85,
+        "num": 14
+      },
+      {
+        "n": "Bobic",
+        "p": "RW",
+        "r": 79,
+        "num": 8
+      }
+    ]
+  },
+  "Alemanha 2002": {
+    "flag": "🇩🇪",
+    "year": 2002,
+    "players": [
+      {
+        "n": "Kahn",
+        "p": "GK",
+        "r": 95,
+        "num": 1
+      },
+      {
+        "n": "Linke",
+        "p": "RB",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Lizarazu",
+        "p": "LB",
+        "r": 85,
+        "num": 3
+      },
+      {
+        "n": "Ramelow",
+        "p": "CB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Metzelder",
+        "p": "CB",
+        "r": 82,
+        "num": 21
+      },
+      {
+        "n": "Hamann",
+        "p": "DM",
+        "r": 86,
+        "num": 6
+      },
+      {
+        "n": "Frings",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Schneider",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Ballack",
+        "p": "CM",
+        "r": 93,
+        "num": 13
+      },
+      {
+        "n": "Klose",
+        "p": "ST",
+        "r": 88,
+        "num": 11
+      },
+      {
+        "n": "Jancker",
+        "p": "ST",
+        "r": 80,
+        "num": 9
+      },
+      {
+        "n": "Neuville",
+        "p": "LW",
+        "r": 82,
+        "num": 20
+      }
+    ]
+  },
+  "Coreia do Sul 2002": {
+    "flag": "🇰🇷",
+    "year": 2002,
+    "players": [
+      {
+        "n": "Lee Woon-Jae",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Song Chong-Gug",
+        "p": "RB",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Choi Jin-Cheul",
+        "p": "CB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Kim Tae-Young",
+        "p": "CB",
+        "r": 79,
+        "num": 12
+      },
+      {
+        "n": "Lee Young-Pyo",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Kim Nam-Il",
+        "p": "DM",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Park Ji-Sung",
+        "p": "CM",
+        "r": 88,
+        "num": 7
+      },
+      {
+        "n": "Yoo Sang-Chul",
+        "p": "CM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Hong Myung-Bo",
+        "p": "AM",
+        "r": 84,
+        "num": 20
+      },
+      {
+        "n": "Ahn Jung-Hwan",
+        "p": "ST",
+        "r": 83,
+        "num": 10
+      },
+      {
+        "n": "Hwang Sun-Hong",
+        "p": "RW",
+        "r": 81,
+        "num": 9
+      },
+      {
+        "n": "Choi Yong-Soo",
+        "p": "AM",
+        "r": 80,
+        "num": 11
+      }
+    ]
+  },
+  "Turquia 2002": {
+    "flag": "🇹🇷",
+    "year": 2002,
+    "players": [
+      {
+        "n": "Rüştü",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Fatih",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Alpay",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Okan",
+        "p": "CB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Tayfun",
+        "p": "LB",
+        "r": 79,
+        "num": 4
+      },
+      {
+        "n": "Emre",
+        "p": "CM",
+        "r": 85,
+        "num": 15
+      },
+      {
+        "n": "Tugay",
+        "p": "DM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Arif",
+        "p": "RW",
+        "r": 80,
+        "num": 7
+      },
+      {
+        "n": "Basturk",
+        "p": "AM",
+        "r": 84,
+        "num": 10
+      },
+      {
+        "n": "Hasan Sas",
+        "p": "LW",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Hakan Sukur",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Ilhan",
+        "p": "ST",
+        "r": 80,
+        "num": 22
+      }
+    ]
+  },
+  "Senegal 2002": {
+    "flag": "🇸🇳",
+    "year": 2002,
+    "players": [
+      {
+        "n": "Tony Sylva",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Pape Sarr",
+        "p": "RB",
+        "r": 78,
+        "num": 2
+      },
+      {
+        "n": "Lamine Diatta",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Aliou Cisse",
+        "p": "DM",
+        "r": 81,
+        "num": 4
+      },
+      {
+        "n": "Ferdinand Coly",
+        "p": "LB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Salif Diao",
+        "p": "CM",
+        "r": 81,
+        "num": 10
+      },
+      {
+        "n": "Papa Bouba Diop",
+        "p": "CM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "El Hadji Diouf",
+        "p": "RW",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Moussa Ndoye",
+        "p": "CB",
+        "r": 77,
+        "num": 6
+      },
+      {
+        "n": "Henri Camara",
+        "p": "ST",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Khalilou Fadiga",
+        "p": "LW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Pape Thiaw",
+        "p": "AM",
+        "r": 77,
+        "num": 17
+      }
+    ]
+  },
+  "Brasil 2006": {
+    "flag": "🇧🇷",
+    "year": 2006,
+    "players": [
+      {
+        "n": "Dida",
+        "p": "GK",
+        "r": 87,
+        "num": 1
+      },
+      {
+        "n": "Cafu",
+        "p": "RB",
+        "r": 88,
+        "num": 2
+      },
+      {
+        "n": "Roberto Carlos",
+        "p": "LB",
+        "r": 88,
+        "num": 6
+      },
+      {
+        "n": "Lúcio",
+        "p": "CB",
+        "r": 87,
+        "num": 3
+      },
+      {
+        "n": "Juan",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Emerson",
+        "p": "DM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Zé Roberto",
+        "p": "LM",
+        "r": 82,
+        "num": 16
+      },
+      {
+        "n": "Ronaldinho",
+        "p": "AM",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Kaká",
+        "p": "CM",
+        "r": 93,
+        "num": 8
+      },
+      {
+        "n": "Ronaldo",
+        "p": "ST",
+        "r": 94,
+        "num": 9
+      },
+      {
+        "n": "Adriano",
+        "p": "ST",
+        "r": 87,
+        "num": 19
+      },
+      {
+        "n": "Robinho",
+        "p": "RW",
+        "r": 84,
+        "num": 11
+      }
+    ]
+  },
+  "Itália 2006": {
+    "flag": "🇮🇹",
+    "year": 2006,
+    "players": [
+      {
+        "n": "Buffon",
+        "p": "GK",
+        "r": 95,
+        "num": 1
+      },
+      {
+        "n": "Zambrotta",
+        "p": "RB",
+        "r": 88,
+        "num": 19
+      },
+      {
+        "n": "Grosso",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Cannavaro",
+        "p": "CB",
+        "r": 95,
+        "num": 5
+      },
+      {
+        "n": "Materazzi",
+        "p": "CB",
+        "r": 82,
+        "num": 23
+      },
+      {
+        "n": "Gattuso",
+        "p": "DM",
+        "r": 87,
+        "num": 8
+      },
+      {
+        "n": "De Rossi",
+        "p": "CM",
+        "r": 88,
+        "num": 16
+      },
+      {
+        "n": "Pirlo",
+        "p": "CM",
+        "r": 93,
+        "num": 21
+      },
+      {
+        "n": "Perrotta",
+        "p": "CM",
+        "r": 82,
+        "num": 20
+      },
+      {
+        "n": "Totti",
+        "p": "AM",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "Toni",
+        "p": "ST",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Inzaghi",
+        "p": "ST",
+        "r": 87,
+        "num": 18
+      }
+    ]
+  },
+  "Alemanha 2006": {
+    "flag": "🇩🇪",
+    "year": 2006,
+    "players": [
+      {
+        "n": "Lehmann",
+        "p": "GK",
+        "r": 87,
+        "num": 1
+      },
+      {
+        "n": "Friedrich",
+        "p": "RB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Lahm",
+        "p": "LB",
+        "r": 90,
+        "num": 16
+      },
+      {
+        "n": "Mertesacker",
+        "p": "CB",
+        "r": 84,
+        "num": 17
+      },
+      {
+        "n": "Metzelder",
+        "p": "CB",
+        "r": 83,
+        "num": 21
+      },
+      {
+        "n": "Schneider",
+        "p": "CM",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Frings",
+        "p": "DM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Ballack",
+        "p": "CM",
+        "r": 93,
+        "num": 13
+      },
+      {
+        "n": "Podolski",
+        "p": "LW",
+        "r": 88,
+        "num": 11
+      },
+      {
+        "n": "Klose",
+        "p": "ST",
+        "r": 90,
+        "num": 11
+      },
+      {
+        "n": "Schweinsteiger",
+        "p": "CM",
+        "r": 88,
+        "num": 7
+      },
+      {
+        "n": "Odonkor",
+        "p": "RW",
+        "r": 80,
+        "num": 20
+      }
+    ]
+  },
+  "Espanha 2006": {
+    "flag": "🇪🇸",
+    "year": 2006,
+    "players": [
+      {
+        "n": "Casillas",
+        "p": "GK",
+        "r": 93,
+        "num": 1
+      },
+      {
+        "n": "Sergio Ramos",
+        "p": "RB",
+        "r": 89,
+        "num": 15
+      },
+      {
+        "n": "Puyol",
+        "p": "CB",
+        "r": 90,
+        "num": 5
+      },
+      {
+        "n": "Marchena",
+        "p": "CB",
+        "r": 81,
+        "num": 22
+      },
+      {
+        "n": "Albelda",
+        "p": "LB",
+        "r": 82,
+        "num": 16
+      },
+      {
+        "n": "Xavi",
+        "p": "CM",
+        "r": 93,
+        "num": 8
+      },
+      {
+        "n": "Marcos Senna",
+        "p": "DM",
+        "r": 82,
+        "num": 14
+      },
+      {
+        "n": "Fabregas",
+        "p": "CM",
+        "r": 87,
+        "num": 4
+      },
+      {
+        "n": "Villa",
+        "p": "LW",
+        "r": 91,
+        "num": 7
+      },
+      {
+        "n": "Torres",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Reyes",
+        "p": "RW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Raúl",
+        "p": "AM",
+        "r": 88,
+        "num": 7
+      }
+    ]
+  },
+  "Alemanha 2010": {
+    "flag": "🇩🇪",
+    "year": 2010,
+    "players": [
+      {
+        "n": "Neuer",
+        "p": "GK",
+        "r": 92,
+        "num": 1
+      },
+      {
+        "n": "Lahm",
+        "p": "LB",
+        "r": 92,
+        "num": 16
+      },
+      {
+        "n": "Friedrich",
+        "p": "RB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "Mertesacker",
+        "p": "CB",
+        "r": 85,
+        "num": 17
+      },
+      {
+        "n": "Badstuber",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Schweinsteiger",
+        "p": "CM",
+        "r": 92,
+        "num": 7
+      },
+      {
+        "n": "Khedira",
+        "p": "DM",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Müller T.",
+        "p": "AM",
+        "r": 88,
+        "num": 13
+      },
+      {
+        "n": "Özil",
+        "p": "AM",
+        "r": 89,
+        "num": 8
+      },
+      {
+        "n": "Klose",
+        "p": "ST",
+        "r": 88,
+        "num": 11
+      },
+      {
+        "n": "Podolski",
+        "p": "LW",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Trochowski",
+        "p": "RM",
+        "r": 80,
+        "num": 19
+      }
+    ]
+  },
+  "Brasil 2010": {
+    "flag": "🇧🇷",
+    "year": 2010,
+    "players": [
+      {
+        "n": "Julio Cesar",
+        "p": "GK",
+        "r": 87,
+        "num": 12
+      },
+      {
+        "n": "Maicon",
+        "p": "RB",
+        "r": 88,
+        "num": 13
+      },
+      {
+        "n": "Luisão",
+        "p": "CB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Lúcio",
+        "p": "CB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Michel Bastos",
+        "p": "LB",
+        "r": 82,
+        "num": 19
+      },
+      {
+        "n": "Felipe Melo",
+        "p": "DM",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Gilberto Silva",
+        "p": "DM",
+        "r": 84,
+        "num": 6
+      },
+      {
+        "n": "Kaká",
+        "p": "AM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Ramires",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Robinho",
+        "p": "LW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Fabiano",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Elano",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      }
+    ]
+  },
+  "Argentina 2010": {
+    "flag": "🇦🇷",
+    "year": 2010,
+    "players": [
+      {
+        "n": "Romero",
+        "p": "GK",
+        "r": 83,
+        "num": 23
+      },
+      {
+        "n": "Zabaleta",
+        "p": "RB",
+        "r": 84,
+        "num": 4
+      },
+      {
+        "n": "Demichelis",
+        "p": "CB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Burdisso",
+        "p": "CB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "Heinze",
+        "p": "LB",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Mascherano",
+        "p": "DM",
+        "r": 89,
+        "num": 14
+      },
+      {
+        "n": "Di María",
+        "p": "LW",
+        "r": 88,
+        "num": 7
+      },
+      {
+        "n": "Verón",
+        "p": "CM",
+        "r": 83,
+        "num": 16
+      },
+      {
+        "n": "Higuaín",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Messi",
+        "p": "RW",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Tévez",
+        "p": "ST",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Milito",
+        "p": "ST",
+        "r": 85,
+        "num": 20
+      }
+    ]
+  },
+  "Ghana 2010": {
+    "flag": "🇬🇭",
+    "year": 2010,
+    "players": [
+      {
+        "n": "Kingson",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Pappoe",
+        "p": "RB",
+        "r": 77,
+        "num": 2
+      },
+      {
+        "n": "John Mensah",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Jonathan Mensah",
+        "p": "CB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Vorsah",
+        "p": "LB",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Annan",
+        "p": "DM",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Ayew A.",
+        "p": "CM",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "Muntari",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Boateng K.",
+        "p": "AM",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Appiah",
+        "p": "DM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Gyan",
+        "p": "ST",
+        "r": 87,
+        "num": 3
+      },
+      {
+        "n": "Ayew J.",
+        "p": "RW",
+        "r": 82,
+        "num": 11
+      }
+    ]
+  },
+  "Brasil 2014": {
+    "flag": "🇧🇷",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Julio Cesar",
+        "p": "GK",
+        "r": 84,
+        "num": 12
+      },
+      {
+        "n": "Daniel Alves",
+        "p": "RB",
+        "r": 89,
+        "num": 22
+      },
+      {
+        "n": "David Luiz",
+        "p": "CB",
+        "r": 85,
+        "num": 4
+      },
+      {
+        "n": "Thiago Silva",
+        "p": "CB",
+        "r": 92,
+        "num": 3
+      },
+      {
+        "n": "Marcelo",
+        "p": "LB",
+        "r": 89,
+        "num": 6
+      },
+      {
+        "n": "Luiz Gustavo",
+        "p": "DM",
+        "r": 83,
+        "num": 17
+      },
+      {
+        "n": "Paulinho",
+        "p": "CM",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Oscar",
+        "p": "AM",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Hulk",
+        "p": "RW",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Neymar",
+        "p": "LW",
+        "r": 96,
+        "num": 10
+      },
+      {
+        "n": "Fred",
+        "p": "ST",
+        "r": 79,
+        "num": 9
+      },
+      {
+        "n": "Bernard",
+        "p": "LW",
+        "r": 82,
+        "num": 7
+      }
+    ]
+  },
+  "Argentina 2014": {
+    "flag": "🇦🇷",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Romero",
+        "p": "GK",
+        "r": 84,
+        "num": 23
+      },
+      {
+        "n": "Zabaleta",
+        "p": "RB",
+        "r": 85,
+        "num": 4
+      },
+      {
+        "n": "Garay",
+        "p": "CB",
+        "r": 84,
+        "num": 13
+      },
+      {
+        "n": "Demichelis",
+        "p": "CB",
+        "r": 81,
+        "num": 2
+      },
+      {
+        "n": "Rojo",
+        "p": "LB",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Mascherano",
+        "p": "DM",
+        "r": 90,
+        "num": 14
+      },
+      {
+        "n": "Biglia",
+        "p": "CM",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Di María",
+        "p": "RW",
+        "r": 91,
+        "num": 7
+      },
+      {
+        "n": "Higuaín",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Messi",
+        "p": "AM",
+        "r": 99,
+        "num": 10
+      },
+      {
+        "n": "Lavezzi",
+        "p": "LW",
+        "r": 83,
+        "num": 22
+      },
+      {
+        "n": "Agüero",
+        "p": "ST",
+        "r": 90,
+        "num": 16
+      }
+    ]
+  },
+  "Holanda 2014": {
+    "flag": "🇳🇱",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Cillessen",
+        "p": "GK",
+        "r": 84,
+        "num": 13
+      },
+      {
+        "n": "van Dijk",
+        "p": "CB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "de Vrij",
+        "p": "RB",
+        "r": 86,
+        "num": 6
+      },
+      {
+        "n": "Vlaar",
+        "p": "CB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Blind",
+        "p": "LB",
+        "r": 84,
+        "num": 17
+      },
+      {
+        "n": "de Jong N.",
+        "p": "DM",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "van Persie",
+        "p": "ST",
+        "r": 92,
+        "num": 9
+      },
+      {
+        "n": "Robben",
+        "p": "RW",
+        "r": 93,
+        "num": 11
+      },
+      {
+        "n": "Sneijder",
+        "p": "AM",
+        "r": 90,
+        "num": 10
+      },
+      {
+        "n": "Kuyt",
+        "p": "CM",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Lens",
+        "p": "LW",
+        "r": 81,
+        "num": 18
+      },
+      {
+        "n": "Huntelaar",
+        "p": "RM",
+        "r": 87,
+        "num": 23
+      }
+    ]
+  },
+  "Colômbia 2014": {
+    "flag": "🇨🇴",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Ospina",
+        "p": "GK",
+        "r": 85,
+        "num": 1
+      },
+      {
+        "n": "Cuadrado",
+        "p": "RB",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Yepes",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Zapata",
+        "p": "CB",
+        "r": 80,
+        "num": 15
+      },
+      {
+        "n": "Armero",
+        "p": "LB",
+        "r": 80,
+        "num": 18
+      },
+      {
+        "n": "Aguilar",
+        "p": "DM",
+        "r": 79,
+        "num": 8
+      },
+      {
+        "n": "Carlos Sánchez",
+        "p": "CM",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Rodríguez J.",
+        "p": "AM",
+        "r": 92,
+        "num": 10
+      },
+      {
+        "n": "Quintero",
+        "p": "CM",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Falcao",
+        "p": "ST",
+        "r": 91,
+        "num": 9
+      },
+      {
+        "n": "Gutiérrez",
+        "p": "RW",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "Ramos C.",
+        "p": "LW",
+        "r": 79,
+        "num": 20
+      }
+    ]
+  },
+  "Bélgica 2014": {
+    "flag": "🇧🇪",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Courtois",
+        "p": "GK",
+        "r": 91,
+        "num": 1
+      },
+      {
+        "n": "Alderweireld",
+        "p": "RB",
+        "r": 88,
+        "num": 2
+      },
+      {
+        "n": "Kompany",
+        "p": "CB",
+        "r": 91,
+        "num": 4
+      },
+      {
+        "n": "Vermaelen",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Vertonghen",
+        "p": "LB",
+        "r": 88,
+        "num": 5
+      },
+      {
+        "n": "Witsel",
+        "p": "DM",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Fellaini",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Hazard",
+        "p": "LW",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "de Bruyne",
+        "p": "AM",
+        "r": 91,
+        "num": 7
+      },
+      {
+        "n": "Lukaku",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Origi",
+        "p": "LW",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "Januzaj",
+        "p": "RW",
+        "r": 80,
+        "num": 14
+      }
+    ]
+  },
+  "Bélgica 2018": {
+    "flag": "🇧🇪",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Courtois",
+        "p": "GK",
+        "r": 93,
+        "num": 1
+      },
+      {
+        "n": "Alderweireld",
+        "p": "RB",
+        "r": 88,
+        "num": 2
+      },
+      {
+        "n": "Kompany",
+        "p": "CB",
+        "r": 89,
+        "num": 4
+      },
+      {
+        "n": "Vertonghen",
+        "p": "LB",
+        "r": 88,
+        "num": 5
+      },
+      {
+        "n": "Boyata",
+        "p": "CB",
+        "r": 80,
+        "num": 3
+      },
+      {
+        "n": "Witsel",
+        "p": "DM",
+        "r": 88,
+        "num": 6
+      },
+      {
+        "n": "de Bruyne",
+        "p": "AM",
+        "r": 95,
+        "num": 7
+      },
+      {
+        "n": "Hazard",
+        "p": "LW",
+        "r": 94,
+        "num": 10
+      },
+      {
+        "n": "Mertens",
+        "p": "RW",
+        "r": 86,
+        "num": 14
+      },
+      {
+        "n": "Lukaku",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Fellaini",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Chadli",
+        "p": "LW",
+        "r": 81,
+        "num": 22
+      }
+    ]
+  },
+  "Croácia 2018": {
+    "flag": "🇭🇷",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Subašić",
+        "p": "GK",
+        "r": 85,
+        "num": 23
+      },
+      {
+        "n": "Vrsaljko",
+        "p": "RB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Lovren",
+        "p": "CB",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Vida",
+        "p": "CB",
+        "r": 82,
+        "num": 21
+      },
+      {
+        "n": "Strinić",
+        "p": "LB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Rakitić",
+        "p": "CM",
+        "r": 89,
+        "num": 7
+      },
+      {
+        "n": "Modric",
+        "p": "CM",
+        "r": 95,
+        "num": 10
+      },
+      {
+        "n": "Brozović",
+        "p": "DM",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Perisić",
+        "p": "LW",
+        "r": 86,
+        "num": 4
+      },
+      {
+        "n": "Mandžukić",
+        "p": "ST",
+        "r": 86,
+        "num": 17
+      },
+      {
+        "n": "Rebić",
+        "p": "RW",
+        "r": 83,
+        "num": 18
+      },
+      {
+        "n": "Kovačić",
+        "p": "CM",
+        "r": 84,
+        "num": 8
+      }
+    ]
+  },
+  "Brasil 2018": {
+    "flag": "🇧🇷",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Alisson",
+        "p": "GK",
+        "r": 91,
+        "num": 1
+      },
+      {
+        "n": "Fagner",
+        "p": "RB",
+        "r": 79,
+        "num": 23
+      },
+      {
+        "n": "Thiago Silva",
+        "p": "CB",
+        "r": 91,
+        "num": 3
+      },
+      {
+        "n": "Miranda",
+        "p": "CB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Filipe Luís",
+        "p": "LB",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Casemiro",
+        "p": "DM",
+        "r": 89,
+        "num": 5
+      },
+      {
+        "n": "Paulinho",
+        "p": "CM",
+        "r": 83,
+        "num": 15
+      },
+      {
+        "n": "Coutinho",
+        "p": "AM",
+        "r": 89,
+        "num": 11
+      },
+      {
+        "n": "Willian",
+        "p": "RW",
+        "r": 83,
+        "num": 19
+      },
+      {
+        "n": "Neymar",
+        "p": "LW",
+        "r": 96,
+        "num": 10
+      },
+      {
+        "n": "Gabriel Jesus",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Firmino",
+        "p": "ST",
+        "r": 84,
+        "num": 20
+      }
+    ]
+  },
+  "Suécia 2018": {
+    "flag": "🇸🇪",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Olsen",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Lustig",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Lindelöf",
+        "p": "CB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "Granqvist",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Augustinsson",
+        "p": "LB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Ekdal",
+        "p": "DM",
+        "r": 79,
+        "num": 10
+      },
+      {
+        "n": "Claesson",
+        "p": "RW",
+        "r": 79,
+        "num": 17
+      },
+      {
+        "n": "Larsson",
+        "p": "CM",
+        "r": 79,
+        "num": 19
+      },
+      {
+        "n": "Forsberg",
+        "p": "LW",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Berg",
+        "p": "ST",
+        "r": 79,
+        "num": 20
+      },
+      {
+        "n": "Toivonen",
+        "p": "AM",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Guidetti",
+        "p": "ST",
+        "r": 78,
+        "num": 11
+      }
+    ]
+  },
+  "México 2018": {
+    "flag": "🇲🇽",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Ochoa",
+        "p": "GK",
+        "r": 87,
+        "num": 13
+      },
+      {
+        "n": "Salcedo",
+        "p": "RB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Ayala",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Moreno",
+        "p": "CB",
+        "r": 79,
+        "num": 15
+      },
+      {
+        "n": "Gallardo",
+        "p": "LB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Guardado",
+        "p": "DM",
+        "r": 83,
+        "num": 18
+      },
+      {
+        "n": "Herrera H.",
+        "p": "CM",
+        "r": 82,
+        "num": 16
+      },
+      {
+        "n": "Lozano",
+        "p": "RW",
+        "r": 86,
+        "num": 22
+      },
+      {
+        "n": "Corona",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Chicharito",
+        "p": "ST",
+        "r": 84,
+        "num": 14
+      },
+      {
+        "n": "Dos Santos G.",
+        "p": "AM",
+        "r": 81,
+        "num": 10
+      },
+      {
+        "n": "Vela",
+        "p": "LW",
+        "r": 85,
+        "num": 11
+      }
+    ]
+  },
+  "Brasil 2022": {
+    "flag": "🇧🇷",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Alisson",
+        "p": "GK",
+        "r": 93,
+        "num": 1
+      },
+      {
+        "n": "Danilo",
+        "p": "RB",
+        "r": 84,
+        "num": 13
+      },
+      {
+        "n": "Thiago Silva",
+        "p": "CB",
+        "r": 90,
+        "num": 3
+      },
+      {
+        "n": "Militão",
+        "p": "CB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Alex Sandro",
+        "p": "LB",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Casemiro",
+        "p": "DM",
+        "r": 91,
+        "num": 5
+      },
+      {
+        "n": "Fred",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Lucas Paquetá",
+        "p": "CM",
+        "r": 87,
+        "num": 10
+      },
+      {
+        "n": "Vinicius Jr.",
+        "p": "LW",
+        "r": 92,
+        "num": 20
+      },
+      {
+        "n": "Neymar",
+        "p": "AM",
+        "r": 94,
+        "num": 10
+      },
+      {
+        "n": "Richarlison",
+        "p": "ST",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Rodrygo",
+        "p": "RW",
+        "r": 86,
+        "num": 11
+      }
+    ]
+  },
+  "Portugal 2022": {
+    "flag": "🇵🇹",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Diogo Costa",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "João Cancelo",
+        "p": "RB",
+        "r": 89,
+        "num": 20
+      },
+      {
+        "n": "Pepe",
+        "p": "CB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Rúben Dias",
+        "p": "CB",
+        "r": 91,
+        "num": 6
+      },
+      {
+        "n": "Guerreiro",
+        "p": "LB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Vitinha",
+        "p": "CM",
+        "r": 83,
+        "num": 16
+      },
+      {
+        "n": "Bernardo Silva",
+        "p": "CM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Bruno Fernandes",
+        "p": "AM",
+        "r": 88,
+        "num": 8
+      },
+      {
+        "n": "João Félix",
+        "p": "RW",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Cristiano Ronaldo",
+        "p": "ST",
+        "r": 93,
+        "num": 7
+      },
+      {
+        "n": "Rafael Leão",
+        "p": "LW",
+        "r": 85,
+        "num": 15
+      },
+      {
+        "n": "Gonçalo Ramos",
+        "p": "ST",
+        "r": 84,
+        "num": 18
+      }
+    ]
+  },
+  "França 2022": {
+    "flag": "🇫🇷",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Lloris",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Pavard",
+        "p": "RB",
+        "r": 84,
+        "num": 2
+      },
+      {
+        "n": "Varane",
+        "p": "CB",
+        "r": 88,
+        "num": 4
+      },
+      {
+        "n": "Upamecano",
+        "p": "CB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "Theo Hernández",
+        "p": "LB",
+        "r": 86,
+        "num": 22
+      },
+      {
+        "n": "Tchouaméni",
+        "p": "DM",
+        "r": 86,
+        "num": 8
+      },
+      {
+        "n": "Rabiot",
+        "p": "CM",
+        "r": 82,
+        "num": 14
+      },
+      {
+        "n": "Griezmann",
+        "p": "AM",
+        "r": 90,
+        "num": 7
+      },
+      {
+        "n": "Dembélé",
+        "p": "RW",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Mbappé",
+        "p": "LW",
+        "r": 97,
+        "num": 10
+      },
+      {
+        "n": "Giroud",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Coman",
+        "p": "RW",
+        "r": 83,
+        "num": 21
+      }
+    ]
+  },
+  "Croácia 2022": {
+    "flag": "🇭🇷",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Livaković",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Juranović",
+        "p": "RB",
+        "r": 81,
+        "num": 2
+      },
+      {
+        "n": "Lovren",
+        "p": "CB",
+        "r": 81,
+        "num": 6
+      },
+      {
+        "n": "Gvardiol",
+        "p": "LB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Erlić",
+        "p": "CB",
+        "r": 79,
+        "num": 5
+      },
+      {
+        "n": "Brozović",
+        "p": "DM",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Modric",
+        "p": "CM",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "Kovačić",
+        "p": "CM",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "Perisić",
+        "p": "LW",
+        "r": 86,
+        "num": 4
+      },
+      {
+        "n": "Kramarić",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Pasalić",
+        "p": "AM",
+        "r": 82,
+        "num": 15
+      },
+      {
+        "n": "Rebić",
+        "p": "RW",
+        "r": 80,
+        "num": 18
+      }
+    ]
+  },
+  "Holanda 2022": {
+    "flag": "🇳🇱",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Noppert",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Dumfries",
+        "p": "RB",
+        "r": 86,
+        "num": 22
+      },
+      {
+        "n": "van Dijk",
+        "p": "CB",
+        "r": 91,
+        "num": 4
+      },
+      {
+        "n": "Aké",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Blind",
+        "p": "LB",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "Frenkie de Jong",
+        "p": "CM",
+        "r": 89,
+        "num": 21
+      },
+      {
+        "n": "Koopmeiners",
+        "p": "CM",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Berghuis",
+        "p": "AM",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Gakpo",
+        "p": "LW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Depay",
+        "p": "ST",
+        "r": 86,
+        "num": 10
+      },
+      {
+        "n": "Bergwijn",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Janssen",
+        "p": "ST",
+        "r": 79,
+        "num": 9
+      }
+    ]
+  },
+  "Senegal 2022": {
+    "flag": "🇸🇳",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Mendy E.",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Sabaly",
+        "p": "RB",
+        "r": 81,
+        "num": 20
+      },
+      {
+        "n": "Koulibaly",
+        "p": "CB",
+        "r": 88,
+        "num": 3
+      },
+      {
+        "n": "Diallo A.",
+        "p": "CB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Jakobs",
+        "p": "LB",
+        "r": 79,
+        "num": 14
+      },
+      {
+        "n": "Nampalys",
+        "p": "DM",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Gueye I.",
+        "p": "CM",
+        "r": 84,
+        "num": 8
+      },
+      {
+        "n": "Kouyaté",
+        "p": "CM",
+        "r": 80,
+        "num": 9
+      },
+      {
+        "n": "Sarr I.",
+        "p": "RW",
+        "r": 84,
+        "num": 12
+      },
+      {
+        "n": "Mané",
+        "p": "LW",
+        "r": 92,
+        "num": 10
+      },
+      {
+        "n": "Dia B.",
+        "p": "ST",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Jackson N.",
+        "p": "ST",
+        "r": 79,
+        "num": 15
+      }
+    ]
+  },
+  "Japão 2022": {
+    "flag": "🇯🇵",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Gonda",
+        "p": "GK",
+        "r": 81,
+        "num": 1
+      },
+      {
+        "n": "Yamane",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Yoshida",
+        "p": "CB",
+        "r": 83,
+        "num": 22
+      },
+      {
+        "n": "Itakura",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Nagatomo",
+        "p": "LB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Endo W.",
+        "p": "DM",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Tanaka H.",
+        "p": "CM",
+        "r": 81,
+        "num": 4
+      },
+      {
+        "n": "Doan",
+        "p": "RW",
+        "r": 81,
+        "num": 8
+      },
+      {
+        "n": "Minamino",
+        "p": "AM",
+        "r": 82,
+        "num": 10
+      },
+      {
+        "n": "Asano",
+        "p": "ST",
+        "r": 80,
+        "num": 18
+      },
+      {
+        "n": "Maeda",
+        "p": "LW",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Mitoma",
+        "p": "LW",
+        "r": 82,
+        "num": 16
+      }
+    ]
+  },
+  "Camarões 2022": {
+    "flag": "🇨🇲",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Onana A.",
+        "p": "GK",
+        "r": 87,
+        "num": 1
+      },
+      {
+        "n": "Fai",
+        "p": "RB",
+        "r": 79,
+        "num": 21
+      },
+      {
+        "n": "Castelletto",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Nkoulou",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Tolo",
+        "p": "LB",
+        "r": 78,
+        "num": 17
+      },
+      {
+        "n": "Anguissa",
+        "p": "CM",
+        "r": 86,
+        "num": 7
+      },
+      {
+        "n": "Hongla",
+        "p": "DM",
+        "r": 79,
+        "num": 20
+      },
+      {
+        "n": "Mbeumo",
+        "p": "RW",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Choupo-Moting",
+        "p": "ST",
+        "r": 82,
+        "num": 9
+      },
+      {
+        "n": "Aboubakar",
+        "p": "ST",
+        "r": 84,
+        "num": 10
+      },
+      {
+        "n": "Toko-Ekambi",
+        "p": "LW",
+        "r": 82,
+        "num": 12
+      },
+      {
+        "n": "Ekambi",
+        "p": "AM",
+        "r": 78,
+        "num": 15
+      }
+    ]
+  },
+  "Brasil 2026": {
+    "flag": "🇧🇷",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Alisson",
+        "p": "GK",
+        "r": 92,
+        "num": 1
+      },
+      {
+        "n": "Danilo",
+        "p": "RB",
+        "r": 82,
+        "num": 13
+      },
+      {
+        "n": "Marquinhos",
+        "p": "CB",
+        "r": 89,
+        "num": 4
+      },
+      {
+        "n": "Gabriel Magalhães",
+        "p": "CB",
+        "r": 86,
+        "num": 5
+      },
+      {
+        "n": "Alex Telles",
+        "p": "LB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Casemiro",
+        "p": "DM",
+        "r": 88,
+        "num": 5
+      },
+      {
+        "n": "Lucas Paquetá",
+        "p": "CM",
+        "r": 88,
+        "num": 10
+      },
+      {
+        "n": "Gerson",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Vinicius Jr.",
+        "p": "LW",
+        "r": 95,
+        "num": 7
+      },
+      {
+        "n": "Endrick",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Rodrygo",
+        "p": "RW",
+        "r": 88,
+        "num": 11
+      },
+      {
+        "n": "Estevão",
+        "p": "AM",
+        "r": 83,
+        "num": 17
+      }
+    ]
+  },
+  "Argentina 2026": {
+    "flag": "🇦🇷",
+    "year": 2026,
+    "players": [
+      {
+        "n": "E. Martínez",
+        "p": "GK",
+        "r": 91,
+        "num": 23
+      },
+      {
+        "n": "Molina",
+        "p": "RB",
+        "r": 84,
+        "num": 26
+      },
+      {
+        "n": "Romero",
+        "p": "CB",
+        "r": 89,
+        "num": 13
+      },
+      {
+        "n": "Otamendi",
+        "p": "CB",
+        "r": 84,
+        "num": 19
+      },
+      {
+        "n": "Tagliafico",
+        "p": "LB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "de Paul",
+        "p": "CM",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Enzo Fernández",
+        "p": "CM",
+        "r": 86,
+        "num": 24
+      },
+      {
+        "n": "Mac Allister",
+        "p": "CM",
+        "r": 86,
+        "num": 20
+      },
+      {
+        "n": "Di María",
+        "p": "RW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Messi",
+        "p": "AM",
+        "r": 98,
+        "num": 10
+      },
+      {
+        "n": "Lautaro",
+        "p": "ST",
+        "r": 91,
+        "num": 22
+      },
+      {
+        "n": "Álvarez J.",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      }
+    ]
+  },
+  "França 2026": {
+    "flag": "🇫🇷",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Maignan",
+        "p": "GK",
+        "r": 90,
+        "num": 16
+      },
+      {
+        "n": "Koundé",
+        "p": "RB",
+        "r": 87,
+        "num": 5
+      },
+      {
+        "n": "Saliba",
+        "p": "CB",
+        "r": 90,
+        "num": 12
+      },
+      {
+        "n": "Upamecano",
+        "p": "CB",
+        "r": 86,
+        "num": 4
+      },
+      {
+        "n": "Theo Hernández",
+        "p": "LB",
+        "r": 87,
+        "num": 22
+      },
+      {
+        "n": "Tchouaméni",
+        "p": "DM",
+        "r": 88,
+        "num": 8
+      },
+      {
+        "n": "Camavinga",
+        "p": "CM",
+        "r": 86,
+        "num": 6
+      },
+      {
+        "n": "Griezmann",
+        "p": "AM",
+        "r": 88,
+        "num": 7
+      },
+      {
+        "n": "Dembélé",
+        "p": "RW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Mbappé",
+        "p": "LW",
+        "r": 98,
+        "num": 10
+      },
+      {
+        "n": "Thuram M.",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Olise",
+        "p": "RW",
+        "r": 84,
+        "num": 25
+      }
+    ]
+  },
+  "Espanha 2026": {
+    "flag": "🇪🇸",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Unai Simón",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Carvajal",
+        "p": "RB",
+        "r": 86,
+        "num": 2
+      },
+      {
+        "n": "Le Normand",
+        "p": "CB",
+        "r": 85,
+        "num": 14
+      },
+      {
+        "n": "Laporte",
+        "p": "CB",
+        "r": 85,
+        "num": 14
+      },
+      {
+        "n": "Grimaldo",
+        "p": "LB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "Rodri",
+        "p": "DM",
+        "r": 94,
+        "num": 16
+      },
+      {
+        "n": "Pedri",
+        "p": "CM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Fabián Ruiz",
+        "p": "CM",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Lamine Yamal",
+        "p": "RW",
+        "r": 90,
+        "num": 19
+      },
+      {
+        "n": "Morata",
+        "p": "ST",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Williams N.",
+        "p": "LW",
+        "r": 86,
+        "num": 17
+      },
+      {
+        "n": "Dani Olmo",
+        "p": "AM",
+        "r": 86,
+        "num": 10
+      }
+    ]
+  },
+  "Alemanha 2026": {
+    "flag": "🇩🇪",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Ter Stegen",
+        "p": "GK",
+        "r": 89,
+        "num": 1
+      },
+      {
+        "n": "Kimmich",
+        "p": "RB",
+        "r": 91,
+        "num": 6
+      },
+      {
+        "n": "Rüdiger",
+        "p": "CB",
+        "r": 88,
+        "num": 2
+      },
+      {
+        "n": "Tah",
+        "p": "CB",
+        "r": 84,
+        "num": 4
+      },
+      {
+        "n": "Raum",
+        "p": "LB",
+        "r": 83,
+        "num": 22
+      },
+      {
+        "n": "Kroos",
+        "p": "DM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Andrich",
+        "p": "CM",
+        "r": 82,
+        "num": 23
+      },
+      {
+        "n": "Gündogan",
+        "p": "CM",
+        "r": 87,
+        "num": 21
+      },
+      {
+        "n": "Musiala",
+        "p": "AM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Wirtz",
+        "p": "AM",
+        "r": 92,
+        "num": 17
+      },
+      {
+        "n": "Havertz",
+        "p": "ST",
+        "r": 86,
+        "num": 7
+      },
+      {
+        "n": "Gnabry",
+        "p": "RW",
+        "r": 83,
+        "num": 10
+      }
+    ]
+  },
+  "Portugal 2026": {
+    "flag": "🇵🇹",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Diogo Costa",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "João Cancelo",
+        "p": "RB",
+        "r": 87,
+        "num": 20
+      },
+      {
+        "n": "Pepe",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Rúben Dias",
+        "p": "CB",
+        "r": 92,
+        "num": 6
+      },
+      {
+        "n": "Nuno Mendes",
+        "p": "LB",
+        "r": 87,
+        "num": 19
+      },
+      {
+        "n": "Vitinha",
+        "p": "CM",
+        "r": 86,
+        "num": 16
+      },
+      {
+        "n": "Bernardo Silva",
+        "p": "CM",
+        "r": 90,
+        "num": 10
+      },
+      {
+        "n": "Bruno Fernandes",
+        "p": "AM",
+        "r": 88,
+        "num": 8
+      },
+      {
+        "n": "Rafael Leão",
+        "p": "LW",
+        "r": 88,
+        "num": 17
+      },
+      {
+        "n": "Cristiano Ronaldo",
+        "p": "ST",
+        "r": 88,
+        "num": 7
+      },
+      {
+        "n": "Pedro Neto",
+        "p": "RW",
+        "r": 85,
+        "num": 11
+      },
+      {
+        "n": "Gonçalo Ramos",
+        "p": "ST",
+        "r": 85,
+        "num": 18
+      }
+    ]
+  },
+  "Inglaterra 2026": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Pickford",
+        "p": "GK",
+        "r": 85,
+        "num": 1
+      },
+      {
+        "n": "Alexander-Arnold",
+        "p": "RB",
+        "r": 89,
+        "num": 66
+      },
+      {
+        "n": "Stones",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Maguire",
+        "p": "CB",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Trippier",
+        "p": "LB",
+        "r": 83,
+        "num": 12
+      },
+      {
+        "n": "Rice",
+        "p": "DM",
+        "r": 90,
+        "num": 4
+      },
+      {
+        "n": "Bellingham",
+        "p": "CM",
+        "r": 93,
+        "num": 10
+      },
+      {
+        "n": "Saka",
+        "p": "RW",
+        "r": 90,
+        "num": 7
+      },
+      {
+        "n": "Foden",
+        "p": "AM",
+        "r": 90,
+        "num": 20
+      },
+      {
+        "n": "Kane",
+        "p": "ST",
+        "r": 92,
+        "num": 9
+      },
+      {
+        "n": "Palmer",
+        "p": "LW",
+        "r": 88,
+        "num": 24
+      },
+      {
+        "n": "Gordon",
+        "p": "LW",
+        "r": 82,
+        "num": 11
+      }
+    ]
+  },
+  "Itália 2026": {
+    "flag": "🇮🇹",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Donnarumma",
+        "p": "GK",
+        "r": 91,
+        "num": 1
+      },
+      {
+        "n": "Di Lorenzo",
+        "p": "RB",
+        "r": 84,
+        "num": 2
+      },
+      {
+        "n": "Bastoni",
+        "p": "LB",
+        "r": 88,
+        "num": 23
+      },
+      {
+        "n": "Calafiori",
+        "p": "CB",
+        "r": 85,
+        "num": 15
+      },
+      {
+        "n": "Mancini",
+        "p": "CB",
+        "r": 82,
+        "num": 23
+      },
+      {
+        "n": "Tonali",
+        "p": "DM",
+        "r": 87,
+        "num": 8
+      },
+      {
+        "n": "Barella",
+        "p": "CM",
+        "r": 88,
+        "num": 18
+      },
+      {
+        "n": "Frattesi",
+        "p": "CM",
+        "r": 83,
+        "num": 16
+      },
+      {
+        "n": "Raspadori",
+        "p": "AM",
+        "r": 82,
+        "num": 10
+      },
+      {
+        "n": "Scamacca",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Chiesa",
+        "p": "RW",
+        "r": 84,
+        "num": 14
+      },
+      {
+        "n": "Pellegrini",
+        "p": "LW",
+        "r": 83,
+        "num": 10
+      }
+    ]
+  },
+  "Holanda 2026": {
+    "flag": "🇳🇱",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Flekken",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Dumfries",
+        "p": "RB",
+        "r": 86,
+        "num": 22
+      },
+      {
+        "n": "van Dijk",
+        "p": "CB",
+        "r": 89,
+        "num": 4
+      },
+      {
+        "n": "de Ligt",
+        "p": "CB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Aké",
+        "p": "LB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Frenkie de Jong",
+        "p": "CM",
+        "r": 87,
+        "num": 21
+      },
+      {
+        "n": "Gravenberch",
+        "p": "CM",
+        "r": 85,
+        "num": 14
+      },
+      {
+        "n": "Gakpo",
+        "p": "LW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Xavi Simons",
+        "p": "AM",
+        "r": 85,
+        "num": 17
+      },
+      {
+        "n": "Depay",
+        "p": "ST",
+        "r": 83,
+        "num": 10
+      },
+      {
+        "n": "Zirkzee",
+        "p": "ST",
+        "r": 82,
+        "num": 23
+      },
+      {
+        "n": "Malen",
+        "p": "RW",
+        "r": 81,
+        "num": 7
+      }
+    ]
+  },
+  "Noruega 2026": {
+    "flag": "🇳🇴",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Nyland",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Pedersen",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Ajer",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Ostigard",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Meling",
+        "p": "LB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Berge",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Thorsby",
+        "p": "DM",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "Elyounoussi",
+        "p": "RW",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "Odegaard",
+        "p": "AM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Haaland",
+        "p": "ST",
+        "r": 97,
+        "num": 9
+      },
+      {
+        "n": "Sorloth",
+        "p": "ST",
+        "r": 83,
+        "num": 22
+      },
+      {
+        "n": "Nusa",
+        "p": "LW",
+        "r": 82,
+        "num": 7
+      }
+    ]
+  },
+  "Marrocos 2026": {
+    "flag": "🇲🇦",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Bono",
+        "p": "GK",
+        "r": 87,
+        "num": 1
+      },
+      {
+        "n": "Hakimi",
+        "p": "RB",
+        "r": 90,
+        "num": 2
+      },
+      {
+        "n": "Aguerd",
+        "p": "CB",
+        "r": 84,
+        "num": 6
+      },
+      {
+        "n": "Saïss",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Mazraoui",
+        "p": "LB",
+        "r": 85,
+        "num": 3
+      },
+      {
+        "n": "Amrabat",
+        "p": "DM",
+        "r": 87,
+        "num": 4
+      },
+      {
+        "n": "Ounahi",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Ziyech",
+        "p": "AM",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "Brahim Díaz",
+        "p": "RW",
+        "r": 84,
+        "num": 10
+      },
+      {
+        "n": "En-Nesyri",
+        "p": "ST",
+        "r": 84,
+        "num": 19
+      },
+      {
+        "n": "Boufal",
+        "p": "LW",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Sabiri",
+        "p": "CM",
+        "r": 80,
+        "num": 18
+      }
+    ]
+  },
+  "EUA 2026": {
+    "flag": "🇺🇸",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Turner",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Dest",
+        "p": "RB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Long",
+        "p": "CB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Richards",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Robinson",
+        "p": "LB",
+        "r": 83,
+        "num": 12
+      },
+      {
+        "n": "McKennie",
+        "p": "CM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Adams T.",
+        "p": "DM",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Musah",
+        "p": "CM",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Reyna",
+        "p": "AM",
+        "r": 81,
+        "num": 7
+      },
+      {
+        "n": "Pulisic",
+        "p": "AM",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Balogun",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Weah T.",
+        "p": "RW",
+        "r": 80,
+        "num": 21
+      }
+    ]
+  },
+  "Japão 2026": {
+    "flag": "🇯🇵",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Suzuki",
+        "p": "GK",
+        "r": 82,
+        "num": 12
+      },
+      {
+        "n": "Yamane",
+        "p": "RB",
+        "r": 81,
+        "num": 2
+      },
+      {
+        "n": "Itakura",
+        "p": "CB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Machida",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Nagatomo",
+        "p": "LB",
+        "r": 78,
+        "num": 5
+      },
+      {
+        "n": "Endo W.",
+        "p": "DM",
+        "r": 85,
+        "num": 6
+      },
+      {
+        "n": "Tanaka H.",
+        "p": "CM",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Doan",
+        "p": "RW",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Minamino",
+        "p": "AM",
+        "r": 83,
+        "num": 10
+      },
+      {
+        "n": "Ueda",
+        "p": "ST",
+        "r": 82,
+        "num": 14
+      },
+      {
+        "n": "Mitoma",
+        "p": "LW",
+        "r": 85,
+        "num": 16
+      },
+      {
+        "n": "Ito H.",
+        "p": "RW",
+        "r": 83,
+        "num": 11
+      }
+    ]
+  },
+  "México 2026": {
+    "flag": "🇲🇽",
+    "year": 2026,
+    "players": [
+      {
+        "n": "Ochoa",
+        "p": "GK",
+        "r": 84,
+        "num": 13
+      },
+      {
+        "n": "Sánchez L.",
+        "p": "RB",
+        "r": 80,
+        "num": 19
+      },
+      {
+        "n": "Araujo",
+        "p": "CB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "Montes",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Gallardo",
+        "p": "LB",
+        "r": 79,
+        "num": 16
+      },
+      {
+        "n": "Guardado",
+        "p": "DM",
+        "r": 80,
+        "num": 18
+      },
+      {
+        "n": "Herrera H.",
+        "p": "CM",
+        "r": 80,
+        "num": 16
+      },
+      {
+        "n": "Lozano",
+        "p": "RW",
+        "r": 84,
+        "num": 22
+      },
+      {
+        "n": "Rodríguez C.",
+        "p": "CM",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Jiménez",
+        "p": "ST",
+        "r": 84,
+        "num": 14
+      },
+      {
+        "n": "Antuna",
+        "p": "LW",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Vega O.",
+        "p": "AM",
+        "r": 80,
+        "num": 10
+      }
+    ]
+  },
+  "Uruguai 1930": {
+    "flag": "🇺🇾",
+    "year": 1930,
+    "players": [
+      {
+        "n": "Ballesteros",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Nasazzi",
+        "p": "RB",
+        "r": 88,
+        "num": 2
+      },
+      {
+        "n": "Mascheroni",
+        "p": "CB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Andrade J.",
+        "p": "CB",
+        "r": 86,
+        "num": 4
+      },
+      {
+        "n": "Gestido",
+        "p": "LB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Píriz",
+        "p": "DM",
+        "r": 79,
+        "num": 6
+      },
+      {
+        "n": "Dorado",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Scarone",
+        "p": "AM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Castro",
+        "p": "ST",
+        "r": 84,
+        "num": 9
+      },
+      {
+        "n": "Cea",
+        "p": "ST",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Iriarte",
+        "p": "LW",
+        "r": 81,
+        "num": 11
+      },
+      {
+        "n": "Fernández L.",
+        "p": "CM",
+        "r": 80,
+        "num": 12
+      },
+      {
+        "n": "Anselmo",
+        "p": "ST",
+        "r": 79,
+        "num": 13
+      },
+      {
+        "n": "Petrone",
+        "p": "ST",
+        "r": 83,
+        "num": 14
+      }
+    ]
+  },
+  "Argentina 1930": {
+    "flag": "🇦🇷",
+    "year": 1930,
+    "players": [
+      {
+        "n": "Bossio",
+        "p": "GK",
+        "r": 80,
+        "num": 1
+      },
+      {
+        "n": "Della Torre",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Paternoster",
+        "p": "CB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "Zumelzú",
+        "p": "CB",
+        "r": 79,
+        "num": 4
+      },
+      {
+        "n": "Bidoglio",
+        "p": "LB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Médici",
+        "p": "DM",
+        "r": 78,
+        "num": 6
+      },
+      {
+        "n": "Peucelle",
+        "p": "RW",
+        "r": 86,
+        "num": 7
+      },
+      {
+        "n": "Varallo",
+        "p": "AM",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "Stábile",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Ferreira F.",
+        "p": "ST",
+        "r": 84,
+        "num": 10
+      },
+      {
+        "n": "Evaristo M.",
+        "p": "LW",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Cherro",
+        "p": "ST",
+        "r": 80,
+        "num": 12
+      },
+      {
+        "n": "Orsi",
+        "p": "LW",
+        "r": 82,
+        "num": 13
+      },
+      {
+        "n": "Zubieta",
+        "p": "CM",
+        "r": 78,
+        "num": 14
+      }
+    ]
+  },
+  "Itália 1934": {
+    "flag": "🇮🇹",
+    "year": 1934,
+    "players": [
+      {
+        "n": "Combi",
+        "p": "GK",
+        "r": 87,
+        "num": 1
+      },
+      {
+        "n": "Monzeglio",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Allemandi",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Ferraris",
+        "p": "CB",
+        "r": 82,
+        "num": 4
+      },
+      {
+        "n": "Monti",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Bertolini",
+        "p": "DM",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Guaita",
+        "p": "RW",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Meazza",
+        "p": "AM",
+        "r": 95,
+        "num": 10
+      },
+      {
+        "n": "Schiavio",
+        "p": "ST",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Ferrari",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Orsi",
+        "p": "LW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Borel",
+        "p": "ST",
+        "r": 80,
+        "num": 16
+      },
+      {
+        "n": "Castellazzi",
+        "p": "GK",
+        "r": 79,
+        "num": 12
+      },
+      {
+        "n": "Piola",
+        "p": "ST",
+        "r": 88,
+        "num": 17
+      }
+    ]
+  },
+  "Itália 1938": {
+    "flag": "🇮🇹",
+    "year": 1938,
+    "players": [
+      {
+        "n": "Olivieri",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Foni",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Rava",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Serantoni",
+        "p": "CB",
+        "r": 81,
+        "num": 4
+      },
+      {
+        "n": "Andreolo",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Locatelli",
+        "p": "DM",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Biavati",
+        "p": "RW",
+        "r": 83,
+        "num": 7
+      },
+      {
+        "n": "Meazza",
+        "p": "AM",
+        "r": 94,
+        "num": 10
+      },
+      {
+        "n": "Piola",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Ferrari",
+        "p": "CM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Colaussi",
+        "p": "LW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Ferraris",
+        "p": "CB",
+        "r": 79,
+        "num": 13
+      },
+      {
+        "n": "Amoretti",
+        "p": "GK",
+        "r": 78,
+        "num": 12
+      },
+      {
+        "n": "Pasinati",
+        "p": "RW",
+        "r": 78,
+        "num": 14
+      }
+    ]
+  },
+  "Brasil 1950": {
+    "flag": "🇧🇷",
+    "year": 1950,
+    "players": [
+      {
+        "n": "Barbosa",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Augusto",
+        "p": "RB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Juvenal",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Danilo",
+        "p": "CB",
+        "r": 80,
+        "num": 5
+      },
+      {
+        "n": "Bigode",
+        "p": "LB",
+        "r": 81,
+        "num": 6
+      },
+      {
+        "n": "Bauer",
+        "p": "DM",
+        "r": 86,
+        "num": 15
+      },
+      {
+        "n": "Jair",
+        "p": "RW",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Zizinho",
+        "p": "AM",
+        "r": 94,
+        "num": 10
+      },
+      {
+        "n": "Ademir",
+        "p": "ST",
+        "r": 91,
+        "num": 9
+      },
+      {
+        "n": "Chico",
+        "p": "ST",
+        "r": 83,
+        "num": 20
+      },
+      {
+        "n": "Friaca",
+        "p": "LW",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Baltazar",
+        "p": "ST",
+        "r": 84,
+        "num": 21
+      },
+      {
+        "n": "Castilho",
+        "p": "GK",
+        "r": 82,
+        "num": 12
+      },
+      {
+        "n": "Nélton",
+        "p": "CM",
+        "r": 79,
+        "num": 8
+      }
+    ]
+  },
+  "Espanha 2014": {
+    "flag": "🇪🇸",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Casillas",
+        "p": "GK",
+        "r": 87,
+        "num": 1
+      },
+      {
+        "n": "Arbeloa",
+        "p": "RB",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "Piqué",
+        "p": "CB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Ramos",
+        "p": "CB",
+        "r": 89,
+        "num": 15
+      },
+      {
+        "n": "Alba",
+        "p": "LB",
+        "r": 86,
+        "num": 18
+      },
+      {
+        "n": "Busquets",
+        "p": "DM",
+        "r": 88,
+        "num": 5
+      },
+      {
+        "n": "Xavi",
+        "p": "CM",
+        "r": 91,
+        "num": 8
+      },
+      {
+        "n": "Iniesta",
+        "p": "AM",
+        "r": 93,
+        "num": 6
+      },
+      {
+        "n": "Silva D.",
+        "p": "RW",
+        "r": 87,
+        "num": 21
+      },
+      {
+        "n": "Torres",
+        "p": "ST",
+        "r": 83,
+        "num": 9
+      },
+      {
+        "n": "Fàbregas",
+        "p": "LW",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Alonso",
+        "p": "CM",
+        "r": 88,
+        "num": 14
+      },
+      {
+        "n": "Villa",
+        "p": "ST",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Mata",
+        "p": "AM",
+        "r": 84,
+        "num": 11
+      }
+    ]
+  },
+  "Espanha 2018": {
+    "flag": "🇪🇸",
+    "year": 2018,
+    "players": [
+      {
+        "n": "De Gea",
+        "p": "GK",
+        "r": 89,
+        "num": 1
+      },
+      {
+        "n": "Carvajal",
+        "p": "RB",
+        "r": 83,
+        "num": 2
+      },
+      {
+        "n": "Piqué",
+        "p": "CB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Ramos",
+        "p": "CB",
+        "r": 90,
+        "num": 15
+      },
+      {
+        "n": "Alba",
+        "p": "LB",
+        "r": 85,
+        "num": 18
+      },
+      {
+        "n": "Busquets",
+        "p": "DM",
+        "r": 87,
+        "num": 5
+      },
+      {
+        "n": "Koke",
+        "p": "CM",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Iniesta",
+        "p": "AM",
+        "r": 88,
+        "num": 8
+      },
+      {
+        "n": "Silva D.",
+        "p": "RW",
+        "r": 85,
+        "num": 21
+      },
+      {
+        "n": "Costa D.",
+        "p": "ST",
+        "r": 85,
+        "num": 19
+      },
+      {
+        "n": "Asensio",
+        "p": "LW",
+        "r": 83,
+        "num": 20
+      },
+      {
+        "n": "Thiago A.",
+        "p": "CM",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "Morata",
+        "p": "ST",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Saúl",
+        "p": "CM",
+        "r": 81,
+        "num": 14
+      }
+    ]
+  },
+  "Espanha 2022": {
+    "flag": "🇪🇸",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Unai Simón",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Carvajal",
+        "p": "RB",
+        "r": 84,
+        "num": 2
+      },
+      {
+        "n": "Rodri",
+        "p": "DM",
+        "r": 90,
+        "num": 16
+      },
+      {
+        "n": "Laporte",
+        "p": "CB",
+        "r": 85,
+        "num": 14
+      },
+      {
+        "n": "Jordi Alba",
+        "p": "LB",
+        "r": 83,
+        "num": 18
+      },
+      {
+        "n": "Busquets",
+        "p": "CB",
+        "r": 84,
+        "num": 5
+      },
+      {
+        "n": "Pedri",
+        "p": "CM",
+        "r": 87,
+        "num": 26
+      },
+      {
+        "n": "Gavi",
+        "p": "CM",
+        "r": 85,
+        "num": 9
+      },
+      {
+        "n": "Ferran Torres",
+        "p": "RW",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Morata",
+        "p": "ST",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Dani Olmo",
+        "p": "AM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "Asensio",
+        "p": "LW",
+        "r": 82,
+        "num": 20
+      },
+      {
+        "n": "Ansu Fati",
+        "p": "LW",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "Soler",
+        "p": "CM",
+        "r": 80,
+        "num": 10
+      }
+    ]
+  },
+  "França 2006": {
+    "flag": "🇫🇷",
+    "year": 2006,
+    "players": [
+      {
+        "n": "Barthez",
+        "p": "GK",
+        "r": 84,
+        "num": 16
+      },
+      {
+        "n": "Sagnol",
+        "p": "RB",
+        "r": 83,
+        "num": 19
+      },
+      {
+        "n": "Thuram",
+        "p": "CB",
+        "r": 86,
+        "num": 15
+      },
+      {
+        "n": "Gallas",
+        "p": "CB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "Abidal",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Makelele",
+        "p": "DM",
+        "r": 87,
+        "num": 4
+      },
+      {
+        "n": "Vieira",
+        "p": "CM",
+        "r": 88,
+        "num": 4
+      },
+      {
+        "n": "Zidane",
+        "p": "AM",
+        "r": 95,
+        "num": 10
+      },
+      {
+        "n": "Ribéry",
+        "p": "LW",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "Henry",
+        "p": "ST",
+        "r": 91,
+        "num": 12
+      },
+      {
+        "n": "Malouda",
+        "p": "RW",
+        "r": 82,
+        "num": 7
+      },
+      {
+        "n": "Diarra",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Trezeguet",
+        "p": "ST",
+        "r": 85,
+        "num": 20
+      },
+      {
+        "n": "Wiltord",
+        "p": "RW",
+        "r": 80,
+        "num": 11
+      }
+    ]
+  },
+  "França 2014": {
+    "flag": "🇫🇷",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Lloris",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Debuchy",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Varane",
+        "p": "CB",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Mangala",
+        "p": "CB",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "Evra",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Matuidi",
+        "p": "DM",
+        "r": 83,
+        "num": 14
+      },
+      {
+        "n": "Pogba",
+        "p": "CM",
+        "r": 83,
+        "num": 6
+      },
+      {
+        "n": "Valbuena",
+        "p": "AM",
+        "r": 80,
+        "num": 20
+      },
+      {
+        "n": "Griezmann",
+        "p": "RW",
+        "r": 83,
+        "num": 11
+      },
+      {
+        "n": "Benzema",
+        "p": "ST",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "Ribéry",
+        "p": "LW",
+        "r": 86,
+        "num": 7
+      },
+      {
+        "n": "Giroud",
+        "p": "ST",
+        "r": 80,
+        "num": 9
+      },
+      {
+        "n": "Sissoko",
+        "p": "CM",
+        "r": 79,
+        "num": 29
+      },
+      {
+        "n": "Rémy",
+        "p": "ST",
+        "r": 79,
+        "num": 15
+      }
+    ]
+  },
+  "Portugal 2010": {
+    "flag": "🇵🇹",
+    "year": 2010,
+    "players": [
+      {
+        "n": "Eduardo",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Miguel",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Bruno Alves",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "R. Carvalho",
+        "p": "CB",
+        "r": 85,
+        "num": 16
+      },
+      {
+        "n": "Fábio Coentrão",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Meireles",
+        "p": "DM",
+        "r": 83,
+        "num": 18
+      },
+      {
+        "n": "Tiago",
+        "p": "CM",
+        "r": 82,
+        "num": 8
+      },
+      {
+        "n": "C. Ronaldo",
+        "p": "AM",
+        "r": 93,
+        "num": 7
+      },
+      {
+        "n": "Danny",
+        "p": "RW",
+        "r": 80,
+        "num": 10
+      },
+      {
+        "n": "Nani",
+        "p": "LW",
+        "r": 84,
+        "num": 17
+      },
+      {
+        "n": "Liedson",
+        "p": "ST",
+        "r": 79,
+        "num": 9
+      },
+      {
+        "n": "Duda",
+        "p": "CM",
+        "r": 78,
+        "num": 14
+      },
+      {
+        "n": "Simão",
+        "p": "RW",
+        "r": 80,
+        "num": 15
+      },
+      {
+        "n": "Hugo Almeida",
+        "p": "ST",
+        "r": 79,
+        "num": 23
+      }
+    ]
+  },
+  "Portugal 2014": {
+    "flag": "🇵🇹",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Rui Patrício",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "João Pereira",
+        "p": "RB",
+        "r": 79,
+        "num": 21
+      },
+      {
+        "n": "Pepe",
+        "p": "CB",
+        "r": 87,
+        "num": 3
+      },
+      {
+        "n": "R. Carvalho",
+        "p": "CB",
+        "r": 83,
+        "num": 16
+      },
+      {
+        "n": "Fábio Coentrão",
+        "p": "LB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Meireles",
+        "p": "DM",
+        "r": 81,
+        "num": 18
+      },
+      {
+        "n": "William Carvalho",
+        "p": "CM",
+        "r": 80,
+        "num": 14
+      },
+      {
+        "n": "C. Ronaldo",
+        "p": "AM",
+        "r": 96,
+        "num": 7
+      },
+      {
+        "n": "Nani",
+        "p": "RW",
+        "r": 82,
+        "num": 17
+      },
+      {
+        "n": "Varela",
+        "p": "LW",
+        "r": 78,
+        "num": 11
+      },
+      {
+        "n": "Postiga",
+        "p": "ST",
+        "r": 78,
+        "num": 9
+      },
+      {
+        "n": "João Moutinho",
+        "p": "CM",
+        "r": 83,
+        "num": 8
+      },
+      {
+        "n": "Eder",
+        "p": "ST",
+        "r": 78,
+        "num": 20
+      },
+      {
+        "n": "Veloso",
+        "p": "CM",
+        "r": 78,
+        "num": 6
+      }
+    ]
+  },
+  "Portugal 2018": {
+    "flag": "🇵🇹",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Rui Patrício",
+        "p": "GK",
+        "r": 85,
+        "num": 1
+      },
+      {
+        "n": "João Cancelo",
+        "p": "RB",
+        "r": 83,
+        "num": 21
+      },
+      {
+        "n": "Pepe",
+        "p": "CB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Fonte",
+        "p": "CB",
+        "r": 81,
+        "num": 6
+      },
+      {
+        "n": "Guerreiro",
+        "p": "LB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Carvalho W.",
+        "p": "DM",
+        "r": 83,
+        "num": 14
+      },
+      {
+        "n": "Moutinho",
+        "p": "CM",
+        "r": 84,
+        "num": 8
+      },
+      {
+        "n": "C. Ronaldo",
+        "p": "AM",
+        "r": 97,
+        "num": 7
+      },
+      {
+        "n": "Bernardo Silva",
+        "p": "RW",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Guedes",
+        "p": "LW",
+        "r": 80,
+        "num": 17
+      },
+      {
+        "n": "André Silva",
+        "p": "ST",
+        "r": 79,
+        "num": 9
+      },
+      {
+        "n": "Adrien Silva",
+        "p": "CM",
+        "r": 79,
+        "num": 15
+      },
+      {
+        "n": "Quaresma",
+        "p": "RW",
+        "r": 80,
+        "num": 20
+      },
+      {
+        "n": "Félix",
+        "p": "AM",
+        "r": 78,
+        "num": 11
+      }
+    ]
+  },
+  "Inglaterra 1990": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 1990,
+    "players": [
+      {
+        "n": "Shilton",
+        "p": "GK",
+        "r": 88,
+        "num": 1
+      },
+      {
+        "n": "Stevens G.",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Walker",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Wright M.",
+        "p": "CB",
+        "r": 82,
+        "num": 6
+      },
+      {
+        "n": "Pearce",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "McMahon",
+        "p": "DM",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Waddle",
+        "p": "RW",
+        "r": 85,
+        "num": 11
+      },
+      {
+        "n": "Gascoigne",
+        "p": "AM",
+        "r": 90,
+        "num": 19
+      },
+      {
+        "n": "Barnes",
+        "p": "LW",
+        "r": 86,
+        "num": 10
+      },
+      {
+        "n": "Lineker",
+        "p": "ST",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "Platt",
+        "p": "CM",
+        "r": 83,
+        "num": 14
+      },
+      {
+        "n": "Beardsley",
+        "p": "AM",
+        "r": 84,
+        "num": 20
+      },
+      {
+        "n": "Robson",
+        "p": "CM",
+        "r": 85,
+        "num": 7
+      },
+      {
+        "n": "Bull",
+        "p": "ST",
+        "r": 78,
+        "num": 22
+      }
+    ]
+  },
+  "Inglaterra 1998": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 1998,
+    "players": [
+      {
+        "n": "Seaman",
+        "p": "GK",
+        "r": 86,
+        "num": 1
+      },
+      {
+        "n": "Neville G.",
+        "p": "RB",
+        "r": 82,
+        "num": 2
+      },
+      {
+        "n": "Campbell",
+        "p": "CB",
+        "r": 85,
+        "num": 5
+      },
+      {
+        "n": "Adams",
+        "p": "CB",
+        "r": 85,
+        "num": 6
+      },
+      {
+        "n": "Neville P.",
+        "p": "LB",
+        "r": 79,
+        "num": 3
+      },
+      {
+        "n": "Ince",
+        "p": "DM",
+        "r": 83,
+        "num": 4
+      },
+      {
+        "n": "Beckham",
+        "p": "RW",
+        "r": 89,
+        "num": 7
+      },
+      {
+        "n": "Scholes",
+        "p": "AM",
+        "r": 86,
+        "num": 18
+      },
+      {
+        "n": "McManaman",
+        "p": "LW",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Owen",
+        "p": "ST",
+        "r": 87,
+        "num": 20
+      },
+      {
+        "n": "Shearer",
+        "p": "ST",
+        "r": 91,
+        "num": 9
+      },
+      {
+        "n": "Batty",
+        "p": "CM",
+        "r": 79,
+        "num": 16
+      },
+      {
+        "n": "Anderton",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Sheringham",
+        "p": "ST",
+        "r": 83,
+        "num": 10
+      }
+    ]
+  },
+  "Inglaterra 2002": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2002,
+    "players": [
+      {
+        "n": "Seaman",
+        "p": "GK",
+        "r": 84,
+        "num": 1
+      },
+      {
+        "n": "Neville G.",
+        "p": "RB",
+        "r": 81,
+        "num": 2
+      },
+      {
+        "n": "Campbell",
+        "p": "CB",
+        "r": 86,
+        "num": 23
+      },
+      {
+        "n": "Ferdinand",
+        "p": "CB",
+        "r": 87,
+        "num": 6
+      },
+      {
+        "n": "Cole A.",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Butt",
+        "p": "DM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Beckham",
+        "p": "RW",
+        "r": 91,
+        "num": 7
+      },
+      {
+        "n": "Scholes",
+        "p": "AM",
+        "r": 87,
+        "num": 18
+      },
+      {
+        "n": "Heskey",
+        "p": "LW",
+        "r": 79,
+        "num": 21
+      },
+      {
+        "n": "Owen",
+        "p": "ST",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "Sheringham",
+        "p": "ST",
+        "r": 81,
+        "num": 19
+      },
+      {
+        "n": "Hargreaves",
+        "p": "CM",
+        "r": 79,
+        "num": 16
+      },
+      {
+        "n": "Fowler",
+        "p": "ST",
+        "r": 80,
+        "num": 20
+      },
+      {
+        "n": "Sinclair",
+        "p": "RW",
+        "r": 78,
+        "num": 11
+      }
+    ]
+  },
+  "Inglaterra 2006": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2006,
+    "players": [
+      {
+        "n": "Robinson",
+        "p": "GK",
+        "r": 81,
+        "num": 1
+      },
+      {
+        "n": "Neville G.",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Campbell",
+        "p": "CB",
+        "r": 83,
+        "num": 23
+      },
+      {
+        "n": "Terry",
+        "p": "CB",
+        "r": 88,
+        "num": 6
+      },
+      {
+        "n": "Cole A.",
+        "p": "LB",
+        "r": 84,
+        "num": 3
+      },
+      {
+        "n": "Lampard",
+        "p": "DM",
+        "r": 88,
+        "num": 8
+      },
+      {
+        "n": "Beckham",
+        "p": "RW",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Gerrard",
+        "p": "AM",
+        "r": 90,
+        "num": 4
+      },
+      {
+        "n": "Joe Cole",
+        "p": "LW",
+        "r": 83,
+        "num": 10
+      },
+      {
+        "n": "Owen",
+        "p": "ST",
+        "r": 83,
+        "num": 17
+      },
+      {
+        "n": "Rooney",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Hargreaves",
+        "p": "CM",
+        "r": 80,
+        "num": 16
+      },
+      {
+        "n": "Crouch",
+        "p": "ST",
+        "r": 79,
+        "num": 21
+      },
+      {
+        "n": "Carragher",
+        "p": "CB",
+        "r": 83,
+        "num": 23
+      }
+    ]
+  },
+  "Inglaterra 2010": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2010,
+    "players": [
+      {
+        "n": "James",
+        "p": "GK",
+        "r": 79,
+        "num": 1
+      },
+      {
+        "n": "Johnson G.",
+        "p": "RB",
+        "r": 80,
+        "num": 2
+      },
+      {
+        "n": "Terry",
+        "p": "CB",
+        "r": 86,
+        "num": 6
+      },
+      {
+        "n": "Upson",
+        "p": "CB",
+        "r": 79,
+        "num": 15
+      },
+      {
+        "n": "Cole A.",
+        "p": "LB",
+        "r": 83,
+        "num": 3
+      },
+      {
+        "n": "Lampard",
+        "p": "DM",
+        "r": 86,
+        "num": 8
+      },
+      {
+        "n": "Milner",
+        "p": "RW",
+        "r": 80,
+        "num": 7
+      },
+      {
+        "n": "Gerrard",
+        "p": "AM",
+        "r": 88,
+        "num": 4
+      },
+      {
+        "n": "Joe Cole",
+        "p": "LW",
+        "r": 81,
+        "num": 10
+      },
+      {
+        "n": "Heskey",
+        "p": "ST",
+        "r": 77,
+        "num": 21
+      },
+      {
+        "n": "Rooney",
+        "p": "ST",
+        "r": 87,
+        "num": 9
+      },
+      {
+        "n": "Wright-Phillips",
+        "p": "RW",
+        "r": 79,
+        "num": 11
+      },
+      {
+        "n": "Crouch",
+        "p": "ST",
+        "r": 79,
+        "num": 18
+      },
+      {
+        "n": "Barry",
+        "p": "CM",
+        "r": 79,
+        "num": 16
+      }
+    ]
+  },
+  "Inglaterra 2014": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2014,
+    "players": [
+      {
+        "n": "Hart",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Johnson G.",
+        "p": "RB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Jagielka",
+        "p": "CB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Cahill",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Baines",
+        "p": "LB",
+        "r": 81,
+        "num": 3
+      },
+      {
+        "n": "Henderson",
+        "p": "DM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Walcott",
+        "p": "RW",
+        "r": 80,
+        "num": 29
+      },
+      {
+        "n": "Gerrard",
+        "p": "AM",
+        "r": 84,
+        "num": 4
+      },
+      {
+        "n": "Sterling",
+        "p": "LW",
+        "r": 80,
+        "num": 21
+      },
+      {
+        "n": "Rooney",
+        "p": "ST",
+        "r": 86,
+        "num": 10
+      },
+      {
+        "n": "Sturridge",
+        "p": "ST",
+        "r": 83,
+        "num": 23
+      },
+      {
+        "n": "Wilshere",
+        "p": "CM",
+        "r": 80,
+        "num": 7
+      },
+      {
+        "n": "Welbeck",
+        "p": "LW",
+        "r": 79,
+        "num": 27
+      },
+      {
+        "n": "Lambert",
+        "p": "ST",
+        "r": 78,
+        "num": 20
+      }
+    ]
+  },
+  "Inglaterra 2018": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2018,
+    "players": [
+      {
+        "n": "Pickford",
+        "p": "GK",
+        "r": 82,
+        "num": 1
+      },
+      {
+        "n": "Trippier",
+        "p": "RB",
+        "r": 81,
+        "num": 12
+      },
+      {
+        "n": "Stones",
+        "p": "CB",
+        "r": 82,
+        "num": 5
+      },
+      {
+        "n": "Maguire",
+        "p": "CB",
+        "r": 80,
+        "num": 6
+      },
+      {
+        "n": "Young A.",
+        "p": "LB",
+        "r": 79,
+        "num": 18
+      },
+      {
+        "n": "Henderson",
+        "p": "DM",
+        "r": 81,
+        "num": 8
+      },
+      {
+        "n": "Dele Alli",
+        "p": "AM",
+        "r": 83,
+        "num": 20
+      },
+      {
+        "n": "Lingard",
+        "p": "RW",
+        "r": 80,
+        "num": 11
+      },
+      {
+        "n": "Sterling",
+        "p": "LW",
+        "r": 85,
+        "num": 10
+      },
+      {
+        "n": "Kane",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Rashford",
+        "p": "ST",
+        "r": 82,
+        "num": 19
+      },
+      {
+        "n": "Dier",
+        "p": "CM",
+        "r": 79,
+        "num": 4
+      },
+      {
+        "n": "Vardy",
+        "p": "ST",
+        "r": 82,
+        "num": 22
+      },
+      {
+        "n": "Walker",
+        "p": "RB",
+        "r": 82,
+        "num": 2
+      }
+    ]
+  },
+  "Inglaterra 2022": {
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2022,
+    "players": [
+      {
+        "n": "Pickford",
+        "p": "GK",
+        "r": 83,
+        "num": 1
+      },
+      {
+        "n": "Trippier",
+        "p": "RB",
+        "r": 83,
+        "num": 12
+      },
+      {
+        "n": "Stones",
+        "p": "CB",
+        "r": 83,
+        "num": 5
+      },
+      {
+        "n": "Maguire",
+        "p": "CB",
+        "r": 81,
+        "num": 6
+      },
+      {
+        "n": "Shaw",
+        "p": "LB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Rice",
+        "p": "DM",
+        "r": 85,
+        "num": 4
+      },
+      {
+        "n": "Bellingham",
+        "p": "CM",
+        "r": 86,
+        "num": 22
+      },
+      {
+        "n": "Saka",
+        "p": "RW",
+        "r": 84,
+        "num": 7
+      },
+      {
+        "n": "Mount",
+        "p": "AM",
+        "r": 82,
+        "num": 19
+      },
+      {
+        "n": "Kane",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Rashford",
+        "p": "LW",
+        "r": 85,
+        "num": 11
+      },
+      {
+        "n": "Henderson",
+        "p": "CM",
+        "r": 80,
+        "num": 8
+      },
+      {
+        "n": "Foden",
+        "p": "AM",
+        "r": 85,
+        "num": 20
+      },
+      {
+        "n": "Grealish",
+        "p": "LW",
+        "r": 82,
+        "num": 10
+      }
+    ]
+  }
+}
