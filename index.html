@@ -262,9 +262,13 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .slot-pos{font-size:9px;color:rgba(255,255,255,.5);letter-spacing:.5px;font-weight:700;text-align:center}
 
 /* BOX SCORE */
-.boxscore-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.boxscore-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2px}
 .boxscore-title{font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase}
 .boxscore-total{font-size:38px;font-weight:900;color:var(--white);line-height:1}
+.boxscore-team{display:flex;align-items:baseline;gap:6px;margin-bottom:12px}
+.boxscore-team-flag{font-size:14px;line-height:1}
+.boxscore-team-name{font-size:13px;font-weight:800;color:var(--text);letter-spacing:.3px}
+.boxscore-team-year{font-size:11px;font-weight:700;color:var(--text3);letter-spacing:.5px}
 .stat-bars{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
 .stat-bar-row{display:flex;align-items:center;gap:8px}
 .stat-bar-label{font-size:10px;color:var(--text3);font-weight:700;width:24px;letter-spacing:.5px}
@@ -658,6 +662,58 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .room-player-you{font-size:8px;font-weight:800;color:var(--gold);letter-spacing:1px;background:rgba(255,210,63,.1);padding:1px 4px}
 .room-player-host-tag{font-size:8px;font-weight:700;color:var(--text3);letter-spacing:1px}
 .room-player-dot{display:none}/* hidden, replaced by avatar */
+
+/* ── STAT BADGES (wins + goal diff) ── */
+.stat-badges{display:flex;gap:4px;justify-content:center;margin-top:1px;flex-wrap:wrap}
+.stat-badge{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:10px;font-weight:800;letter-spacing:.4px;
+  padding:3px 8px 3px 6px;
+  border-radius:20px;line-height:1;white-space:nowrap;
+}
+.stat-badge-wins{background:rgba(255,210,63,.15);color:var(--gold);border:1px solid rgba(255,210,63,.35);box-shadow:0 0 6px rgba(255,210,63,.12)}
+.stat-badge-goals{background:rgba(43,192,108,.12);color:var(--green3);border:1px solid rgba(43,192,108,.3);box-shadow:0 0 6px rgba(43,192,108,.1)}
+.stat-badge-goals.negative{background:rgba(224,71,62,.1);color:var(--danger2);border-color:rgba(224,71,62,.3);box-shadow:0 0 6px rgba(224,71,62,.08)}
+
+/* Lobby profile strip */
+.lobby-profile{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:18px;padding:10px 14px;
+  background:var(--bg2);border:1px solid var(--border2);
+  text-align:left;
+}
+.lobby-profile-avatar{
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:900;color:#fff;
+  background:var(--border2);flex-shrink:0;
+}
+.lobby-profile-name{font-size:12px;font-weight:800;color:var(--text);margin-bottom:4px;letter-spacing:.3px}
+.lobby-profile-badges{display:flex;gap:4px;flex-wrap:wrap}
+.lobby-profile-empty{font-size:10px;color:var(--text3);letter-spacing:1px;padding:4px 0}
+
+/* Draft topbar compact stat badges */
+.dtb-stat-badge{
+  display:inline-flex;align-items:center;gap:2px;
+  font-size:9px;font-weight:800;
+  padding:1px 4px;border-radius:2px;line-height:1;
+  border:1px solid var(--border2);
+}
+.dtb-stat-badge.wins{color:var(--gold);border-color:rgba(255,210,63,.2)}
+.dtb-stat-badge.goals{color:var(--green3);border-color:rgba(43,192,108,.2)}
+.dtb-stat-badge.goals.neg{color:var(--danger2);border-color:rgba(224,71,62,.2)}
+
+/* ── LOW PROFILE MODE ── */
+.lp-mode-badge{
+  display:inline-flex;align-items:center;gap:3px;
+  font-size:8px;font-weight:800;letter-spacing:1px;
+  padding:2px 7px;border-radius:20px;
+  background:rgba(160,130,60,.15);color:#c8a84a;
+  border:1px solid rgba(160,130,60,.3);
+  vertical-align:middle;margin-left:6px;
+}
+.form-btn.lp-active{border-color:#c8a84a!important;color:#c8a84a!important;background:rgba(160,130,60,.1)!important}
+
 .btn-kick{
   position:absolute;top:-4px;right:-4px;
   background:var(--bg3);border:1px solid var(--border2);
@@ -739,12 +795,45 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 
 /* SIMULATE SCREEN */
 .sim-screen{padding:28px;max-width:580px;width:100%}
-/* ===== PENALTY SCREEN ===== */
-#screen-penalty.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px);background:var(--bg)}
+/* ===== PENALTY SCREEN — v2: Psychological Tension Edition ===== */
+#screen-penalty.active{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 52px);background:var(--bg);transition:background .8s ease}
+#screen-penalty.active.pen-tension-miss{background:#1a0a0a}
+#screen-penalty.active.pen-tension-goal{background:#0a1a0d}
+#screen-penalty.active.pen-sudden-death{background:#0d0d1a}
 .penalty-screen{width:100%;max-width:680px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:0}
 
 /* Header label */
-.penalty-header{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:4px;color:var(--text3);text-transform:uppercase;margin-bottom:20px;text-align:center}
+.penalty-header{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:4px;color:var(--text3);text-transform:uppercase;margin-bottom:20px;text-align:center;transition:color .4s}
+
+/* ── SUDDEN DEATH ALERT ── */
+.pen-sudden-death-banner{
+  width:100%;padding:10px 16px;margin-bottom:14px;
+  background:linear-gradient(135deg,rgba(100,80,200,.18),rgba(60,40,160,.1));
+  border:1px solid rgba(120,100,255,.35);
+  border-left:3px solid rgba(120,100,255,.8);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  animation:sdPulse 1.4s ease-in-out infinite;
+  display:none;
+}
+.pen-sudden-death-banner.show{display:flex}
+@keyframes sdPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(120,100,255,.0)}
+  50%{box-shadow:0 0 16px 4px rgba(120,100,255,.25)}
+}
+.pen-sd-icon{font-size:18px}
+.pen-sd-text{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:900;color:rgba(160,140,255,.9);letter-spacing:3px;text-transform:uppercase}
+
+/* ── PRESSURE METER ── */
+.pen-pressure-wrap{width:100%;margin-bottom:16px;display:flex;flex-direction:column;gap:4px}
+.pen-pressure-label{font-size:8px;letter-spacing:3px;color:var(--text3);text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}
+.pen-pressure-bar-track{width:100%;height:5px;background:var(--border2);border-radius:3px;overflow:hidden;position:relative}
+.pen-pressure-bar-fill{height:100%;border-radius:3px;transition:width 1.2s cubic-bezier(.4,0,.2,1),background 1.2s;background:linear-gradient(90deg,var(--green2),var(--gold))}
+.pen-pressure-bar-fill.high{background:linear-gradient(90deg,var(--gold),var(--danger))}
+.pen-pressure-bar-fill.critical{background:linear-gradient(90deg,var(--danger),#ff2020);animation:pressurePulse .6s ease-in-out infinite}
+@keyframes pressurePulse{0%,100%{opacity:1}50%{opacity:.6}}
+.pen-pressure-value{font-size:9px;font-weight:800;color:var(--text3);transition:color .4s}
+.pen-pressure-value.high{color:var(--gold)}
+.pen-pressure-value.critical{color:var(--danger);animation:pressurePulse .6s ease-in-out infinite}
 
 /* Two-column layout: team-A | center | team-B */
 .pen-arena{display:grid;grid-template-columns:1fr auto 1fr;gap:0;width:100%;align-items:start}
@@ -753,8 +842,8 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .pen-col{display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 12px}
 .pen-col-flag{font-size:40px;line-height:1}
 .pen-col-name{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:800;color:var(--text);text-align:center;line-height:1.2}
-.pen-col-score{font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:900;color:var(--text);line-height:1;transition:color .25s,transform .25s}
-.pen-col-score.flash{color:var(--gold);transform:scale(1.18)}
+.pen-col-score{font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:900;color:var(--text);line-height:1;transition:color .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.pen-col-score.flash{color:var(--gold);transform:scale(1.25)}
 .pen-kicks-col{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:200px}
 
 /* Kick row per attempt */
@@ -762,10 +851,40 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .pen-col.right-col .pen-kick-row{transform:translateX(6px)}
 .pen-kick-row.show{opacity:1;transform:translateX(0)}
 .pen-kick-row.pending-row{opacity:.35}
-.pen-kick-ball{width:28px;height:28px;border-radius:50%;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;transition:all .3s}
-.pen-kick-ball.scored{background:var(--green2);border-color:var(--green3);animation:penPop .4s cubic-bezier(.34,1.56,.64,1)}
-.pen-kick-ball.missed{background:var(--danger);border-color:var(--danger2);animation:penPop .4s cubic-bezier(.34,1.56,.64,1)}
+.pen-kick-ball{
+  width:28px;height:28px;border-radius:50%;border:2px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;
+  transition:all .3s cubic-bezier(.34,1.56,.64,1)
+}
+.pen-kick-ball.scored{
+  background:var(--green2);border-color:var(--green3);
+  box-shadow:0 0 10px 3px rgba(43,192,108,.35);
+  animation:penPopScored .5s cubic-bezier(.34,1.56,.64,1)
+}
+.pen-kick-ball.missed{
+  background:var(--danger);border-color:var(--danger2);
+  box-shadow:0 0 10px 3px rgba(224,71,62,.3);
+  animation:penPopMissed .4s cubic-bezier(.34,1.56,.64,1)
+}
 .pen-kick-ball.pending{border-style:dashed}
+.pen-kick-ball.next-up{
+  border-color:var(--gold);border-style:solid;
+  box-shadow:0 0 8px 2px rgba(255,210,63,.3);
+  animation:nextUpPulse 1s ease-in-out infinite;
+}
+@keyframes nextUpPulse{0%,100%{box-shadow:0 0 6px 2px rgba(255,210,63,.2)}50%{box-shadow:0 0 14px 5px rgba(255,210,63,.45)}}
+@keyframes penPopScored{
+  0%{transform:scale(0) rotate(-15deg)}
+  50%{transform:scale(1.4) rotate(5deg)}
+  75%{transform:scale(.9) rotate(-2deg)}
+  100%{transform:scale(1) rotate(0)}
+}
+@keyframes penPopMissed{
+  0%{transform:scale(0.5)}
+  40%{transform:scale(1.25) rotate(8deg)}
+  70%{transform:scale(.95) rotate(-3deg)}
+  100%{transform:scale(1) rotate(0)}
+}
 .pen-kick-name{font-size:11px;color:var(--text2);font-weight:600;letter-spacing:.3px;white-space:nowrap;max-width:90px;overflow:hidden;text-overflow:ellipsis}
 .pen-col.right-col .pen-kick-row{flex-direction:row-reverse}
 .pen-col.right-col .pen-kick-name{text-align:right}
@@ -775,18 +894,87 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .pen-center-vs{font-size:13px;font-weight:800;color:var(--border2);letter-spacing:2px}
 .pen-center-dash{font-size:40px;font-weight:900;color:var(--border2);line-height:1}
 
-/* Active shooter banner */
-.pen-shooter-banner{width:100%;margin-top:20px;padding:14px 20px;background:var(--bg3);border:1px solid var(--border2);border-left:3px solid var(--gold);display:flex;align-items:center;gap:12px;min-height:56px}
+/* ── COUNTDOWN BEFORE KICK ── */
+.pen-countdown-overlay{
+  position:fixed;inset:0;z-index:350;
+  display:flex;align-items:center;justify-content:center;
+  pointer-events:none;opacity:0;
+  transition:opacity .1s;
+}
+.pen-countdown-overlay.show{opacity:1}
+.pen-countdown-num{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:160px;font-weight:900;
+  color:rgba(255,210,63,.85);
+  -webkit-text-stroke:3px rgba(0,0,0,.4);
+  text-shadow:0 4px 40px rgba(0,0,0,.7),0 0 80px rgba(255,210,63,.4);
+  animation:penCountDrop .35s cubic-bezier(.34,1.56,.64,1) both;
+  line-height:1;
+}
+@keyframes penCountDrop{
+  0%{transform:scale(.4) translateY(-20px);opacity:0}
+  100%{transform:scale(1) translateY(0);opacity:1}
+}
+.pen-countdown-label{
+  font-size:14px;letter-spacing:4px;color:rgba(255,255,255,.5);
+  text-transform:uppercase;text-align:center;margin-top:8px;
+  font-family:'Space Grotesk',sans-serif;font-weight:700;
+}
+
+/* ── ACTIVE SHOOTER BANNER ── */
+.pen-shooter-banner{
+  width:100%;margin-top:20px;padding:14px 20px;
+  background:var(--bg3);border:1px solid var(--border2);
+  border-left:3px solid var(--gold);
+  display:flex;align-items:center;gap:12px;min-height:56px;
+  transition:border-left-color .4s,background .4s;
+}
+.pen-shooter-banner.result-scored{
+  border-left-color:var(--green3);
+  background:rgba(43,192,108,.06);
+  animation:bannerScored .5s ease;
+}
+.pen-shooter-banner.result-missed{
+  border-left-color:var(--danger);
+  background:rgba(224,71,62,.06);
+  animation:bannerMissed .5s ease;
+}
+@keyframes bannerScored{0%{transform:scale(1.02)}100%{transform:scale(1)}}
+@keyframes bannerMissed{0%,20%,40%{transform:translateX(-3px)}10%,30%{transform:translateX(3px)}100%{transform:translateX(0)}}
 .pen-shooter-flag{font-size:22px;flex-shrink:0}
 .pen-shooter-info{flex:1}
 .pen-shooter-label{font-size:9px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin-bottom:2px}
 .pen-shooter-name{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:800;color:var(--text)}
 .pen-shooter-result{font-size:24px;flex-shrink:0;transition:all .3s}
 
-/* Final message */
-.penalty-message{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:800;color:var(--gold);margin-top:20px;min-height:32px;letter-spacing:1px;text-align:center;animation:msgFadeIn .5s ease}
+/* ── CONTEXT PRESSURE MESSAGE ── */
+.pen-context-msg{
+  font-size:11px;letter-spacing:2px;color:var(--text3);
+  text-transform:uppercase;font-weight:700;margin-top:4px;
+  transition:color .3s;
+}
+.pen-context-msg.match-point{color:var(--green3)}
+.pen-context-msg.must-score{color:var(--gold)}
+.pen-context-msg.sudden-death-kick{color:rgba(160,140,255,.9)}
+.pen-context-msg.must-not-miss{color:var(--danger)}
 
-@keyframes penPop{0%{transform:scale(0.5)}60%{transform:scale(1.2)}100%{transform:scale(1)}}
+/* ── RESULT FLASH OVERLAY ── */
+.pen-result-flash{
+  position:fixed;inset:0;pointer-events:none;z-index:290;
+  opacity:0;transition:opacity .12s;
+}
+.pen-result-flash.flash-goal{background:radial-gradient(ellipse at 50% 50%,rgba(43,192,108,.18) 0%,transparent 70%)}
+.pen-result-flash.flash-miss{background:radial-gradient(ellipse at 50% 50%,rgba(224,71,62,.15) 0%,transparent 70%)}
+.pen-result-flash.show{opacity:1}
+
+/* ── FINAL MESSAGE ── */
+.penalty-message{
+  font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:800;
+  color:var(--gold);margin-top:20px;min-height:32px;
+  letter-spacing:1px;text-align:center;
+  animation:msgFadeIn .5s ease;
+}
+
 @keyframes msgFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .sim-screen h2{font-size:12px;letter-spacing:3px;color:var(--text3);text-transform:uppercase;margin-bottom:16px}
 .sim-team-row{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--bg3);border:1px solid var(--border2);margin-bottom:6px;transition:all .2s}
@@ -805,6 +993,32 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .btn-modal-cancel{background:transparent;border:1px solid var(--border2);color:var(--text2);padding:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;width:100%;margin-top:10px;transition:all .15s;letter-spacing:1px}
 .btn-modal-confirm{background:var(--danger);border:none;color:#fff;padding:10px;font-size:12px;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;width:100%;margin-top:4px;transition:all .15s;letter-spacing:1px}
 .btn-modal-confirm:hover{background:var(--danger2)}
+/* ── ADMIN MODAL ── */
+#admin-overlay{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center}
+#admin-overlay.open{display:flex}
+.admin-box{background:var(--bg2);border:1px solid var(--border2);padding:24px;width:320px;max-width:94vw;box-shadow:0 24px 64px rgba(0,0,0,.7);display:flex;flex-direction:column;gap:14px}
+.admin-title{font-size:10px;letter-spacing:4px;color:var(--text3);text-transform:uppercase;font-weight:700}
+.admin-subtitle{font-size:11px;color:var(--text3);margin-top:-8px}
+.admin-input{width:100%;background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:10px 14px;font-size:16px;font-weight:700;font-family:'Space Grotesk',sans-serif;outline:none;letter-spacing:2px;text-align:center}
+.admin-input:focus{border-color:var(--gold)}
+.admin-input-err{border-color:var(--danger)!important;animation:adminShake .3s ease}
+@keyframes adminShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.admin-btn{background:var(--red);color:#fff;border:none;padding:11px;font-size:12px;font-weight:900;letter-spacing:2px;cursor:pointer;font-family:'Space Grotesk',sans-serif;width:100%}
+.admin-btn-cancel{background:transparent;border:1px solid var(--border2);color:var(--text3);padding:9px;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;font-family:'Inter',sans-serif;width:100%}
+/* admin panel (shown when unlocked) */
+.admin-panel-title{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border2);padding-bottom:8px}
+.admin-toggle-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(38,53,46,.4)}
+.admin-toggle-label{font-size:12px;font-weight:600;color:var(--text);display:flex;flex-direction:column;gap:1px}
+.admin-toggle-sub{font-size:10px;color:var(--text3);font-weight:400}
+.admin-toggle{position:relative;width:36px;height:20px;flex-shrink:0}
+.admin-toggle input{opacity:0;width:0;height:0;position:absolute}
+.admin-toggle-slider{position:absolute;inset:0;background:var(--border2);cursor:pointer;border-radius:20px;transition:background .2s}
+.admin-toggle-slider::before{content:'';position:absolute;width:14px;height:14px;top:3px;left:3px;background:#fff;border-radius:50%;transition:transform .2s}
+.admin-toggle input:checked + .admin-toggle-slider{background:var(--green2)}
+.admin-toggle input:checked + .admin-toggle-slider::before{transform:translateX(16px)}
+.admin-file-btn{background:var(--bg3);border:1px solid var(--border2);color:var(--text2);padding:9px 12px;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;font-family:'Inter',sans-serif;width:100%;text-align:left;display:flex;align-items:center;gap:8px;margin-top:4px}
+.admin-file-btn:hover{border-color:var(--gold);color:var(--text)}
+.admin-close-btn{background:transparent;border:1px solid var(--border2);color:var(--text3);padding:9px;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;font-family:'Inter',sans-serif;width:100%;margin-top:4px}
 .bracket-grid{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 8px;max-width:min(90vw,900px)}
 .bracket-col{display:flex;flex-direction:column;gap:8px;min-width:180px;flex-shrink:0}
 .bracket-stage-title{font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;text-align:center;padding-bottom:4px;border-bottom:1px solid var(--border)}
@@ -1140,31 +1354,54 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 #match-result-transition{
   position:absolute;inset:0;z-index:350;
   display:flex;align-items:center;justify-content:center;
-  background:rgba(10,18,14,.97);
-  backdrop-filter:blur(6px);
+  background:rgba(10,18,14,.98);
+  backdrop-filter:blur(8px);
   opacity:0;pointer-events:none;
-  transition:opacity .2s ease;
+  transition:opacity .25s ease;
 }
 #match-result-transition.show{opacity:1;pointer-events:all}
 #match-result-transition.hide{animation:mrtOut .3s ease forwards}
-@keyframes mrtOut{to{opacity:0}}
+@keyframes mrtOut{to{opacity:0;transform:scale(.96)}}
 .mrt-inner{
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  text-align:center;
-  animation:mrtIn .35s cubic-bezier(.34,1.56,.64,1) both;
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  text-align:center;width:100%;max-width:520px;padding:0 24px;
+  animation:mrtIn .4s cubic-bezier(.34,1.56,.64,1) both;
 }
-@keyframes mrtIn{from{transform:scale(.92) translateY(12px);opacity:0}to{transform:none;opacity:1}}
-.mrt-label{font-size:9px;letter-spacing:4px;color:var(--text3);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.mrt-label::before,.mrt-label::after{content:'';flex:1;height:1px;width:30px;background:var(--border2)}
-.mrt-teams{display:flex;align-items:center;gap:20px}
-.mrt-team{display:flex;flex-direction:column;align-items:center;gap:4px;width:120px}
-.mrt-flag{font-size:26px;line-height:1}
-.mrt-pname{font-size:13px;font-weight:800;color:var(--text);font-family:'Space Grotesk',sans-serif;letter-spacing:.5px}
-.mrt-tname{font-size:9px;color:var(--text3);letter-spacing:.5px}
-.mrt-center{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0}
-.mrt-score{font-size:52px;font-weight:900;color:var(--white);font-family:'Space Grotesk',sans-serif;letter-spacing:-3px;line-height:1;text-shadow:0 2px 20px rgba(0,0,0,.8)}
-.mrt-winner-label{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:800;margin-top:4px;text-transform:uppercase}
-.mrt-next{font-size:9px;letter-spacing:2px;color:var(--text3);margin-top:16px;display:flex;align-items:center;gap:6px;animation:feedPulse 1s ease-in-out infinite}
+@keyframes mrtIn{from{transform:scale(.9) translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.mrt-label{font-size:10px;letter-spacing:5px;color:var(--text3);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:10px;width:100%}
+.mrt-label::before,.mrt-label::after{content:'';flex:1;height:1px;background:var(--border2)}
+.mrt-teams{display:flex;align-items:center;gap:0;width:100%}
+.mrt-team{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1}
+.mrt-team-card{
+  width:100%;padding:20px 12px 16px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  border:1px solid var(--border2);background:var(--bg2);
+  position:relative;
+}
+.mrt-team-card.winner{border-color:var(--gold);background:rgba(255,210,63,.04)}
+.mrt-team-card.loser{opacity:.6}
+.mrt-winner-crown{font-size:18px;line-height:1;margin-bottom:-2px}
+.mrt-flag{font-size:48px;line-height:1}
+.mrt-pname{font-size:18px;font-weight:900;color:var(--text);font-family:'Space Grotesk',sans-serif;letter-spacing:.3px;margin-top:2px}
+.mrt-tname{font-size:11px;color:var(--text3);letter-spacing:.5px;margin-top:0}
+.mrt-team-goals{font-size:44px;font-weight:900;font-family:'Space Grotesk',sans-serif;line-height:1;margin-top:10px}
+.mrt-team-goals.goals-winner{color:var(--gold)}
+.mrt-team-goals.goals-loser{color:var(--text3)}
+.mrt-team-goals.goals-draw{color:var(--text2)}
+.mrt-vs-sep{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:0 16px;flex-shrink:0;gap:6px;
+}
+.mrt-vs-dash{font-size:28px;font-weight:900;color:var(--border2);font-family:'Space Grotesk',sans-serif;line-height:1}
+.mrt-winner-banner{
+  margin-top:24px;padding:12px 24px;
+  background:rgba(255,210,63,.1);border:1px solid rgba(255,210,63,.3);
+  width:100%;
+}
+.mrt-winner-banner.draw{background:rgba(100,120,110,.1);border-color:var(--border2)}
+.mrt-winner-text{font-size:13px;letter-spacing:3px;color:var(--gold);font-weight:900;font-family:'Space Grotesk',sans-serif;text-transform:uppercase}
+.mrt-winner-text.draw{color:var(--text2)}
+.mrt-next{font-size:10px;letter-spacing:3px;color:var(--text3);margin-top:20px;display:flex;align-items:center;gap:8px;animation:feedPulse 1s ease-in-out infinite}
 .mrt-next-dot{width:5px;height:5px;border-radius:50%;background:var(--green3)}
 
 /* FAST MODE: dim animations on pitch when speed >= 3x */
@@ -1370,112 +1607,200 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
   position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
 }
 
-/* Animated ball */
+/* ═══════════════════════════════════════════════
+   BALL — v2: richer texture + per-state effects
+   ═══════════════════════════════════════════════ */
 #live-ball{
   position:absolute;
   width:18px;height:18px;
   border-radius:50%;
-  background:radial-gradient(circle at 33% 28%,#fff 0%,#f5f5f5 35%,#c8c8c8 100%);
-  box-shadow:0 3px 8px rgba(0,0,0,.95),0 0 0 1.5px rgba(255,255,255,.8),0 0 12px 3px rgba(255,255,255,.2);
+  background:
+    radial-gradient(circle at 30% 25%, #ffffff 0%, #f0f0f0 30%, #d0d0d0 65%, #b0b0b0 100%);
+  box-shadow:
+    0 3px 10px rgba(0,0,0,.95),
+    0 0 0 1.5px rgba(255,255,255,.85),
+    0 0 14px 4px rgba(255,255,255,.18),
+    inset 0 -2px 4px rgba(0,0,0,.25);
   transform:translate(-50%,-50%);
   transition:left .32s cubic-bezier(.18,.9,.28,1), top .32s cubic-bezier(.18,.9,.28,1);
   z-index:50;left:50%;top:50%;
   will-change:left,top;
   overflow:visible;
 }
-/* Soccer pattern lines on ball */
+/* Panel seams on ball */
 #live-ball::before{
-  content:'';position:absolute;inset:2px;border-radius:50%;
+  content:'';position:absolute;inset:1px;border-radius:50%;
   background:
-    radial-gradient(ellipse at 38% 30%, rgba(0,0,0,.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 65% 60%, rgba(0,0,0,.12) 0%, transparent 45%);
+    radial-gradient(ellipse at 35% 28%, rgba(0,0,0,.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 68% 62%, rgba(0,0,0,.14) 0%, transparent 42%),
+    radial-gradient(ellipse at 52% 52%, rgba(0,0,0,.06) 0%, transparent 70%);
   pointer-events:none;
 }
+/* Specular shine */
+#live-ball::after{
+  content:'';position:absolute;
+  width:6px;height:4px;
+  border-radius:50%;
+  background:rgba(255,255,255,.75);
+  top:3px;left:5px;
+  pointer-events:none;
+  filter:blur(1px);
+}
 
-/* Ball trail ghost elements */
+/* ─── TRAIL — 3 visual tiers ─── */
+/* Base trail (pass / idle) */
 .ball-trail{
   position:absolute;
-  width:18px;height:18px;
+  width:16px;height:16px;
   border-radius:50%;
-  background:rgba(255,255,255,.22);
-  box-shadow:0 0 8px 3px rgba(255,255,255,.12);
+  background:rgba(255,255,255,.18);
+  box-shadow:0 0 6px 2px rgba(255,255,255,.1);
   transform:translate(-50%,-50%);
   pointer-events:none;
   z-index:48;
   transition:none;
 }
-
-/* Kick impact — squash then spring */
-#live-ball.ball-kick{animation:ballSquash .26s cubic-bezier(.34,1.56,.64,1)}
-@keyframes ballSquash{
-  0%  {transform:translate(-50%,-50%) scale(1.7,.55)}
-  40% {transform:translate(-50%,-50%) scale(.82,1.22)}
-  70% {transform:translate(-50%,-50%) scale(1.06,.95)}
-  100%{transform:translate(-50%,-50%) scale(1)}
+/* Kick trail — warm orange spark */
+.ball-trail.trail-kick{
+  background:rgba(255,160,40,.22);
+  box-shadow:0 0 8px 3px rgba(255,130,20,.2);
+}
+/* Comet/goal trail — bright white-hot core */
+.ball-trail.trail-comet{
+  background:rgba(255,240,200,.35);
+  box-shadow:0 0 10px 4px rgba(255,210,80,.25);
 }
 
-/* Goal: pure white flash burst */
-#live-ball.ball-goal{animation:ballGoalBurst .55s cubic-bezier(.34,1.56,.64,1) forwards}
+/* ─── KICK IMPACT: harder squash + brightness flash ─── */
+#live-ball.ball-kick{animation:ballSquash .22s cubic-bezier(.34,1.56,.64,1)}
+@keyframes ballSquash{
+  0%  {transform:translate(-50%,-50%) scale(2,.45);filter:brightness(2)}
+  30% {transform:translate(-50%,-50%) scale(.75,1.35);filter:brightness(1.4)}
+  60% {transform:translate(-50%,-50%) scale(1.1,.9);filter:brightness(1.1)}
+  80% {transform:translate(-50%,-50%) scale(.97,1.03);filter:brightness(1)}
+  100%{transform:translate(-50%,-50%) scale(1);filter:brightness(1)}
+}
+
+/* ─── LONG PASS — stretching blur trail ─── */
+#live-ball.ball-longpass{animation:ballLongPass .38s cubic-bezier(.4,0,.2,1)}
+@keyframes ballLongPass{
+  0%  {transform:translate(-50%,-50%) scale(.9) scaleX(1.4);filter:blur(1px) brightness(1.3)}
+  50% {transform:translate(-50%,-50%) scale(1.05) scaleX(1.2);filter:blur(.5px) brightness(1.1)}
+  100%{transform:translate(-50%,-50%) scale(1) scaleX(1);filter:blur(0) brightness(1)}
+}
+
+/* ─── DRIBBLE TOUCH — quick wobble ─── */
+#live-ball.ball-dribble{animation:ballDribble .18s ease-in-out 2}
+@keyframes ballDribble{
+  0%  {transform:translate(-50%,-50%) rotate(0deg) scale(1)}
+  25% {transform:translate(-50%,-50%) rotate(-12deg) scale(1.08,.94)}
+  75% {transform:translate(-50%,-50%) rotate(10deg) scale(.94,1.06)}
+  100%{transform:translate(-50%,-50%) rotate(0deg) scale(1)}
+}
+
+/* ─── GOAL NET BURST: 3-phase white→gold→settle ─── */
+#live-ball.ball-goal{animation:ballGoalBurst .65s cubic-bezier(.34,1.56,.64,1) forwards}
 @keyframes ballGoalBurst{
-  0%  {transform:translate(-50%,-50%) scale(1);box-shadow:0 2px 6px rgba(0,0,0,.9),0 0 0 1.5px rgba(255,255,255,.7)}
-  30% {transform:translate(-50%,-50%) scale(2.4);box-shadow:0 0 0 6px rgba(255,255,255,.6),0 0 20px 10px rgba(255,255,255,.4)}
-  55% {transform:translate(-50%,-50%) scale(.6);box-shadow:0 0 0 2px rgba(255,255,255,.3)}
-  80% {transform:translate(-50%,-50%) scale(1.1)}
-  100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 2px 6px rgba(0,0,0,.9),0 0 0 1.5px rgba(255,255,255,.7)}
+  0%  {transform:translate(-50%,-50%) scale(1);
+       box-shadow:0 2px 6px rgba(0,0,0,.9),0 0 0 1.5px rgba(255,255,255,.7);
+       filter:brightness(1)}
+  18% {transform:translate(-50%,-50%) scale(3.2);
+       box-shadow:0 0 0 10px rgba(255,255,255,.8),0 0 40px 18px rgba(255,255,255,.6);
+       filter:brightness(3)}
+  42% {transform:translate(-50%,-50%) scale(1.4);
+       box-shadow:0 0 0 5px rgba(255,210,63,.7),0 0 24px 10px rgba(255,180,0,.5);
+       filter:brightness(1.8)}
+  65% {transform:translate(-50%,-50%) scale(.7);
+       box-shadow:0 0 0 2px rgba(255,210,63,.4);
+       filter:brightness(1.2)}
+  82% {transform:translate(-50%,-50%) scale(1.12);filter:brightness(1)}
+  100%{transform:translate(-50%,-50%) scale(1);
+       box-shadow:0 2px 6px rgba(0,0,0,.9),0 0 0 1.5px rgba(255,255,255,.7);
+       filter:brightness(1)}
+}
+
+/* ─── GOAL RING BURST (DOM elements spawned in JS) ─── */
+.ball-goal-ring{
+  position:absolute;
+  border-radius:50%;
+  border:2px solid var(--ring-color,rgba(255,255,255,.9));
+  pointer-events:none;
+  z-index:52;
+  transform:translate(-50%,-50%) scale(0);
+  animation:goalRingExpand var(--ring-dur,.5s) var(--ring-delay,0s) cubic-bezier(.2,.8,.3,1) forwards;
+}
+@keyframes goalRingExpand{
+  0%  {transform:translate(-50%,-50%) scale(0);opacity:1}
+  70% {opacity:.6}
+  100%{transform:translate(-50%,-50%) scale(var(--ring-scale,8));opacity:0}
+}
+
+/* ─── SPARK PARTICLES (DOM elements spawned in JS) ─── */
+.ball-spark{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:53;
+  transform:translate(-50%,-50%);
+  animation:sparkFly var(--spark-dur,.6s) var(--spark-delay,0s) cubic-bezier(.2,1,.3,1) forwards;
+}
+@keyframes sparkFly{
+  0%  {transform:translate(-50%,-50%) scale(1);opacity:1}
+  60% {opacity:.7}
+  100%{transform:translate(calc(-50% + var(--spark-tx,0px)),calc(-50% + var(--spark-ty,0px))) scale(.15);opacity:0}
 }
 
 /* COMET MODE — ball traveling to goal */
 #live-ball.ball-comet{
-  /* Brighter, bigger while flying */
   box-shadow:
     0 2px 8px rgba(0,0,0,.9),
-    0 0 0 2px rgba(255,255,255,1),
-    0 0 28px 10px var(--comet-color, rgba(255,255,255,.8)),
-    0 0 60px 22px var(--comet-glow, rgba(255,210,63,.6));
+    0 0 0 2.5px rgba(255,255,255,1),
+    0 0 32px 12px var(--comet-color, rgba(255,255,255,.8)),
+    0 0 70px 28px var(--comet-glow, rgba(255,210,63,.6));
   z-index:55;
-  width:20px;height:20px;
+  width:21px;height:21px;
+  filter:brightness(1.4);
 }
 #live-ball.ball-comet::before{
   content:'';
   position:absolute;
   top:50%;left:50%;
-  width:90px;height:18px;
-  border-radius:10px 0 0 10px;
+  width:100px;height:20px;
+  border-radius:12px 0 0 12px;
   background:linear-gradient(to left,
-    var(--comet-core,rgba(255,255,255,.95)) 0%,
-    var(--comet-mid,rgba(255,210,63,.8)) 25%,
-    var(--comet-color,rgba(255,150,30,.5)) 60%,
+    var(--comet-core,rgba(255,255,255,.98)) 0%,
+    var(--comet-mid,rgba(255,210,63,.85)) 22%,
+    var(--comet-color,rgba(255,150,30,.55)) 58%,
     transparent 100%);
-  transform:translate(-100%,-50%) rotate(calc(var(--comet-angle,0deg) + 180deg));
+  transform:translate(-100%,-50%) rotate(var(--comet-angle,0deg));
   transform-origin:right center;
-  filter:blur(3px);
+  filter:blur(2.5px);
   pointer-events:none;
 }
 #live-ball.ball-comet::after{
   content:'';
   position:absolute;
-  /* Tail goes opposite to direction: rotate(angle) then shift back */
   top:50%;left:50%;
-  width:130px;height:26px;
-  border-radius:14px 0 0 14px;
+  width:145px;height:30px;
+  border-radius:16px 0 0 16px;
   background:linear-gradient(to left,
     var(--comet-core,rgba(255,255,255,.7)) 0%,
-    var(--comet-mid,rgba(255,210,63,.55)) 20%,
-    var(--comet-color,rgba(255,150,30,.35)) 55%,
+    var(--comet-mid,rgba(255,210,63,.5)) 18%,
+    var(--comet-color,rgba(255,150,30,.3)) 52%,
     transparent 100%);
-  transform:translate(-100%,-50%) rotate(calc(var(--comet-angle,0deg) + 180deg));
+  transform:translate(-100%,-50%) rotate(var(--comet-angle,0deg));
   transform-origin:right center;
-  filter:blur(6px);
+  filter:blur(7px);
   pointer-events:none;
 }
 
 /* Glow pulse while in play */
 @keyframes ballGlow{
-  0%  {box-shadow:0 3px 8px rgba(0,0,0,.95),0 0 0 1.5px rgba(255,255,255,.8),0 0 10px 3px rgba(255,255,255,.18)}
-  50% {box-shadow:0 3px 8px rgba(0,0,0,.95),0 0 0 2.5px rgba(255,255,255,1),0 0 22px 8px rgba(255,255,255,.38)}
-  100%{box-shadow:0 3px 8px rgba(0,0,0,.95),0 0 0 1.5px rgba(255,255,255,.8),0 0 10px 3px rgba(255,255,255,.18)}
+  0%  {box-shadow:0 3px 10px rgba(0,0,0,.95),0 0 0 1.5px rgba(255,255,255,.8),0 0 12px 4px rgba(255,255,255,.2)}
+  50% {box-shadow:0 3px 10px rgba(0,0,0,.95),0 0 0 2.5px rgba(255,255,255,1),0 0 26px 10px rgba(255,255,255,.42)}
+  100%{box-shadow:0 3px 10px rgba(0,0,0,.95),0 0 0 1.5px rgba(255,255,255,.8),0 0 12px 4px rgba(255,255,255,.2)}
 }
-#live-ball.in-play{animation:ballGlow 1s ease-in-out infinite}
+#live-ball.in-play{animation:ballGlow 1.1s ease-in-out infinite}
 
 /* ---- PLAYER JERSEYS ON PITCH ---- */
 .pitch-player{
@@ -1533,38 +1858,27 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
   text-transform:uppercase;
 }
 
-/* ★ STAR PLAYER (overall 90+) — golden aura */
+/* ★ STAR PLAYER (overall 90+) — subtle team-colored detail */
+.pitch-player.star-player{
+  filter:drop-shadow(0 0 3px var(--star-glow, rgba(255,210,63,.45)));
+  animation:starPlayerAura 2.4s ease-in-out infinite;
+}
+@keyframes starPlayerAura{
+  0%,100%{filter:drop-shadow(0 0 2px var(--star-glow, rgba(255,210,63,.3)))}
+  50%    {filter:drop-shadow(0 0 4px var(--star-glow, rgba(255,210,63,.5)))}
+}
 .pitch-player.star-player .jersey{
   box-shadow:
     0 4px 12px rgba(0,0,0,.7),
-    0 0 0 2px rgba(255,210,63,.75),
-    0 0 18px 6px rgba(255,210,63,.45),
+    0 0 0 1px var(--star-glow-ring, rgba(255,210,63,.75)),
     inset 0 1px 0 rgba(255,255,255,.3);
-  animation:starAuraPulse 2s ease-in-out infinite;
 }
-.pitch-player.star-player::before{
-  content:'★';
-  position:absolute;top:-10px;left:50%;transform:translateX(-50%);
-  font-size:9px;color:var(--gold);
-  text-shadow:0 0 6px rgba(255,210,63,.9);
-  animation:starBadgePulse 2s ease-in-out infinite;
-  z-index:20;pointer-events:none;
-}
-@keyframes starAuraPulse{
-  0%,100%{box-shadow:0 4px 12px rgba(0,0,0,.7),0 0 0 2px rgba(255,210,63,.7),0 0 16px 5px rgba(255,210,63,.38),inset 0 1px 0 rgba(255,255,255,.3)}
-  50%    {box-shadow:0 4px 12px rgba(0,0,0,.7),0 0 0 2.5px rgba(255,220,80,1),0 0 28px 10px rgba(255,210,63,.6),inset 0 1px 0 rgba(255,255,255,.3)}
-}
-@keyframes starBadgePulse{
-  0%,100%{opacity:.8;transform:translateX(-50%) scale(1)}
-  50%    {opacity:1;transform:translateX(-50%) scale(1.25)}
-}
-/* Star keeps aura even when has-ball */
+/* Star keeps its ring even when has-ball */
 .pitch-player.star-player.has-ball .jersey{
-  animation:jerseyBob 0.65s ease-in-out infinite alternate, starAuraPulse 2s ease-in-out infinite;
   box-shadow:
     0 0 0 2.5px rgba(255,255,255,.95),
     0 5px 18px rgba(0,0,0,.75),
-    0 0 28px 10px rgba(255,210,63,.6),
+    0 0 0 1px var(--star-glow-ring, rgba(255,210,63,.75)),
     inset 0 1px 0 rgba(255,255,255,.3)!important;
 }
 
@@ -1674,38 +1988,24 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 }
 .live-score.goal-flash{animation:scoreGoalJuice .55s cubic-bezier(.34,1.56,.64,1)}
 
-/* ---- EMPIRE JERSEYS AD BANNER ---- */
-.empire-ad{
-  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
-  display:flex;align-items:center;gap:5px;
-  background:rgba(0,0,0,.55);border:1px solid rgba(255,210,63,.3);
-  padding:2px 10px;border-radius:2px;white-space:nowrap;z-index:5;pointer-events:none;
-}
-.empire-ad-text{
-  font-size:8px;font-weight:800;letter-spacing:2px;
-  color:rgba(255,210,63,.85);text-transform:uppercase;
-  font-family:'Space Grotesk',sans-serif;
-}
-.empire-ad-ball{font-size:9px;}
-
-/* Propagandas extras */
+/* Propagandas — fora do campo, dentro do mini-pitch-outer */
 .field-ad{
   position:absolute;
   display:flex;align-items:center;gap:5px;
-  background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.15);
   padding:2px 9px;border-radius:2px;white-space:nowrap;z-index:5;pointer-events:none;
 }
 .field-ad-text{
   font-size:8px;font-weight:800;letter-spacing:2px;
-  color:rgba(255,255,255,.78);text-transform:uppercase;
+  color:rgba(255,255,255,.72);text-transform:uppercase;
   font-family:'Space Grotesk',sans-serif;
 }
 .field-ad-icon{font-size:9px;}
-/* posições */
-.field-ad.top-center{top:6px;left:50%;transform:translateX(-50%)}
-.field-ad.left-mid{top:50%;left:6px;transform:translateY(-50%) rotate(-90deg);transform-origin:center center}
-.field-ad.right-mid{top:50%;right:6px;transform:translateY(-50%) rotate(90deg);transform-origin:center center}
-.field-ad.bottom-right{bottom:6px;right:8px}
+/* posições — ancoradas ao outer wrapper, fora da grama */
+.field-ad.top-left  {top:2px; left:8px;}
+.field-ad.top-right {top:2px; right:8px;}
+.field-ad.bot-left  {bottom:2px; left:8px;}
+.field-ad.bot-right {bottom:2px; right:8px;}
 
 /* Progress bar bottom of pitch */
 .pitch-progress-bar{
@@ -2056,6 +2356,7 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
   <div class="header-center" id="header-scorers-bar" style="display:none"></div>
   <div class="header-right">
     <span class="header-info" id="header-info"></span>
+    <button class="btn-outline" onclick="openAdminLogin()" title="Admin" style="font-size:11px;padding:4px 8px;opacity:.25;border-color:transparent;color:var(--text3)" id="btn-admin-entry">⚙</button>
     <button class="btn-outline" onclick="confirmRestart()">REINICIAR</button>
   </div>
 </header>
@@ -2086,6 +2387,18 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
     <div class="lobby-logo">⚽<span>×</span>⚽</div>
     <div class="lobby-subtitle">CAMPO X CAMPO</div>
     <div class="lobby-tagline">MONTE · SORTEIE · DISPUTE · MULTIPLAYER</div>
+    <div id="lobby-profile-strip" style="display:none" class="lobby-profile">
+      <div class="lobby-profile-avatar" id="lobby-profile-avatar">?</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:6px">
+          <div class="lobby-profile-name" id="lobby-profile-name">—</div>
+          <button onclick="editLobbyName()" title="Editar nome" style="background:transparent;border:none;cursor:pointer;color:var(--text3);font-size:11px;padding:2px 5px;line-height:1;transition:color .15s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text3)'">✏️</button>
+        </div>
+        <div class="lobby-profile-badges" id="lobby-profile-badges">
+          <span class="lobby-profile-empty">SEM HISTÓRICO AINDA</span>
+        </div>
+      </div>
+    </div>
     <div class="lobby-actions">
       <button class="btn-lobby-main" onclick="goCreateRoom()">CRIAR SALA</button>
       <div class="lobby-sep">OU</div>
@@ -2109,6 +2422,7 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
     <input class="name-big-input" id="player-name-input" placeholder="Nome..." onkeydown="if(event.key==='Enter')confirmName()">
     <div class="emoji-picker-label">Escolha um emoji (opcional)</div>
     <div class="emoji-picker-grid" id="emoji-picker-grid"></div>
+    <div id="name-screen-stat-badges" style="display:none;justify-content:center;gap:6px;margin:10px 0 4px;flex-wrap:wrap"></div>
     <button class="btn-confirm-name" onclick="confirmName()">CONFIRMAR →</button>
   </div>
 </div>
@@ -2286,41 +2600,16 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
           <!-- Animated ball -->
           <div id="live-ball"></div>
 
-          <!-- EMPIRE JERSEYS ad (bottom center) -->
-          <div class="empire-ad">
-            <span class="empire-ad-ball">⚽</span>
-            <span class="empire-ad-text">Empire Jerseys</span>
-          </div>
-
-          <!-- Dona Maria (top center) -->
-          <div class="field-ad top-center">
-            <span class="field-ad-icon">🍽️</span>
-            <span class="field-ad-text">Dona Maria</span>
-          </div>
-
-          <!-- Van do Adi (left side) -->
-          <div class="field-ad left-mid">
-            <span class="field-ad-icon">🚐</span>
-            <span class="field-ad-text">Van do Adi</span>
-          </div>
-
-          <!-- Gin do Jocaceto (right side) -->
-          <div class="field-ad right-mid">
-            <span class="field-ad-icon">🍹</span>
-            <span class="field-ad-text">Gin do Jocaceto</span>
-          </div>
-
-          <!-- Romano Lanches (bottom right) -->
-          <div class="field-ad bottom-right">
-            <span class="field-ad-icon">🍔</span>
-            <span class="field-ad-text">Romano Lanches</span>
-          </div>
-
           <!-- Progress bar -->
           <div class="pitch-progress-bar">
             <div class="match-progress-fill" id="progress-fill"></div>
           </div>
         </div>
+        <!-- Propagandas fora do campo -->
+        <div class="field-ad top-left"><span class="field-ad-icon">🍽️</span><span class="field-ad-text">Dona Maria</span></div>
+        <div class="field-ad top-right"><span class="field-ad-icon">🍹</span><span class="field-ad-text">Gin do Jocaceto</span></div>
+        <div class="field-ad bot-left"><span class="field-ad-icon">🚐</span><span class="field-ad-text">Van do Adi</span></div>
+        <div class="field-ad bot-right"><span class="field-ad-icon">🍔</span><span class="field-ad-text">Romano Lanches</span></div>
       </div>
 
       <!-- STATS STRIP: posse + chutes — abaixo do campo -->
@@ -2368,9 +2657,38 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 </div>
 
 <!-- RESULTS -->
+<!-- Penalty countdown overlay -->
+<div class="pen-countdown-overlay" id="pen-countdown-overlay">
+  <div style="display:flex;flex-direction:column;align-items:center">
+    <div class="pen-countdown-num" id="pen-countdown-num">3</div>
+    <div class="pen-countdown-label" id="pen-countdown-label">PREPARANDO...</div>
+  </div>
+</div>
+<!-- Screen flash on result -->
+<div class="pen-result-flash" id="pen-result-flash"></div>
+
 <div id="screen-penalty" class="screen">
   <div class="penalty-screen">
     <div class="penalty-header" id="pen-header">⚽ COBRANÇAS DE PÊNALTI</div>
+
+    <!-- Sudden death banner -->
+    <div class="pen-sudden-death-banner" id="pen-sd-banner">
+      <div class="pen-sd-icon">⚡</div>
+      <div class="pen-sd-text">MORTE SÚBITA</div>
+      <div class="pen-sd-icon">⚡</div>
+    </div>
+
+    <!-- Pressure meter -->
+    <div class="pen-pressure-wrap" id="pen-pressure-wrap">
+      <div class="pen-pressure-label">
+        <span>TENSÃO</span>
+        <span class="pen-pressure-value" id="pen-pressure-value">0%</span>
+      </div>
+      <div class="pen-pressure-bar-track">
+        <div class="pen-pressure-bar-fill" id="pen-pressure-bar" style="width:0%"></div>
+      </div>
+    </div>
+
     <div class="pen-arena">
       <div class="pen-col" id="pen-col-a"></div>
       <div class="pen-center">
@@ -2412,6 +2730,39 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
   </div>
 </div>
 
+<!-- ADMIN OVERLAY -->
+<div id="admin-overlay" onclick="adminOverlayClick(event)">
+  <div class="admin-box" id="admin-box">
+    <!-- Login view -->
+    <div id="admin-login-view">
+      <div class="admin-title">🔒 Área Restrita</div>
+      <div class="admin-subtitle">Digite a senha de administrador</div>
+      <input class="admin-input" id="admin-password-input" type="password" placeholder="••••••••"
+        onkeydown="if(event.key==='Enter')submitAdminPassword()" autocomplete="off" spellcheck="false">
+      <button class="admin-btn" onclick="submitAdminPassword()">ENTRAR</button>
+      <button class="admin-btn-cancel" onclick="closeAdminOverlay()">CANCELAR</button>
+    </div>
+    <!-- Panel view (shown after unlock) -->
+    <div id="admin-panel-view" style="display:none;flex-direction:column;gap:10px">
+      <div class="admin-panel-title">⚙ PAINEL ADMIN</div>
+      <div class="admin-toggle-row">
+        <label class="admin-toggle-label" for="toggle-gerar">
+          ⚡ Gerar Seleção
+          <span class="admin-toggle-sub">Botão "Gerar Seleção" no draft</span>
+        </label>
+        <label class="admin-toggle">
+          <input type="checkbox" id="toggle-gerar" onchange="adminToggleFeature('GERAR_SELECAO', this.checked)">
+          <span class="admin-toggle-slider"></span>
+        </label>
+      </div>
+      <button class="admin-file-btn" onclick="importTeamsFile()">
+        📂 <span>Importar teams.json</span>
+      </button>
+      <button class="admin-close-btn" onclick="closeAdminOverlay()">FECHAR</button>
+    </div>
+  </div>
+</div>
+
 <!-- GOAL OVERLAY -->
 <div class="goal-overlay" id="goal-overlay">
   <div class="goal-backdrop"></div>
@@ -2441,13 +2792,51 @@ const FEATURE_FLAGS = {
 let TEAMS_DB = {};
 
 async function loadGameData(){
+  // 1. Try fetch (GitHub Pages / local server)
   try{
     const res = await fetch('teams.json');
-    TEAMS_DB = await res.json();
-  } catch(e){
-    console.error('Erro ao carregar dados:', e);
-    alert('Erro ao carregar seleções. Certifique-se de que teams.json está na mesma pasta.');
-  }
+    if(res.ok){
+      TEAMS_DB = await res.json();
+      return;
+    }
+  } catch(e){}
+  // 2. Fall back to locally imported data (saved via importTeamsFile)
+  try{
+    const saved = localStorage.getItem('cxc_teams_local');
+    if(saved){ TEAMS_DB = JSON.parse(saved); return; }
+  } catch(e){}
+  // 3. Show import prompt
+  showImportPrompt();
+}
+
+function showImportPrompt(){
+  showToast('Nenhum teams.json encontrado — importe o arquivo pelo botão no cabeçalho');
+}
+
+function importTeamsFile(){
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json,application/json';
+  input.onchange = async e => {
+    const file = e.target.files[0];
+    if(!file) return;
+    try{
+      const text = await file.text();
+      const data = JSON.parse(text);
+      // Basic validation
+      const keys = Object.keys(data);
+      if(!keys.length || !data[keys[0]].players) throw new Error('Formato inválido');
+      TEAMS_DB = data;
+      localStorage.setItem('cxc_teams_local', text);
+      showToast(`✓ ${keys.length} seleções carregadas!`);
+      // Refresh lobby team count if visible
+      const el = document.getElementById('total-teams-count');
+      if(el) el.textContent = keys.length;
+    } catch(err){
+      alert('Erro ao ler o arquivo: ' + err.message);
+    }
+  };
+  input.click();
 }
 
 
@@ -2541,7 +2930,7 @@ function animateDrawnCard(teamKey, finalTeam){
   document.getElementById('draft-content-left').classList.add('hide-list-spin');
   if(cupEl) cupEl.style.visibility = 'hidden';
 
-  const keys = teamKeys(G.yearMin, G.yearMax);
+  const keys = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
   const REEL_LEN = 24;
   const tiles = [];
   for(let i=0;i<REEL_LEN-1;i++) tiles.push(TEAMS_DB[rand(keys)]);
@@ -2577,6 +2966,7 @@ function animateDrawnCard(teamKey, finalTeam){
     G.spinDisplayTeamKey = null;
     document.getElementById('draft-content-left').classList.remove('hide-list-spin');
     renderDraftLeft(); // rebuilds the card normally and reveals the new player list
+    renderDraftRight(); // sync box score's team/year label with the settled team
     renderPitch();     // refresh pitch with correct team's players in popups
   }, 1750);
 }
@@ -2621,14 +3011,28 @@ function makeSeededRandom(seed){
 }
 function randSeeded(arr, rngFn){ return arr[Math.floor(rngFn()*arr.length)]; }
 function getYearsList(){ return [...new Set(Object.values(TEAMS_DB).map(t=>t.year))].sort((a,b)=>a-b); }
-function teamKeys(yearMin, yearMax){
-  const keys = Object.keys(TEAMS_DB);
-  if(yearMin==null && yearMax==null) return keys;
-  const lo = yearMin ?? getYearsList()[0], hi = yearMax ?? getYearsList().slice(-1)[0];
-  const filtered = keys.filter(k=>TEAMS_DB[k].year>=lo && TEAMS_DB[k].year<=hi);
-  return filtered.length ? filtered : keys;
+function teamAvgRating(key){
+  const t = TEAMS_DB[key];
+  if(!t || !t.players || !t.players.length) return 0;
+  return t.players.reduce((s,p)=>s+p.r, 0) / t.players.length;
 }
-function randTeam(yearMin, yearMax){ return rand(teamKeys(yearMin, yearMax)); }
+const LOW_PROFILE_MAX_AVG = 83; // bottom ~40% of teams
+
+function teamKeys(yearMin, yearMax, lowProfile){
+  const keys = Object.keys(TEAMS_DB);
+  let filtered = keys;
+  if(yearMin != null || yearMax != null){
+    const lo = yearMin ?? getYearsList()[0], hi = yearMax ?? getYearsList().slice(-1)[0];
+    const byYear = keys.filter(k=>TEAMS_DB[k].year>=lo && TEAMS_DB[k].year<=hi);
+    filtered = byYear.length ? byYear : keys;
+  }
+  if(lowProfile){
+    const lp = filtered.filter(k=>teamAvgRating(k) <= LOW_PROFILE_MAX_AVG);
+    filtered = lp.length >= 4 ? lp : filtered; // fallback if too few teams
+  }
+  return filtered;
+}
+function randTeam(yearMin, yearMax, lowProfile){ return rand(teamKeys(yearMin, yearMax, lowProfile)); }
 function avgRating(lineup){
   const vals = Object.values(lineup);
   if(!vals.length) return 0;
@@ -2685,12 +3089,86 @@ function getDeviceId(){
 }
 const MY_DEVICE_ID = getDeviceId();
 
+// ── Render stat badge HTML from a stats object ──
+function renderStatBadgesHTML(stats, size='normal'){
+  if(!stats || (stats.wins===0 && stats.gf===0 && stats.ga===0 && stats.matches===0)) return '';
+  const saldo = (stats.gf||0) - (stats.ga||0);
+  const saldoStr = saldo >= 0 ? '+'+saldo : ''+saldo;
+  const goalsNeg = saldo < 0 ? ' negative' : '';
+  if(size === 'compact'){
+    // For draft topbar — very small inline
+    const winsHtml = stats.wins > 0
+      ? `<span class="dtb-stat-badge wins">🏆${stats.wins}</span>` : '';
+    const goalsHtml = `<span class="dtb-stat-badge goals${saldo<0?' neg':''}">⚽${saldoStr}</span>`;
+    return winsHtml + goalsHtml;
+  }
+  const winsHtml = `<span class="stat-badge stat-badge-wins">🏆 ${stats.wins||0}</span>`;
+  const goalsHtml = `<span class="stat-badge stat-badge-goals${goalsNeg}">⚽ ${saldoStr}</span>`;
+  return winsHtml + goalsHtml;
+}
+
 function loadMyStats(){
   try{
     const raw = localStorage.getItem(STATS_KEY);
     const all = raw ? JSON.parse(raw) : {};
     return all[MY_DEVICE_ID] || {wins:0, gf:0, ga:0, matches:0, lastNames:[]};
   } catch(e){ return {wins:0,gf:0,ga:0,matches:0,lastNames:[]}; }
+}
+
+function editLobbyName(){
+  // Go to name screen to allow changing name
+  pendingAction = null;
+  setScreen('name');
+  const sub = document.getElementById('name-screen-sub');
+  if(sub) sub.textContent = 'Altere seu nome:';
+  const inp = document.getElementById('player-name-input');
+  const stats = loadMyStats();
+  if(inp && stats.lastNames && stats.lastNames[0]){
+    inp.value = stats.lastNames[0].replace(/^@\s*/,'');
+    inp.select();
+  }
+}
+
+function updateLobbyProfile(){
+  const stats = loadMyStats();
+  const strip = document.getElementById('lobby-profile-strip');
+  const avatarEl = document.getElementById('lobby-profile-avatar');
+  const nameEl = document.getElementById('lobby-profile-name');
+  const badgesEl = document.getElementById('lobby-profile-badges');
+  const nameScreenBadges = document.getElementById('name-screen-stat-badges');
+
+  const hasHistory = stats && (stats.wins > 0 || stats.gf > 0 || stats.ga > 0 || stats.matches > 0);
+  const lastName = stats.lastNames && stats.lastNames[0];
+
+  // Lobby strip
+  if(strip){
+    if(hasHistory && lastName){
+      strip.style.display = 'flex';
+      if(avatarEl) avatarEl.textContent = lastName.slice(0,2).toUpperCase();
+      if(nameEl) nameEl.textContent = lastName;
+      if(badgesEl){
+        const badgesHtml = renderStatBadgesHTML(stats);
+        badgesEl.innerHTML = badgesHtml || '<span class="lobby-profile-empty">SEM HISTÓRICO AINDA</span>';
+      }
+    } else if(hasHistory){
+      strip.style.display = 'flex';
+      if(avatarEl) avatarEl.textContent = '?';
+      if(nameEl) nameEl.textContent = 'Jogador';
+      if(badgesEl) badgesEl.innerHTML = renderStatBadgesHTML(stats) || '<span class="lobby-profile-empty">SEM HISTÓRICO AINDA</span>';
+    } else {
+      strip.style.display = 'none';
+    }
+  }
+
+  // Name screen badges
+  if(nameScreenBadges){
+    if(hasHistory){
+      nameScreenBadges.style.display = 'flex';
+      nameScreenBadges.innerHTML = renderStatBadgesHTML(stats);
+    } else {
+      nameScreenBadges.style.display = 'none';
+    }
+  }
 }
 
 function saveMyStats(stats){
@@ -2742,6 +3220,7 @@ function goCreateRoom(){
   document.getElementById('player-name-input').value = '';
   setScreen('name');
   initEmojiPicker();
+  updateLobbyProfile();
   setTimeout(()=>document.getElementById('player-name-input').focus(),100);
 }
 
@@ -2754,19 +3233,33 @@ function goJoinRoom(){
   document.getElementById('player-name-input').value = '';
   setScreen('name');
   initEmojiPicker();
+  updateLobbyProfile();
   setTimeout(()=>document.getElementById('player-name-input').focus(),100);
 }
 
-async function confirmName(){
+function confirmName(){
   const name = document.getElementById('player-name-input').value.trim();
   if(!name){ showToast('Digite seu nome!'); return; }
+
+  // Editing name from lobby profile (no pending room action)
+  if(!pendingAction){
+    const stats = loadMyStats();
+    stats.lastNames = stats.lastNames || [];
+    stats.lastNames = [name, ...stats.lastNames.filter(n=>n!==name)].slice(0,5);
+    saveMyStats(stats);
+    updateLobbyProfile();
+    showToast('✓ Nome atualizado!');
+    setScreen('lobby');
+    return;
+  }
+
   initFirebase();
   MY_PLAYER_ID = genPlayerId();
   if(pendingAction === 'create'){
-    await createRoom(name);
+    createRoom(name);
   } else if(pendingAction && pendingAction.startsWith('join:')){
     const code = pendingAction.split(':')[1];
-    await joinRoom(code, name);
+    joinRoom(code, name);
   }
 }
 
@@ -2867,6 +3360,7 @@ function syncRoomToG(room){
     G.tacticalStyle = myDraft.tacticalStyle || room.tacticalStyle || 'equilibrado';
     G.mode = room.gameMode || 'Classic';
     G.showScores = G.mode === 'Classic';
+    G.lowProfile = G.mode === 'LowProfile';
     G.currentTeamKey = myDraft.teamKey || null;
     G.rerolls = myDraft.rerolls ?? 3;
     G.yearMin = room.yearMin ?? getYearsList()[0];
@@ -2982,22 +3476,25 @@ function renderRoomWaiting(players, room, isHost){
         ${isMe?'<span class="room-player-you">você</span>':''}
         ${isH?'<span class="room-player-host-tag">host</span>':''}
       </div>
+      ${isMe ? `<div class="stat-badges" id="room-my-stat-badges">${renderStatBadgesHTML(loadMyStats())}</div>` : ''}
       ${isHost && p.id!==MY_PLAYER_ID?`<button class="btn-kick" title="Expulsar ${p.name}" onclick="kickPlayer('${p.id}','${p.name.replace(/'/g,"\\'")}')">✕</button>`:''}
     </div>`;
   }).join('');
 
   const currentMode = room.gameMode || 'Classic';
+  const isLowProfileRoom = currentMode === 'LowProfile';
   const modeEl = document.getElementById('room-mode-picker');
   modeEl.innerHTML = `
     <button class="form-btn ${currentMode==='Classic'?'active':''}" ${isHost?`onclick="setRoomMode('Classic')"`:'disabled'}>FÁCIL · COM NOTAS</button>
     <button class="form-btn ${currentMode==='Memory'?'active':''}" ${isHost?`onclick="setRoomMode('Memory')"`:'disabled'}>MEMÓRIA · SEM NOTAS</button>
+    <button class="form-btn ${currentMode==='LowProfile'?'active':''}" ${isHost?`onclick="setRoomMode('LowProfile')"`:'disabled'} style="${currentMode==='LowProfile'?'border-color:#c8a84a;color:#c8a84a;background:rgba(160,130,60,.1)':''}">🥴 LOW PROFILE</button>
   `;
 
   const yMin = getYearsList()[0], yMax = getYearsList().slice(-1)[0];
   const yearMin = room.yearMin ?? yMin;
   const yearMax = room.yearMax ?? yMax;
   const totalTeams = Object.keys(TEAMS_DB).length;
-  const filteredTeams = teamKeys(yearMin, yearMax).length;
+  const filteredTeams = teamKeys(yearMin, yearMax, isLowProfileRoom).length;
   const periodEl = document.getElementById('room-period-picker');
   periodEl.innerHTML = `
     <div class="period-picker">
@@ -3026,7 +3523,7 @@ function renderRoomWaiting(players, room, isHost){
   // Timer picker
   const timerMode = room.timerMode || 'none'; // 'none' | 'fixed' | 'pressure'
   const timerSecs = room.timerSecs ?? 60;
-  const TIMER_SECS_OPTIONS = [15, 30, 45, 60, 90, 120];
+  const TIMER_SECS_OPTIONS = [5, 10, 15, 20, 30, 45];
   const timerEl = document.getElementById('room-timer-picker');
   const secsLabel = s => s >= 60 ? `${s/60}min` : `${s}s`;
   timerEl.innerHTML = `
@@ -3103,7 +3600,7 @@ function onRoomPeriodInput(){
   }
   document.querySelector('#room-period-picker .period-values').innerHTML = `<span>${vMin}</span>—<span>${vMax}</span>`;
   const filteredEl = document.getElementById('room-period-filtered');
-  if(filteredEl) filteredEl.textContent = `FILTRADO: ${teamKeys(vMin, vMax).length}`;
+  if(filteredEl) filteredEl.textContent = `FILTRADO: ${teamKeys(vMin, vMax, G.lowProfile || (G.room?.gameMode === 'LowProfile')).length}`;
   updateRoomPeriodRangeBar();
 }
 
@@ -3160,11 +3657,12 @@ async function hostStartGame(){
   const yearMin = room.yearMin ?? getYearsList()[0];
   const yearMax = room.yearMax ?? getYearsList().slice(-1)[0];
   const roomRerolls = room.rerolls ?? 3;
+  const isLowProfile = (room.gameMode || 'Classic') === 'LowProfile';
   const playerDrafts = {};
   const usedTeams = new Set();
   players.forEach(([id])=>{
     let team; let tries=0;
-    do { team = randTeam(yearMin, yearMax); tries++; } while(usedTeams.has(team) && tries < 40);
+    do { team = randTeam(yearMin, yearMax, isLowProfile); tries++; } while(usedTeams.has(team) && tries < 40);
     usedTeams.add(team);
     playerDrafts[id] = {
       teamKey: team,
@@ -3224,7 +3722,7 @@ function showLobby(){
   if(G.draftTimerInterval){ clearInterval(G.draftTimerInterval); G.draftTimerInterval = null; }
   LAST_DRAWN_TEAM = null;
   if(ROOM_LISTENER && ROOM_REF){ ROOM_REF.off('value'); ROOM_LISTENER=null; }
-  G={players:[],draftIdx:0,draftedTeams:[],formation:"4-3-3",tacticalStyle:"equilibrado",style:"Balanced",mode:"Classic",
+  G={players:[],draftIdx:0,draftedTeams:[],formation:"4-3-3",tacticalStyle:"equilibrado",style:"Balanced",mode:"Classic",lowProfile:false,
      currentTeamKey:null,rerolls:3,lineup:{},activeSlot:null,pendingPlayer:null,
      matchQueue:[],currentMatchIdx:0,matchStats:{},matchLog:[],simTimeout:null,isSimRunning:false,
      isMyTurn:false,room:null,roomPlayers:[],isHost:false,draftTimerInterval:null,draftDeadline:null,draftInitialSecs:120};
@@ -3234,6 +3732,7 @@ function showLobby(){
   if(overlay) overlay.classList.remove('visible');
   setScreen('lobby');
   listenOpenRooms();
+  updateLobbyProfile();
 }
 
 let OPEN_ROOMS_LISTENER = null;
@@ -3279,6 +3778,7 @@ function joinOpenRoom(code){
   document.getElementById('player-name-input').value = '';
   setScreen('name');
   initEmojiPicker();
+  updateLobbyProfile();
   setTimeout(()=>document.getElementById('player-name-input').focus(),100);
 }
 
@@ -3318,7 +3818,7 @@ function beginDraft(){
   if(G.draftIdx >= G.players.length){ goSimulate(); return; }
   G.rerolls = 3;
   G.lineup = {};
-  G.currentTeamKey = randTeam();
+  G.currentTeamKey = randTeam(G.yearMin, G.yearMax, G.lowProfile);
   renderDraft();
   setScreen('draft');
 }
@@ -3368,7 +3868,7 @@ function renderDraftLeft(){
 
   if(filled < total){
     html += `<div class="drawn-card" id="drawn-card">
-      <div class="drawn-label">SORTEADO</div>
+      <div class="drawn-label">SORTEADO${G.lowProfile ? ' <span class="lp-mode-badge">🥴 LOW PROFILE</span>' : ''}</div>
       <div class="drawn-country"><span class="drawn-flag" id="drawn-flag">${t.flag}</span> <span id="drawn-name">${G.currentTeamKey.replace(/\d+/,'').trim()}</span></div>
       <div class="drawn-cup">Copa <span id="drawn-cup-num" class="spin-num">${G.currentTeamKey.match(/\d+/)?.[0]||''}</span></div>
     </div>`;
@@ -3413,6 +3913,8 @@ function renderDraftRight(){
   const filled = slotsFilled(G.lineup);
   const total = totalSlots(G.formation);
   const lineup = G.lineup;
+  const displayTeamKey = (G.isSpinning && G.spinDisplayTeamKey) ? G.spinDisplayTeamKey : G.currentTeamKey;
+  const t = TEAMS_DB[displayTeamKey] || TEAMS_DB[G.currentTeamKey];
 
   const atkPos = ['ST','LW','RW','AM'];
   const defPos = ['GK','RB','CB','LB'];
@@ -3426,6 +3928,20 @@ function renderDraftRight(){
     <span class="boxscore-title">BOX SCORE · ${filled}/${total}</span>
     ${filled===total?`<span class="boxscore-total">${totalAvg}</span>`:''}
   </div>`;
+
+  if(t){
+    const myPlayerName = (G.players && MY_PLAYER_ID)
+      ? (G.players.find(p=>p.id===MY_PLAYER_ID)||{}).name || ''
+      : '';
+    html += `<div class="boxscore-team">
+      <span class="boxscore-team-flag">${t.flag||''}</span>
+      <span class="boxscore-team-name">${(displayTeamKey||'').replace(/\d+/,'').trim()}</span>
+      ${t.year?`<span class="boxscore-team-year">· ${t.year}</span>`:''}
+    </div>`;
+    if(myPlayerName){
+      html += `<div style="font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.5px;margin-top:-8px;margin-bottom:10px;display:flex;align-items:center;gap:4px"><span style="color:var(--border2)">▸</span>${myPlayerName}</div>`;
+    }
+  }
 
   if(filled > 0){
     html += `<div class="stat-bars">
@@ -3777,7 +4293,7 @@ function updateMyDraft(data){
 
   if(playerWasPlaced && !data.currentTeamKey){
     // Auto-draw a new team 100% randomly — only avoid repeating the exact same team
-    const allKeys = teamKeys(G.yearMin, G.yearMax);
+    const allKeys = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
 
     const candidates = allKeys.filter(k => k !== G.currentTeamKey);
     const newTeam = rand(candidates.length ? candidates : allKeys);
@@ -3796,7 +4312,7 @@ function rerollTeam(){
   if(!G.isMyTurn){ showToast('Não é sua vez!'); return; }
   if(G.rerolls<=0) return;
   const year = G.currentTeamKey.match(/\d+/)?.[0];
-  const pool = teamKeys(G.yearMin, G.yearMax);
+  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
   // Get positions still needed
   const neededSlotPos = getMissingSlotPositions();
   // Filter pool: only teams that have at least one player able to fill EACH needed slot
@@ -3811,7 +4327,7 @@ function rerollTeam(){
   const anyValid = pool.filter(k=>teamCanFillNeeded(k));
   const newTeam = sameyear.length ? rand(sameyear)
     : anyValid.length ? rand(anyValid)
-    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax));
+    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax, G.lowProfile));
   G.pendingPlayer=null;
   updateMyDraft({ currentTeamKey: newTeam, rerolls: G.rerolls-1 });
   resetPickTimer();
@@ -3820,7 +4336,7 @@ function rerollCup(){
   if(!G.isMyTurn){ showToast('Não é sua vez!'); return; }
   if(G.rerolls<=0) return;
   const country = G.currentTeamKey.replace(/\d+/,'').trim();
-  const pool = teamKeys(G.yearMin, G.yearMax);
+  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
   // Get positions still needed
   const neededSlotPos = getMissingSlotPositions();
   function teamCanFillNeeded(key){
@@ -3834,7 +4350,7 @@ function rerollCup(){
   const anyValid = pool.filter(k=>teamCanFillNeeded(k));
   const newTeam = samecountry.length ? rand(samecountry)
     : anyValid.length ? rand(anyValid)
-    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax));
+    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax, G.lowProfile));
   G.pendingPlayer=null;
   updateMyDraft({ currentTeamKey: newTeam, rerolls: G.rerolls-1 });
   resetPickTimer();
@@ -3906,10 +4422,9 @@ async function confirmLineup(){
 // Calculates effective time for pressure mode:
 // each confirmation reduces the remaining time by 25% of the base time (floor 15s)
 function pressureSecsForMe(){
-  const base = G.room?.timerSecs ?? 60;
+  const base = G.room?.timerSecs ?? 30;
   const confirms = Object.values(G.room?.pressureConfirms || {}).length;
-  const reduction = confirms * base * 0.25;
-  return Math.max(15, Math.round(base - reduction));
+  return Math.max(5, Math.round(base * Math.pow(0.8, confirms)));
 }
 
 function startPickTimer(){
@@ -3917,7 +4432,7 @@ function startPickTimer(){
   const timerMode = G.room?.timerMode || 'none';
   if(timerMode === 'none' || !G.isMyTurn) return;
 
-  const secs = timerMode === 'pressure' ? pressureSecsForMe() : (G.room?.timerSecs ?? 60);
+  const secs = timerMode === 'pressure' ? pressureSecsForMe() : (G.room?.timerSecs ?? 30);
   G.draftDeadline = Date.now() + secs * 1000;
   G.draftInitialSecs = secs;
   updateTimerUI(secs, secs);
@@ -3983,6 +4498,7 @@ function renderDraftTopbar(){
         <div class="dtb-avatar" style="background:${p.color}">${p.emoji ? `<span style="font-size:14px;line-height:1">${p.emoji}</span>` : p.name[0].toUpperCase()}</div>
         <span class="dtb-name" style="${isMe?'color:var(--text)':''}">${p.name}</span>
         <span class="dtb-progress${confirmed?' done':''}" style="color:${labelColor}">${label}</span>
+        ${isMe ? renderStatBadgesHTML(loadMyStats(), 'compact') : ''}
       </div>`;
     }).join('');
     playersEl.innerHTML = chips;
@@ -4126,6 +4642,18 @@ async function autoFillLineup(){
 
 async function autoPickPlayer(){
   if(!G.isMyTurn) return;
+
+  // Se não tem time sorteado, sorteia um aleatório
+  if(!G.currentTeamKey || !TEAMS_DB[G.currentTeamKey]){
+    const randomKey = randTeam(G.yearMin, G.yearMax, G.lowProfile);
+    if(!randomKey){ await confirmLineup(); return; }
+    G.currentTeamKey = randomKey;
+    G.lineup = {};
+    updateMyDraft({ teamKey: randomKey, lineup: {} });
+    showToast('⏱ Tempo esgotado! Time sorteado aleatoriamente.');
+    renderDraft();
+  }
+
   const t = TEAMS_DB[G.currentTeamKey];
   if(!t){ await confirmLineup(); return; }
 
@@ -4136,21 +4664,21 @@ async function autoPickPlayer(){
     Object.values(pd.lineup||{}).forEach(pl=>globalUsed.add(pl.n));
   });
 
-  // Find first empty slot and best available player for it
+  // Acha o primeiro slot vazio e pica 1 jogador aleatório
   let placed = false;
   let posIdx = 0;
   outer: for(const row of FORMATIONS_DB[G.formation]){
     for(const pos of row){
       const key = `${pos}_${posIdx}`;
       if(!G.lineup[key]){
-        const candidate = t.players.find(pl=>
+        const candidates = t.players.filter(pl=>
           !usedNames.has(pl.n) && !globalUsed.has(pl.n) && canPlaceInSlot(pl.p, pos)
         );
-        if(candidate){
+        if(candidates.length){
+          const candidate = candidates[Math.floor(Math.random() * candidates.length)];
           G.lineup = {...G.lineup, [key]: {n:candidate.n, p:candidate.p, r:candidate.r, num:candidate.num}};
-          usedNames.add(candidate.n);
           G.pendingPlayer = null;
-          showToast(`⏱ ${candidate.n} escolhido automaticamente`);
+          showToast(`⏱ ${candidate.n} escolhido aleatoriamente`);
           updateMyDraft({ lineup: G.lineup });
           placed = true;
           break outer;
@@ -4160,21 +4688,39 @@ async function autoPickPlayer(){
     }
   }
 
-  // Check if lineup is now full
+  // Verifica se a escalação está completa
   const total = totalSlots(G.formation);
   const filled = slotsFilled(G.lineup);
   if(filled >= total){
-    showToast('⏱ Tempo esgotado! Escalação confirmada automaticamente.');
+    showToast('⏱ Escalação completa! Confirmando...');
     await confirmLineup();
-  } else if(placed){
-    // Reset timer for the next pick
-    startPickTimer();
-    renderDraft();
-  } else {
-    // No candidate found — just confirm with what we have
-    showToast('⏱ Tempo esgotado! Escalação confirmada automaticamente.');
-    await confirmLineup();
+    return;
   }
+
+  if(!placed){
+    // Sem candidatos disponíveis — confirma com o que tem
+    await confirmLineup();
+    return;
+  }
+
+  // Após pick aleatório → gira seleção + ano (sem consumir reroll)
+  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
+  const neededSlotPos = getMissingSlotPositions();
+  function teamCanFillNeeded(key){
+    if(key === G.currentTeamKey) return false;
+    const players = TEAMS_DB[key].players;
+    return neededSlotPos.every(slotPos =>
+      players.some(pl => canPlaceInSlot(pl.p, slotPos))
+    );
+  }
+  const validPool = pool.filter(k => teamCanFillNeeded(k));
+  const newTeam = validPool.length
+    ? rand(validPool)
+    : rand(pool.filter(k => k !== G.currentTeamKey) || pool);
+
+  // Atualiza time sem consumir reroll, reinicia timer
+  updateMyDraft({ currentTeamKey: newTeam });
+  resetPickTimer();
 }
 
 // ===== SIMULATE OVERVIEW =====
@@ -5324,19 +5870,71 @@ function spawnGoalParticles(goalX, goalY){
   if(isFastMode()) return; // skip heavy particles at high speed
   const pitch = document.getElementById('mini-pitch-wrap');
   if(!pitch) return;
-  const colors = ['#fff','#ffd23f','#4ade80','#e74c3c','#2980b9','#fff','#ffd23f'];
-  const count = 18;
+
+  // ── Phase 1: expanding goal rings (CSS-animated DOM elements) ──
+  const ringColors = [
+    'rgba(255,255,255,.95)',
+    'rgba(255,210,63,.85)',
+    'rgba(255,255,255,.5)',
+  ];
+  ringColors.forEach((color,i)=>{
+    const r = document.createElement('div');
+    r.className = 'ball-goal-ring';
+    const startSize = 18;
+    r.style.cssText = `
+      left:${goalX}%;top:${goalY}%;
+      width:${startSize}px;height:${startSize}px;
+      --ring-color:${color};
+      --ring-dur:${.55+i*.12}s;
+      --ring-delay:${i*.1}s;
+      --ring-scale:${9+i*3};
+    `;
+    pitch.appendChild(r);
+    setTimeout(()=>r.remove(), (.55+i*.12+i*.1)*1000+200);
+  });
+
+  // ── Phase 2: radial sparks ──
+  const sparkColors = ['#fff','#ffd23f','#fff','#4ade80','#fff','#ffd23f','#ff9f43','#fff','#4ade80'];
+  const sparkCount = 24;
+  for(let i=0;i<sparkCount;i++){
+    const s = document.createElement('div');
+    s.className = 'ball-spark';
+    const angle = (i/sparkCount)*360 + (Math.random()-0.5)*18;
+    const rad = angle * Math.PI/180;
+    const dist = 35 + Math.random()*75;
+    const tx = Math.cos(rad)*dist;
+    const ty = Math.sin(rad)*dist;
+    const size = 3 + Math.random()*5;
+    const dur = 0.5 + Math.random()*0.45;
+    const delay = i < 12 ? Math.random()*0.06 : 0.06 + Math.random()*0.12;
+    const color = sparkColors[i%sparkColors.length];
+    s.style.cssText = `
+      left:${goalX}%;top:${goalY}%;
+      width:${size}px;height:${size}px;
+      background:${color};
+      box-shadow:0 0 ${size*1.5}px ${color};
+      border-radius:${Math.random()>.4?'50%':'2px'};
+      --spark-tx:${tx}px;--spark-ty:${ty}px;
+      --spark-dur:${dur}s;--spark-delay:${delay}s;
+    `;
+    pitch.appendChild(s);
+    setTimeout(()=>s.remove(), (dur+delay)*1000+60);
+  }
+
+  // ── Phase 3: legacy confetti for extra density ──
+  const colors = ['#fff','#ffd23f','#4ade80','#e74c3c','#2980b9','#ff9f43'];
+  const count = 14;
   for(let i=0;i<count;i++){
     const p = document.createElement('div');
     p.className = 'goal-particle';
-    const angle = (i/count)*360 + (Math.random()-0.5)*25;
+    const angle = (i/count)*360 + (Math.random()-0.5)*30;
     const rad = angle * Math.PI/180;
-    const dist = 40 + Math.random()*60;
+    const dist = 55 + Math.random()*50;
     const tx = Math.cos(rad)*dist;
     const ty = Math.sin(rad)*dist;
-    const dur = 0.6 + Math.random()*0.5;
-    const delay = Math.random()*0.12;
-    const rot = (Math.random()-0.5)*360;
+    const dur = 0.65 + Math.random()*0.5;
+    const delay = 0.08 + Math.random()*0.14;
+    const rot = (Math.random()-0.5)*420;
     const color = colors[i%colors.length];
     p.style.cssText = `
       left:${goalX}%;top:${goalY}%;
@@ -5347,10 +5945,11 @@ function spawnGoalParticles(goalX, goalY){
     pitch.appendChild(p);
     setTimeout(()=>p.remove(), (dur+delay)*1000+50);
   }
-  // Pitch shake
+
+  // ── Pitch shake ──
   const wrap = document.getElementById('mini-pitch-wrap');
   if(wrap){ wrap.classList.remove('goal-shake'); void wrap.offsetWidth; wrap.classList.add('goal-shake');
-    setTimeout(()=>wrap.classList.remove('goal-shake'),400); }
+    setTimeout(()=>wrap.classList.remove('goal-shake'),450); }
 }
 
 function skipToEnd(){
@@ -5447,7 +6046,11 @@ function renderPitchPlayers(match){
         const shortName = player ? player.n.split(' ').slice(-1)[0].toUpperCase() : pos;
         const isStar = player && player.r >= 90;
 
-        if(isStar) el.classList.add('star-player');
+        if(isStar){
+          el.classList.add('star-player');
+          el.style.setProperty('--star-glow', hexToRgba(color, 0.45));
+          el.style.setProperty('--star-glow-ring', hexToRgba(color, 0.8));
+        }
 
         el.innerHTML = `
           <div class="jersey" style="background:linear-gradient(165deg,${color} 0%,${darkenColor(color)} 100%)">
@@ -5528,6 +6131,11 @@ function darkenColor(hex){
   return '#'+[r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('');
 }
 
+function hexToRgba(hex, alpha){
+  const n = parseInt(hex.slice(1),16);
+  return `rgba(${(n>>16)&0xff},${(n>>8)&0xff},${n&0xff},${alpha})`;
+}
+
 // ===== INDIVIDUAL BALL CARRIER + PLAY TYPES =====
 
 // State: which player currently has the ball
@@ -5597,10 +6205,11 @@ function pickPlayerFromSide(side, preferAttack){
 }
 
 // ===== BALL TRAIL SYSTEM =====
-const TRAIL_COUNT = 5;
+const TRAIL_COUNT = 7;
 let TRAIL_DOTS = [];
 let BALL_PREV_POS = {x:50,y:50};
 let TRAIL_INTERVAL = null;
+let BALL_TRAIL_TYPE = 'idle'; // 'idle' | 'kick' | 'comet'
 
 function initBallTrail(){
   const pitch = document.getElementById('mini-pitch-wrap');
@@ -5616,6 +6225,8 @@ function initBallTrail(){
   }
 }
 
+function setBallTrailType(type){ BALL_TRAIL_TYPE = type; }
+
 function updateBallTrail(){
   const ball = document.getElementById('live-ball');
   if(!ball || !TRAIL_DOTS.length) return;
@@ -5624,14 +6235,20 @@ function updateBallTrail(){
   const dx = bx - BALL_PREV_POS.x;
   const dy = by - BALL_PREV_POS.y;
   const speed = Math.sqrt(dx*dx+dy*dy);
-  if(speed < 0.3){ TRAIL_DOTS.forEach(d=>{d.style.opacity='0';}); BALL_PREV_POS={x:bx,y:by}; return; }
+  if(speed < 0.25){ TRAIL_DOTS.forEach(d=>{d.style.opacity='0';}); BALL_PREV_POS={x:bx,y:by}; return; }
   BALL_PREV_POS = {x:bx,y:by};
+  const trailClass = BALL_TRAIL_TYPE==='comet' ? 'ball-trail trail-comet'
+                   : BALL_TRAIL_TYPE==='kick'  ? 'ball-trail trail-kick'
+                   : 'ball-trail';
   TRAIL_DOTS.forEach((d,i)=>{
+    d.className = trailClass;
     const t = (i+1)/(TRAIL_COUNT+1);
-    const tx = bx - dx*t*2.2;
-    const ty = by - dy*t*2.2;
-    const scale = 1 - t*0.65;
-    const alpha = (1-t)*0.45*Math.min(1,speed/2);
+    const stretch = BALL_TRAIL_TYPE==='comet' ? 3.2 : BALL_TRAIL_TYPE==='kick' ? 2.6 : 2.0;
+    const tx = bx - dx*t*stretch;
+    const ty = by - dy*t*stretch;
+    const scale = BALL_TRAIL_TYPE==='comet' ? (1-t*0.55) : (1-t*0.72);
+    const alphaMax = BALL_TRAIL_TYPE==='comet' ? 0.7 : BALL_TRAIL_TYPE==='kick' ? 0.55 : 0.38;
+    const alpha = (1-t)*alphaMax*Math.min(1,speed/1.8);
     d.style.left = tx+'%';
     d.style.top = ty+'%';
     d.style.opacity = alpha;
@@ -5698,11 +6315,17 @@ function playIndividualAction(ev, pA){
     const midX = isTeamA
       ? Math.min(90, carrier.baseX + 18 + Math.random()*8)
       : Math.max(10, carrier.baseX - 18 - Math.random()*8);
+
+    // Grab the ball's real current position BEFORE the carrier drifts —
+    // driftPlayer() overwrites carrier.el.dataset.curX/curY immediately,
+    // so reading it afterward would give the wrong origin for the trail.
+    const liveBallEl = document.getElementById('live-ball');
+    const fromX = liveBallEl ? parseFloat(liveBallEl.style.left) : carrier.baseX;
+    const fromY = liveBallEl ? parseFloat(liveBallEl.style.top) : carrier.baseY;
+
     driftPlayer(carrier, midX, carrier.baseY + (Math.random()-0.5)*8, 900);
 
-    // Compute direction for comet tail
-    const fromX = parseFloat(carrier.el.dataset.curX || carrier.baseX);
-    const fromY = parseFloat(carrier.el.dataset.curY || carrier.baseY);
+    // Compute direction for comet tail — matches the ball's actual path
     const dx = goalX - fromX;
     const dy = goalY - fromY;
     const angle = Math.atan2(dy, dx) * 180 / Math.PI;
@@ -5712,9 +6335,10 @@ function playIndividualAction(ev, pA){
       if(ball){
         // Comet mode: fast transition + directional blur tail
         ball.style.transition = 'left .45s cubic-bezier(.6,0,.4,1), top .45s cubic-bezier(.6,0,.4,1)';
-        ball.classList.remove('ball-kick','ball-goal','in-play');
+        ball.classList.remove('ball-kick','ball-goal','in-play','ball-longpass','ball-dribble');
         ball.classList.add('ball-comet');
         ball.style.setProperty('--comet-angle', angle + 'deg');
+        setBallTrailType('comet');
         // Team-colored comet trail
         if(isTeamA){
           ball.style.setProperty('--comet-color',  'rgba(231,76,60,.65)');
@@ -5740,6 +6364,7 @@ function playIndividualAction(ev, pA){
           ball.classList.add('ball-goal');
           void ball.offsetWidth;
         }
+        setBallTrailType('idle');
         spawnGoalParticles(goalX, goalY);
         // showGoalBanner is called by renderLiveStateUpTo AFTER this returns —
         // we need to delay it too, so we signal via a flag
@@ -5778,20 +6403,30 @@ function playIndividualAction(ev, pA){
   setBallCarrier(carrier, isTeamA);
 
   if(playType.id === 'dribble' || playType.id === 'fake'){
-    // Carrier moves laterally
+    // Carrier moves laterally — wobble animation
     const dX = isTeamA ? 6 + Math.random()*8 : -(6 + Math.random()*8);
     const dY = (Math.random()-0.5)*12;
     setTimeout(()=>{
       driftPlayer(carrier, carrier.baseX + dX, carrier.baseY + dY, 700);
       const ball = document.getElementById('live-ball');
-      if(ball){ ball.style.left = (carrier.baseX + dX + (isTeamA?2:-2)) + '%'; ball.style.top = (carrier.baseY + dY) + '%'; }
+      if(ball){
+        ball.classList.remove('ball-kick','ball-longpass','ball-dribble'); void ball.offsetWidth;
+        ball.classList.add('ball-dribble');
+        setBallTrailType('idle');
+        ball.style.left = (carrier.baseX + dX + (isTeamA?2:-2)) + '%';
+        ball.style.top = (carrier.baseY + dY) + '%';
+      }
     }, 200);
   } else if(receiver && receiver !== carrier){
     // Ball moves to receiver
     setTimeout(()=>{
       const ball = document.getElementById('live-ball');
       if(ball){
-        ball.classList.remove('ball-kick'); void ball.offsetWidth; ball.classList.add('ball-kick');
+        const isLong = playType.id === 'longball';
+        const animClass = isLong ? 'ball-longpass' : 'ball-kick';
+        setBallTrailType(isLong ? 'idle' : 'kick');
+        ball.classList.remove('ball-kick','ball-longpass','ball-dribble'); void ball.offsetWidth;
+        ball.classList.add(animClass);
         ball.style.left = (parseFloat(receiver.el.dataset.curX||receiver.baseX) + (isTeamA?1.5:-1.5)) + '%';
         ball.style.top = (parseFloat(receiver.el.dataset.curY||receiver.baseY)) + '%';
       }
@@ -5978,23 +6613,49 @@ function showMatchResultTransition(matchIdx, onDone){
     : 'EMPATE';
   const winClass = goalsA > goalsB ? 'win-a' : goalsB > goalsA ? 'win-b' : '';
 
+  const aIsWinner = goalsA > goalsB;
+  const bIsWinner = goalsB > goalsA;
+  const isDraw = goalsA === goalsB;
+
+  const aCardClass = isDraw ? '' : aIsWinner ? 'winner' : 'loser';
+  const bCardClass = isDraw ? '' : bIsWinner ? 'winner' : 'loser';
+  const aGoalsClass = isDraw ? 'goals-draw' : aIsWinner ? 'goals-winner' : 'goals-loser';
+  const bGoalsClass = isDraw ? 'goals-draw' : bIsWinner ? 'goals-winner' : 'goals-loser';
+  const bannerClass = isDraw ? 'draw' : '';
+  const bannerTextClass = isDraw ? 'draw' : '';
+  const bannerText = isDraw
+    ? '— EMPATE —'
+    : aIsWinner
+    ? `🏆 ${match.a.playerName.toUpperCase()} VENCE`
+    : `🏆 ${match.b.playerName.toUpperCase()} VENCE`;
+
   inner.innerHTML = `
     <div class="mrt-label">RESULTADO</div>
     <div class="mrt-teams">
       <div class="mrt-team">
-        <div class="mrt-flag">${match.a.flag}</div>
-        <div class="mrt-pname" style="color:#e74c3c">${match.a.playerName}</div>
-        <div class="mrt-tname">${match.a.teamKey}</div>
+        <div class="mrt-team-card ${aCardClass}">
+          ${aIsWinner ? '<div class="mrt-winner-crown">👑</div>' : ''}
+          <div class="mrt-flag">${match.a.flag}</div>
+          <div class="mrt-pname" style="color:#e74c3c">${match.a.playerName}</div>
+          <div class="mrt-tname">${match.a.teamKey}</div>
+          <div class="mrt-team-goals ${aGoalsClass}">${goalsA}</div>
+        </div>
       </div>
-      <div class="mrt-center">
-        <div class="mrt-score ${winClass}">${goalsA} – ${goalsB}</div>
-        <div class="mrt-winner-label">${winnerLabel}</div>
+      <div class="mrt-vs-sep">
+        <div class="mrt-vs-dash">–</div>
       </div>
       <div class="mrt-team">
-        <div class="mrt-flag">${match.b.flag}</div>
-        <div class="mrt-pname" style="color:#2980b9">${match.b.playerName}</div>
-        <div class="mrt-tname">${match.b.teamKey}</div>
+        <div class="mrt-team-card ${bCardClass}">
+          ${bIsWinner ? '<div class="mrt-winner-crown">👑</div>' : ''}
+          <div class="mrt-flag">${match.b.flag}</div>
+          <div class="mrt-pname" style="color:#2980b9">${match.b.playerName}</div>
+          <div class="mrt-tname">${match.b.teamKey}</div>
+          <div class="mrt-team-goals ${bGoalsClass}">${goalsB}</div>
+        </div>
       </div>
+    </div>
+    <div class="mrt-winner-banner ${bannerClass}">
+      <div class="mrt-winner-text ${bannerTextClass}">${bannerText}</div>
     </div>
     <div class="mrt-next"><div class="mrt-next-dot"></div>PRÓXIMO JOGO<div class="mrt-next-dot"></div></div>
   `;
@@ -6029,7 +6690,55 @@ function proceedNextMatch(){
   showMatchIntro(match, ()=> hostTick(nextIdx, 0));
 }
 
-// ===== PENALTY SHOOTOUT ANIMATION =====
+// ===== PENALTY SHOOTOUT ANIMATION — v2: Psychological Tension =====
+
+// Helper: compute "pressure" 0-100 based on kick situation
+function computePenaltyPressure(pen, kickIdx, gA, gB){
+  const total = pen.kicksA.length;
+  const kicksLeft = Math.max(0, total*2 - kickIdx);
+  const round = Math.floor(kickIdx/2) + 1;
+  const diff = Math.abs(gA - gB);
+  const isSuddenDeath = round > total;
+
+  if(isSuddenDeath) return 95;
+  if(diff === 0 && kicksLeft <= 4) return 90;
+  if(diff <= 1 && kicksLeft <= 2) return 85;
+  if(diff === 0 && kicksLeft <= 6) return 70;
+  if(diff <= 1 && kicksLeft <= 6) return 60;
+  if(diff === 0) return 40 + (round/total)*20;
+  return Math.max(10, 50 - diff*15 + (round/total)*20);
+}
+
+// Helper: context message for current kick
+function getPenContextMsg(pen, kickIdx, gA, gB){
+  const total = pen.kicksA.length;
+  const round = Math.floor(kickIdx/2);
+  const isA = kickIdx % 2 === 0;
+  const isSuddenDeath = round >= total;
+
+  if(isSuddenDeath) return { text:'MORTE SÚBITA', cls:'sudden-death-kick' };
+
+  // Can the current kicker's team clinch with this kick?
+  const myScore = isA ? gA : gB;
+  const oppScore = isA ? gB : gA;
+  const myKicksLeft = isA
+    ? total - round - 1
+    : total - round - 1;
+  const oppKicksLeft = isA
+    ? total - Math.floor(kickIdx/2)
+    : total - Math.ceil(kickIdx/2);
+
+  // If goal would make it impossible for opponent to catch up
+  if(myScore + 1 > oppScore + oppKicksLeft) return { text:'PODE SELAR! GOL DECIDE', cls:'match-point' };
+  // If miss eliminates team
+  if(oppScore > myScore && myKicksLeft === 0) return { text:'TEM QUE MARCAR', cls:'must-score' };
+  // Opponent leads
+  if(oppScore > myScore + 1) return { text:'PRECISA DE REAÇÃO', cls:'must-not-miss' };
+  // Tied late
+  if(myScore === oppScore && round >= total-2) return { text:'TUDO IGUAL · PRESSÃO TOTAL', cls:'must-score' };
+  // Generic
+  return null;
+}
 
 function startPenaltyTick(matchIdx){
   setScreen('penalty');
@@ -6042,19 +6751,17 @@ function startPenaltyTick(matchIdx){
   let idx = 0;
   function penTick(){
     if(idx > totalKicks * 2){
-      // Finished - show final message then proceed
+      // Finished
       if(ROOM_REF) ROOM_REF.update({ liveSync: {penaltyMatchIdx: matchIdx, penaltyIdx: totalKicks*2+1} });
       setTimeout(()=>{
-        setScreen('live'); // back to live for "next match" button
+        setScreen('live');
         setupMatchUI(matchIdx);
         renderLiveStateUpTo(matchIdx, result.events.length);
-        // Write as boundary so non-hosts immediately receive the switch back to live
         LAST_FIREBASE_WRITE = 0;
         writeLiveSync({matchIdx, eventIdx: result.events.length, penaltyMatchIdx: null}, true);
-        // Trigger winner celebration now that we know the penalty winner
         if(!G.celebrationShown){
           G.celebrationShown = true;
-          const penWinner = result.penalties.winnerTeam; // 'A' or 'B'
+          const penWinner = result.penalties.winnerTeam;
           setTimeout(()=>triggerWinnerCelebration(penWinner), 350);
         }
         if(G.autoPlay && matchIdx+1 < G.matchQueue.length){
@@ -6065,12 +6772,28 @@ function startPenaltyTick(matchIdx){
     }
     renderPenaltyState(match, result, idx);
     if(ROOM_REF) ROOM_REF.update({ liveSync: {penaltyMatchIdx: matchIdx, penaltyIdx: idx} });
-    if(navigator.vibrate) navigator.vibrate(30);
+
+    // Determine result of THIS kick for vibration
+    const pen = result.penalties;
+    const isAKick = idx%2===0;
+    const kNum = Math.floor(idx/2);
+    const kicked = isAKick ? pen.kicksA[kNum] : pen.kicksB[kNum];
+    if(kicked === true && navigator.vibrate) navigator.vibrate([30,20,60]);
+    else if(kicked === false && navigator.vibrate) navigator.vibrate([80]);
+    else if(navigator.vibrate) navigator.vibrate(20);
+
     idx++;
-    const delay = 1400; // fixed delay — penalty screen is always same speed
+    // Variable delay — base 700ms, up to 1100ms at peak pressure
+    let gA=0,gB=0;
+    for(let i=0;i<Math.min(idx-1,pen.kicksA.length*2);i++){
+      if(i%2===0&&i/2<pen.kicksA.length) gA+=pen.kicksA[Math.floor(i/2)]?1:0;
+      else if(i%2===1&&Math.floor(i/2)<pen.kicksA.length) gB+=pen.kicksB[Math.floor(i/2)]?1:0;
+    }
+    const pressure = computePenaltyPressure(pen, idx, gA, gB);
+    const delay = Math.round(700 + pressure*4); // 700ms → 1100ms based on pressure
     G.simTimeout = setTimeout(penTick, delay);
   }
-  G.simTimeout = setTimeout(penTick, 900);
+  G.simTimeout = setTimeout(penTick, 600);
 }
 
 function renderPenaltyState(match, result, kickIdx){
@@ -6090,11 +6813,40 @@ function renderPenaltyState(match, result, kickIdx){
     else if(i%2===1 && Math.floor(i/2) < totalKicks) gB += pen.kicksB[Math.floor(i/2)] ? 1 : 0;
   }
 
+  // ── Sudden death banner ──
+  const round = Math.floor(kickIdx/2);
+  const isSuddenDeath = round >= totalKicks && kickIdx >= 0;
+  const sdBanner = document.getElementById('pen-sd-banner');
+  if(sdBanner) sdBanner.classList.toggle('show', isSuddenDeath && !finished);
+
+  // ── Background tension color ──
+  const screenEl = document.getElementById('screen-penalty');
+  screenEl.classList.remove('pen-tension-miss','pen-tension-goal','pen-sudden-death');
+  if(!finished && kickIdx >= 0){
+    if(isSuddenDeath) screenEl.classList.add('pen-sudden-death');
+    else {
+      const pressure = computePenaltyPressure(pen, kickIdx, gA, gB);
+      if(pressure >= 80) screenEl.classList.add('pen-sudden-death');
+    }
+  }
+
+  // ── Pressure bar ──
+  const pressure = finished ? 100 : computePenaltyPressure(pen, kickIdx, gA, gB);
+  const pBar = document.getElementById('pen-pressure-bar');
+  const pVal = document.getElementById('pen-pressure-value');
+  if(pBar){
+    pBar.style.width = pressure+'%';
+    pBar.className = 'pen-pressure-bar-fill' + (pressure>=85?' critical':pressure>=60?' high':'');
+  }
+  if(pVal){
+    pVal.textContent = pressure+'%';
+    pVal.className = 'pen-pressure-value' + (pressure>=85?' critical':pressure>=60?' high':'');
+  }
+
   const revA = Math.min(Math.ceil(kickIdx/2), totalKicks);
   const revB = Math.min(Math.floor(kickIdx/2), totalKicks);
 
   function buildCol(kicks, shooters, revealedCount, teamInfo, isRight){
-    const nameA = shooters && shooters[revealedCount] ? shooters[revealedCount] : '';
     let rows = kicks.map((scored, i) => {
       if(i < revealedCount){
         const shooter = shooters && shooters[i] ? shooters[i] : `Chute ${i+1}`;
@@ -6107,8 +6859,8 @@ function renderPenaltyState(match, result, kickIdx){
       } else if(i === revealedCount && !finished){
         const nextShooter = shooters && shooters[i] ? shooters[i] : `Chute ${i+1}`;
         return `<div class="pen-kick-row pending-row show">
-          <div class="pen-kick-ball pending">○</div>
-          <span class="pen-kick-name" style="color:var(--text3)">${nextShooter}</span>
+          <div class="pen-kick-ball next-up">○</div>
+          <span class="pen-kick-name" style="color:var(--gold)">${nextShooter}</span>
         </div>`;
       } else {
         return `<div class="pen-kick-row">
@@ -6128,20 +6880,35 @@ function renderPenaltyState(match, result, kickIdx){
   document.getElementById('pen-col-a').innerHTML = buildCol(pen.kicksA, pen.shootersA, revA, match.a, false);
   document.getElementById('pen-col-b').innerHTML = buildCol(pen.kicksB, pen.shootersB, revB, match.b, true);
 
-  // Flash score on new goal
+  // ── Result of previous kick: flash score + screen tint + banner class ──
+  let prevScored = null, prevIsA = false;
   if(kickIdx > 0){
     const prevIdx = kickIdx - 1;
-    const prevIsA = prevIdx%2===0;
+    prevIsA = prevIdx%2===0;
     const prevKickNum = Math.floor(prevIdx/2);
-    const prevScored = prevIsA ? pen.kicksA[prevKickNum] : pen.kicksB[prevKickNum];
-    if(prevScored){
+    prevScored = prevIsA ? pen.kicksA[prevKickNum] : pen.kicksB[prevKickNum];
+
+    if(prevScored === true){
       const sid = prevIsA ? 'pen-score-a' : 'pen-score-b';
       const el = document.getElementById(sid);
-      if(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); setTimeout(()=>el.classList.remove('flash'), 500); }
+      if(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); setTimeout(()=>el.classList.remove('flash'), 600); }
+      // Screen tint: green flash
+      const flash = document.getElementById('pen-result-flash');
+      if(flash){
+        flash.className = 'pen-result-flash flash-goal show';
+        setTimeout(()=>flash.classList.remove('show'),800);
+      }
+    } else if(prevScored === false){
+      // Screen tint: red flash
+      const flash = document.getElementById('pen-result-flash');
+      if(flash){
+        flash.className = 'pen-result-flash flash-miss show';
+        setTimeout(()=>flash.classList.remove('show'),800);
+      }
     }
   }
 
-  // Shooter banner
+  // ── Shooter banner ──
   const bannerEl = document.getElementById('pen-shooter-banner');
   if(finished){
     bannerEl.style.display = 'none';
@@ -6153,29 +6920,38 @@ function renderPenaltyState(match, result, kickIdx){
     const shooterName = (isAKick ? pen.shootersA : pen.shootersB)?.[kIdx] || `Chute ${kIdx+1}`;
     const kickNum = kIdx + 1;
     let resultIcon = '';
-    let borderColor = 'var(--gold)';
-    if(scored === true){ resultIcon = '⚽'; borderColor = 'var(--green3)'; }
-    else if(scored === false){ resultIcon = '✕'; borderColor = 'var(--danger)'; }
-    bannerEl.style.borderLeftColor = borderColor;
+    let bannerResultClass = '';
+    if(scored === true){ resultIcon = '⚽ GOL!'; bannerResultClass = 'result-scored'; }
+    else if(scored === false){ resultIcon = '✕ PERDEU'; bannerResultClass = 'result-missed'; }
+    bannerEl.className = 'pen-shooter-banner' + (bannerResultClass?' '+bannerResultClass:'');
     bannerEl.style.display = 'flex';
+
+    // Context message
+    const ctxMsg = getPenContextMsg(pen, kickIdx, gA, gB);
+    const ctxHtml = ctxMsg
+      ? `<div class="pen-context-msg ${ctxMsg.cls}">${ctxMsg.text}</div>`
+      : '';
+
     bannerEl.innerHTML = `
       <div class="pen-shooter-flag">${kickerTeam.flag}</div>
       <div class="pen-shooter-info">
         <div class="pen-shooter-label">${kickerTeam.playerName} · COBRANÇA ${kickNum}</div>
         <div class="pen-shooter-name">${shooterName}</div>
+        ${ctxHtml}
       </div>
       <div class="pen-shooter-result">${resultIcon}</div>`;
   } else {
     bannerEl.style.display = 'none';
   }
 
-  // Final message
+  // ── Final message ──
   const msgEl = document.getElementById('pen-message');
   if(finished){
     const winner = pen.winnerTeam==='A' ? match.a : match.b;
     const winScore = gA > gB ? gA : gB;
     const loseScore = gA > gB ? gB : gA;
     msgEl.innerHTML = `${winner.flag} <strong>${winner.playerName}</strong> VENCE NOS PÊNALTIS! (${winScore}–${loseScore})`;
+    screenEl.classList.add('pen-tension-goal');
     if(navigator.vibrate) navigator.vibrate([0,60,50,120,50,200]);
   } else {
     msgEl.textContent = '';
@@ -6745,10 +7521,81 @@ function tryInitOpenRooms(attempts){
   listenOpenRooms();
 }
 if(document.readyState === 'complete'){
-  loadGameData().then(()=>{ tryInitOpenRooms(10); });
+  loadGameData().then(()=>{ tryInitOpenRooms(10); updateLobbyProfile(); });
 } else {
-  window.addEventListener('load', ()=>loadGameData().then(()=>{ tryInitOpenRooms(10); }));
+  window.addEventListener('load', ()=>loadGameData().then(()=>{ tryInitOpenRooms(10); updateLobbyProfile(); }));
 }
+
+// ── ADMIN SYSTEM ──
+const ADMIN_CODE = '28LFEcode';
+const ADMIN_SESSION_KEY = 'cxc_admin_unlocked';
+
+function isAdminUnlocked(){
+  return sessionStorage.getItem(ADMIN_SESSION_KEY) === '1';
+}
+
+function openAdminLogin(){
+  const overlay = document.getElementById('admin-overlay');
+  overlay.classList.add('open');
+  if(isAdminUnlocked()){
+    showAdminPanel();
+  } else {
+    document.getElementById('admin-login-view').style.display = '';
+    document.getElementById('admin-panel-view').style.display = 'none';
+    setTimeout(()=>document.getElementById('admin-password-input').focus(), 80);
+  }
+}
+
+function closeAdminOverlay(){
+  document.getElementById('admin-overlay').classList.remove('open');
+  const inp = document.getElementById('admin-password-input');
+  if(inp){ inp.value = ''; inp.classList.remove('admin-input-err'); }
+}
+
+function adminOverlayClick(e){
+  if(e.target === document.getElementById('admin-overlay')) closeAdminOverlay();
+}
+
+function submitAdminPassword(){
+  const inp = document.getElementById('admin-password-input');
+  const val = inp.value;
+  if(val === ADMIN_CODE){
+    sessionStorage.setItem(ADMIN_SESSION_KEY, '1');
+    inp.value = '';
+    showAdminPanel();
+  } else {
+    inp.classList.add('admin-input-err');
+    setTimeout(()=>inp.classList.remove('admin-input-err'), 400);
+    inp.select();
+  }
+}
+
+function showAdminPanel(){
+  document.getElementById('admin-login-view').style.display = 'none';
+  const panel = document.getElementById('admin-panel-view');
+  panel.style.display = 'flex';
+  // Sync toggle states
+  const gerarToggle = document.getElementById('toggle-gerar');
+  if(gerarToggle) gerarToggle.checked = !!FEATURE_FLAGS.GERAR_SELECAO;
+}
+
+function adminToggleFeature(flag, val){
+  FEATURE_FLAGS[flag] = val;
+  // Persist in sessionStorage
+  try{ sessionStorage.setItem('cxc_flags', JSON.stringify(FEATURE_FLAGS)); }catch(e){}
+  showToast(`${flag}: ${val ? '✓ ativado' : '✗ desativado'}`);
+}
+
+// Restore flags from session if admin was already active
+(function restoreAdminFlags(){
+  try{
+    const saved = sessionStorage.getItem('cxc_flags');
+    if(saved && isAdminUnlocked()){
+      const flags = JSON.parse(saved);
+      Object.assign(FEATURE_FLAGS, flags);
+    }
+  }catch(e){}
+})();
 
 </script>
 </body>
