@@ -73,6 +73,10 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .dtb-progress{font-size:12px;font-weight:800;color:var(--text3);letter-spacing:.5px}
 .dtb-progress.done{color:var(--green3)}
 .dtb-sep{width:1px;height:20px;background:var(--border2);flex-shrink:0;margin:0 2px}
+.dtb-player{position:relative}
+.dtb-kick-btn{display:none;position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--bg2);border:1px solid var(--danger);color:var(--danger);font-size:9px;font-weight:800;letter-spacing:.8px;padding:4px 8px;cursor:pointer;white-space:nowrap;z-index:300;border-radius:2px;font-family:'Inter',sans-serif}
+.dtb-kick-btn:hover{background:rgba(224,71,62,.15)}
+.dtb-player.host-can-kick:hover .dtb-kick-btn{display:block}
 
 /* Timer: absolutely centered pill */
 .dtb-timer{
@@ -285,12 +289,82 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .player-row{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid transparent;cursor:pointer;transition:all .12s;margin-bottom:2px;border-radius:2px}
 .player-row.player-disabled{cursor:default;opacity:.35}
 .player-row.player-disabled:hover{background:transparent}
+.resenha-player-row.player-disabled{cursor:default;opacity:.32;pointer-events:none}
+.resenha-player-row.player-disabled:hover{background:transparent;transform:none;border-color:var(--border)}
 .player-row:hover{background:var(--bg3);border-color:var(--border);transform:translateX(2px)}
 .player-row.selected{background:var(--bg3);border-color:var(--green3)}
 .player-num{font-size:11px;color:var(--text3);font-weight:700;min-width:26px}
 .player-name{flex:1;font-size:13px;font-weight:600;color:var(--text)}
+.player-team-label{font-size:9px;font-weight:500;color:var(--text3);opacity:.45;margin-left:5px;letter-spacing:.3px;white-space:nowrap}
 .player-pos-tag{font-size:10px;color:var(--text3);background:var(--bg);border:1px solid var(--border);padding:2px 5px;border-radius:2px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
 .player-rat{font-size:13px;font-weight:800;color:var(--red);min-width:26px;text-align:right}
+
+/* RESENHA: LISTA DE ESCOLHA DE JOGADOR (sorteio de 11 jogadores individuais) */
+.resenha-header{margin-bottom:10px}
+.resenha-choice-label{font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.resenha-choice-label .resenha-emoji{font-size:13px}
+.resenha-progress-bar{height:2px;background:var(--border2);border-radius:2px;overflow:hidden;margin-bottom:4px}
+.resenha-progress-fill{height:100%;background:var(--green2);border-radius:2px;transition:width .4s ease}
+.resenha-progress-text{font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;display:flex;justify-content:space-between}
+.resenha-progress-text span{color:var(--gold);font-weight:700}
+
+.resenha-player-list{display:flex;flex-direction:column;gap:3px;overflow-y:auto;flex:1;min-height:0;padding:2px 0 4px}
+.resenha-player-list::-webkit-scrollbar{width:3px}
+.resenha-player-list::-webkit-scrollbar-thumb{background:var(--border2)}
+
+.resenha-player-row{
+  background:var(--bg3);border:1px solid var(--border2);
+  padding:10px 12px;cursor:pointer;
+  transition:border-color .15s, background .15s, transform .15s, box-shadow .15s;
+  display:flex;align-items:center;gap:10px;border-radius:2px;
+  position:relative;overflow:hidden;
+  animation:resenhaRowIn .22s cubic-bezier(.34,1.56,.64,1) both;
+}
+/* Entrada escalonada por índice — aplicada via style inline no elemento */
+.resenha-player-row:hover{background:rgba(255,255,255,.03);border-color:var(--border2);transform:translateX(2px)}
+.resenha-player-row:active{transform:scale(.98) translateX(1px);transition-duration:.06s}
+
+/* Ripple ao clicar */
+.resenha-player-row .rp-ripple{
+  position:absolute;border-radius:50%;
+  background:rgba(255,255,255,.18);
+  transform:scale(0);pointer-events:none;
+  animation:rpRipple .45s ease-out forwards;
+}
+@keyframes rpRipple{
+  to{transform:scale(4);opacity:0}
+}
+
+/* Selecionado */
+.resenha-player-row.active-pick{
+  border-color:var(--green3);
+  background:rgba(74,222,128,.08);
+  transform:translateX(4px);
+  box-shadow:0 0 0 1px var(--green3), -3px 0 12px rgba(74,222,128,.15);
+}
+
+/* Animação de entrada dos cards */
+@keyframes resenhaRowIn{
+  from{opacity:0;transform:translateX(-8px)}
+  to{opacity:1;transform:translateX(0)}
+}
+
+.resenha-player-avatar{width:34px;height:34px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:var(--bg);border:1px solid var(--border2)}
+.resenha-player-num{font-size:13px;font-weight:900;color:var(--text2);line-height:1;font-family:'Space Grotesk',sans-serif}
+.resenha-player-flag-sm{font-size:8px;line-height:1;margin-top:1px}
+
+.resenha-player-info{flex:1;min-width:0}
+.resenha-player-name{font-size:14px;font-weight:700;color:var(--white);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resenha-player-sub{font-size:10px;color:var(--text2);margin-top:2px;letter-spacing:.2px;font-weight:500}
+
+.resenha-player-pos{font-size:10px;font-weight:700;color:var(--text3);background:var(--bg);border:1px solid var(--border);padding:2px 6px;border-radius:2px;letter-spacing:.5px;white-space:nowrap;flex-shrink:0}
+.resenha-player-row.active-pick .resenha-player-pos{color:var(--green3);border-color:rgba(74,222,128,.3)}
+
+.resenha-pick-num{font-size:9px;color:var(--text3);min-width:14px;text-align:right;flex-shrink:0;font-weight:600}
+.resenha-pick-arrow{font-size:11px;color:var(--green3);flex-shrink:0;font-weight:800}
+.resenha-team-divider{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);background:var(--bg3);border:1px solid var(--border);padding:5px 10px;margin:6px 0 2px;display:flex;align-items:center;gap:5px}
+
+.resenha-choice-empty{padding:24px 12px;text-align:center;color:var(--text3);font-size:12px;line-height:1.5}
 
 /* PITCH */
 .panel-center{background:var(--bg);display:flex;align-items:stretch;overflow:hidden;padding:0;width:420px;flex-shrink:0}
@@ -1355,6 +1429,20 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .sim-screen h2{font-size:12px;letter-spacing:3px;color:var(--text3);text-transform:uppercase;margin-bottom:16px}
 .sim-team-row{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--bg3);border:1px solid var(--border2);margin-bottom:6px;transition:all .2s}
 .sim-team-row:hover{border-color:var(--border)}
+.sim-kick-btn{background:transparent;border:1px solid var(--border2);color:var(--text3);padding:5px 9px;font-size:10px;font-weight:800;cursor:pointer;letter-spacing:.8px;font-family:'Inter',sans-serif;transition:all .15s;flex-shrink:0;border-radius:2px}
+.sim-kick-btn:hover{border-color:var(--danger);color:var(--danger);background:rgba(224,71,62,.08)}
+.kick-confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9000;display:flex;align-items:center;justify-content:center}
+.kick-confirm-box{background:var(--bg2);border:1px solid var(--border2);padding:24px 28px;max-width:340px;width:90%;text-align:center}
+.kick-confirm-box h3{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:var(--text);margin-bottom:8px}
+.kick-confirm-box p{font-size:12px;color:var(--text2);margin-bottom:18px;line-height:1.5}
+.kick-confirm-btns{display:flex;gap:8px}
+.kick-confirm-btns button{flex:1;padding:10px;font-size:11px;font-weight:800;letter-spacing:1px;cursor:pointer;font-family:'Inter',sans-serif;border:none;transition:all .15s}
+.kick-confirm-cancel{background:var(--bg3);color:var(--text2);border:1px solid var(--border2) !important}
+.kick-confirm-cancel:hover{border-color:var(--border) !important;color:var(--text)}
+.kick-confirm-ok{background:var(--danger);color:#fff}
+.kick-confirm-ok:hover{background:var(--danger2)}
+.live-kick-btn{position:fixed;bottom:70px;right:12px;z-index:500;background:rgba(15,23,20,.9);border:1px solid var(--danger);color:var(--danger);padding:7px 12px;font-size:10px;font-weight:800;letter-spacing:1px;cursor:pointer;font-family:'Inter',sans-serif;border-radius:2px;transition:all .15s}
+.live-kick-btn:hover{background:rgba(224,71,62,.15)}
 
 /* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px)}
@@ -4307,8 +4395,27 @@ const POSITION_COMPAT = {
   LW: ["LW","LM","RW"],
   ST: ["ST"]
 };
+// Modo Resenha: compatibilidade ampla por linha do campo
+// Defesa: ZAG, CB, RB, LB jogam qualquer slot de defesa (CB, RB, LB)
+// Meio: VOL, MC, MEI, DM, CM, AM, RM, LM jogam qualquer slot de meio (DM, CM, AM, RM, LM)
+// Ataque: PD, PE, ATA, RW, LW, ST jogam qualquer slot de ataque (RW, LW, ST)
+const POSITION_COMPAT_RESENHA = {
+  GK: ["GK"],
+  CB: ["CB","RB","LB"],
+  RB: ["RB","LB","CB"],
+  LB: ["LB","RB","CB"],
+  DM: ["DM","CM","AM","RM","LM"],
+  CM: ["CM","DM","AM","RM","LM"],
+  AM: ["AM","CM","DM","RM","LM"],
+  RM: ["RM","CM","DM","AM","LM"],
+  LM: ["LM","CM","DM","AM","RM"],
+  RW: ["RW","LW","ST"],
+  LW: ["LW","RW","ST"],
+  ST: ["ST","RW","LW"]
+};
 function canPlaceInSlot(playerPos, slotPos){
-  const compat = POSITION_COMPAT[playerPos];
+  const compatMap = (typeof G !== 'undefined' && G.resenha) ? POSITION_COMPAT_RESENHA : POSITION_COMPAT;
+  const compat = compatMap[playerPos];
   return compat ? compat.includes(slotPos) : playerPos === slotPos;
 }
 
@@ -4321,7 +4428,8 @@ const POS_LABELS = {
 };
 function posLabel(p){ return POS_LABELS[p] || p; }
 function posAllLabels(p){
-  const compat = POSITION_COMPAT[p] || [p];
+  const compatMap = (typeof G !== 'undefined' && G.resenha) ? POSITION_COMPAT_RESENHA : POSITION_COMPAT;
+  const compat = compatMap[p] || [p];
   return compat.map(pos => POS_LABELS[pos] || pos).join('/');
 }
 
@@ -4357,7 +4465,7 @@ function animateDrawnCard(teamKey, finalTeam){
   document.getElementById('draft-content-left').classList.add('hide-list-spin');
   if(cupEl) cupEl.style.visibility = 'hidden';
 
-  const keys = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
+  const keys = teamKeys(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
   const REEL_LEN = 24;
   const tiles = [];
   for(let i=0;i<REEL_LEN-1;i++) tiles.push(TEAMS_DB[rand(keys)]);
@@ -4445,21 +4553,27 @@ function teamAvgRating(key){
 }
 const LOW_PROFILE_MAX_AVG = 83; // bottom ~40% of teams
 
-function teamKeys(yearMin, yearMax, lowProfile){
+function teamKeys(yearMin, yearMax, lowProfile, resenha){
   const keys = Object.keys(TEAMS_DB);
-  let filtered = keys;
+  // Resenha mode: only teams with category === 'conhecidos'
+  if(resenha){
+    const pool = keys.filter(k => TEAMS_DB[k].category === 'conhecidos');
+    return pool.length ? pool : keys;
+  }
+  // Normal modes: exclude 'conhecidos' teams
+  let filtered = keys.filter(k => TEAMS_DB[k].category !== 'conhecidos');
   if(yearMin != null || yearMax != null){
     const lo = yearMin ?? getYearsList()[0], hi = yearMax ?? getYearsList().slice(-1)[0];
-    const byYear = keys.filter(k=>TEAMS_DB[k].year>=lo && TEAMS_DB[k].year<=hi);
-    filtered = byYear.length ? byYear : keys;
+    const byYear = filtered.filter(k=>TEAMS_DB[k].year>=lo && TEAMS_DB[k].year<=hi);
+    filtered = byYear.length ? byYear : filtered;
   }
   if(lowProfile){
     const lp = filtered.filter(k=>teamAvgRating(k) <= LOW_PROFILE_MAX_AVG);
-    filtered = lp.length >= 4 ? lp : filtered; // fallback if too few teams
+    filtered = lp.length >= 4 ? lp : filtered;
   }
   return filtered;
 }
-function randTeam(yearMin, yearMax, lowProfile){ return rand(teamKeys(yearMin, yearMax, lowProfile)); }
+function randTeam(yearMin, yearMax, lowProfile, resenha){ return rand(teamKeys(yearMin, yearMax, lowProfile, resenha)); }
 function avgRating(lineup){
   const vals = Object.values(lineup);
   if(!vals.length) return 0;
@@ -5005,11 +5119,13 @@ function syncRoomToG(room){
 
     // ── Snapshot of MY state before update (to detect if my own draft changed) ──
     const prevMyTeamKey   = G.currentTeamKey;
+    const prevMyTeamChoicesJSON = JSON.stringify(G.teamChoices || null);
     const prevMyLineup    = JSON.stringify(G.lineup || {});
     const prevMyFormation = G.formation;
     const prevMyRerolls   = G.rerolls;
     const prevMyConfirmed = !G.isMyTurn; // G.isMyTurn === !confirmed
     const prevPlayerDraftsJSON = JSON.stringify(G.playerDrafts || {});
+    const prevPlayerCount = (G.players || []).length;
 
     G.players = players.map(p=>({name:p.name, color:p.color, emoji:p.emoji||'', id:p.id}));
     G.formation = myDraft.formation || room.formation || '4-3-3';
@@ -5017,14 +5133,18 @@ function syncRoomToG(room){
     G.mode = room.gameMode || 'Classic';
     G.showScores = G.mode === 'Classic';
     G.lowProfile = G.mode === 'LowProfile';
+    G.resenha   = G.mode === 'Resenha';
     G.currentTeamKey = myDraft.teamKey || null;
+    G.teamChoices = myDraft.teamChoices || null;
+    // Restore resenhaDupeNames from Firebase (saved as array, used as Set)
+    G.resenhaDupeNames = myDraft.resenhaDupeNames ? new Set(myDraft.resenhaDupeNames) : (G.resenhaDupeNames || null);
     G.rerolls = myDraft.rerolls ?? 3;
     G.yearMin = room.yearMin ?? getYearsList()[0];
     G.yearMax = room.yearMax ?? getYearsList().slice(-1)[0];
     G.lineup = myDraft.lineup || {};
     G.draftIdx = 0; // unused in simultaneous mode but kept for compat
     G.draftedTeams = players.map(p=>(room.draftedTeams||{})[p.id]).filter(Boolean);
-    G.isMyTurn = !myDraft.confirmed; // can always act until confirmed
+    G.isMyTurn = G._confirmingInProgress ? false : !myDraft.confirmed; // can always act until confirmed
     G.room = room;
     G.roomPlayers = players;
     G.isHost = isHost;
@@ -5053,7 +5173,7 @@ function syncRoomToG(room){
       renderDraft();
     } else {
       // Already on draft screen — check what actually changed
-      const myTeamChanged    = G.currentTeamKey !== prevMyTeamKey;
+      const myTeamChanged    = G.currentTeamKey !== prevMyTeamKey || JSON.stringify(G.teamChoices||null) !== prevMyTeamChoicesJSON;
       const myLineupChanged  = JSON.stringify(G.lineup) !== prevMyLineup;
       const myFormChanged    = G.formation !== prevMyFormation;
       const myRerollsChanged = G.rerolls !== prevMyRerolls;
@@ -5061,10 +5181,25 @@ function syncRoomToG(room){
       const myDraftChanged   = myTeamChanged || myLineupChanged || myFormChanged || myRerollsChanged || myConfirmChanged;
 
       const otherDraftsChanged = JSON.stringify(G.playerDrafts) !== prevPlayerDraftsJSON;
+      const playerCountChanged = G.players.length !== prevPlayerCount;
 
       if(myDraftChanged || newPressureConfirm){
         // Something in MY draft changed → full re-render needed
         renderDraft();
+      } else if(playerCountChanged){
+        // Um jogador foi expulso — re-render completo para atualizar topbar,
+        // globalUsed (picks liberados) e cancelar spectate se necessário
+        if(G.spectating && !G.players.find(p=>p.id===G.spectating)){
+          G.spectating = null; // expulso era quem eu assistia
+        }
+        renderDraftTopbar();
+        renderPlayerListOnly();
+        if(G.spectating){
+          renderPitch();
+          renderDraftRight();
+        }
+        // Re-render resenha list se modo resenha (globalUsed menor agora)
+        if(G.resenha) renderDraftLeft();
       } else if(otherDraftsChanged){
         // Only other players' drafts changed (they picked someone) →
         // Light update: just topbar + re-render the player list rows
@@ -5089,11 +5224,15 @@ function syncRoomToG(room){
     G.draftedTeams = players.map(p=>(room.draftedTeams||{})[p.id]).filter(Boolean);
     G.players = players.map(p=>({name:p.name, color:p.color, emoji:p.emoji||'', id:p.id}));
 
-    if(room.matchResults){
+    const simSeedChanged = room.simSeed && room.simSeed !== G._lastSimSeed;
+    G._lastSimSeed = room.simSeed;
+
+    if(room.matchResults && !simSeedChanged){
       // Results already computed (by host) - everyone loads the same data
       loadPrecomputedTournament({resolvedQueue:room.matchQueue, results:room.matchResults});
     } else if(isHost && room.simSeed){
       // Host computes the full tournament once and shares it via Firebase
+      // (also triggered when simSeed changed = player was kicked)
       const precomputed = precomputeTournament(room.simSeed);
       ROOM_REF.update({
         matchQueue: precomputed.resolvedQueue,
@@ -5108,6 +5247,13 @@ function syncRoomToG(room){
     const onSimScreen = document.getElementById('screen-simulate').classList.contains('active');
     const onResultsScreen = document.getElementById('screen-results').classList.contains('active');
     const onPenaltyScreen = document.getElementById('screen-penalty').classList.contains('active');
+
+    // Se um jogador foi expulso (simSeed mudou), voltar para a tela de simulação
+    if(simSeedChanged && (onLiveScreen || onResultsScreen || onPenaltyScreen)){
+      document.getElementById('live-kick-btn')?.remove();
+      goSimulate();
+      return;
+    }
 
     if(!onSimScreen && !onLiveScreen && !onResultsScreen && !onPenaltyScreen){
       goSimulate();
@@ -5194,18 +5340,20 @@ function renderRoomWaiting(players, room, isHost){
 
   const currentMode = room.gameMode || 'Classic';
   const isLowProfileRoom = currentMode === 'LowProfile';
+  const isResenhaRoom    = currentMode === 'Resenha';
   const modeEl = document.getElementById('room-mode-picker');
   modeEl.innerHTML = `
     <button class="form-btn ${currentMode==='Classic'?'active':''}" ${isHost?`onclick="setRoomMode('Classic')"`:'disabled'}>FÁCIL · COM NOTAS</button>
     <button class="form-btn ${currentMode==='Memory'?'active':''}" ${isHost?`onclick="setRoomMode('Memory')"`:'disabled'}>MEMÓRIA · SEM NOTAS</button>
     <button class="form-btn ${currentMode==='LowProfile'?'active':''}" ${isHost?`onclick="setRoomMode('LowProfile')"`:'disabled'} style="${currentMode==='LowProfile'?'border-color:#c8a84a;color:#c8a84a;background:rgba(160,130,60,.1)':''}">🥴 LOW PROFILE</button>
+    <button class="form-btn ${currentMode==='Resenha'?'active':''}" ${isHost?`onclick="setRoomMode('Resenha')"`:'disabled'} style="${currentMode==='Resenha'?'border-color:#4ade80;color:#4ade80;background:rgba(74,222,128,.08)':''}">🍻 RESENHA</button>
   `;
 
   const yMin = getYearsList()[0], yMax = getYearsList().slice(-1)[0];
   const yearMin = room.yearMin ?? yMin;
   const yearMax = room.yearMax ?? yMax;
   const totalTeams = Object.keys(TEAMS_DB).length;
-  const filteredTeams = teamKeys(yearMin, yearMax, isLowProfileRoom).length;
+  const filteredTeams = teamKeys(yearMin, yearMax, isLowProfileRoom, isResenhaRoom).length;
   const periodEl = document.getElementById('room-period-picker');
   periodEl.innerHTML = `
     <div class="period-picker">
@@ -5314,7 +5462,7 @@ function onRoomPeriodInput(){
   }
   document.querySelector('#room-period-picker .period-values').innerHTML = `<span>${vMin}</span>—<span>${vMax}</span>`;
   const filteredEl = document.getElementById('room-period-filtered');
-  if(filteredEl) filteredEl.textContent = `FILTRADO: ${teamKeys(vMin, vMax, G.lowProfile || (G.room?.gameMode === 'LowProfile')).length}`;
+  if(filteredEl) filteredEl.textContent = `FILTRADO: ${teamKeys(vMin, vMax, G.lowProfile || (G.room?.gameMode === 'LowProfile'), G.resenha || (G.room?.gameMode === 'Resenha')).length}`;
   updateRoomPeriodRangeBar();
 }
 
@@ -5372,21 +5520,44 @@ async function hostStartGame(){
   const yearMax = room.yearMax ?? getYearsList().slice(-1)[0];
   const roomRerolls = room.rerolls ?? 3;
   const isLowProfile = (room.gameMode || 'Classic') === 'LowProfile';
+  const isResenha    = (room.gameMode || 'Classic') === 'Resenha';
+  const formation = room.formation || '4-3-3';
   const playerDrafts = {};
-  const usedTeams = new Set();
-  players.forEach(([id])=>{
-    let team; let tries=0;
-    do { team = randTeam(yearMin, yearMax, isLowProfile); tries++; } while(usedTeams.has(team) && tries < 40);
-    usedTeams.add(team);
-    playerDrafts[id] = {
-      teamKey: team,
-      lineup: {},
-      rerolls: roomRerolls,
-      formation: room.formation || '4-3-3',
-      tacticalStyle: room.tacticalStyle || 'equilibrado',
-      confirmed: false
-    };
-  });
+
+  if(isResenha){
+    // Modo Resenha: cada jogador começa com lineup vazio, então as posições
+    // que "faltam" no início são TODAS as posições da formação. Ninguém
+    // escolheu jogador ainda, então globalUsed começa vazio para todos.
+    const missingAtStart = getMissingSlotPositionsFor(formation, {});
+    const globalUsedAtStart = new Set();
+    players.forEach(([id])=>{
+      const choices = getResenhaCandidates(missingAtStart, globalUsedAtStart, null);
+      playerDrafts[id] = {
+        teamKey: null,
+        teamChoices: choices,
+        lineup: {},
+        rerolls: roomRerolls,
+        formation,
+        tacticalStyle: room.tacticalStyle || 'equilibrado',
+        confirmed: false
+      };
+    });
+  } else {
+    const usedTeams = new Set();
+    players.forEach(([id])=>{
+      let team; let tries=0;
+      do { team = randTeam(yearMin, yearMax, isLowProfile, isResenha); tries++; } while(usedTeams.has(team) && tries < 40);
+      usedTeams.add(team);
+      playerDrafts[id] = {
+        teamKey: team,
+        lineup: {},
+        rerolls: roomRerolls,
+        formation,
+        tacticalStyle: room.tacticalStyle || 'equilibrado',
+        confirmed: false
+      };
+    });
+  }
 
   const updatePayload = {
     status: 'drafting',
@@ -5438,7 +5609,7 @@ function showLobby(){
   LAST_DRAWN_TEAM = null;
   stopRoomScreenOpenRooms();
   if(ROOM_LISTENER && ROOM_REF){ ROOM_REF.off('value'); ROOM_LISTENER=null; }
-  G={players:[],draftIdx:0,draftedTeams:[],formation:"4-3-3",tacticalStyle:"equilibrado",style:"Balanced",mode:"Classic",lowProfile:false,
+  G={players:[],draftIdx:0,draftedTeams:[],formation:"4-3-3",tacticalStyle:"equilibrado",style:"Balanced",mode:"Classic",lowProfile:false,resenha:false,
      currentTeamKey:null,rerolls:3,lineup:{},activeSlot:null,pendingPlayer:null,
      matchQueue:[],currentMatchIdx:0,matchStats:{},matchLog:[],simTimeout:null,isSimRunning:false,
      isMyTurn:false,room:null,roomPlayers:[],isHost:false,draftTimerInterval:null,draftDeadline:null,draftInitialSecs:120};
@@ -5704,7 +5875,7 @@ function beginDraft(){
   if(G.draftIdx >= G.players.length){ goSimulate(); return; }
   G.rerolls = 3;
   G.lineup = {};
-  G.currentTeamKey = randTeam(G.yearMin, G.yearMax, G.lowProfile);
+  G.currentTeamKey = randTeam(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
   renderDraft();
   setScreen('draft');
 }
@@ -5731,6 +5902,31 @@ function renderPlayerListOnly(){
   // Update each existing player-row in the scroll list
   const scrollEl = document.querySelector('#draft-content-left .player-scroll');
   if(!scrollEl) return;
+
+  // Atualizar resenha-player-rows se estiver em modo resenha
+  if(G.resenha){
+    const resenhaList = document.querySelector('#draft-content-left .resenha-player-list');
+    if(resenhaList){
+      resenhaList.querySelectorAll('.resenha-player-row').forEach(row=>{
+        const nameEl = row.querySelector('.resenha-player-name');
+        if(!nameEl) return;
+        const playerName = nameEl.textContent.trim();
+        const isTaken = globalUsed.has(playerName);
+        if(isTaken){
+          row.classList.add('player-disabled');
+          row.removeAttribute('onclick');
+          row.title = 'Escolhido por outro jogador';
+        } else {
+          row.classList.remove('player-disabled');
+          const ridx = row.dataset.ridx;
+          if(ridx != null) row.setAttribute('onclick', `resenhaPickRipple(event,${ridx})`);
+          row.title = '';
+        }
+      });
+    }
+    renderDraftTopbar();
+    return;
+  }
 
   scrollEl.querySelectorAll('.player-row').forEach(row=>{
     const nameEl = row.querySelector('.player-name');
@@ -5765,6 +5961,73 @@ function renderPlayerListOnly(){
   });
 }
 
+// Monta o HTML da lista de 11 jogadores sorteados no modo Resenha.
+// Cada linha mostra: bandeira do time, nome do jogador (+ label de turma se duplicado), posição.
+// Mapa de cores por posição para o modo Resenha
+// Clicar num jogador o seleciona como pendente; depois o usuário clica no slot do campo para posicioná-lo.
+function renderResenhaChoiceGridHTML(){
+  const choices = G.teamChoices || [];
+  if(!choices.length){
+    return `<div class="resenha-choice-empty">😅 Nenhum jogador disponível agora com as posições que faltam.<br>Aguarde ou ajuste sua formação.</div>`;
+  }
+  const nameCount = new Map();
+  choices.forEach(pl => nameCount.set(pl.n, (nameCount.get(pl.n)||0) + 1));
+  const dupeNames = new Set([...nameCount.entries()].filter(([,c])=>c>1).map(([n])=>n));
+
+  const filled = slotsFilled(G.lineup);
+  const total = totalSlots(G.formation);
+  const progressPct = Math.round((filled / total) * 100);
+
+  let html = `<div class="resenha-header">
+    <div class="resenha-choice-label"><span class="resenha-emoji">🍻</span>ESCOLHA UM JOGADOR <span style="color:var(--gold)">(${choices.length})</span></div>
+    <div class="resenha-progress-bar"><div class="resenha-progress-fill" style="width:${progressPct}%"></div></div>
+    <div class="resenha-progress-text"><span>TIME MONTADO</span><span>${filled}/${total} jogadores</span></div>
+  </div>`;
+
+  html += `<div class="resenha-player-list">`;
+  const pendingIdx = (G.pendingPlayer && G.pendingFromKey == null && G.pendingPlayer._resenhaIdx != null) ? G.pendingPlayer._resenhaIdx : -1;
+
+  // Montar globalUsed para marcar jogadores já escolhidos por outros
+  const _globalUsedResenha = new Set();
+  Object.entries(G.playerDrafts||{}).forEach(([pid, pd])=>{
+    if(pid === MY_PLAYER_ID) return;
+    Object.values(pd.lineup||{}).forEach(pl=>_globalUsedResenha.add(pl.n));
+  });
+
+  // Agrupar jogadores por time, preservando a ordem do sorteio
+  const _teamOrder = [];
+  const _teamGroups = {};
+  choices.forEach((pl, idx) => {
+    const _key = pl.teamKey || '__unknown__';
+    if(!_teamGroups[_key]){ _teamGroups[_key] = []; _teamOrder.push(_key); }
+    _teamGroups[_key].push({ pl, idx });
+  });
+  _teamOrder.forEach(_tKey => {
+    const _group = _teamGroups[_tKey];
+    const _tLabel = _group[0].pl.teamLabel || _tKey;
+    const _tFlag  = _group[0].pl.flag || '';
+    html += `<div class="resenha-team-divider">${_tFlag} ${_tLabel}</div>`;
+    _group.forEach(({ pl, idx }) => {
+      const posLabels = posAllLabels(pl.p);
+      const isSelected = pendingIdx === idx;
+      const isTaken = _globalUsedResenha.has(pl.n);
+      html += `<div class="resenha-player-row${isSelected ? ' active-pick' : ''}${isTaken ? ' player-disabled' : ''}" style="animation-delay:${idx * 35}ms" ${isTaken ? '' : `onclick="resenhaPickRipple(event,${idx})"`} data-ridx="${idx}" title="${isTaken ? 'Escolhido por outro jogador' : ''}">
+      <div class="resenha-player-avatar">
+        <span class="resenha-player-num">${pl.num || '?'}</span>
+        <span class="resenha-player-flag-sm">${pl.flag}</span>
+      </div>
+      <div class="resenha-player-info">
+        <div class="resenha-player-name">${pl.n}</div>
+      </div>
+      <span class="resenha-player-pos">${posLabels}</span>
+      ${isSelected ? `<span class="resenha-pick-arrow">▶</span>` : `<span class="resenha-pick-num">${idx+1}</span>`}
+    </div>`;
+    });
+  });
+  html += `</div>`;
+  return html;
+}
+
 function renderDraftLeft(){
   // Simultaneous draft mode: each player always edits their own lineup
   const myPlayer = G.players.find(p=>p.id===MY_PLAYER_ID) || G.players[0] || {name:'Você',color:'#ccc',id:''};
@@ -5796,22 +6059,34 @@ function renderDraftLeft(){
     </div>
   </div>`;
 
-  if(!G.currentTeamKey || !t){
+  if(G.resenha && G.teamChoices && G.teamChoices.length){
+    document.getElementById('draft-content-left').innerHTML = html + renderResenhaChoiceGridHTML();
+    return;
+  }
+
+  if(G.resenha && (!G.teamChoices || !G.teamChoices.length) && filled < total){
+    // Resenha sem candidatos disponíveis (todos os jogadores usados ou time esgotado)
+    html += `<div class="resenha-choice-empty" style="margin-top:12px">😅 Nenhum jogador disponível agora com as posições que faltam.<br>Aguarde outro jogador ou ajuste sua formação.</div>`;
+    document.getElementById('draft-content-left').innerHTML = html;
+    return;
+  }
+
+  if(!G.resenha && (!G.currentTeamKey || !t)){
     html += `<div style="padding:20px;text-align:center;color:var(--text3);font-size:12px">Carregando time sorteado...</div>`;
     document.getElementById('draft-content-left').innerHTML = html;
     return;
   }
 
   if(filled < total){
-    html += `<div class="drawn-card" id="drawn-card">
+    // Modo resenha: tela de escolha já foi tratada acima; se chegou aqui é Classic/LowProfile
+    if(!G.resenha){
+      html += `<div class="drawn-card" id="drawn-card">
       <div class="drawn-label">SORTEADO${G.lowProfile ? ' <span class="lp-mode-badge">🥴 LOW PROFILE</span>' : ''}</div>
       <div class="drawn-country"><span class="drawn-flag" id="drawn-flag">${t.flag}</span> <span id="drawn-name">${G.currentTeamKey.replace(/\d+/,'').trim()}</span></div>
       <div class="drawn-cup">Copa <span id="drawn-cup-num" class="spin-num">${G.currentTeamKey.match(/\d+/)?.[0]||''}</span></div>
     </div>`;
-
-    if(FEATURE_FLAGS.GERAR_SELECAO) html += `<button class="btn-autofill" onclick="autoFillLineup()">⚡ GERAR SELEÇÃO</button>`;
-
-    html += `<div class="pick-label">ESCOLHER JOGADOR (${filled}/${total} SLOTS)</div>
+      if(FEATURE_FLAGS.GERAR_SELECAO) html += `<button class="btn-autofill" onclick="autoFillLineup()">⚡ GERAR SELEÇÃO</button>`;
+      html += `<div class="pick-label">ESCOLHER JOGADOR (${filled}/${total} SLOTS)</div>
     <div class="player-scroll">
       ${available.map(pl=>{
         const groupFull = !formationHasEmptySlot(pl.p);
@@ -5828,23 +6103,26 @@ function renderDraftLeft(){
         </div>`;
       }).join('')}
     </div>`;
+    }
   } else if(!G.isMyTurn){
-    // ── Já confirmado: nada mais para fazer além de esperar os outros.
-    // Mostra animação "TIME SELECIONADO", esconde o botão de confirmar,
-    // e oferece o modo espectador + chat.
+    const teamDisplay = G.resenha
+      ? `🍻 ${filled}/${total} jogadores`
+      : `${t ? t.flag : ''} ${G.currentTeamKey ? G.currentTeamKey.replace(/\d+/,'').trim() : ''} · ${filled}/${total} jogadores`;
     html += `<div class="team-selected-banner" id="team-selected-banner">
       <div class="team-selected-check">✅</div>
       <div class="team-selected-title">Time selecionado!</div>
-      <div class="team-selected-sub">${t.flag} ${G.currentTeamKey.replace(/\d+/,'').trim()} · ${filled}/${total} jogadores</div>
+      <div class="team-selected-sub">${teamDisplay}</div>
     </div>`;
     html += renderSpectateListHTML();
     html += renderChatPanelHTML();
   } else {
-    html += `<div class="drawn-card" id="drawn-card">
+    if(!G.resenha){
+      html += `<div class="drawn-card" id="drawn-card">
       <div class="drawn-label">SORTEADO</div>
       <div class="drawn-country"><span class="drawn-flag" id="drawn-flag">${t.flag}</span> <span id="drawn-name">${G.currentTeamKey.replace(/\d+/,'').trim()}</span></div>
       <div class="drawn-cup">Copa <span id="drawn-cup-num" class="spin-num">${G.currentTeamKey.match(/\d+/)?.[0]||''}</span></div>
     </div>`;
+    }
     html += `<div class="complete-badge">
       <div class="complete-count">${filled}/${total}</div>
       <div class="complete-label">ESCALAÇÃO COMPLETA ✓</div>
@@ -5852,7 +6130,7 @@ function renderDraftLeft(){
     html += `<button class="btn-simulate" onclick="confirmLineup()">CONFIRMAR ESCALAÇÃO →</button>`;
   }
   document.getElementById('draft-content-left').innerHTML = html;
-  checkAndAnimateDraw(G.currentTeamKey, t);
+  if(!G.resenha) checkAndAnimateDraw(G.currentTeamKey, t);
   document.getElementById('header-info').textContent = `${G.formation} · ${G.style.toUpperCase()} · ${G.mode.toUpperCase()}`;
 
   if(!G.isMyTurn && filled===total){
@@ -5913,6 +6191,7 @@ function renderDraftRight(){
   }
 
   html += `<div class="position-list">`;
+  // As keys do lineup seguem a ordem original do FORMATIONS_DB (corrigido no renderPitch)
   let posIdx = 0;
   FORMATIONS_DB[G.formation].forEach(row=>{
     row.forEach(pos=>{
@@ -5929,7 +6208,7 @@ function renderDraftRight(){
   });
   html += `</div>`;
 
-  if(filled < total){
+  if(filled < total && (G.currentTeamKey || G.resenha)){
     const missingPos = getMissingSlotPositions ? getMissingSlotPositions() : [];
     const missingLabels = [...new Set(missingPos.map(p=>posLabel(p)))];
     const missingHint = missingLabels.length
@@ -5939,15 +6218,21 @@ function renderDraftRight(){
       <div class="reroll-info">NÃO CURTIU? RE-ROLAR · ${G.rerolls} RESTANTE${G.rerolls!==1?'S':''}</div>
       ${missingHint}
       <div class="reroll-btns">
+        ${G.resenha ? `
+        <button class="btn-reroll" onclick="rerollTeam()" ${G.rerolls<=0?'disabled':''} style="flex:1">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2A5 5 0 102 8"/><path d="M10 5V2H7"/></svg>SORTEAR OUTROS 11
+        </button>` : `
         <button class="btn-reroll" onclick="rerollTeam()" ${G.rerolls<=0?'disabled':''}>
           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2A5 5 0 102 8"/><path d="M10 5V2H7"/></svg>OUTRO TIME
         </button>
         <button class="btn-reroll" onclick="rerollCup()" ${G.rerolls<=0?'disabled':''}>
           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2A5 5 0 102 8"/><path d="M10 5V2H7"/></svg>OUTRA COPA
-        </button>
+        </button>`}
       </div>
     </div>`;
+  }
 
+  if(filled < total){
     html += `<div style="margin-top:10px">
       <div class="section-label" style="display:flex;align-items:center;gap:5px">
         ESTILO TÁTICO
@@ -5985,13 +6270,38 @@ function renderPitch(){
   const displayTeamKey = (G.isSpinning && G.spinDisplayTeamKey) ? G.spinDisplayTeamKey : G.currentTeamKey;
   const t = TEAMS_DB[displayTeamKey] || TEAMS_DB[G.currentTeamKey];
   const usedNames = new Set(Object.values(G.lineup).map(x=>x.n));
+  // Inverte a ordem das linhas: goleiro no topo, atacantes embaixo
+  // E espelha esquerda/direita para que LD fique à esquerda na tela
+  const MIRROR_POS = {RB:'LB',LB:'RB',RW:'LW',LW:'RW',RM:'LM',LM:'RM'};
+  const UNMIRROR_POS = {LB:'RB',RB:'LB',LW:'RW',RW:'LW',LM:'RM',RM:'LM'};
+  const displayForm = [...form].reverse().map(row => row.map(p => MIRROR_POS[p] || p));
+
+  // Pré-computar mapa: (displayRowIdx, displayColIdx) → originalKey
+  // As linhas do displayForm são a ordem invertida, e as colunas são diretas (sem reverse).
+  // A key original deve usar o pos ORIGINAL (antes do mirror) e o posIdx ORIGINAL.
+  // Original: form[0]=GK row, form[1]=def row, etc. posIdx incrementa nessa ordem.
+  const origKeyMap = {}; // [displayRowIdx][displayColIdx] = originalKey
+  {
+    const nRows = form.length;
+    let oIdx = 0;
+    form.forEach((row, ri) => {
+      row.forEach((origPos, ci) => {
+        // displayRowIdx = (nRows - 1 - ri), displayColIdx = ci (sem reverse de colunas)
+        const dri = nRows - 1 - ri;
+        if(!origKeyMap[dri]) origKeyMap[dri] = {};
+        origKeyMap[dri][ci] = `${origPos}_${oIdx}`;
+        oIdx++;
+      });
+    });
+  }
+
   let posIdx = 0;
   let html = '';
-  form.forEach((row,ri)=>{
-    const isLastRow = ri === form.length - 1;
+  displayForm.forEach((row,ri)=>{
+    const isLastRow = ri === displayForm.length - 1;
     html += `<div class="slot-row">`;
     row.forEach((pos,ci)=>{
-      const key = `${pos}_${posIdx}`;
+      const key = origKeyMap[ri][ci]; // usar key original consistente com FORMATIONS_DB
       const player = G.lineup[key];
       const shortName = player ? (player.n.split(' ').pop().substring(0,8)) : '';
       // Highlight slots where the pending player is allowed to be placed/swapped
@@ -5999,8 +6309,8 @@ function renderPitch(){
       const isCompatible = !readOnly && !isSource && G.pendingPlayer && canPlaceInSlot(G.pendingPlayer.p, pos)
         && (!player || G.pendingFromKey); // empty slots always ok; filled slots only as swap targets
 
-      // Eligible players for this slot (for hover picker) - hidden while spinning or read-only
-      const eligible = (G.isSpinning || readOnly) ? [] : t.players.filter(x=>!usedNames.has(x.n) && canPlaceInSlot(x.p, pos));
+      // Eligible players for this slot (for hover picker) - hidden while spinning, read-only, or resenha
+      const eligible = (G.isSpinning || readOnly || G.resenha || !t) ? [] : t.players.filter(x=>!usedNames.has(x.n) && canPlaceInSlot(x.p, pos));
       const hoverList = eligible.map(pl=>`
         <div class="hover-player-row" onmousedown="event.preventDefault();selectFromHover('${key}','${pos}','${pl.n.replace(/'/g,"\\'")}')" onclick="event.stopPropagation();selectFromHover('${key}','${pos}','${pl.n.replace(/'/g,"\\'")}')">
           <span class="player-num">#${pl.num}</span>
@@ -6009,15 +6319,17 @@ function renderPitch(){
           <span class="player-rat">${G.mode==='Classic'?pl.r:'?'}</span>
         </div>`).join('') || `<div class="hover-player-row" style="color:var(--text3);font-style:italic">Nenhum jogador disponível</div>`;
 
+      // No modo resenha, slots vazios não mostram o hover-popup (jogador é escolhido pela lista à esquerda)
+      const showHoverPopup = !player && !readOnly && !G.resenha;
       html += `<div class="player-slot${isCompatible?' slot-compatible':''}${isSource?' slot-selected':''}${readOnly?' slot-readonly':''}" data-slot-key="${key}" ${readOnly?'':`onclick="slotClick('${key}','${pos}')"`}>
         <div class="slot-circle ${player?'filled':''}">${player?shortName:posLabel(pos)}</div>
         <div class="slot-pos">${player?`#${player.num}`:posLabel(pos)}</div>
-        ${(player || readOnly) ? '' : `<div class="slot-hover-popup${isLastRow?' popup-above':''}">
+        ${showHoverPopup ? `<div class="slot-hover-popup${isLastRow?' popup-above':''}">
           <div class="slot-hover-popup-inner">
             <div class="slot-hover-title">${posLabel(pos)} <span class="popup-close" onclick="event.stopPropagation();this.closest('.player-slot').classList.remove('touch-open');if(G.pendingPlayer&&G.pendingFromKey){G.pendingPlayer=null;G.pendingFromKey=null;renderPitch();renderDraftLeft();}">✕</span></div>
             ${hoverList}
           </div>
-        </div>`}
+        </div>` : ''}
       </div>`;
       posIdx++;
     });
@@ -6038,12 +6350,27 @@ function renderReadonlyPitch(pd){
   }
   const form = FORMATIONS_DB[pd.formation] || FORMATIONS_DB['4-3-3'];
   const lineup = pd.lineup || {};
+  const MIRROR_POS2 = {RB:'LB',LB:'RB',RW:'LW',LW:'RW',RM:'LM',LM:'RM'};
+  const displayForm2 = [...form].reverse().map(row => row.map(p => MIRROR_POS2[p] || p));
+  const origKeyMap2 = {};
+  {
+    const nRows2 = form.length;
+    let oIdx2 = 0;
+    form.forEach((row, ri) => {
+      row.forEach((origPos, ci) => {
+        const dri = nRows2 - 1 - ri;
+        if(!origKeyMap2[dri]) origKeyMap2[dri] = {};
+        origKeyMap2[dri][ci] = `${origPos}_${oIdx2}`;
+        oIdx2++;
+      });
+    });
+  }
   let posIdx = 0;
   let html = '';
-  form.forEach(row=>{
+  displayForm2.forEach((row,rIdx)=>{
     html += `<div class="slot-row">`;
-    row.forEach(pos=>{
-      const key = `${pos}_${posIdx}`;
+    row.forEach((pos,ci)=>{
+      const key = origKeyMap2[rIdx][ci];
       const player = lineup[key];
       const shortName = player ? (player.n.split(' ').pop().substring(0,8)) : '';
       html += `<div class="player-slot slot-readonly" data-slot-key="${key}">
@@ -6077,6 +6404,7 @@ function renderWatchingBanner(){
 
 function selectFromHover(key, pos, name){
   if(!G.isMyTurn){ showToast('Não é sua vez!'); return; }
+  if(G.resenha || !G.currentTeamKey) return;
   const t = TEAMS_DB[G.currentTeamKey];
   const player = t.players.find(p=>p.n===name);
   if(!player) return;
@@ -6088,7 +6416,77 @@ function selectFromHover(key, pos, name){
   resetPickTimer();
 }
 
+// Chamado quando o jogador clica num card de jogador no modo Resenha.
+// Coloca o jogador diretamente no primeiro slot compatível do lineup
+// e gera novos 11 candidatos para o próximo pick.
+function resenhaPickRipple(e, idx){
+  // Cria ripple no ponto do clique
+  const row = e.currentTarget;
+  const rect = row.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
+  const x = e.clientX - rect.left - size / 2;
+  const y = e.clientY - rect.top - size / 2;
+  const ripple = document.createElement('span');
+  ripple.className = 'rp-ripple';
+  ripple.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+  row.appendChild(ripple);
+  ripple.addEventListener('animationend', () => ripple.remove());
+  // Delega para a lógica real
+  pickResenhaPlayer(idx);
+}
+
+function pickResenhaPlayer(idx){
+  if(!G.isMyTurn){ showToast('Não é sua vez!'); return; }
+  const pl = G.teamChoices && G.teamChoices[idx];
+  if(!pl || !pl.n) return;
+  const globalUsed = buildGlobalUsedNamesSet();
+  if(globalUsed.has(pl.n)){ showToast('Esse jogador já foi escolhido!'); return; }
+
+  // Se clicar no mesmo jogador já pendente, deseleciona (toggle)
+  if(G.pendingPlayer && G.pendingPlayer._resenhaIdx === idx && G.pendingFromKey == null){
+    G.pendingPlayer = null;
+    renderPitch();
+    renderDraftLeft();
+    return;
+  }
+
+  // Seleciona o jogador como pendente — o usuário clicará no slot do campo para posicioná-lo
+  G.pendingPlayer = { n: pl.n, p: pl.p, r: pl.r, num: pl.num, _resenhaIdx: idx };
+  G.pendingFromKey = null;
+  renderPitch();
+  renderDraftLeft();
+  showToast(`${pl.n} selecionado — clique no slot do campo!`);
+}
+
+// Chamado pelo slotClick quando há um pendingPlayer vindo do Resenha
+function placeResenhaPlayerInSlot(player, key, pos){
+  if(!canPlaceInSlot(player.p, pos)){
+    showToast(`${player.n} (${posLabel(player.p)}) não pode jogar em ${posLabel(pos)}!`);
+    return;
+  }
+  const newLineup = { ...G.lineup, [key]: { n: player.n, p: player.p, r: player.r, num: player.num } };
+
+  // Gera novos candidatos para o próximo pick
+  const missingAfter = [];
+  let posIdx2 = 0;
+  FORMATIONS_DB[G.formation].forEach(row => row.forEach(pos2 => {
+    const k = `${pos2}_${posIdx2}`;
+    if(!newLineup[k]) missingAfter.push(pos2);
+    posIdx2++;
+  }));
+  const globalUsed2 = buildGlobalUsedNamesSet(newLineup);
+  const newChoices = missingAfter.length > 0 ? getResenhaCandidates(missingAfter, globalUsed2, null) : [];
+
+  G.pendingPlayer = null;
+  G.pendingFromKey = null;
+  G.teamChoices = newChoices;
+  updateMyDraft({ lineup: newLineup, teamChoices: newChoices, currentTeamKey: null, resenhaDupeNames: null });
+  resetPickTimer();
+  showToast(`${player.n} escalado!`);
+}
+
 function selectPendingPlayer(name){
+  if(G.resenha || !G.currentTeamKey) return;
   const t = TEAMS_DB[G.currentTeamKey];
   const player = t.players.find(p=>p.n===name);
   if(!player) return;
@@ -6135,6 +6533,13 @@ function slotClick(key, pos){
       showToast(`${player.n} (${posLabel(player.p)}) não pode jogar em ${posLabel(pos)}!`);
       return;
     }
+
+    // Resenha: jogador vindo da lista de escolha (sem fromKey) — usa fluxo especial
+    if(!fromKey && G.resenha && player._resenhaIdx != null){
+      placeResenhaPlayerInSlot(player, key, pos);
+      return;
+    }
+
     const newLineup = {...G.lineup, [key]: player};
     if(fromKey) delete newLineup[fromKey];
     G.pendingPlayer = null; G.pendingFromKey = null;
@@ -6169,6 +6574,11 @@ function slotClick(key, pos){
   }
 
   // Empty slot, no pending player: toggle the tap-to-open picker (mobile)
+  // No modo Resenha, o jogador é escolhido pela lista à esquerda — não abre picker no slot
+  if(G.resenha){
+    showToast('Escolha um jogador na lista à esquerda primeiro!');
+    return;
+  }
   document.querySelectorAll('.player-slot.touch-open').forEach(el=>{
     if(el.dataset.slotKey !== key) el.classList.remove('touch-open');
   });
@@ -6280,6 +6690,16 @@ function applyFormationChange(changes){
       currentTeamKey: G.currentTeamKey  // NEVER reroll the team when changing formation/style
     };
     if(changes.tacticalStyle) update.tacticalStyle = changes.tacticalStyle;
+
+    // Modo Resenha + ainda na tela de escolha (sem time definido): a lista
+    // de 11 candidatos foi calculada para a formação antiga, então precisa
+    // ser refeita para as posições da formação nova.
+    if(G.resenha && !G.currentTeamKey){
+      const missing = getMissingSlotPositionsFor(changes.formation, newLineup);
+      const globalUsed = buildGlobalUsedNamesSet(newLineup);
+      update.teamChoices = getResenhaCandidates(missing, globalUsed, null);
+    }
+
     updateMyDraft(update);
     showToast(changes.tacticalStyle ? `Estilo: ${changes.styleLabel}` : `Formação: ${changes.formation}`);
   };
@@ -6317,12 +6737,32 @@ function updateMyDraft(data){
   const playerWasPlaced = newLineup && newSize > oldSize;
 
   if(playerWasPlaced && !data.currentTeamKey){
-    // Auto-draw a new team 100% randomly — only avoid repeating the exact same team
-    const allKeys = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
+    const allKeys = teamKeys(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
 
-    const candidates = allKeys.filter(k => k !== G.currentTeamKey);
-    const newTeam = rand(candidates.length ? candidates : allKeys);
-    data = { ...data, currentTeamKey: newTeam };
+    if(G.resenha){
+      // Modo Resenha: pickResenhaPlayer já calcula os novos candidatos antes
+      // de chamar updateMyDraft, então se data.teamChoices já está definido
+      // (array ou null explícito), não recalculamos.
+      if(!('teamChoices' in data)){
+        // Fallback: calcular agora (ex: chamada legacy sem teamChoices)
+        const pendingLineup = data.lineup;
+        const missingAfter = [];
+        let posIdx2 = 0;
+        FORMATIONS_DB[G.formation].forEach(row => row.forEach(pos => {
+          const key = `${pos}_${posIdx2}`;
+          if(!pendingLineup[key]) missingAfter.push(pos);
+          posIdx2++;
+        }));
+        const globalUsed2 = buildGlobalUsedNamesSet(pendingLineup);
+        const newChoices = getResenhaCandidates(missingAfter, globalUsed2, null);
+        data = { ...data, currentTeamKey: null, teamChoices: newChoices, resenhaDupeNames: null };
+      }
+    } else {
+      // Modo normal: apenas evitar repetir o mesmo time
+      const candidates = allKeys.filter(k => k !== G.currentTeamKey);
+      const newTeam = rand(candidates.length ? candidates : allKeys);
+      data = { ...data, currentTeamKey: newTeam };
+    }
   }
 
   const mapped = {};
@@ -6336,8 +6776,22 @@ function updateMyDraft(data){
 function rerollTeam(){
   if(!G.isMyTurn){ showToast('Não é sua vez!'); return; }
   if(G.rerolls<=0) return;
+
+  if(G.resenha){
+    // No modo Resenha: sorteia 11 novos jogadores candidatos, gastando 1 reroll.
+    const missing = getMissingSlotPositions();
+    const globalUsed = buildGlobalUsedNamesSet();
+    const newChoices = getResenhaCandidates(missing, globalUsed, null);
+    G.pendingPlayer = null;
+    G.teamChoices = newChoices;
+    updateMyDraft({ currentTeamKey: null, teamChoices: newChoices, rerolls: G.rerolls-1, resenhaDupeNames: null });
+    resetPickTimer();
+    showToast('Novos jogadores sorteados!');
+    return;
+  }
+
   const year = G.currentTeamKey.match(/\d+/)?.[0];
-  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
+  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
   // Get positions still needed
   const neededSlotPos = getMissingSlotPositions();
   // Filter pool: only teams that have at least one player able to fill EACH needed slot
@@ -6352,7 +6806,7 @@ function rerollTeam(){
   const anyValid = pool.filter(k=>teamCanFillNeeded(k));
   const newTeam = sameyear.length ? rand(sameyear)
     : anyValid.length ? rand(anyValid)
-    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax, G.lowProfile));
+    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax, G.lowProfile, G.resenha));
   G.pendingPlayer=null;
   updateMyDraft({ currentTeamKey: newTeam, rerolls: G.rerolls-1 });
   resetPickTimer();
@@ -6360,8 +6814,22 @@ function rerollTeam(){
 function rerollCup(){
   if(!G.isMyTurn){ showToast('Não é sua vez!'); return; }
   if(G.rerolls<=0) return;
+
+  if(G.resenha){
+    // Modo Resenha: sorteia 11 novos jogadores candidatos, gastando 1 reroll.
+    const missing = getMissingSlotPositions();
+    const globalUsed = buildGlobalUsedNamesSet();
+    const newChoices = getResenhaCandidates(missing, globalUsed, null);
+    G.pendingPlayer = null;
+    G.teamChoices = newChoices;
+    updateMyDraft({ currentTeamKey: null, teamChoices: newChoices, rerolls: G.rerolls-1, resenhaDupeNames: null });
+    resetPickTimer();
+    showToast('Novos jogadores sorteados!');
+    return;
+  }
+
   const country = G.currentTeamKey.replace(/\d+/,'').trim();
-  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
+  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
   // Get positions still needed
   const neededSlotPos = getMissingSlotPositions();
   function teamCanFillNeeded(key){
@@ -6375,36 +6843,151 @@ function rerollCup(){
   const anyValid = pool.filter(k=>teamCanFillNeeded(k));
   const newTeam = samecountry.length ? rand(samecountry)
     : anyValid.length ? rand(anyValid)
-    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax, G.lowProfile));
+    : (pool.filter(k=>k!==G.currentTeamKey).length ? rand(pool.filter(k=>k!==G.currentTeamKey)) : randTeam(G.yearMin, G.yearMax, G.lowProfile, G.resenha));
   G.pendingPlayer=null;
   updateMyDraft({ currentTeamKey: newTeam, rerolls: G.rerolls-1 });
   resetPickTimer();
   showToast('Nova Copa sorteada!');
 }
 
-// Returns the list of slot positions (e.g. ["CM","CM","ST"]) that are still empty in the current lineup
-function getMissingSlotPositions(){
+// Versão pura (sem depender de G): dado uma formação e um lineup, retorna
+// as posições de slot ainda vazias. Reaproveitada tanto pelo estado atual
+// (G.formation/G.lineup) quanto por contextos sem G montado ainda, como o
+// sorteio inicial em hostStartGame().
+function getMissingSlotPositionsFor(formation, lineup){
   const missing = [];
   let posIdx = 0;
-  FORMATIONS_DB[G.formation].forEach(row => row.forEach(pos => {
+  FORMATIONS_DB[formation].forEach(row => row.forEach(pos => {
     const key = `${pos}_${posIdx}`;
-    if(!G.lineup[key]) missing.push(pos);
+    if(!lineup[key]) missing.push(pos);
     posIdx++;
   }));
   return missing;
 }
+// Returns the list of slot positions (e.g. ["CM","CM","ST"]) that are still empty in the current lineup
+function getMissingSlotPositions(){
+  return getMissingSlotPositionsFor(G.formation, G.lineup);
+}
+
+// ===== MODO RESENHA: ESCOLHA MANUAL ENTRE 11 TIMES CANDIDATOS =====
+// Em vez de sortear 1 time automaticamente, o modo Resenha gera até 11
+// times candidatos que (a) ainda têm pelo menos 1 jogador disponível
+// (não escolhido por ninguém) e (b) juntos cobrem TODAS as posições que
+// faltam no lineup do jogador. O jogador escolhe manualmente qual usar.
+const RESENHA_CANDIDATE_COUNT = 11;
+
+// Um time "esgotado" é aquele em que TODOS os jogadores já foram
+// escolhidos por algum participante (em qualquer lineup). Times esgotados
+// nunca mais devem ser sorteados/listados para ninguém.
+function isTeamExhausted(key, globalUsedSet){
+  const team = TEAMS_DB[key];
+  if(!team || !team.players || !team.players.length) return false;
+  return team.players.every(pl => globalUsedSet.has(pl.n));
+}
+
+// Monta o set de nomes de jogadores já usados por QUALQUER participante
+// (todos os playerDrafts, incluindo o meu próprio lineup atual).
+function buildGlobalUsedNamesSet(extraLineup){
+  const used = new Set();
+  Object.values(G.lineup||{}).forEach(pl=>used.add(pl.n));
+  Object.entries(G.playerDrafts||{}).forEach(([pid, pd])=>{
+    Object.values(pd.lineup||{}).forEach(pl=>used.add(pl.n));
+  });
+  if(extraLineup) Object.values(extraLineup).forEach(pl=>used.add(pl.n));
+  return used;
+}
+
+// Verifica se um time candidato é válido no modo resenha: precisa ter
+// pelo menos 1 jogador disponível para CADA posição de slot que ainda
+// falta no lineup (considerando jogadores já usados globalmente).
+function resenhaCandidateValid(key, missingSlotPositions, globalUsedSet, excludeKey){
+  if(key === excludeKey) return false;
+  const team = TEAMS_DB[key];
+  if(!team || !team.players) return false;
+  if(isTeamExhausted(key, globalUsedSet)) return false;
+  const available = team.players.filter(pl => !globalUsedSet.has(pl.n));
+  if(available.length === 0) return false;
+  if(!missingSlotPositions.length) return true; // lineup já completo (edge case)
+  return missingSlotPositions.every(slotPos =>
+    available.some(pl => canPlaceInSlot(pl.p, slotPos))
+  );
+}
+
+// Gera a lista de até RESENHA_CANDIDATE_COUNT jogadores individuais sorteados
+// aleatoriamente de todos os times conhecidos disponíveis.
+// Cada entrada: { n, p, r, num, teamKey, flag, teamLabel }
+// Critérios: (a) jogador não usado por ninguém, (b) pode preencher pelo menos
+// uma posição que ainda falta no lineup do jogador.
+function getResenhaCandidates(missingSlotPositions, globalUsedSet, excludeKey){
+  const pool = teamKeys(null, null, false, true);
+  const allPlayers = [];
+  pool.forEach(key => {
+    if(isTeamExhausted(key, globalUsedSet)) return;
+    const team = TEAMS_DB[key];
+    if(!team || !team.players) return;
+    const available = team.players.filter(pl => !globalUsedSet.has(pl.n));
+    if(available.length === 0) return;
+    available.forEach(pl => {
+      // Se há posições faltando, o jogador precisa poder preencher pelo menos uma
+      if(missingSlotPositions.length === 0 || missingSlotPositions.some(slotPos => canPlaceInSlot(pl.p, slotPos))){
+        allPlayers.push({ ...pl, teamKey: key, flag: team.flag || '', teamLabel: resenhaTeamLabel(key) });
+      }
+    });
+  });
+  // Fisher-Yates shuffle e retorna os primeiros RESENHA_CANDIDATE_COUNT
+  for(let i=allPlayers.length-1; i>0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [allPlayers[i],allPlayers[j]] = [allPlayers[j],allPlayers[i]];
+  }
+  return allPlayers.slice(0, RESENHA_CANDIDATE_COUNT);
+}
+
+// Dado um array de team keys candidatos, retorna um Set com os nomes de
+// jogadores que aparecem em MAIS DE UM desses times (precisam de label
+// de desambiguação "turma/ano" ao lado do nome).
+function findDuplicateNamesAcross(candidateKeys){
+  const countByName = new Map();
+  candidateKeys.forEach(key=>{
+    const team = TEAMS_DB[key];
+    if(!team || !team.players) return;
+    const namesInThisTeam = new Set(team.players.map(p=>p.n));
+    namesInThisTeam.forEach(n=>{
+      countByName.set(n, (countByName.get(n)||0) + 1);
+    });
+  });
+  const dupes = new Set();
+  countByName.forEach((count, name)=>{ if(count > 1) dupes.add(name); });
+  return dupes;
+}
+
+// Retorna o rótulo de turma/ano de um time candidato, ex: "1 Ano - 2025"
+// (nome do time sem o ano + o ano, igual ao padrão já usado no card
+// "SORTEADO" / "Copa {ano}").
+function resenhaTeamLabel(key){
+  const team = TEAMS_DB[key];
+  const name = key.replace(/\d+/,'').replace(/[-–—\s]+$/,'').trim();
+  const year = (team && team.year) || key.match(/\d+/)?.[0] || '';
+  return year ? `${name} - ${year}` : name;
+}
 
 async function confirmLineup(){
   if(!G.isMyTurn) return;
+  if(G._confirmingInProgress) return; // evita double-submit
+  G._confirmingInProgress = true;
   const t = TEAMS_DB[G.currentTeamKey];
   const myPlayer = G.players.find(p=>p.id===MY_PLAYER_ID) || G.players[0];
+  const filled = slotsFilled(G.lineup);
+  const total  = totalSlots(G.formation);
+  const teamDisplay = G.resenha
+    ? `🍻 ${filled}/${total} jogadores`
+    : `${t ? t.flag : ''} ${G.currentTeamKey ? G.currentTeamKey.replace(/\d+/,'').trim() : ''} · ${filled}/${total} jogadores`;
   const newDraftedTeam = {
     playerName: myPlayer.name,
     playerColor: myPlayer.color,
     playerEmoji: myPlayer.emoji || '',
     playerId: myPlayer.id,
-    teamKey: G.currentTeamKey,
-    flag: t.flag,
+    teamKey: G.currentTeamKey || 'resenha',
+    flag: t ? t.flag : '🍻',
     lineup: {...G.lineup},
     avgRat: avgRating(G.lineup),
     formation: G.formation
@@ -6412,15 +6995,13 @@ async function confirmLineup(){
 
   // ── FEEDBACK VISUAL IMEDIATO (antes do Firebase) ──
   G.isMyTurn = false;
-  const filled = slotsFilled(G.lineup);
-  const total  = totalSlots(G.formation);
   const leftContent = document.getElementById('draft-content-left');
   if(leftContent){
     leftContent.innerHTML = `
       <div class="team-selected-banner" id="team-selected-banner">
         <div class="team-selected-check">✅</div>
         <div class="team-selected-title">TIME SELECIONADO!</div>
-        <div class="team-selected-sub">${t.flag} ${G.currentTeamKey.replace(/\d+/,'').trim()} · ${filled}/${total} jogadores</div>
+        <div class="team-selected-sub">${teamDisplay}</div>
       </div>
       ${renderSpectateListHTML()}
       ${renderChatPanelHTML()}`;
@@ -6443,21 +7024,22 @@ async function confirmLineup(){
     updates[`pressureConfirms/${MY_PLAYER_ID}`] = { at: Date.now(), order: alreadyConfirmed };
   }
 
-  // Check if ALL players have now confirmed (after this one)
+  // Gravar confirmed:true PRIMEIRO — o listener do Firebase vai detectar
+  // myConfirmChanged=true e fazer o re-render correto da tela.
+  // Só depois verificar se todos confirmaram para promover status=simulating.
+  await ROOM_REF.update(updates);
+
+  // Agora checar se todos confirmaram (leitura pós-write para ter estado real)
   const snap = await ROOM_REF.once('value');
-  const room = snap.val();
-  const allPlayerIds = Object.keys(room.players || {});
-  const drafts = room.playerDrafts || {};
-  const allConfirmed = allPlayerIds.every(pid =>
-    pid === MY_PLAYER_ID || (drafts[pid] && drafts[pid].confirmed)
-  );
+  const roomSnap = snap.val();
+  const allPlayerIds = Object.keys(roomSnap.players || {});
+  const drafts = roomSnap.playerDrafts || {};
+  const allConfirmed = allPlayerIds.every(pid => drafts[pid] && drafts[pid].confirmed);
 
   if(allConfirmed){
-    updates.status = 'simulating';
-    updates.simSeed = Date.now();
+    await ROOM_REF.update({ status: 'simulating', simSeed: Date.now() });
   }
-
-  await ROOM_REF.update(updates);
+  G._confirmingInProgress = false;
 }
 
 // ===== DRAFT TIMER =====
@@ -6539,11 +7121,14 @@ function renderDraftTopbar(){
       const label = confirmed ? `✓` : `${pFilled}/${pTotal}`;
       const labelColor = confirmed ? 'var(--green3)' : isMe ? 'var(--gold)' : 'var(--text3)';
       const sep = i > 0 ? '<div class="dtb-sep"></div>' : '';
-      return `${sep}<div class="dtb-player">
+      const canKick = G.isHost && !isMe;
+      const safeName = p.name.replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+      return `${sep}<div class="dtb-player${canKick?' host-can-kick':''}" >
         <div class="dtb-avatar" style="background:${p.color}">${p.emoji ? `<span style="font-size:14px;line-height:1">${p.emoji}</span>` : p.name[0].toUpperCase()}</div>
         <span class="dtb-name" style="${isMe?'color:var(--text)':''}">${p.name}</span>
         <span class="dtb-progress${confirmed?' done':''}" style="color:${labelColor}">${label}</span>
         ${isMe ? renderStatBadgesHTML(loadMyStats(), 'compact') : ''}
+        ${canKick ? `<button class="dtb-kick-btn" data-pid="${p.id}" data-pname="${safeName}" onclick="kickPlayerDraft(this.dataset.pid,this.dataset.pname)">✕ EXPULSAR</button>` : ''}
       </div>`;
     }).join('');
     playersEl.innerHTML = chips;
@@ -6688,15 +7273,49 @@ async function autoFillLineup(){
 async function autoPickPlayer(){
   if(!G.isMyTurn) return;
 
-  // Se não tem time sorteado, sorteia um aleatório
-  if(!G.currentTeamKey || !TEAMS_DB[G.currentTeamKey]){
-    const randomKey = randTeam(G.yearMin, G.yearMax, G.lowProfile);
+  // Se não tem time sorteado, sorteia um aleatório (não se aplica ao modo resenha)
+  if(!G.resenha && (!G.currentTeamKey || !TEAMS_DB[G.currentTeamKey])){
+    const randomKey = randTeam(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
     if(!randomKey){ await confirmLineup(); return; }
     G.currentTeamKey = randomKey;
     G.lineup = {};
     updateMyDraft({ teamKey: randomKey, lineup: {} });
     showToast('⏱ Tempo esgotado! Time sorteado aleatoriamente.');
     renderDraft();
+  }
+
+  // Modo resenha: pegar do pool de candidatos atual ou gerar novos
+  if(G.resenha){
+    const missing = getMissingSlotPositions();
+    const globalUsedAll = buildGlobalUsedNamesSet();
+    const candidates = (G.teamChoices && G.teamChoices.length)
+      ? G.teamChoices.filter(pl => !globalUsedAll.has(pl.n) && missing.some(pos => canPlaceInSlot(pl.p, pos)))
+      : getResenhaCandidates(missing, globalUsedAll, null);
+    if(!candidates.length){ await confirmLineup(); return; }
+    const picked = candidates[Math.floor(Math.random() * candidates.length)];
+    // Encontra slot compatível
+    let targetKey = null; let posIdx0 = 0;
+    FORMATIONS_DB[G.formation].forEach(row => row.forEach(pos => {
+      const key = `${pos}_${posIdx0}`;
+      if(!targetKey && !G.lineup[key] && canPlaceInSlot(picked.p, pos)) targetKey = key;
+      posIdx0++;
+    }));
+    if(targetKey){
+      const player = { n: picked.n, p: picked.p, r: picked.r, num: picked.num };
+      G.lineup = { ...G.lineup, [targetKey]: player };
+      G.pendingPlayer = null;
+      showToast(`⏱ ${picked.n} escolhido aleatoriamente`);
+      const missingAfter2 = getMissingSlotPositions();
+      const newChoices2 = missingAfter2.length > 0 ? getResenhaCandidates(missingAfter2, buildGlobalUsedNamesSet(), null) : [];
+      G.teamChoices = newChoices2;
+      updateMyDraft({ lineup: G.lineup, teamChoices: newChoices2, currentTeamKey: null });
+    }
+    const totalR = totalSlots(G.formation);
+    const filledR = slotsFilled(G.lineup);
+    if(filledR >= totalR){ await confirmLineup(); return; }
+    renderDraft();
+    resetPickTimer();
+    return;
   }
 
   const t = TEAMS_DB[G.currentTeamKey];
@@ -6743,13 +7362,37 @@ async function autoPickPlayer(){
   }
 
   if(!placed){
-    // Sem candidatos disponíveis — confirma com o que tem
+    // Sem candidatos disponíveis no time atual — tenta trocar de time antes de confirmar incompleto
+    const pool2 = teamKeys(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
+    const neededSlotPos2 = getMissingSlotPositions();
+    const globalUsed2 = new Set();
+    Object.entries(G.playerDrafts||{}).forEach(([pid,pd])=>{
+      if(pid===MY_PLAYER_ID) return;
+      Object.values(pd.lineup||{}).forEach(pl=>globalUsed2.add(pl.n));
+    });
+    // Acha um time que tenha ao menos 1 jogador livre para algum slot vazio
+    const rescuePool = pool2.filter(k => {
+      if(k === G.currentTeamKey) return false;
+      const players = TEAMS_DB[k].players;
+      return neededSlotPos2.some(slotPos =>
+        players.some(pl => !globalUsed2.has(pl.n) && canPlaceInSlot(pl.p, slotPos))
+      );
+    });
+    if(rescuePool.length){
+      const rescueKey = rand(rescuePool);
+      G.currentTeamKey = rescueKey;
+      updateMyDraft({ currentTeamKey: rescueKey });
+      showToast('⏱ Sem jogadores disponíveis! Novo time sorteado...');
+      resetPickTimer();
+      return;
+    }
+    // Nenhum time consegue ajudar — confirma com o que tem
     await confirmLineup();
     return;
   }
 
   // Após pick aleatório → gira seleção + ano (sem consumir reroll)
-  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile);
+  const pool = teamKeys(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
   const neededSlotPos = getMissingSlotPositions();
   function teamCanFillNeeded(key){
     if(key === G.currentTeamKey) return false;
@@ -6777,15 +7420,19 @@ function goSimulate(){
   if(overlay) overlay.classList.remove('visible');
   let html = '';
   G.draftedTeams.forEach((dt,i)=>{
+    const kickBtnHTML = G.isHost ? `<button class="sim-kick-btn" onclick="confirmKickPlayer('${dt.playerId}','${dt.playerName.replace(/'/g,"\\'")}')" title="Expulsar jogador">✕ EXPULSAR</button>` : '';
     html += `<div class="sim-team-row" style="border-left:3px solid ${dt.playerColor}">
       <div style="width:36px;height:36px;border-radius:50%;background:${dt.playerColor};display:flex;align-items:center;justify-content:center;font-size:${dt.playerEmoji?'20px':'13px'};font-weight:900;color:#fff;flex-shrink:0;line-height:1">${dt.playerEmoji || dt.playerName[0].toUpperCase()}</div>
       <div style="flex:1;margin-left:12px">
         <div style="font-size:15px;font-weight:800;color:var(--text)">${dt.playerName}</div>
         <div style="font-size:11px;color:var(--text3);margin-top:2px">${dt.flag} ${dt.teamKey} · ${dt.formation}</div>
       </div>
-      <div style="text-align:right">
-        <div style="font-size:22px;font-weight:900;color:var(--red)">${dt.avgRat}</div>
-        <div style="font-size:10px;letter-spacing:1px;color:var(--text3)">MÉDIA</div>
+      <div style="text-align:right;display:flex;align-items:center;gap:10px">
+        <div>
+          <div style="font-size:22px;font-weight:900;color:var(--red)">${dt.avgRat}</div>
+          <div style="font-size:10px;letter-spacing:1px;color:var(--text3)">MÉDIA</div>
+        </div>
+        ${kickBtnHTML}
       </div>
     </div>`;
   });
@@ -7149,6 +7796,143 @@ function loadPrecomputedTournament(precomputed){
 }
 
 
+function renderLiveKickBtn(){
+  const existing = document.getElementById('live-kick-btn');
+  if(existing) existing.remove();
+  if(!G.isHost || !ROOM_REF) return;
+  const btn = document.createElement('button');
+  btn.id = 'live-kick-btn';
+  btn.className = 'live-kick-btn';
+  btn.textContent = '✕ EXPULSAR JOGADOR';
+  btn.onclick = () => showLiveKickPicker();
+  document.body.appendChild(btn);
+}
+
+function showLiveKickPicker(){
+  document.getElementById('kick-picker-overlay')?.remove();
+  const overlay = document.createElement('div');
+  overlay.className = 'kick-confirm-overlay';
+  overlay.id = 'kick-picker-overlay';
+  const box = document.createElement('div');
+  box.className = 'kick-confirm-box';
+  box.style.maxWidth = '360px';
+  box.innerHTML = '<h3>EXPULSAR JOGADOR</h3><p style="margin-bottom:14px">Escolha quem saiu. O torneio será refeito com os jogadores restantes.</p>';
+  (G.draftedTeams||[]).forEach(dt => {
+    const btn = document.createElement('button');
+    btn.className = 'sim-kick-btn';
+    btn.style.cssText = 'width:100%;margin-bottom:6px;padding:10px 12px;display:flex;align-items:center;gap:10px;text-align:left';
+    btn.innerHTML = `<div style="width:28px;height:28px;border-radius:50%;background:${dt.playerColor};display:flex;align-items:center;justify-content:center;font-size:${dt.playerEmoji?'15px':'11px'};font-weight:900;color:#fff;flex-shrink:0">${dt.playerEmoji||dt.playerName[0].toUpperCase()}</div><span style="flex:1;font-size:13px;font-weight:700;color:var(--text)">${dt.playerName}</span><span style="font-size:10px;color:var(--text3)">${dt.flag} ${dt.teamKey}</span>`;
+    btn.onclick = () => { overlay.remove(); confirmKickPlayer(dt.playerId, dt.playerName); };
+    box.appendChild(btn);
+  });
+  const cancel = document.createElement('button');
+  cancel.className = 'kick-confirm-cancel kick-confirm-btns';
+  cancel.style.cssText = 'width:100%;margin-top:4px;padding:9px;font-size:11px;font-weight:700;cursor:pointer;border:1px solid var(--border2);background:var(--bg3);color:var(--text2)';
+  cancel.textContent = 'CANCELAR';
+  cancel.onclick = () => overlay.remove();
+  box.appendChild(cancel);
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+}
+
+function confirmKickPlayer(playerId, playerName){
+  document.getElementById('kick-confirm-overlay')?.remove();
+  const overlay = document.createElement('div');
+  overlay.className = 'kick-confirm-overlay';
+  overlay.id = 'kick-confirm-overlay';
+  const box = document.createElement('div');
+  box.className = 'kick-confirm-box';
+  const remaining = (G.draftedTeams||[]).length - 1;
+  box.innerHTML = `<h3>⚠️ EXPULSAR JOGADOR</h3><p><strong style="color:var(--text)">${playerName}</strong> será removido e o torneio será refeito com ${remaining} jogadores.<br><br>Isso não pode ser desfeito.</p>`;
+  const btns = document.createElement('div');
+  btns.className = 'kick-confirm-btns';
+  const cancel = document.createElement('button');
+  cancel.className = 'kick-confirm-cancel';
+  cancel.textContent = 'CANCELAR';
+  cancel.onclick = () => overlay.remove();
+  const ok = document.createElement('button');
+  ok.className = 'kick-confirm-ok';
+  ok.textContent = 'EXPULSAR';
+  ok.onclick = () => { overlay.remove(); kickPlayer(playerId); };
+  btns.appendChild(cancel);
+  btns.appendChild(ok);
+  box.appendChild(btns);
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+}
+
+// Expulsa jogador DURANTE O DRAFT (antes da simulação começar)
+// Remove de room.players + playerDrafts → libera jogadores pickados por ele
+// → outros jogadores recebem update via listener e podem usar esses jogadores
+async function kickPlayerDraft(playerId, playerName){
+  if(!G.isHost || !ROOM_REF) return;
+  const kicked = G.players.find(p=>p.id===playerId);
+  if(!kicked) return;
+
+  // Montar lista de jogadores que o expulso tinha no lineup (para mostrar no confirm)
+  const theirDraft = (G.playerDrafts||{})[playerId] || {};
+  const theirLineup = theirDraft.lineup || {};
+  const theirPicks = Object.values(theirLineup).map(p=>p.n);
+  const pickPreview = theirPicks.length
+    ? `<br><span style="color:var(--text3);font-size:11px">${theirPicks.slice(0,3).join(', ')}${theirPicks.length>3?` +${theirPicks.length-3} mais`:''} ficam disponíveis</span>`
+    : '';
+
+  // Construir modal via DOM para evitar escapes problemáticos
+  document.getElementById('kick-draft-confirm')?.remove();
+  const overlay = document.createElement('div');
+  overlay.className = 'kick-confirm-overlay';
+  overlay.id = 'kick-draft-confirm';
+  const box = document.createElement('div');
+  box.className = 'kick-confirm-box';
+  box.innerHTML = `<h3>⚠️ EXPULSAR DO DRAFT</h3><p><strong style="color:var(--text)">${playerName}</strong> será removido da sala. Os jogadores que ele pickou ficam disponíveis para os outros.${pickPreview}</p>`;
+  const btns = document.createElement('div');
+  btns.className = 'kick-confirm-btns';
+  const cancel = document.createElement('button');
+  cancel.className = 'kick-confirm-cancel';
+  cancel.textContent = 'CANCELAR';
+  cancel.onclick = () => overlay.remove();
+  const ok = document.createElement('button');
+  ok.className = 'kick-confirm-ok';
+  ok.textContent = 'EXPULSAR';
+  ok.onclick = () => { overlay.remove(); doKickPlayerDraft(playerId, playerName); };
+  btns.appendChild(cancel);
+  btns.appendChild(ok);
+  box.appendChild(btns);
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+}
+
+async function doKickPlayerDraft(playerId, playerName){
+  if(!G.isHost || !ROOM_REF) return;
+  const updates = {};
+  // Remover da sala e do draft — o listener propaga para todos
+  updates[`players/${playerId}`] = null;
+  updates[`playerDrafts/${playerId}`] = null;
+  updates[`draftedTeams/${playerId}`] = null;
+  updates[`kicked/${playerId}`] = Date.now();
+  await ROOM_REF.update(updates);
+  showToast(`${playerName} foi expulso. Os picks dele ficam disponíveis.`);
+  // O listener do Firebase vai disparar para todos e re-renderizar
+  // (os globalUsed dos outros jogadores ficam menores → picks liberados)
+}
+
+async function kickPlayer(playerId){
+  if(!G.isHost || !ROOM_REF) return;
+  // Remover do draftedTeams no Firebase
+  const updates = {};
+  updates[`draftedTeams/${playerId}`] = null;
+  // Limpar torneio anterior e forçar re-seed
+  updates.matchQueue = null;
+  updates.matchResults = null;
+  updates.liveSync = null;
+  updates.simSeed = Date.now();
+  // Manter status simulating — o listener vai re-processar com os times restantes
+  await ROOM_REF.update(updates);
+  // Remover botão live
+  document.getElementById('live-kick-btn')?.remove();
+  showToast(`${(G.draftedTeams.find(t=>t.playerId===playerId)||{}).playerName || 'Jogador'} expulso. Torneio refeito.`);
+}
+
 function startLiveSimulation(){
   if(ROOM_REF && !G.isHost){
     // Non-host: transition to live screen to watch - host controls playback via liveSync
@@ -7175,6 +7959,7 @@ function startLiveSimulation(){
   G.simSpeed = G.simSpeed || 1;
   setScreen('live');
   renderSpeedPicker();
+  renderLiveKickBtn();
   if(ROOM_REF){
     if(G.isHost){
       ROOM_REF.update({ liveSync: {matchIdx:0, eventIdx:-1} });
