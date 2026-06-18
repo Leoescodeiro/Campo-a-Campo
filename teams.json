@@ -605,7 +605,7 @@
       },
       {
         "n": "Torres",
-        "p": "LW",
+        "p": "ST",
         "r": 88,
         "num": 9
       },
@@ -1415,7 +1415,7 @@
       },
       {
         "n": "Cavani",
-        "p": "LW",
+        "p": "ST",
         "r": 88,
         "num": 7
       },
@@ -6881,7 +6881,7 @@
       },
       {
         "n": "Xavi Simons",
-        "p": "AM",
+        "p": "CM",
         "r": 86,
         "num": 17
       },
@@ -8033,7 +8033,7 @@
       },
       {
         "n": "Busquets",
-        "p": "CB",
+        "p": "DM",
         "r": 84,
         "num": 5
       },
@@ -8315,7 +8315,7 @@
       },
       {
         "n": "C. Ronaldo",
-        "p": "AM",
+        "p": "LW",
         "r": 93,
         "num": 7
       },
@@ -8405,7 +8405,7 @@
       },
       {
         "n": "C. Ronaldo",
-        "p": "AM",
+        "p": "LW",
         "r": 96,
         "num": 7
       },
@@ -8495,7 +8495,7 @@
       },
       {
         "n": "C. Ronaldo",
-        "p": "AM",
+        "p": "LW",
         "r": 97,
         "num": 7
       },
@@ -8675,7 +8675,7 @@
       },
       {
         "n": "Scholes",
-        "p": "AM",
+        "p": "CM",
         "r": 86,
         "num": 18
       },
@@ -8765,7 +8765,7 @@
       },
       {
         "n": "Scholes",
-        "p": "AM",
+        "p": "CM",
         "r": 87,
         "num": 18
       },
@@ -8843,7 +8843,7 @@
       },
       {
         "n": "Lampard",
-        "p": "DM",
+        "p": "CM",
         "r": 88,
         "num": 8
       },
@@ -8855,7 +8855,7 @@
       },
       {
         "n": "Gerrard",
-        "p": "AM",
+        "p": "CM",
         "r": 90,
         "num": 4
       },
@@ -8933,7 +8933,7 @@
       },
       {
         "n": "Lampard",
-        "p": "DM",
+        "p": "CM",
         "r": 86,
         "num": 8
       },
@@ -8945,7 +8945,7 @@
       },
       {
         "n": "Gerrard",
-        "p": "AM",
+        "p": "CM",
         "r": 88,
         "num": 4
       },
@@ -9035,7 +9035,7 @@
       },
       {
         "n": "Gerrard",
-        "p": "AM",
+        "p": "CM",
         "r": 84,
         "num": 4
       },
@@ -10533,7 +10533,8 @@
         "r": 94,
         "num": 9
       }
-    ]
+    ],
+    "category": "conhecidos"
   },
   "Águias de Marabá 2026": {
     "flag": "🇧🇷",
@@ -10569,7 +10570,8 @@
         "r": 87,
         "num": 9
       }
-    ]
+    ],
+    "category": "conhecidos"
   },
   "Águias de Marabá 2025": {
     "flag": "🇧🇷",
@@ -10635,7 +10637,8 @@
         "r": 83,
         "num": 9
       }
-    ]
+    ],
+    "category": "conhecidos"
   },
   "Águias de Marabá 2024": {
     "flag": "🇧🇷",
@@ -10668,7 +10671,7 @@
       {
         "n": "Gladiador Fermino",
         "p": "CB",
-        "r": 89,
+        "r": 86,
         "num": 9
       },
       {
@@ -10700,6 +10703,927 @@
         "p": "ST",
         "r": 81,
         "num": 9
+      }
+    ],
+    "category": "conhecidos"
+  },
+  "Segundo Ano - 2026": {
+    "flag": "🇧🇷",
+    "year": 2026,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Flavia",
+        "p": "ST",
+        "r": 92,
+        "num": 10
+      },
+      {
+        "n": "Alice Legauzona",
+        "p": "LW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Avancini",
+        "p": "RW",
+        "r": 92,
+        "num": 7
+      },
+      {
+        "n": "Caizin",
+        "p": "AM",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Leo",
+        "p": "ST",
+        "r": 88,
+        "num": 9
+      },
+      {
+        "n": "Guigas",
+        "p": "DM",
+        "r": 89,
+        "num": 5
+      },
+      {
+        "n": "Joaquim",
+        "p": "CB",
+        "r": 95,
+        "num": 4
+      },
+      {
+        "n": "Julia Honda",
+        "p": "LW",
+        "r": 82,
+        "num": 17
+      },
+      {
+        "n": "Lucas Mattos",
+        "p": "CB",
+        "r": 89,
+        "num": 3
+      },
+      {
+        "n": "Pedro",
+        "p": "RB",
+        "r": 81,
+        "num": 21
+      },
+      {
+        "n": "Pinheiro",
+        "p": "LB",
+        "r": 89,
+        "num": 6
+      },
+      {
+        "n": "Raul",
+        "p": "GK",
+        "r": 67,
+        "num": 1
+      },
+      {
+        "n": "Valentina",
+        "p": "CM",
+        "r": 84,
+        "num": 14
+      },
+      {
+        "n": "Agatha",
+        "p": "ST",
+        "r": 80,
+        "num": 18
+      },
+      {
+        "n": "Ana",
+        "p": "LW",
+        "r": 79,
+        "num": 22
+      },
+      {
+        "n": "Arthur Bergo",
+        "p": "CB",
+        "r": 82,
+        "num": 15
+      },
+      {
+        "n": "Bia",
+        "p": "CM",
+        "r": 81,
+        "num": 20
+      },
+      {
+        "n": "Carlos",
+        "p": "LB",
+        "r": 78,
+        "num": 13
+      },
+      {
+        "n": "Davi Dias dos Santos",
+        "p": "RB",
+        "r": 79,
+        "num": 16
+      },
+      {
+        "n": "Davi Lima",
+        "p": "AM",
+        "r": 83,
+        "num": 12
+      },
+      {
+        "n": "Gabi",
+        "p": "LW",
+        "r": 78,
+        "num": 23
+      },
+      {
+        "n": "João Pedro",
+        "p": "RW",
+        "r": 80,
+        "num": 24
+      },
+      {
+        "n": "Jonas",
+        "p": "DM",
+        "r": 77,
+        "num": 25
+      },
+      {
+        "n": "Sidney",
+        "p": "CM",
+        "r": 79,
+        "num": 26
+      },
+      {
+        "n": "Manso",
+        "p": "CB",
+        "r": 76,
+        "num": 27
+      },
+      {
+        "n": "Manu Carrari",
+        "p": "ST",
+        "r": 89,
+        "num": 28
+      },
+      {
+        "n": "Mateus CR7",
+        "p": "AM",
+        "r": 87,
+        "num": 77
+      },
+      {
+        "n": "Matheus Vilela",
+        "p": "CM",
+        "r": 81,
+        "num": 29
+      },
+      {
+        "n": "Nicole",
+        "p": "ST",
+        "r": 88,
+        "num": 30
+      },
+      {
+        "n": "Vick",
+        "p": "LW",
+        "r": 77,
+        "num": 31
+      }
+    ]
+  },
+  "Primeiro Ano - 2025": {
+    "flag": "🇧🇷",
+    "year": 2025,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Flavia",
+        "p": "ST",
+        "r": 90,
+        "num": 10
+      },
+      {
+        "n": "Alice Legauzona",
+        "p": "LW",
+        "r": 89,
+        "num": 11
+      },
+      {
+        "n": "Avancini",
+        "p": "RW",
+        "r": 90,
+        "num": 7
+      },
+      {
+        "n": "Caizin",
+        "p": "AM",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Leo",
+        "p": "ST",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Guigas",
+        "p": "DM",
+        "r": 87,
+        "num": 5
+      },
+      {
+        "n": "Joaquim",
+        "p": "CB",
+        "r": 93,
+        "num": 4
+      },
+      {
+        "n": "Julia Honda",
+        "p": "LW",
+        "r": 84,
+        "num": 17
+      },
+      {
+        "n": "Lucas Mattos",
+        "p": "CB",
+        "r": 91,
+        "num": 3
+      },
+      {
+        "n": "Pedro",
+        "p": "RB",
+        "r": 83,
+        "num": 21
+      },
+      {
+        "n": "Pinheiro",
+        "p": "LB",
+        "r": 91,
+        "num": 6
+      },
+      {
+        "n": "Calebe Lacerda",
+        "p": "GK",
+        "r": 65,
+        "num": 1
+      },
+      {
+        "n": "Valentina",
+        "p": "CM",
+        "r": 86,
+        "num": 14
+      },
+      {
+        "n": "Agatha",
+        "p": "ST",
+        "r": 82,
+        "num": 18
+      },
+      {
+        "n": "Ana",
+        "p": "LW",
+        "r": 77,
+        "num": 22
+      },
+      {
+        "n": "Arthur Bergo",
+        "p": "CB",
+        "r": 84,
+        "num": 15
+      },
+      {
+        "n": "Bia",
+        "p": "CM",
+        "r": 79,
+        "num": 20
+      },
+      {
+        "n": "Carlos",
+        "p": "LB",
+        "r": 80,
+        "num": 13
+      },
+      {
+        "n": "Davi Dias dos Santos",
+        "p": "RB",
+        "r": 77,
+        "num": 16
+      },
+      {
+        "n": "Davi Lima",
+        "p": "AM",
+        "r": 81,
+        "num": 12
+      },
+      {
+        "n": "Gabi",
+        "p": "LW",
+        "r": 80,
+        "num": 23
+      },
+      {
+        "n": "João Pedro",
+        "p": "RW",
+        "r": 82,
+        "num": 24
+      },
+      {
+        "n": "Jonas",
+        "p": "DM",
+        "r": 79,
+        "num": 25
+      },
+      {
+        "n": "Sidney",
+        "p": "CM",
+        "r": 81,
+        "num": 26
+      },
+      {
+        "n": "Manso",
+        "p": "CB",
+        "r": 78,
+        "num": 27
+      },
+      {
+        "n": "Manu Carrari",
+        "p": "ST",
+        "r": 91,
+        "num": 28
+      },
+      {
+        "n": "Mateus CR7",
+        "p": "AM",
+        "r": 85,
+        "num": 77
+      },
+      {
+        "n": "Matheus Vilela",
+        "p": "CM",
+        "r": 83,
+        "num": 29
+      },
+      {
+        "n": "Nicole",
+        "p": "ST",
+        "r": 90,
+        "num": 30
+      },
+      {
+        "n": "Vick",
+        "p": "LW",
+        "r": 79,
+        "num": 31
+      }
+    ]
+  },
+  "Professores 2026": {
+    "flag": "🇧🇷",
+    "year": 2026,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Wedley Xordo",
+        "p": "CB",
+        "r": 93,
+        "num": 4
+      },
+      {
+        "n": "Manoel",
+        "p": "CM",
+        "r": 88,
+        "num": 8
+      },
+      {
+        "n": "Renatão",
+        "p": "ST",
+        "r": 91,
+        "num": 9
+      },
+      {
+        "n": "Pedro Física",
+        "p": "DM",
+        "r": 92,
+        "num": 6
+      },
+      {
+        "n": "André",
+        "p": "RW",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Regiane",
+        "p": "LW",
+        "r": 86,
+        "num": 11
+      },
+      {
+        "n": "Ana Paula",
+        "p": "AM",
+        "r": 90,
+        "num": 10
+      },
+      {
+        "n": "Daielly",
+        "p": "LW",
+        "r": 85,
+        "num": 17
+      },
+      {
+        "n": "Silvia",
+        "p": "GK",
+        "r": 94,
+        "num": 1
+      },
+      {
+        "n": "Matheus",
+        "p": "CM",
+        "r": 95,
+        "num": 5
+      },
+      {
+        "n": "Zé Renato",
+        "p": "CB",
+        "r": 90,
+        "num": 3
+      },
+      {
+        "n": "Claiton",
+        "p": "RB",
+        "r": 89,
+        "num": 2
+      },
+      {
+        "n": "Aline",
+        "p": "ST",
+        "r": 86,
+        "num": 18
+      },
+      {
+        "n": "Josias",
+        "p": "LB",
+        "r": 88,
+        "num": 14
+      },
+      {
+        "n": "Camila",
+        "p": "AM",
+        "r": 87,
+        "num": 19
+      }
+    ]
+  },
+  "Professores 2025": {
+    "flag": "🇧🇷",
+    "year": 2025,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Wedley Xordo",
+        "p": "CB",
+        "r": 90,
+        "num": 4
+      },
+      {
+        "n": "Manoel",
+        "p": "CM",
+        "r": 91,
+        "num": 8
+      },
+      {
+        "n": "Renatão",
+        "p": "ST",
+        "r": 94,
+        "num": 9
+      },
+      {
+        "n": "Bruno",
+        "p": "CM",
+        "r": 99,
+        "num": 6
+      },
+      {
+        "n": "André",
+        "p": "RW",
+        "r": 87,
+        "num": 7
+      },
+      {
+        "n": "Regiane",
+        "p": "LW",
+        "r": 84,
+        "num": 11
+      },
+      {
+        "n": "Ana Paula",
+        "p": "AM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Daielly",
+        "p": "LW",
+        "r": 88,
+        "num": 17
+      },
+      {
+        "n": "Silvia",
+        "p": "GK",
+        "r": 93,
+        "num": 1
+      },
+      {
+        "n": "Matheus",
+        "p": "CM",
+        "r": 94,
+        "num": 5
+      },
+      {
+        "n": "Zé Renato",
+        "p": "CB",
+        "r": 93,
+        "num": 3
+      },
+      {
+        "n": "Claiton",
+        "p": "RB",
+        "r": 87,
+        "num": 2
+      },
+      {
+        "n": "Aline",
+        "p": "ST",
+        "r": 86,
+        "num": 18
+      },
+      {
+        "n": "Josias",
+        "p": "LB",
+        "r": 91,
+        "num": 14
+      },
+      {
+        "n": "Camila",
+        "p": "AM",
+        "r": 86,
+        "num": 19
+      },
+      {
+        "n": "Carlão Caolho",
+        "p": "ST",
+        "r": 91,
+        "num": 99
+      }
+    ]
+  },
+  "Professores 9 Ano 2024": {
+    "flag": "🇧🇷",
+    "year": 2024,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Manoel",
+        "p": "CM",
+        "r": 98,
+        "num": 8
+      },
+      {
+        "n": "Pedro Física",
+        "p": "DM",
+        "r": 91,
+        "num": 6
+      },
+      {
+        "n": "Regiane",
+        "p": "LW",
+        "r": 94,
+        "num": 11
+      },
+      {
+        "n": "Ana Paula",
+        "p": "AM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Matheus",
+        "p": "CM",
+        "r": 95,
+        "num": 5
+      },
+      {
+        "n": "Zé Renato",
+        "p": "CB",
+        "r": 74,
+        "num": 3
+      },
+      {
+        "n": "Claiton",
+        "p": "RB",
+        "r": 87,
+        "num": 2
+      },
+      {
+        "n": "Josias",
+        "p": "LB",
+        "r": 86,
+        "num": 14
+      },
+      {
+        "n": "Camila",
+        "p": "AM",
+        "r": 87,
+        "num": 19
+      },
+      {
+        "n": "Lucimara",
+        "p": "LW",
+        "r": 85,
+        "num": 20
+      },
+      {
+        "n": "Sonia",
+        "p": "AM",
+        "r": 84,
+        "num": 21
+      },
+      {
+        "n": "Tuco",
+        "p": "ST",
+        "r": 86,
+        "num": 22
+      },
+      {
+        "n": "Bico",
+        "p": "CM",
+        "r": 83,
+        "num": 23
+      }
+    ]
+  },
+  "Funcionários 2026": {
+    "flag": "🇧🇷",
+    "year": 2026,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Vera",
+        "p": "RW",
+        "r": 85,
+        "num": 1
+      },
+      {
+        "n": "Carlos",
+        "p": "CB",
+        "r": 79,
+        "num": 2
+      },
+      {
+        "n": "Carina",
+        "p": "CB",
+        "r": 82,
+        "num": 3
+      },
+      {
+        "n": "Adriana",
+        "p": "CB",
+        "r": 80,
+        "num": 4
+      },
+      {
+        "n": "Tati",
+        "p": "ST",
+        "r": 81,
+        "num": 5
+      },
+      {
+        "n": "Mauro",
+        "p": "CB",
+        "r": 99,
+        "num": 6
+      },
+      {
+        "n": "Evandro",
+        "p": "ST",
+        "r": 90,
+        "num": 7
+      },
+      {
+        "n": "Ricardo",
+        "p": "LB",
+        "r": 85,
+        "num": 8
+      },
+      {
+        "n": "Dalva",
+        "p": "RW",
+        "r": 86,
+        "num": 9
+      },
+      {
+        "n": "Ingui",
+        "p": "ST",
+        "r": 89,
+        "num": 10
+      },
+      {
+        "n": "Eliana",
+        "p": "RB",
+        "r": 82,
+        "num": 11
+      },
+      {
+        "n": "Junior",
+        "p": "CM",
+        "r": 81,
+        "num": 12
+      }
+    ]
+  },
+  "9 Ano Feminino 2024": {
+    "flag": "🇧🇷",
+    "year": 2024,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Alana",
+        "p": "AM",
+        "r": 91,
+        "num": 10
+      },
+      {
+        "n": "Akemi",
+        "p": "ST",
+        "r": 89,
+        "num": 9
+      },
+      {
+        "n": "Eloa",
+        "p": "LW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Laura Avancini",
+        "p": "RW",
+        "r": 88,
+        "num": 7
+      },
+      {
+        "n": "Laura Magossi",
+        "p": "CM",
+        "r": 90,
+        "num": 8
+      },
+      {
+        "n": "Giovana",
+        "p": "DM",
+        "r": 88,
+        "num": 5
+      },
+      {
+        "n": "Livia",
+        "p": "CB",
+        "r": 87,
+        "num": 4
+      },
+      {
+        "n": "Anne",
+        "p": "CB",
+        "r": 86,
+        "num": 3
+      },
+      {
+        "n": "Helena",
+        "p": "RB",
+        "r": 85,
+        "num": 2
+      },
+      {
+        "n": "Valentina",
+        "p": "LB",
+        "r": 89,
+        "num": 6
+      },
+      {
+        "n": "Alice",
+        "p": "GK",
+        "r": 90,
+        "num": 1
+      },
+      {
+        "n": "Gabi",
+        "p": "ST",
+        "r": 86,
+        "num": 14
+      },
+      {
+        "n": "Vitoria",
+        "p": "LW",
+        "r": 87,
+        "num": 17
+      },
+      {
+        "n": "Ana Luiza",
+        "p": "CM",
+        "r": 88,
+        "num": 18
+      },
+      {
+        "n": "Lara",
+        "p": "AM",
+        "r": 86,
+        "num": 19
+      }
+    ]
+  },
+  "9 Ano Masculino 2024": {
+    "flag": "🇧🇷",
+    "year": 2024,
+    "category": "conhecidos",
+    "players": [
+      {
+        "n": "Leo",
+        "p": "ST",
+        "r": 92,
+        "num": 10
+      },
+      {
+        "n": "Felipe Deon",
+        "p": "ST",
+        "r": 90,
+        "num": 9
+      },
+      {
+        "n": "Guigas",
+        "p": "CM",
+        "r": 91,
+        "num": 8
+      },
+      {
+        "n": "Joka",
+        "p": "CM",
+        "r": 95,
+        "num": 7
+      },
+      {
+        "n": "Luquinhas",
+        "p": "LW",
+        "r": 87,
+        "num": 11
+      },
+      {
+        "n": "Lucca",
+        "p": "DM",
+        "r": 91,
+        "num": 5
+      },
+      {
+        "n": "Marabá",
+        "p": "CB",
+        "r": 88,
+        "num": 4
+      },
+      {
+        "n": "Vero",
+        "p": "CB",
+        "r": 87,
+        "num": 3
+      },
+      {
+        "n": "Tiago",
+        "p": "CM",
+        "r": 99,
+        "num": 2
+      },
+      {
+        "n": "Raul",
+        "p": "LB",
+        "r": 90,
+        "num": 6
+      },
+      {
+        "n": "Enzo",
+        "p": "GK",
+        "r": 50,
+        "num": 1
+      },
+      {
+        "n": "Pedro",
+        "p": "CM",
+        "r": 88,
+        "num": 17
+      },
+      {
+        "n": "Guizinho",
+        "p": "RW",
+        "r": 45,
+        "num": 19
       }
     ]
   }
