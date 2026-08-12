@@ -74,9 +74,8 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .dtb-progress.done{color:var(--green3)}
 .dtb-sep{width:1px;height:20px;background:var(--border2);flex-shrink:0;margin:0 2px}
 .dtb-player{position:relative}
-.dtb-kick-btn{display:none;position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--bg2);border:1px solid var(--danger);color:var(--danger);font-size:9px;font-weight:800;letter-spacing:.8px;padding:4px 8px;cursor:pointer;white-space:nowrap;z-index:300;border-radius:2px;font-family:'Inter',sans-serif}
-.dtb-kick-btn:hover{background:rgba(224,71,62,.15)}
-.dtb-player.host-can-kick:hover .dtb-kick-btn{display:block}
+.dtb-kick-btn{display:flex;align-items:center;justify-content:center;width:18px;height:18px;flex-shrink:0;background:transparent;border:1px solid var(--danger);color:var(--danger);font-size:10px;font-weight:800;cursor:pointer;white-space:nowrap;z-index:300;border-radius:50%;font-family:'Inter',sans-serif;padding:0;margin-left:2px}
+.dtb-kick-btn:hover,.dtb-kick-btn:active{background:rgba(224,71,62,.15)}
 
 /* Timer: absolutely centered pill */
 .dtb-timer{
@@ -257,22 +256,27 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 .drawn-country{font-size:26px;font-weight:900;color:var(--white);display:flex;align-items:center;gap:8px}
 .drawn-flag{font-size:20px}
 .drawn-cup{font-size:13px;font-weight:700;color:var(--green3);margin-top:3px;letter-spacing:1px}
-.drawn-card.spinning::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(255,210,63,.12) 50%,transparent 100%);animation:shimmer .5s linear infinite}
-.drawn-card.settled{animation:settlePop .5s ease}
+.drawn-card.spinning::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(255,210,63,.16) 50%,transparent 100%);animation:shimmer .32s linear infinite}
+.drawn-card.settled{animation:settlePop .6s cubic-bezier(.34,1.65,.4,1)}
 #draft-content-left.hide-list-spin .pick-label,
 #draft-content-left.hide-list-spin .player-scroll{filter:blur(6px);opacity:.4;pointer-events:none;transition:none}
 @keyframes shimmer{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
-@keyframes settlePop{0%{transform:scale(1.06);box-shadow:0 0 24px rgba(255,210,63,.6)}60%{transform:scale(.98)}100%{transform:scale(1);box-shadow:none}}
+@keyframes settlePop{0%{transform:scale(1.12);box-shadow:0 0 34px rgba(255,210,63,.8)}40%{transform:scale(.93)}68%{transform:scale(1.04)}100%{transform:scale(1);box-shadow:none}}
 
 /* Casino-style reel */
 .reel-viewport{position:relative;height:54px;overflow:hidden;border-radius:4px;background:rgba(0,0,0,.25);margin:4px 0}
 .reel-strip{display:flex;align-items:center;height:100%;will-change:transform}
+.reel-strip.reel-fast-spin{filter:blur(4px)}
 .reel-tile{width:100%;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
 .drawn-country .reel-viewport{width:100%}
 .reel-tile{min-width:100%}
 .reel-flag{font-size:28px;line-height:1}
 .reel-year{font-size:11px;font-weight:800;color:var(--text2);letter-spacing:1px}
 .reel-marker{position:absolute;top:0;left:0;right:0;bottom:0;border:2px solid var(--gold);border-radius:4px;pointer-events:none;box-shadow:0 0 10px rgba(255,210,63,.4) inset}
+.drawn-card.spinning .reel-marker{animation:markerPulse .28s ease-in-out infinite}
+@keyframes markerPulse{0%,100%{box-shadow:0 0 10px rgba(255,210,63,.4) inset}50%{box-shadow:0 0 22px rgba(255,210,63,.95) inset,0 0 16px rgba(255,210,63,.65)}}
+.roll-spark{position:absolute;left:50%;top:50%;border-radius:50%;pointer-events:none;z-index:80;transform:translate(-50%,-50%);animation:rollSparkFly .6s ease-out forwards}
+@keyframes rollSparkFly{0%{transform:translate(-50%,-50%) scale(1);opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.25);opacity:0}}
 .reroll-info{font-size:10px;letter-spacing:1px;color:var(--text3);text-transform:uppercase;margin-bottom:8px}
 .reroll-btns{display:flex;gap:8px}
 .btn-reroll{background:transparent;border:1px solid var(--border2);color:var(--text2);padding:7px 10px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s ease;display:flex;align-items:center;gap:5px;letter-spacing:.5px;flex:1;justify-content:center}
@@ -4292,7 +4296,7 @@ h1,h2,h3,.drawn-country,.turn-name,.logo-text,.results-title,.btn-create-room,.b
 // 🚀 DEPLOY FLAGS — EDITE AQUI ANTES DE SUBIR NO GITHUB
 // ════════════════════════════════════════════════════════
 const FEATURE_FLAGS = {
-  GERAR_SELECAO: false,   // ⚡ Botão "Gerar Seleção" — mudar para FALSE no deploy
+  GERAR_SELECAO: true,   // ⚡ Botão "Gerar Seleção" — mudar para FALSE no deploy
 };
 // ════════════════════════════════════════════════════════
 
@@ -4455,6 +4459,33 @@ function checkAndAnimateDraw(teamKey, finalTeam){
   animateDrawnCard(teamKey, finalTeam);
 }
 
+// Explosão de faíscas douradas contida dentro do card, disparada no
+// instante em que o time sorteado assenta — dá o "impacto" da revelação.
+function fireRollSparks(card){
+  const colors = ['#ffd23f','#fff2b0','#ffb703'];
+  const rect = card.getBoundingClientRect();
+  const cx = rect.width/2, cy = rect.height/2;
+  const COUNT = 14;
+  for(let i=0;i<COUNT;i++){
+    const p = document.createElement('div');
+    const angle = (Math.PI*2*i/COUNT) + Math.random()*0.35;
+    const dist = 36 + Math.random()*34;
+    const dx = Math.cos(angle)*dist;
+    const dy = Math.sin(angle)*dist;
+    const size = 3 + Math.random()*3;
+    p.className = 'roll-spark';
+    p.style.left = cx+'px';
+    p.style.top = cy+'px';
+    p.style.width = size+'px';
+    p.style.height = size+'px';
+    p.style.background = colors[Math.floor(Math.random()*colors.length)];
+    p.style.setProperty('--dx', dx+'px');
+    p.style.setProperty('--dy', dy+'px');
+    card.appendChild(p);
+    setTimeout(()=>p.remove(), 650);
+  }
+}
+
 function animateDrawnCard(teamKey, finalTeam){
   const card = document.getElementById('drawn-card');
   const countryEl = document.querySelector('.drawn-country');
@@ -4467,35 +4498,59 @@ function animateDrawnCard(teamKey, finalTeam){
 
   const keys = teamKeys(G.yearMin, G.yearMax, G.lowProfile, G.resenha);
   const REEL_LEN = 24;
+  const BUFFER = 2; // tiles extra depois do time sorteado, só pra ter conteúdo visível durante o "estouro" (overshoot)
   const tiles = [];
   for(let i=0;i<REEL_LEN-1;i++) tiles.push(TEAMS_DB[rand(keys)]);
   tiles.push(finalTeam); // final tile lands under the marker
+  for(let i=0;i<BUFFER;i++) tiles.push(TEAMS_DB[rand(keys)]);
 
   countryEl.innerHTML = `<div class="reel-viewport"><div class="reel-strip" id="reel-strip">
     ${tiles.map(tt=>`<div class="reel-tile"><div class="reel-flag">${tt.flag}</div><div class="reel-year">${tt.year||''}</div></div>`).join('')}
   </div><div class="reel-marker"></div></div>`;
 
-  // Light haptic "ticks" while the reel spins (mobile only)
+  // Ticks de vibração que vão desacelerando junto com o giro (celular)
   if(navigator.vibrate){
-    for(let i=0;i<6;i++) setTimeout(()=>navigator.vibrate(12), i*180);
+    const tickDelays = [0,70,145,225,315,420,545,690,860];
+    tickDelays.forEach(d=>setTimeout(()=>navigator.vibrate(10), d));
   }
 
   requestAnimationFrame(()=>{
     const strip = document.getElementById('reel-strip');
     if(!strip) return;
     const tileWidth = strip.children[0].offsetWidth;
+    const finalX = (REEL_LEN-1)*tileWidth;      // posição exata onde o time sorteado alinha com o marcador
+    const overshootX = finalX + tileWidth*0.32; // passa um pouco do ponto certo, "derrapando" antes de assentar
+
     strip.style.transition = 'none';
     strip.style.transform = 'translateX(0px)';
+    strip.classList.add('reel-fast-spin');
+
+    // Fase 1 — giro rápido e desfocado, cobrindo a maior parte do caminho
     requestAnimationFrame(()=>{
-      strip.style.transition = 'transform 1.6s cubic-bezier(.1,.85,.15,1)';
-      strip.style.transform = `translateX(-${(REEL_LEN-1)*tileWidth}px)`;
+      strip.style.transition = 'transform .62s cubic-bezier(.5,0,.85,.4)';
+      strip.style.transform = `translateX(-${finalX*0.58}px)`;
     });
+
+    // Fase 2 — desacelera e "derrapa" passando um pouco do alvo
+    setTimeout(()=>{
+      strip.classList.remove('reel-fast-spin');
+      strip.style.transition = 'transform .95s cubic-bezier(.15,.85,.2,1)';
+      strip.style.transform = `translateX(-${overshootX}px)`;
+    }, 620);
+
+    // Fase 3 — pequeno "solavanco" de volta pro lugar certo (efeito caça-níquel)
+    setTimeout(()=>{
+      strip.style.transition = 'transform .2s ease-out';
+      strip.style.transform = `translateX(-${finalX}px)`;
+    }, 620+950);
   });
 
+  const REVEAL_MS = 620+950+200+40;
   setTimeout(()=>{
     card.classList.remove('spinning');
     card.classList.add('settled');
-    if(navigator.vibrate) navigator.vibrate([0,40,30,90]);
+    fireRollSparks(card);
+    if(navigator.vibrate) navigator.vibrate([0,45,25,90]);
     setTimeout(()=>card.classList.remove('settled'), 500);
     G.isSpinning = false;
     G.spinDisplayTeamKey = null;
@@ -4503,7 +4558,7 @@ function animateDrawnCard(teamKey, finalTeam){
     renderDraftLeft(); // rebuilds the card normally and reveals the new player list
     renderDraftRight(); // sync box score's team/year label with the settled team
     renderPitch();     // refresh pitch with correct team's players in popups
-  }, 1750);
+  }, REVEAL_MS);
 }
 
 // ===== STATE =====
@@ -5054,8 +5109,9 @@ async function createRoom(myName){
     createdAt: Date.now()
   };
   await roomRef.set(roomData);
-  // Remove room when host disconnects
-  roomRef.onDisconnect().update({status:'closed'});
+  // Se o host cair (fechar app, perder conexão), apenas remove ele da sala —
+  // outro jogador assume o comando automaticamente (ver maybeClaimHost)
+  roomRef.child('players/' + MY_PLAYER_ID).onDisconnect().remove();
   enterRoom(code, myName);
 }
 
@@ -5071,6 +5127,8 @@ async function joinRoom(code, myName){
   await roomRef.child('players/' + MY_PLAYER_ID).set({
     name: myName, color, emoji: MY_EMOJI||'', joinedAt: Date.now(), ready: false
   });
+  // Se este jogador cair, some da sala em vez de ficar "fantasma" ocupando vaga
+  roomRef.child('players/' + MY_PLAYER_ID).onDisconnect().remove();
   enterRoom(code, myName);
 }
 
@@ -5092,8 +5150,26 @@ function listenRoom(){
       const wasKicked = room.kicked && room.kicked[MY_PLAYER_ID];
       if(wasKicked){ showToast('Você foi expulso da sala pelo host'); showLobby(); return; }
     }
+    // Se o host caiu/desconectou sem avisar, alguém precisa assumir o comando
+    maybeClaimHost(room);
     // Sync G from Firebase room
     syncRoomToG(room);
+  });
+}
+
+// Se o jogador marcado como host não está mais na lista de jogadores (caiu, fechou o app),
+// o jogador que entrou há mais tempo entre os que restaram assume o posto automaticamente.
+// A transação evita que dois clientes tentem virar host ao mesmo tempo.
+function maybeClaimHost(room){
+  if(!room.players || room.players[room.host]) return; // host ainda presente, nada a fazer
+  const remaining = Object.entries(room.players).sort((a,b)=>a[1].joinedAt-b[1].joinedAt);
+  if(!remaining.length) return; // sala vazia, ninguém para promover
+  const nextHostId = remaining[0][0];
+  if(nextHostId !== MY_PLAYER_ID) return; // só quem vai virar host tenta escrever
+  const previousHost = room.host;
+  ROOM_REF.child('host').transaction(currentHost=>{
+    if(currentHost === previousHost) return nextHostId; // ninguém mudou ainda, pode assumir
+    return; // outro cliente já resolveu, aborta
   });
 }
 
@@ -5578,11 +5654,20 @@ async function leaveRoom(){
   stopRoomScreenOpenRooms();
   if(ROOM_LISTENER){ ROOM_REF.off('value'); ROOM_LISTENER=null; }
   if(ROOM_REF && MY_PLAYER_ID){
-    await ROOM_REF.child('players/'+MY_PLAYER_ID).remove();
-    // If host leaves, close room
     const snap = await ROOM_REF.once('value');
-    if(snap.exists() && snap.val().host === MY_PLAYER_ID){
-      await ROOM_REF.update({status:'closed'});
+    const room = snap.exists() ? snap.val() : null;
+    await ROOM_REF.child('players/'+MY_PLAYER_ID).remove();
+    if(room && room.host === MY_PLAYER_ID){
+      const remaining = Object.entries(room.players||{})
+        .filter(([id])=>id!==MY_PLAYER_ID)
+        .sort((a,b)=>a[1].joinedAt-b[1].joinedAt);
+      if(remaining.length){
+        // Passa o comando para quem entrou primeiro entre os que ficaram
+        await ROOM_REF.update({host: remaining[0][0]});
+      } else {
+        // Sala ficou vazia, agora sim pode fechar
+        await ROOM_REF.update({status:'closed'});
+      }
     }
   }
   ROOM_REF = null;
@@ -5609,6 +5694,12 @@ function showLobby(){
   LAST_DRAWN_TEAM = null;
   stopRoomScreenOpenRooms();
   if(ROOM_LISTENER && ROOM_REF){ ROOM_REF.off('value'); ROOM_LISTENER=null; }
+  // Limpa resíduos da última partida ao vivo: o botão de expulsar (fixo na
+  // tela, fora de qualquer .screen) e o placar de artilheiros no cabeçalho
+  // (também fora do .screen, por isso sobrevive à troca de tela sozinho)
+  document.getElementById('live-kick-btn')?.remove();
+  const hbar = document.getElementById('header-scorers-bar');
+  if(hbar){ hbar.style.display = 'none'; hbar.innerHTML = ''; }
   G={players:[],draftIdx:0,draftedTeams:[],formation:"4-3-3",tacticalStyle:"equilibrado",style:"Balanced",mode:"Classic",lowProfile:false,resenha:false,
      currentTeamKey:null,rerolls:3,lineup:{},activeSlot:null,pendingPlayer:null,
      matchQueue:[],currentMatchIdx:0,matchStats:{},matchLog:[],simTimeout:null,isSimRunning:false,
@@ -7128,7 +7219,7 @@ function renderDraftTopbar(){
         <span class="dtb-name" style="${isMe?'color:var(--text)':''}">${p.name}</span>
         <span class="dtb-progress${confirmed?' done':''}" style="color:${labelColor}">${label}</span>
         ${isMe ? renderStatBadgesHTML(loadMyStats(), 'compact') : ''}
-        ${canKick ? `<button class="dtb-kick-btn" data-pid="${p.id}" data-pname="${safeName}" onclick="kickPlayerDraft(this.dataset.pid,this.dataset.pname)">✕ EXPULSAR</button>` : ''}
+        ${canKick ? `<button class="dtb-kick-btn" data-pid="${p.id}" data-pname="${safeName}" onclick="kickPlayerDraft(this.dataset.pid,this.dataset.pname)" title="Expulsar ${safeName}">✕</button>` : ''}
       </div>`;
     }).join('');
     playersEl.innerHTML = chips;
@@ -11713,7 +11804,14 @@ function spawnFloatingChatReaction(text){
 // ativo na tela (#pitch). Funciona tanto no campo de quem está montando
 // o time quanto no campo de quem está sendo espectado.
 function spawnFloatingPitchItem(content, isText){
-  const pitch = document.getElementById('mini-pitch-wrap') || document.getElementById('pitch');
+  // #mini-pitch-wrap (tela ao vivo) e #pitch (tela de draft) ficam os DOIS
+  // sempre presentes no DOM (telas escondidas só via CSS, não removidas),
+  // então é preciso escolher pelo que está VISÍVEL agora — senão o emoji
+  // sobe escondido atrás da tela errada e ninguém vê nada.
+  const onLiveScreen = document.getElementById('screen-live')?.classList.contains('active');
+  const pitch = onLiveScreen
+    ? document.getElementById('mini-pitch-wrap')
+    : document.getElementById('pitch');
   if(!pitch) return;
   const el = document.createElement('div');
   el.className = isText ? 'pitch-float-text' : 'pitch-float-emoji';
